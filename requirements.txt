@@ -1,0 +1,22 @@
+# INVEST - Python dependencies
+# Install with:  python -m pip install -r requirements.txt
+
+# --- Core data handling -------------------------------------------------------------
+pandas>=2.2.0            # tables of financial data
+numpy>=1.26.0            # the math underneath pandas
+
+# --- Data sources -------------------------------------------------------------------
+requests>=2.31.0         # HTTP client used for SEC EDGAR and FRED (both free, no key)
+yfinance>=0.2.55         # market prices and vendor market data (Yahoo Finance)
+
+# --- Support ------------------------------------------------------------------------
+lxml>=5.0.0              # fast HTML/XML parsing (used by yfinance, and for Form 4 XML)
+python-dateutil>=2.9.0   # robust date parsing
+tabulate>=0.9.0          # pretty console tables in the screening output
+
+# Notes:
+#  * SEC EDGAR and FRED need NO API key and NO account. FRED is read through its public
+#    CSV endpoint unless you set a FRED_API_KEY environment variable.
+#  * yfinance is an unofficial Yahoo Finance client. It is used ONLY for market prices
+#    and clearly-labelled vendor estimates - never for fundamentals, which come from SEC
+#    filings. If Yahoo changes its API, upgrade yfinance: python -m pip install -U yfinance

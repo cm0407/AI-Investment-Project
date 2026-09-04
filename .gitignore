@@ -1,0 +1,27 @@
+# --- Caches (raw API responses; always re-downloadable by re-running a script) --------
+data/cache/
+
+# --- Python --------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- OS / editor ---------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# --- Secrets -------------------------------------------------------------------------
+# The system needs no API keys, but if you add a FRED key put it in a .env file, not code.
+.env
+*.key
+
+# NOTE ON WHAT IS **NOT** IGNORED:
+# memory/, reports/, research/ and data/ (except the cache) are deliberately COMMITTED.
+# CLAUDE.md requires the historical record of what was believed, and when, to be
+# preserved and un-rewritable. Ignoring those folders would defeat the entire point.
