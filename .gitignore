@@ -1,27 +1,56 @@
-# --- Caches (raw API responses; always re-downloadable by re-running a script) --------
+# =====================================================================================
+# .gitignore - files git should NOT track
+#
+# Two rules of thumb:
+#   1. If a script can regenerate it, don't commit it.
+#   2. If it's a password or key, never commit it - once committed it lives in the
+#      history forever, even if you delete the file later.
+# =====================================================================================
+
+# --- Large data caches (raw API responses; ~32MB and growing) -------------------------
+# Always rebuildable with: python scripts/refresh_all.py --force
 data/cache/
 
-# --- Python --------------------------------------------------------------------------
+# --- Secrets --------------------------------------------------------------------------
+# This system needs NO API keys. If you ever add one (e.g. FRED_API_KEY), put it in a
+# .env file - never paste it into a Python file.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.json
+secrets.json
+*_secret*
+*_token*
+
+# --- Python ---------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *.egg-info/
+.pytest_cache/
 .venv/
 venv/
 env/
 
-# --- OS / editor ---------------------------------------------------------------------
+# --- OS / editor / OneDrive noise ------------------------------------------------------
 .DS_Store
 Thumbs.db
 desktop.ini
+~$*
+*.tmp
 .vscode/
 .idea/
 
-# --- Secrets -------------------------------------------------------------------------
-# The system needs no API keys, but if you add a FRED key put it in a .env file, not code.
-.env
-*.key
-
-# NOTE ON WHAT IS **NOT** IGNORED:
-# memory/, reports/, research/ and data/ (except the cache) are deliberately COMMITTED.
+# =====================================================================================
+# WHAT IS DELIBERATELY **NOT** IGNORED - and why
+#
+#   memory/     the prediction record and lessons learned
+#   reports/    the digests
+#   research/   the written theses
+#   data/       everything except the cache
+#
 # CLAUDE.md requires the historical record of what was believed, and when, to be
-# preserved and un-rewritable. Ignoring those folders would defeat the entire point.
+# preserved and un-rewritable. Ignoring those folders would defeat the whole point of
+# version-controlling this project.
+# =====================================================================================

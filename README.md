@@ -194,6 +194,7 @@ INVEST/
 │
 ├── notes/             GLOSSARY.md · my_investing_preferences.md
 ├── docs/              DATA_SOURCES.md · ASSUMPTIONS.md · SCORING.md
+│                      GIT_FOR_BEGINNERS.md
 ├── research/theses/   Full write-ups, one per company
 ├── reports/daily/     The digests
 ├── portfolio/         investment_log.csv
@@ -268,6 +269,9 @@ Worth knowing before you rely on it:
 
 **[notes/GLOSSARY.md](notes/GLOSSARY.md)** explains every term in plain English. If
 something isn't there, ask Claude: *"explain that like I'm new to investing."*
+
+New to git? **[docs/GIT_FOR_BEGINNERS.md](docs/GIT_FOR_BEGINNERS.md)** covers the nine
+commands that do almost everything, and why this project keeps a history at all.
 
 ---
 
