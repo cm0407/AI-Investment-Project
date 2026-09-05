@@ -117,3 +117,19 @@ missing input default to zero anywhere in a scoring path. Where every component 
 pillar is unavailable, reduce the *available* points rather than scoring the pillar zero —
 JPMorgan is scored out of 30, not marked down to 20.5/50.
 **Confidence:** high.
+
+### 2026-09-05 — A tighter stop-loss buys noise, not protection
+**Trigger:** Backtesting the user's proposed −20% stop before adopting it
+(`scripts/analyze_stop_loss.py`, 45,431 simulated 12-month entries, 181 stocks, 6 years).
+**Rule:** When evaluating any stop-loss level, do not look only at the average return cost.
+Compare the *hit rate* (positions the stop genuinely saved from a worse outcome) against
+the *false-alarm rate* (positions that recovered after being sold). Across −20% to −35%,
+the hit rate was almost flat at 35.7–37.3% while the false-alarm rate fell from 23.8% to
+7.9%. Tightening a stop therefore adds ejections without adding protection. Also check
+whether position sizing already caps the tail the stop is meant to cap — with a 20% max
+position, the worst observed −71.5% outcome costs 14.3% of the sleeve, already inside a
+45% tolerance.
+**Evidence:** research/notes/2026-09-05_stop_loss_backtest.md
+**Confidence:** medium. The direction of the effect is clear and mechanical, but the
+universe carries severe survivorship bias that flatters holding, the sample covers a mostly
+rising market, and overlapping windows are not independent.
