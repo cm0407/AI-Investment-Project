@@ -32,10 +32,29 @@ def preferences_ready() -> tuple[bool, str]:
     if not config.PREFERENCES_FILE.exists():
         return False, "notes/my_investing_preferences.md does not exist"
     text = config.PREFERENCES_FILE.read_text(encoding="utf-8")
-    unset = text.count("<UNSET>")
-    if unset:
-        return False, (str(unset) + " field(s) still marked <UNSET> in "
-                       "notes/my_investing_preferences.md")
+
+    # Count only genuine unanswered FIELDS, not every occurrence of the placeholder text.
+    # Two lines legitimately contain "<UNSET>" while being fully answered:
+    #   1. the instruction blockquote at the top, which says 'replace every "<UNSET>"'
+    #   2. the avoid-list "Other:" row - leaving it blank means "nothing else to exclude",
+    #      which is a real answer, not an omission
+    # Counting those made the gate impossible to satisfy: the file could never be complete,
+    # so the system would have blocked recommendations forever.
+    outstanding: list[str] = []
+    for i, raw in enumerate(text.splitlines(), 1):
+        line = raw.strip()
+        if "<UNSET>" not in line:
+            continue
+        if line.startswith(">"):
+            continue                      # instruction blockquote
+        if line.lower().lstrip("-[ x]").startswith("other:"):
+            continue                      # optional free-text row
+        label = line.split("|")[1].strip() if line.count("|") >= 2 else line
+        outstanding.append("line " + str(i) + ": " + label[:60])
+
+    if outstanding:
+        return False, (str(len(outstanding)) + " field(s) still unanswered in "
+                       "notes/my_investing_preferences.md -> " + "; ".join(outstanding))
     return True, "preferences on file"
 
 
