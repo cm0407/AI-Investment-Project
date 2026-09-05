@@ -54,3 +54,10 @@ desktop.ini
 # preserved and un-rewritable. Ignoring those folders would defeat the whole point of
 # version-controlling this project.
 # =====================================================================================
+
+# --- Your private financial information ------------------------------------------------
+# These two hold real money figures once you start using the system. The committed
+# .example templates show the structure without exposing your holdings.
+# Deleting a file later does NOT remove it from git history - keep them untracked.
+notes/my_investing_preferences.md
+portfolio/investment_log.csv

@@ -100,8 +100,17 @@ def main() -> int:
     # ---------------- 3. SEC EDGAR ----------------
     print("\n[3] SEC EDGAR  (data.sec.gov - authoritative fundamentals)")
     check("User-Agent header", PASS, config.SEC_USER_AGENT)
-    if "your-email@example.com" not in config.SEC_USER_AGENT:
-        check("User-Agent contains contact email", FAIL, "SEC requires a contact address")
+    if config.SEC_CONTACT_IS_PLACEHOLDER:
+        check("SEC contact address configured", FAIL,
+              "still the placeholder. Copy .env.example to .env and set "
+              "SEC_CONTACT_EMAIL - the SEC requires a genuine contact address and may "
+              "block callers without one.")
+    elif "@" not in config.SEC_CONTACT_EMAIL or "." not in config.SEC_CONTACT_EMAIL:
+        check("SEC contact address configured", FAIL,
+              "SEC_CONTACT_EMAIL does not look like an email address")
+    else:
+        check("SEC contact address configured", PASS,
+              "loaded from .env, not hard-coded in the source")
     try:
         mapping = sec.load_ticker_map(verbose=False)
         check("ticker -> CIK map", PASS, str(len(mapping)) + " tickers registered with the SEC")

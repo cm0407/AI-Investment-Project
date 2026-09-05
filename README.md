@@ -40,11 +40,28 @@ You need Python 3.10 or newer.
 ```bash
 cd "path/to/INVEST"
 python -m pip install -r requirements.txt
+
+copy .env.example .env          # Windows   (Mac/Linux: cp .env.example .env)
+                                # then open .env and put your email in SEC_CONTACT_EMAIL
+
 python scripts/selftest.py
 ```
 
-If the last command ends with **"All data sources are live"**, you are done. No API keys,
-no accounts, no configuration.
+If the last command ends with **"All data sources are live"**, you are done. No API keys
+and no accounts — but the SEC does require a real contact address in `.env`, and the
+self-test will fail until you set one. `.env` is gitignored, so your address stays on your
+machine.
+
+To use the system for real, also copy the two private templates:
+
+```bash
+copy notes\my_investing_preferences.example.md notes\my_investing_preferences.md
+copy portfolio\investment_log.example.csv portfolio\investment_log.csv
+```
+
+Both are gitignored. They are where your risk tolerance and actual holdings live, so they
+deliberately never enter version control — the `.example` files show the structure without
+exposing anyone's finances.
 
 <details>
 <summary>Optional: a FRED API key</summary>

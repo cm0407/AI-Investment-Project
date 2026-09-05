@@ -44,10 +44,11 @@ in finance is a copy of it.
 requires a declared User-Agent with a real contact address, and caps traffic at 10
 requests/second.
 
-- User-Agent sent: `INVEST-Research/1.0 (your-email@example.com)`
+- User-Agent sent: `INVEST-Research/1.0 (<your SEC_CONTACT_EMAIL>)`
 - Rate limit applied: **5 requests/second** — deliberately half the ceiling
-- Configured in [invest/config.py](../invest/config.py); override the address with the
-  `SEC_CONTACT_EMAIL` environment variable
+- Your address is read from `SEC_CONTACT_EMAIL` in the gitignored `.env` file (copy
+  `.env.example` to `.env`). The committed default is a placeholder, so no personal
+  address is carried in the source code
 - Responses are cached for 24h so re-running a script does not re-hammer a public service
 
 **Known limitations — read these before trusting a figure**

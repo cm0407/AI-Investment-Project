@@ -14,8 +14,9 @@ WHAT IT DOES
 
 SOURCE
     https://data.sec.gov  - free, no API key, no registration.
-    User-Agent is set to your-email@example.com as the SEC requires; requests are rate
-    limited to 5/second against their published ceiling of 10/second.
+    The User-Agent carries the contact address from SEC_CONTACT_EMAIL (set it in .env),
+    as the SEC requires; requests are rate limited to 5/second against their published
+    ceiling of 10/second.
 """
 
 from __future__ import annotations

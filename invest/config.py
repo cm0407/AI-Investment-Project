@@ -10,6 +10,35 @@ from pathlib import Path
 # --------------------------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
 
+
+# --------------------------------------------------------------------------------------
+# Local settings (.env)
+# --------------------------------------------------------------------------------------
+def _load_dotenv(path: Path) -> None:
+    """Read KEY=VALUE lines from a .env file into the environment.
+
+    Deliberately tiny and dependency-free. Real environment variables always win, so
+    exporting SEC_CONTACT_EMAIL in your shell overrides whatever the file says.
+
+    The .env file is gitignored. It is where anything personal lives - your contact
+    address, and an optional FRED key - so that the committed code can be published
+    without carrying your details into a public repository.
+    """
+    if not path.exists():
+        return
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+_load_dotenv(ROOT / ".env")
+
 MEMORY_DIR = ROOT / "memory"
 PORTFOLIO_DIR = ROOT / "portfolio"
 REPORTS_DIR = ROOT / "reports"
@@ -62,8 +91,16 @@ def ensure_dirs() -> None:
 # --------------------------------------------------------------------------------------
 # The SEC requires a declared User-Agent identifying who is making the request.
 # Reference: https://www.sec.gov/os/webmaster-faq#developers
-SEC_CONTACT_EMAIL = os.environ.get("SEC_CONTACT_EMAIL", "your-email@example.com")
+#
+# Set your real address in the .env file (gitignored), NOT here - this default is a
+# placeholder so that the committed code carries nobody's personal email:
+#     SEC_CONTACT_EMAIL=you@example.com
+# Copy .env.example to .env to get started. Leaving the placeholder in place will make
+# selftest.py fail, because the SEC asks for a genuine contact address.
+SEC_PLACEHOLDER_EMAIL = "your-email@example.com"
+SEC_CONTACT_EMAIL = os.environ.get("SEC_CONTACT_EMAIL", SEC_PLACEHOLDER_EMAIL)
 SEC_USER_AGENT = "INVEST-Research/1.0 (" + SEC_CONTACT_EMAIL + ")"
+SEC_CONTACT_IS_PLACEHOLDER = SEC_CONTACT_EMAIL == SEC_PLACEHOLDER_EMAIL
 
 SEC_HEADERS = {
     "User-Agent": SEC_USER_AGENT,

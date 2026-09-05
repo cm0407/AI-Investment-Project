@@ -46,13 +46,28 @@ universe when a genuinely broad screen is wanted.
 
 ## Session log (newest first — append, never overwrite)
 
+### 2026-09-04 - Repository prepared for public publication
+- Moved the SEC contact address out of the source code into a gitignored `.env` file.
+  `invest/config.py` now ships a placeholder default and reads `SEC_CONTACT_EMAIL` at
+  import time; `selftest.py` fails if the placeholder is still in use.
+- Redacted the address from the four other files that carried it, including the line
+  above in this file. **This was a privacy redaction, not a revision of any research
+  conclusion** - no figure, prediction, score or judgement was altered.
+- Untracked `notes/my_investing_preferences.md` and `portfolio/investment_log.csv` and
+  committed `.example` templates in their place, so real holdings and risk tolerance
+  cannot reach a public repository.
+- `memory/predictions.csv` remains tracked on purpose: it is the calibration record and
+  CLAUDE.md requires it to be tamper-evident.
+- Remote added: https://github.com/cm0407/AI-Investment-Project
+- No research conducted. No recommendations issued.
+
 ### 2026-09-03 — System build session
 - Inspected folder: only `CLAUDE.md` and `notes/GLOSSARY.md` existed.
 - Built the full folder structure, memory files, the `invest/` Python package (8 modules),
   9 `scripts/` CLIs, `requirements.txt`, `README.md`, and `docs/` (DATA_SOURCES,
   ASSUMPTIONS, SCORING).
 - Data sources wired and verified live: SEC EDGAR (`data.sec.gov`, User-Agent
-  `INVEST-Research/1.0 (your-email@example.com)`, rate-limited to 5 req/s against their
+  `INVEST-Research/1.0 (<SEC_CONTACT_EMAIL>)`, rate-limited to 5 req/s against their
   10 req/s ceiling), yfinance (prices), FRED (macro, works with no API key).
 - `scripts/selftest.py`: **49 checks passed, 0 failed** on the 5-company test
   (AAPL/tech, JNJ/health care, JPM/financials, PG/staples, CAT/industrials).
