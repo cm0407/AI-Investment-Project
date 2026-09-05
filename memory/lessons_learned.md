@@ -133,3 +133,20 @@ position, the worst observed −71.5% outcome costs 14.3% of the sleeve, already
 **Confidence:** medium. The direction of the effect is clear and mechanical, but the
 universe carries severe survivorship bias that flatters holding, the sample covers a mostly
 rising market, and overlapping windows are not independent.
+
+### 2026-09-05 — Past return is a bar the company must now clear, not a signal
+**Trigger:** Testing the user's stated intent to prioritise "the ones with the best
+returns" (`scripts/analyze_return_chasing.py`, 72,635 observations, 181 stocks, 10 years).
+**Rule:** Never rank candidates by trailing return. In this sample the best-performing
+quintile returned +16.7% over the following year against +17.9% for random selection, and
+carried the HIGHEST rate of losing money (35.7%) of any quintile — with the loss rate
+rising monotonically as past performance rose. Survivorship bias flatters that bucket, so
+the true result is worse. When a screen surfaces a big recent winner, treat the run-up as
+having raised the bar (check the reverse DCF's implied growth against delivered growth),
+not as evidence of quality.
+**Counter-caution:** the same test showed past LOSERS returning +29.5%. That figure is a
+survivorship artifact — bankrupt companies are absent from the universe — and must never
+be used to justify buying beaten-down stocks.
+**Evidence:** research/notes/2026-09-05_return_chasing.md
+**Confidence:** medium-high for the "winners do not persist" half; the mechanism (a higher
+price is a higher bar) is sound independent of this sample. Low for anything about losers.
