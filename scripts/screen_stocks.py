@@ -111,6 +111,8 @@ def screen_one(ticker: str, years: int, refresh: bool, verbose: bool) -> dict:
             round(sc["data_points_earned"] / sc["data_points_available"] * 100, 1)
             if sc.get("data_points_available") else None),
         "pillars_unscorable": len(sc.get("unscorable_data_pillars") or []),
+        "components_scored": sum(pp["components_scored"] for pp in sc["data_pillars"].values()),
+        "components_total": sum(pp["components_total"] for pp in sc["data_pillars"].values()),
         "growth_points": sc["data_pillars"]["growth"].get("points"),
         "valuation_points": sc["data_pillars"]["valuation"].get("points"),
         "strength_points": sc["data_pillars"]["financial_strength"].get("points"),
@@ -194,6 +196,10 @@ def main() -> int:
     ap.add_argument("--min-operating-margin", type=float, default=None)
     ap.add_argument("--refresh", action="store_true")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--min-components", type=int, default=10,
+                    help="components (of 16) a company must be scored on to appear in the "
+                         "main ranking; below this it is listed separately as thinly "
+                         "measured (default 10)")
     ap.add_argument("--ignore-preferences", action="store_true",
                     help="do NOT apply your avoid-list and limits (diagnostic use only)")
     args = ap.parse_args()
@@ -286,10 +292,14 @@ def main() -> int:
         return 0
 
     reverse = args.rank_by != "pe_ratio"  # for P/E, lower is better
-    ranked = sorted(
-        [r for r in rows if r.get(args.rank_by) is not None],
-        key=lambda r: r[args.rank_by], reverse=reverse,
-    )
+    scored = [r for r in rows if r.get(args.rank_by) is not None]
+    well_measured = [r for r in scored
+                     if (r.get("components_scored") or 0) >= args.min_components]
+    thin = [r for r in scored
+            if (r.get("components_scored") or 0) < args.min_components]
+    well_measured.sort(key=lambda r: r[args.rank_by], reverse=reverse)
+    thin.sort(key=lambda r: r[args.rank_by], reverse=reverse)
+    ranked = well_measured
     unranked = [r for r in rows if r.get(args.rank_by) is None]
 
     # ---- Console table ----------------------------------------------------------------
@@ -297,7 +307,7 @@ def main() -> int:
     print("TOP " + str(min(args.top, len(ranked))) + " BY " + args.rank_by.upper()
           + "   (of " + str(len(rows)) + " that passed filters)")
     print("=" * 118)
-    hdr = ("  #  TICKER  " + "COMPANY".ljust(26) + " PCT  PTS/AVL " + "PRICE".rjust(9)
+    hdr = ("  #  TICKER  " + "COMPANY".ljust(26) + " PCT  PTS/AVL  CVG " + "PRICE".rjust(9)
            + "  " + "REV CAGR".rjust(9) + "  " + "OP MGN".rjust(7) + "  "
            + "ROIC".rjust(7) + "  " + "P/E".rjust(7) + "  " + "FCF YLD".rjust(8))
     print(hdr)
@@ -314,6 +324,7 @@ def main() -> int:
               + (format(r.get("composite_pct"), "5.1f") if r.get("composite_pct") is not None else "  n/a")
               + "% " + format(r.get("composite_score") or 0, "4.1f")
               + "/" + format(r.get("composite_max_available") or 0, "2.0f") + " "
+              + format(r.get("components_scored") or 0, "2.0f") + "/16 "
               + fmt(r.get("price"), ",.2f", 9) + "  "
               + fmt(r.get("revenue_cagr_pct"), "8.1f", 9) + "  "
               + fmt(r.get("operating_margin_pct"), "6.1f", 7) + "  "
@@ -321,7 +332,26 @@ def main() -> int:
               + fmt(r.get("pe_ratio"), "6.1f", 7) + "  "
               + fmt(r.get("fcf_yield_pct"), "7.1f", 8))
     print("-" * 118)
+    if thin:
+        print()
+        print("  " + "=" * 114)
+        print("  THINLY MEASURED - scored on fewer than " + str(args.min_components)
+              + " of 16 components. NOT comparable with the table above.")
+        print("  A high percentage here means 'few things were measured and they looked "
+              "fine', not 'this is a better idea'.")
+        print("  " + "=" * 114)
+        for i, r in enumerate(thin[:args.top], 1):
+            print("  " + str(i).rjust(2) + "  " + r["ticker"].ljust(7)
+                  + str(r.get("company_name") or "")[:25].ljust(26)
+                  + (format(r.get("composite_pct"), "5.1f") if r.get("composite_pct")
+                     is not None else "  n/a") + "% "
+                  + format(r.get("composite_score") or 0, "4.1f") + "/"
+                  + format(r.get("composite_max_available") or 0, "2.0f") + " "
+                  + format(r.get("components_scored") or 0, "2.0f") + "/16   "
+                  + str(r.get("sector_special") or "") )
+    print()
     print("  n/a = " + config.MISSING + " (never means zero)")
+    print("  CVG = how many of the 16 scoring components had usable data.")
     print("  PCT = share of AVAILABLE points. PTS/AVL = raw points / points obtainable.")
     print("  An AVL below 50 means this company's industry makes some pillars unscorable")
     print("  (banks, insurers, REITs). Comparing PCT across industries is WEAK evidence -")

@@ -204,3 +204,26 @@ show points/available and the count of unscorable pillars so thin coverage stays
 and keep repeating that cross-sector comparison is weak evidence because the thresholds
 are sector-blind.
 **Confidence:** high.
+
+### 2026-09-09 — A percentage hides how much was actually measured
+**Trigger:** After switching the screen to rank on share-of-available-points, the top four
+results were insurers and a bank. Progressive led at 93.5% — scored on **6 of 16**
+components. Adobe's 81.5% was scored on 15 of 16.
+**Rule:** A ratio says nothing about the size of its own evidence base. Whenever scores are
+built from a variable number of inputs, display the input count and refuse to rank
+thinly-measured candidates alongside well-measured ones. A high percentage on few
+components means "little was measured and it looked fine", which is not the same claim as
+"this is good" and must never be presented as though it were.
+**Implementation:** screens now split into a main ranking (>=10 of 16 components scored) and
+a separate "thinly measured" list, with coverage shown on every row.
+**Confidence:** high. This is a general property of ratios, not a fact about markets.
+
+### 2026-09-09 — Watch which thresholds are the analyst's invention
+**Trigger:** Reviewing why 79 of 184 companies were excluded from the first real screen.
+**Rule:** When a user says "avoid highly leveraged companies" or "avoid heavy dilution"
+without giving a number, the number is the ANALYST's choice and must be labelled as such.
+Here a self-chosen 2.0x debt/equity limit excluded 48 companies and a self-chosen 10%
+dilution limit excluded 35 — together doing almost all of the filtering. An exclusion rate
+that high from an unstated threshold should be surfaced to the user for confirmation, not
+buried in a config file.
+**Confidence:** high.
