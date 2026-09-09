@@ -260,6 +260,14 @@ def compute(fund: dict, price: Optional[float] = None) -> dict:
         "revenue_growth_latest_pct": (yoy_growth(rev)[-1] if len(yoy_growth(rev)) else None),
         "growth_years_covered": span,
 
+        # A CAGR is only as honest as the year it starts from. Booking Holdings' 2020
+        # revenue was the COVID travel trough ($6.8B), so a six-year CAGR reads 31.7%
+        # while the last two years grew 11% and 13%. EOG's 2020 was the oil-price crash,
+        # giving a +15.5% CAGR over three consecutive years of DECLINING revenue.
+        # The recent-3-year CAGR is computed alongside so the distortion is visible.
+        "revenue_cagr_3y_pct": cagr(_v(rev, -4), latest_rev, 3) if (rev and len(rev) >= 4) else None,
+        "net_income_cagr_3y_pct": cagr(_v(ni, -4), latest_ni, 3) if (ni and len(ni) >= 4) else None,
+
         # ---------- Margins (%) ----------
         "gross_margin_pct": _pct(_safe_div(_v(gp), latest_rev)),
         "operating_margin_pct": _pct(_safe_div(latest_op, latest_rev)),
@@ -362,6 +370,45 @@ def compute(fund: dict, price: Optional[float] = None) -> dict:
                                 "figure comes from '" + str(tag) + "' instead, which may "
                                 "not mean exactly the same thing.")
         tags_used[concept] = entry
+
+    # Flag a CAGR whose starting year makes it misleading.
+    base_warn = None
+    full_c, recent_c = metrics.get("revenue_cagr_pct"), metrics.get("revenue_cagr_3y_pct")
+    if full_c is not None and recent_c is not None and (full_c - recent_c) >= 5.0:
+        base_warn = (
+            "BASE-YEAR DISTORTION: the " + str(span) + "-year revenue CAGR of "
+            + format(full_c, ".1f") + "% is far above the recent 3-year CAGR of "
+            + format(recent_c, ".1f") + "%. The window starts at "
+            + (rev[0]["period_end"][:4] if rev else "?")
+            + ", so the long CAGR is measuring recovery from a depressed base, not "
+            "underlying growth. Judge this company on the recent figure and the "
+            "year-by-year series, not the headline CAGR."
+        )
+    metrics["_growth_base_warning"] = base_warn
+
+    # Detect a stock split that historical per-share figures do not reflect.
+    # Booking Holdings files 751m shares on its latest cover page while the diluted
+    # weighted-average count in the same filings reads 33m - a ~23x gap from a split.
+    # Its filed EPS of $165.57 therefore sits on a pre-split share base and CANNOT be
+    # compared with a $180 market price. Ratios built on market cap / net income are
+    # unaffected (both sides scale), but anything per-share is not.
+    split_warn = None
+    wa = _v(dilshares)
+    if shares and wa and wa > 0:
+        ratio = shares / wa
+        if ratio > 1.5 or ratio < 0.67:
+            split_warn = (
+                "PER-SHARE FIGURES ARE NOT COMPARABLE WITH TODAY'S PRICE: the latest cover-"
+                "page share count (" + format(shares, ",.0f") + ") is "
+                + format(ratio, ".1f") + "x the diluted weighted-average count in the "
+                "filings (" + format(wa, ",.0f") + "). That gap indicates a stock split "
+                "or major issuance not reflected in the historical per-share series. "
+                "Reported EPS and any per-share history are on the OLD share base. "
+                "Whole-company ratios (P/E from market cap over net income, P/FCF, "
+                "EV/EBITDA) remain valid because both sides scale together."
+            )
+    metrics["_per_share_split_warning"] = split_warn
+    metrics["_shares_to_wa_ratio"] = (shares / wa) if (shares and wa) else None
 
     metrics["_sector"] = classify_sector((fund.get("profile") or {}).get("sic"))
     metrics["_concept_tags_used"] = tags_used

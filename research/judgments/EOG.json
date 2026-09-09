@@ -1,0 +1,22 @@
+{
+  "business_quality": {
+    "points": 8,
+    "justification": "A high-quality operator inside a low-quality industry. ROIC 14.5%, FCF margin 42.3%, debt/equity 0.27 - a genuinely conservative balance sheet for an E&P. But the product is an undifferentiated commodity sold at a price the company does not set. Revenue has FALLEN three consecutive years (-6%, -2%, -4%); the headline 15.5% six-year CAGR is an artefact of measuring from the 2020 oil crash and is not evidence of growth."
+  },
+  "competitive_advantage": {
+    "points": 4,
+    "justification": "The only durable edge available in E&P is cost per barrel and acreage quality, and EOG has historically been among the better operators - the Encino acquisition exceeded its $150M synergy target. But no oil producer has pricing power. Its economics are set by OPEC decisions and global demand, neither of which any moat protects against."
+  },
+  "catalysts": {
+    "points": 5,
+    "justification": "Dated and real: the 2026 capital plan targets ~$4.5B free cash flow at strip pricing with 5% oil production growth and 13% total production growth including Encino, and the company returned 100% of FCF to shareholders last year ($1.8B in Q2 2026 alone). That is a mechanical return of capital, not a hope. Marked down because the dominant variable - the oil price - is not a catalyst anyone can schedule or forecast."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "A 12.5% FCF yield returned almost entirely to shareholders sets a solid floor while oil holds. But the bear case is a commodity downcycle in which revenue, FCF, the buyback and possibly the variable dividend all compress together - correlated, not independent, risks. Roughly +18% base against -32% bear. The honest statement is that this position is primarily a bet on the oil price, which I cannot forecast."
+  },
+  "management": {
+    "points": 4,
+    "justification": "Among the better capital allocators in the sector: returned 100% of 2025 free cash flow via a growing regular dividend (+8%) and $2.5B of buybacks, kept leverage low, and integrated Encino ahead of its synergy target. Share count down 5.7%. Withheld one point because buying back stock with commodity cash flow is inherently pro-cyclical - it buys most when prices are high."
+  }
+}

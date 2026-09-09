@@ -1,0 +1,22 @@
+{
+  "business_quality": {
+    "points": 9,
+    "justification": "ROIC 49.3%, debt/equity 0.02, and a differentiated mass-plus-prestige retail format with a large loyalty programme. But profitability is deteriorating beneath a growing top line: revenue rose ~10% in the year ended Jan-2026 while OPERATING income FELL from $1.68B to $1.56B to $1.53B and net income fell from $1.29B to $1.20B to $1.15B across three years. Operating margin has compressed to 12.4%. A retailer growing sales while earning less money on them is the classic signature of promotional pressure."
+  },
+  "competitive_advantage": {
+    "points": 5,
+    "justification": "Scale, store footprint and the loyalty database are real advantages, and the salon/services attachment is hard for pure e-commerce to copy. But beauty retail has low switching costs, and the three-year margin compression IS the evidence that the moat is under pressure - from Sephora/Kohl's expansion, Amazon, and brands selling direct. A moat that is working should defend margins; this one is not."
+  },
+  "catalysts": {
+    "points": 5,
+    "justification": "Dated and confirmed: on 27 August 2026 management RAISED full-year guidance - net sales growth to 6.7-7.2% (from 6.0-7.0%), comparable sales to 3.2-3.7% (from 2.5-3.5%), and diluted EPS to $28.70-29.00. Q2 delivered $3.0B of sales (+8.9%) and EPS of $6.55 against a $6.17 consensus. The offsetting fact, and why this is 5 and not 8: the second-half guide implies a sharp slowdown to 4-5% sales and 2-3% comps, and Q2 comps of 3.8% were already down from 6.7% a year earlier. Shares fell on the caution despite the raise."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "Base case +14% against a bear case of -28%. The weakest asymmetry of the four. At 20.4x earnings and a 4.5% FCF yield there is little valuation cushion, and the earnings quality problem below is not priced as a problem. Consumer discretionary retail also carries recession sensitivity."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Share count is down 20.5% through sustained buybacks, and guidance was raised with a genuine Q2 beat, so execution is not broken. But a material deduction is warranted for what the buybacks are doing to the reported story: diluted EPS has been roughly FLAT ($26.03 -> $25.34 -> $25.64) while net income FELL 11%. Per-share growth is being manufactured by shrinking the denominator, not by earning more. That is legitimate capital allocation but it makes headline EPS guidance a poor guide to business health, and management is not foregrounding the distinction."
+  }
+}

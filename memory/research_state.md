@@ -8,6 +8,28 @@ the Session Log. Never delete or rewrite older entries.
 
 ## Current status
 
+- **System status:** Operational. 52 self-tests passing. First full research session completed
+  2026-09-09.
+- **Investment recommendations issued to date:** 0 BUY. 2 WATCH (BKNG, ADBE), 2 AVOID (EOG, ULTA).
+- **Open predictions in `predictions.csv`:** 4 (all logged 2026-09-09)
+- **Stocks rejected (`rejected_stocks.md`):** 2 (EOG, ULTA)
+- **Theses written (`research/theses/`):** 4 (ADBE, BKNG, EOG, ULTA)
+- **User preferences:** COMPLETE as of 2026-09-05. Recommendations gate is open.
+- **Remote:** https://github.com/cm0407/AI-Investment-Project (public; private financial files
+  gitignored)
+
+### Unresolved items carried forward
+1. **No diversified core.** Sleeve is 30-50% of investable money with no index-fund base.
+   Flagged three times; the user has not yet responded. Every screen prints this warning.
+2. **Stop-loss contradiction.** -25% stop fires before the -30% drawdown the user said they
+   would hold through. One answer must change.
+3. **Analyst-chosen thresholds need confirming:** 2.0x debt/equity (excluded 48 companies) and
+   10% dilution (excluded 35). Together they did nearly all the filtering.
+4. **Financial-sector analysis remains weak** — no net interest margin, ROTCE or FFO. Banks,
+   insurers and REITs land in the "thinly measured" bucket by design.
+
+## Superseded status (2026-09-03 build session)
+
 - **System status:** Built and self-tested (2026-09-03). No investment research has been done yet.
 - **Investment recommendations issued to date:** 0
 - **Open predictions in `predictions.csv`:** 0
@@ -45,6 +67,29 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-09-09 - First full research session (Phases 1-5)
+- Built `invest/preferences.py`: the user's avoid-list and limits are now ENFORCED by the
+  screener, fail-closed, with unenforceable rules declared rather than faked.
+- Found and fixed four defects by inspecting output rather than trusting it:
+  (a) XOM resolved to a new holding-company CIK with no history while $332B of revenue sat
+      under the predecessor - added `find_predecessor()` via the SEC's full CIK index;
+  (b) `score_stock.py` shipped a syntax error that 51 self-tests missed - selftest now
+      compiles all 24 modules;
+  (c) insurers were scored on free-cash-flow metrics already declared meaningless for them -
+      suppressed the whole FCF family; PGR fell 48.3/50 -> 37.4/40;
+  (d) ranking by raw points buried financials, then ranking by percentage promoted them for
+      being thinly measured - screens now split well-measured from thin (>=10 of 16 components).
+- Screened 184 names -> 102 passed the user's rules -> top 4 taken through Phases 2-5.
+- **Caught a base-year distortion that would have driven a wrong conclusion.** EOG ranked #2
+  on a 15.5% revenue CAGR while revenue had fallen three consecutive years; the window started
+  at the 2020 oil crash. Added `revenue_cagr_3y_pct` and `_growth_base_warning`.
+- Added split detection: BKNG's cover-page share count is 23.0x its diluted weighted-average
+  count, so filed EPS of $165.57 is on a pre-split base and cannot be compared with a $180 price.
+- **Outcome: no BUY.** BKNG 77.8 (WATCH), ADBE 72.7 (WATCH), EOG 67.6 (AVOID), ULTA 66.2
+  (AVOID). Four predictions logged, two rejections recorded, four theses written.
+- Deliverables: `reports/INVEST_Research_Report_2026-09-09.docx`,
+  `reports/daily/digest_2026-09-09.md`.
 
 ### 2026-09-04 - Repository prepared for public publication
 - Moved the SEC contact address out of the source code into a gitignored `.env` file.

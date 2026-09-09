@@ -61,3 +61,6 @@ desktop.ini
 # Deleting a file later does NOT remove it from git history - keep them untracked.
 notes/my_investing_preferences.md
 portfolio/investment_log.csv
+
+# Analysis run logs (regenerable, noisy)
+logs/

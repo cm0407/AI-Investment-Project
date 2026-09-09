@@ -1,0 +1,302 @@
+{
+  "BKNG": {
+    "price": 180.3,
+    "score": 77.8,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 121.0,
+      "probability": 0.25,
+      "assumptions": [
+        "Consumer recession cuts discretionary travel; room-night growth goes flat or negative against the guided 3-5%.",
+        "Take rate and marketing efficiency compress at the same time - these risks are correlated, not independent.",
+        "Multiple derates from 14.9x free cash flow toward 11x as growth disappoints."
+      ]
+    },
+    "base": {
+      "target_price": 206.0,
+      "probability": 0.5,
+      "assumptions": [
+        "Company delivers its guided high-single-digit growth in gross bookings, revenue and adjusted EBITDA.",
+        "Adjusted EPS grows low-to-mid teens, roughly half of it from the buyback shrinking the share count.",
+        "Multiple holds near 25x earnings; return comes from earnings growth, not re-rating."
+      ]
+    },
+    "bull": {
+      "target_price": 249.0,
+      "probability": 0.25,
+      "assumptions": [
+        "Travel demand proves resilient and room-night growth re-accelerates above 5%.",
+        "Record buyback pace continues (Q2 2026 alone returned $4.1B, $3.7B of it repurchases).",
+        "Multiple expands modestly on evidence the deceleration was temporary."
+      ]
+    },
+    "_computed": {
+      "current_price": 180.3,
+      "cases": {
+        "bear": {
+          "target_price": 121.0,
+          "return_pct": -32.88962839711592,
+          "probability": 0.25,
+          "assumptions": [
+            "Consumer recession cuts discretionary travel; room-night growth goes flat or negative against the guided 3-5%.",
+            "Take rate and marketing efficiency compress at the same time - these risks are correlated, not independent.",
+            "Multiple derates from 14.9x free cash flow toward 11x as growth disappoints."
+          ]
+        },
+        "base": {
+          "target_price": 206.0,
+          "return_pct": 14.254021075984458,
+          "probability": 0.5,
+          "assumptions": [
+            "Company delivers its guided high-single-digit growth in gross bookings, revenue and adjusted EBITDA.",
+            "Adjusted EPS grows low-to-mid teens, roughly half of it from the buyback shrinking the share count.",
+            "Multiple holds near 25x earnings; return comes from earnings growth, not re-rating."
+          ]
+        },
+        "bull": {
+          "target_price": 249.0,
+          "return_pct": 38.10316139767054,
+          "probability": 0.25,
+          "assumptions": [
+            "Travel demand proves resilient and room-night growth re-accelerates above 5%.",
+            "Record buyback pace continues (Q2 2026 alone returned $4.1B, $3.7B of it repurchases).",
+            "Multiple expands modestly on evidence the deceleration was temporary."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 8.430393788130884,
+      "prob_positive": 0.75,
+      "prob_hits_20pct": 0.25,
+      "prob_loss": 0.25,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  },
+  "ADBE": {
+    "price": 257.26,
+    "score": 72.7,
+    "action": "WATCH",
+    "horizon_months": 18,
+    "bear": {
+      "target_price": 180.0,
+      "probability": 0.3,
+      "assumptions": [
+        "AI-native tools keep taking the prosumer and SMB flank; ARR growth decays from 10.9% toward mid-single digits.",
+        "Free-tier shift and AI compute costs compress the 36.6% operating margin.",
+        "Market treats Adobe as a declining franchise; multiple stays at 10-12x free cash flow on falling cash flow."
+      ]
+    },
+    "base": {
+      "target_price": 303.0,
+      "probability": 0.45,
+      "assumptions": [
+        "Enterprise and professional core holds; ARR growth stabilises around 8-10%.",
+        "The $25B buyback keeps shrinking the share count against a depressed price.",
+        "Multiple re-rates modestly from 14.3x earnings toward 16-17x as the panic fades."
+      ]
+    },
+    "bull": {
+      "target_price": 386.0,
+      "probability": 0.25,
+      "assumptions": [
+        "Adobe demonstrates AI monetisation that adds revenue rather than cannibalising it.",
+        "Growth re-accelerates toward 12%+ and the AI-disruption discount unwinds.",
+        "Multiple returns toward 20x earnings, still below its own historical average."
+      ]
+    },
+    "_computed": {
+      "current_price": 257.26,
+      "cases": {
+        "bear": {
+          "target_price": 180.0,
+          "return_pct": -30.031874368343303,
+          "probability": 0.3,
+          "assumptions": [
+            "AI-native tools keep taking the prosumer and SMB flank; ARR growth decays from 10.9% toward mid-single digits.",
+            "Free-tier shift and AI compute costs compress the 36.6% operating margin.",
+            "Market treats Adobe as a declining franchise; multiple stays at 10-12x free cash flow on falling cash flow."
+          ]
+        },
+        "base": {
+          "target_price": 303.0,
+          "return_pct": 17.77967814662209,
+          "probability": 0.45,
+          "assumptions": [
+            "Enterprise and professional core holds; ARR growth stabilises around 8-10%.",
+            "The $25B buyback keeps shrinking the share count against a depressed price.",
+            "Multiple re-rates modestly from 14.3x earnings toward 16-17x as the panic fades."
+          ]
+        },
+        "bull": {
+          "target_price": 386.0,
+          "return_pct": 50.042758298997136,
+          "probability": 0.25,
+          "assumptions": [
+            "Adobe demonstrates AI monetisation that adds revenue rather than cannibalising it.",
+            "Growth re-accelerates toward 12%+ and the AI-disruption discount unwinds.",
+            "Multiple returns toward 20x earnings, still below its own historical average."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 11.501982430226233,
+      "prob_positive": 0.7,
+      "prob_hits_20pct": 0.25,
+      "prob_loss": 0.3,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  },
+  "EOG": {
+    "price": 145.36,
+    "score": 67.6,
+    "action": "AVOID",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 99.0,
+      "probability": 0.3,
+      "assumptions": [
+        "Oil falls into the $50s; revenue, free cash flow, buyback and variable returns compress together.",
+        "Revenue has already declined three consecutive years (-6%, -2%, -4%) before any downcycle.",
+        "Multiple compresses as the market prices a lower mid-cycle oil price."
+      ]
+    },
+    "base": {
+      "target_price": 167.0,
+      "probability": 0.45,
+      "assumptions": [
+        "Oil stays range-bound; the 2026 plan delivers ~$4.5B free cash flow at strip pricing.",
+        "5% oil production growth and 13% total production growth including Encino arrive as planned.",
+        "Roughly the 12.5% free-cash-flow yield is returned to shareholders; little or no re-rating."
+      ]
+    },
+    "bull": {
+      "target_price": 203.0,
+      "probability": 0.25,
+      "assumptions": [
+        "Oil prices rally on supply discipline or a demand surprise.",
+        "Encino integration keeps exceeding its $150M synergy target and unit costs fall.",
+        "Multiple expands from 7.4x EV/EBITDA as free cash flow beats plan."
+      ]
+    },
+    "_computed": {
+      "current_price": 145.36,
+      "cases": {
+        "bear": {
+          "target_price": 99.0,
+          "return_pct": -31.893230599889932,
+          "probability": 0.3,
+          "assumptions": [
+            "Oil falls into the $50s; revenue, free cash flow, buyback and variable returns compress together.",
+            "Revenue has already declined three consecutive years (-6%, -2%, -4%) before any downcycle.",
+            "Multiple compresses as the market prices a lower mid-cycle oil price."
+          ]
+        },
+        "base": {
+          "target_price": 167.0,
+          "return_pct": 14.887176664832126,
+          "probability": 0.45,
+          "assumptions": [
+            "Oil stays range-bound; the 2026 plan delivers ~$4.5B free cash flow at strip pricing.",
+            "5% oil production growth and 13% total production growth including Encino arrive as planned.",
+            "Roughly the 12.5% free-cash-flow yield is returned to shareholders; little or no re-rating."
+          ]
+        },
+        "bull": {
+          "target_price": 203.0,
+          "return_pct": 39.65327462850852,
+          "probability": 0.25,
+          "assumptions": [
+            "Oil prices rally on supply discipline or a demand surprise.",
+            "Encino integration keeps exceeding its $150M synergy target and unit costs fall.",
+            "Multiple expands from 7.4x EV/EBITDA as free cash flow beats plan."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 7.0445789763346065,
+      "prob_positive": 0.7,
+      "prob_hits_20pct": 0.25,
+      "prob_loss": 0.3,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  },
+  "ULTA": {
+    "price": 549.23,
+    "score": 66.2,
+    "action": "AVOID",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 395.0,
+      "probability": 0.35,
+      "assumptions": [
+        "Comparable sales decelerate through the guided 2-3% second half and turn negative.",
+        "Operating margin keeps compressing - it has already fallen three straight years while sales grew.",
+        "Multiple derates from 20.4x earnings once buybacks can no longer mask falling net income."
+      ]
+    },
+    "base": {
+      "target_price": 615.0,
+      "probability": 0.45,
+      "assumptions": [
+        "Raised full-year guidance holds: 6.7-7.2% sales growth, 3.2-3.7% comps, EPS $28.70-29.00.",
+        "Margin compression flattens out rather than reversing.",
+        "Buyback continues shrinking the share count ~5% a year, carrying per-share growth."
+      ]
+    },
+    "bull": {
+      "target_price": 714.0,
+      "probability": 0.2,
+      "assumptions": [
+        "Promotional intensity eases and operating margin recovers back toward 14%.",
+        "Comps re-accelerate above the guided range on new brand launches and loyalty gains.",
+        "Multiple expands as the market re-rates it back to a growth retailer."
+      ]
+    },
+    "_computed": {
+      "current_price": 549.23,
+      "cases": {
+        "bear": {
+          "target_price": 395.0,
+          "return_pct": -28.08113176629099,
+          "probability": 0.35,
+          "assumptions": [
+            "Comparable sales decelerate through the guided 2-3% second half and turn negative.",
+            "Operating margin keeps compressing - it has already fallen three straight years while sales grew.",
+            "Multiple derates from 20.4x earnings once buybacks can no longer mask falling net income."
+          ]
+        },
+        "base": {
+          "target_price": 615.0,
+          "return_pct": 11.974946743622894,
+          "probability": 0.45,
+          "assumptions": [
+            "Raised full-year guidance holds: 6.7-7.2% sales growth, 3.2-3.7% comps, EPS $28.70-29.00.",
+            "Margin compression flattens out rather than reversing.",
+            "Buyback continues shrinking the share count ~5% a year, carrying per-share growth."
+          ]
+        },
+        "bull": {
+          "target_price": 714.0,
+          "return_pct": 30.000182073084126,
+          "probability": 0.2,
+          "assumptions": [
+            "Promotional intensity eases and operating margin recovers back toward 14%.",
+            "Comps re-accelerate above the guided range on new brand launches and loyalty gains.",
+            "Multiple expands as the market re-rates it back to a growth retailer."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 1.560366331045282,
+      "prob_positive": 0.65,
+      "prob_hits_20pct": 0.2,
+      "prob_loss": 0.35,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  }
+}

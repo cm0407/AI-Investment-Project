@@ -227,3 +227,37 @@ dilution limit excluded 35 — together doing almost all of the filtering. An ex
 that high from an unstated threshold should be surfaced to the user for confirmation, not
 buried in a config file.
 **Confidence:** high.
+
+### 2026-09-09 — Check the base year before believing any CAGR
+**Trigger:** The first full research session. Three of four candidates had multi-year growth
+rates that inverted or badly overstated the truth, all for the same reason: the six-year
+window began in 2020.
+**Rule:** Never quote a multi-year CAGR without computing the recent three-year rate beside
+it. A window that starts in a crisis year measures RECOVERY, not growth. The gap is not
+subtle: Booking 31.7% vs 16.3%; EOG 15.5% vs **−4.2%**; Ulta 15.0% vs 6.7%. EOG's headline
+implied a growing company while revenue had fallen three consecutive years. Adobe was the only
+clean series (13.1% vs 10.5%) and that fact alone materially raised my confidence in it.
+**Implementation:** `metrics.compute()` now emits `revenue_cagr_3y_pct` and sets
+`_growth_base_warning` when the long CAGR exceeds the recent one by 5+ points.
+**Confidence:** high. Mechanical and verified on four companies.
+
+### 2026-09-09 — Read the profit line, not the per-share line
+**Trigger:** Ulta Beauty guided to 11.9–13.1% EPS growth and had just raised guidance. The
+filings showed operating income falling three years running.
+**Rule:** When a company runs a large buyback, per-share figures and business performance
+decouple. Always compare net income growth against EPS growth. Ulta's net income fell 11%
+($1.29B → $1.15B) while diluted EPS held roughly flat ($26.03 → $25.64), the entire difference
+coming from a 50M → 45M share-count reduction. A screen or a headline reading only EPS would
+have called this a stable grower. Sales rising while operating profit falls is the signature
+of promotional pressure and should be treated as a red flag, not a growth story.
+**Confidence:** high.
+
+### 2026-09-09 — Honest process can end with no recommendation
+**Trigger:** Four candidates taken through all five phases; best score 77.8, none reaching the
+80 threshold for STRONG. Two landed in the speculative band and were rejected.
+**Rule:** A session that recommends nothing is a completed session, not a failed one. The
+pressure to produce a BUY — especially when the user has asked for 20% returns and is waiting
+— is exactly the pressure that inflates scores. The correct output was two WATCH and two
+AVOID, with the reasons recorded. Resist the urge to promote the best available idea to a
+recommendation simply because it is the best available.
+**Confidence:** high. This is a process commitment, not an empirical claim.
