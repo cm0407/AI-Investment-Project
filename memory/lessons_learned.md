@@ -177,3 +177,30 @@ self-test passed anyway, because nothing in it imported that script.
 broken command-line tool as healthy. Compile every module in the project as an explicit
 check. Cheap, and it catches the entire class of "the CLI is broken but the tests are green."
 **Confidence:** high.
+
+### 2026-09-09 — Suppress a metric family, not one member of it
+**Trigger:** The first full screen ranked Progressive (an insurer) #1 at 48.3/50. The
+scoring engine suppressed `fcf_margin_pct` for insurers as meaningless, but still scored
+them on `fcf_yield_pct` and `pfcf_ratio` — the same free-cash-flow number divided by market
+cap instead of revenue.
+**Rule:** When a metric is declared not-meaningful for an industry, suppress every metric
+derived from the same underlying quantity, not just the one that was noticed. Changing the
+denominator does not make an invalid numerator valid. Enumerate the family
+(FCF -> fcf_margin, fcf_yield, P/FCF, fcf_cagr, fcf_latest) and suppress it as a set.
+**Effect:** PGR fell from 48.3/50 to 37.4/40 with its free-cash-flow pillar correctly
+marked unscorable.
+**Confidence:** high.
+
+### 2026-09-09 — Ranking on raw points punishes companies for their industry
+**Trigger:** After the fix above, insurers could reach at most 40 points and banks 30,
+while operating companies could reach 50. Sorting on raw points would bury every financial
+company regardless of quality — an artefact of the scoring design, not a judgement about
+the business.
+**Rule:** When the maximum obtainable score varies between candidates, rank on the share of
+AVAILABLE points earned and always display the denominator alongside. Never sort on a raw
+total whose ceiling differs across the list.
+**Counter-caution:** a percentage flatters companies scored on very few components. Always
+show points/available and the count of unscorable pillars so thin coverage stays visible,
+and keep repeating that cross-sector comparison is weak evidence because the thresholds
+are sector-blind.
+**Confidence:** high.

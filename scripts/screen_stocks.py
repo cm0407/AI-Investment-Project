@@ -38,7 +38,11 @@ from invest import sec_edgar as sec
 from invest.http_cache import write_dataset, Provenance, utcnow_iso, FetchError
 
 RANK_FIELDS = [
-    ("composite_score", "Composite of the 4 data-scorable pillars, 0-50 points"),
+    ("composite_pct", "Share of AVAILABLE points earned - the default, and the only "
+                      "ranking that does not penalise a company for having pillars its "
+                      "industry makes unscorable"),
+    ("composite_score", "Raw points out of 50. Biased against banks, insurers and REITs, "
+                        "which can only reach 30-40."),
     ("revenue_cagr_pct", "Multi-year revenue growth"),
     ("fcf_yield_pct", "Free cash flow / market cap"),
     ("roic_pct", "Return on invested capital"),
@@ -103,6 +107,10 @@ def screen_one(ticker: str, years: int, refresh: bool, verbose: bool) -> dict:
         "share_count_change_pct": m.get("share_count_change_pct"),
         "composite_score": sc.get("data_points_earned"),
         "composite_max_available": sc.get("data_points_available"),
+        "composite_pct": (
+            round(sc["data_points_earned"] / sc["data_points_available"] * 100, 1)
+            if sc.get("data_points_available") else None),
+        "pillars_unscorable": len(sc.get("unscorable_data_pillars") or []),
         "growth_points": sc["data_pillars"]["growth"].get("points"),
         "valuation_points": sc["data_pillars"]["valuation"].get("points"),
         "strength_points": sc["data_pillars"]["financial_strength"].get("points"),
@@ -174,7 +182,7 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=None, help="only screen the first N names")
     ap.add_argument("--years", type=int, default=6, help="years of financial history")
     ap.add_argument("--top", type=int, default=25, help="how many rows to print")
-    ap.add_argument("--rank-by", default="composite_score",
+    ap.add_argument("--rank-by", default="composite_pct",
                     choices=[f for f, _ in RANK_FIELDS])
     ap.add_argument("--sector", default=None, help="substring match on SIC industry")
     ap.add_argument("--min-revenue-growth", type=float, default=None)
@@ -289,7 +297,7 @@ def main() -> int:
     print("TOP " + str(min(args.top, len(ranked))) + " BY " + args.rank_by.upper()
           + "   (of " + str(len(rows)) + " that passed filters)")
     print("=" * 118)
-    hdr = ("  #  TICKER  " + "COMPANY".ljust(26) + "SCORE  " + "PRICE".rjust(9)
+    hdr = ("  #  TICKER  " + "COMPANY".ljust(26) + " PCT  PTS/AVL " + "PRICE".rjust(9)
            + "  " + "REV CAGR".rjust(9) + "  " + "OP MGN".rjust(7) + "  "
            + "ROIC".rjust(7) + "  " + "P/E".rjust(7) + "  " + "FCF YLD".rjust(8))
     print(hdr)
@@ -303,7 +311,9 @@ def main() -> int:
     for i, r in enumerate(ranked[:args.top], 1):
         print("  " + str(i).rjust(2) + "  " + r["ticker"].ljust(7)
               + str(r.get("company_name") or "")[:25].ljust(26)
-              + fmt(r.get("composite_score"), "5.1f", 5) + "  "
+              + (format(r.get("composite_pct"), "5.1f") if r.get("composite_pct") is not None else "  n/a")
+              + "% " + format(r.get("composite_score") or 0, "4.1f")
+              + "/" + format(r.get("composite_max_available") or 0, "2.0f") + " "
               + fmt(r.get("price"), ",.2f", 9) + "  "
               + fmt(r.get("revenue_cagr_pct"), "8.1f", 9) + "  "
               + fmt(r.get("operating_margin_pct"), "6.1f", 7) + "  "
@@ -312,6 +322,10 @@ def main() -> int:
               + fmt(r.get("fcf_yield_pct"), "7.1f", 8))
     print("-" * 118)
     print("  n/a = " + config.MISSING + " (never means zero)")
+    print("  PCT = share of AVAILABLE points. PTS/AVL = raw points / points obtainable.")
+    print("  An AVL below 50 means this company's industry makes some pillars unscorable")
+    print("  (banks, insurers, REITs). Comparing PCT across industries is WEAK evidence -")
+    print("  the thresholds are sector-blind. See docs/ASSUMPTIONS.md.")
     if unranked:
         print(str(len(unranked)) + " passed filters but could not be ranked on "
               + args.rank_by + " (value unavailable): "
