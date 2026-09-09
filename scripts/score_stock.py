@@ -91,6 +91,13 @@ def main() -> int:
         print("  Price $" + format(price, ",.2f") + " (" + quote["price_date"] + ")"
               + "   52w $" + format(quote["52w_low"], ",.2f")
               + " - $" + format(quote["52w_high"], ",.2f"))
+    reorg = fund.get("reorganization")
+    if reorg:
+        print()
+        print("  ** CORPORATE REORGANIZATION DETECTED **")
+        print("     " + reorg["explanation"])
+        print("     " + reorg["caution"])
+
     sect = m.get("_sector", {})
     if sect.get("special"):
         print("\n  ** " + sect["note"] + " **")

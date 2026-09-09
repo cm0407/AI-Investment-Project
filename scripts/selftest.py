@@ -68,6 +68,29 @@ def main() -> int:
     from invest import sec_edgar as sec
     from invest.http_cache import FetchError
 
+    # ---------------- 1b. Every module parses ----------------
+    # score_stock.py once shipped a syntax error that the self-test missed entirely,
+    # because nothing here imported it. A CLI that cannot even be parsed is broken no
+    # matter how well the library underneath it works.
+    import ast as _ast
+    from pathlib import Path as _Path
+    print()
+    print("[1b] Every module compiles")
+    _root = _Path(__file__).resolve().parent.parent
+    _broken = []
+    _files = sorted(_root.glob("scripts/*.py")) + sorted(_root.glob("invest/*.py"))
+    for _f in _files:
+        try:
+            _ast.parse(_f.read_text(encoding="utf-8"))
+        except SyntaxError as _e:
+            _broken.append(_f.name + " line " + str(_e.lineno) + ": " + str(_e.msg))
+    if _broken:
+        for _b in _broken:
+            check("syntax " + _b.split()[0], FAIL, _b)
+    else:
+        check("all " + str(len(_files)) + " modules parse", PASS,
+              "every script and library file compiles")
+
     # ---------------- 2. Structure ----------------
     print("\n[2] Project structure and memory files")
     config.ensure_dirs()
@@ -247,6 +270,25 @@ def main() -> int:
         check("judgment evidence pack provided",
               PASS if len(s["judgment_evidence"]) == 5 else FAIL,
               str(len(s["judgment_evidence"])) + " pillars documented for the analyst")
+
+    # A ticker pointing at a new holding company must recover the predecessor's history
+    # rather than silently reporting a company with no financials.
+    try:
+        xom = sec.fundamentals("XOM", years=6, verbose=False)
+        rz = xom.get("reorganization")
+        periods = len(xom.get("annual", {}).get("revenue") or [])
+        if rz:
+            check("reorganized ticker recovers predecessor history", PASS,
+                  "XOM -> CIK " + rz["history_cik"] + " (" + str(rz["history_entity_name"])
+                  + "), " + str(periods) + " annual periods recovered")
+        elif periods >= 2:
+            check("reorganized ticker recovers predecessor history", PASS,
+                  "XOM resolves directly with " + str(periods) + " periods (no reorg)")
+        else:
+            check("reorganized ticker recovers predecessor history", FAIL,
+                  "XOM has " + str(periods) + " annual periods and no predecessor found")
+    except Exception as exc:
+        check("reorganized ticker recovers predecessor history", FAIL, str(exc)[:110])
 
     check("missing values render as text, not 0",
           PASS if metrics.format_metric(None) == config.MISSING else FAIL,

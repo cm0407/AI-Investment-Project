@@ -608,6 +608,38 @@ def fundamentals(ticker: str, years: int = 6, refresh: bool = False,
     facts, prov = get_company_facts(cikp, refresh=refresh, verbose=verbose)
     profile = company_profile(cikp, refresh=refresh, verbose=verbose)
 
+    # A ticker can point at a freshly-registered holding company that carries none of the
+    # operating history (see the ExxonMobil note above). When that happens, look for the
+    # predecessor entity and analyse ITS filings instead - loudly, never silently.
+    reorg: Optional[dict] = None
+    if len(annual_series(facts, "revenue", years=0)) < 2:
+        pred = find_predecessor(profile.get("name") or ident["name"], profile.get("sic"),
+                                cikp, refresh=refresh, verbose=verbose)
+        if pred:
+            reorg = {
+                "detected": True,
+                "ticker_cik": cikp,
+                "ticker_entity_name": profile.get("name"),
+                "history_cik": pred["cik_padded"],
+                "history_entity_name": pred["name"],
+                "annual_periods_recovered": pred["annual_periods"],
+                "explanation": pred["why"],
+                "caution": (
+                    "Financials below come from the PREDECESSOR entity, not from the CIK "
+                    "the ticker resolves to. Verify the reorganization was a pure holding-"
+                    "company restructuring before comparing these figures across the "
+                    "transition - if assets were spun off or acquired, the history is not "
+                    "continuous with the entity you would be buying today."
+                ),
+            }
+            if verbose:
+                print("    [sec] " + ticker.upper() + ": ticker maps to a new entity with "
+                      "no history; using predecessor CIK " + pred["cik_padded"]
+                      + " (" + str(pred["name"]) + ")")
+            cikp = pred["cik_padded"]
+            facts, prov = get_company_facts(cikp, refresh=refresh, verbose=verbose)
+            profile = company_profile(cikp, refresh=refresh, verbose=verbose)
+
     series: dict[str, list[dict]] = {}
     unavailable: list[str] = []
 
@@ -658,6 +690,7 @@ def fundamentals(ticker: str, years: int = 6, refresh: bool = False,
         "annual": series,
         "shares_outstanding_latest": shares.as_dict() if shares else None,
         "latest_fiscal_period_end": anchor,
+        "reorganization": reorg,
         "concepts_stale": stale,
         "concepts_stale_note": (
             "These tags exist in the filings but have not been updated in over ~13 months "
@@ -679,3 +712,118 @@ def fundamentals(ticker: str, years: int = 6, refresh: bool = False,
                              + cikp + "&type=10-K&dateb=&owner=include&count=40"),
         },
     }
+
+
+# --------------------------------------------------------------------------------------
+# Corporate reorganizations: finding a company's history under a predecessor CIK
+# --------------------------------------------------------------------------------------
+# When a company reorganizes into a holding-company structure, the ticker is reassigned to
+# a BRAND NEW CIK with no filing history, while decades of financials stay under the
+# predecessor entity - which usually loses its ticker and therefore vanishes from
+# company_tickers.json entirely.
+#
+# ExxonMobil is the live example: XOM maps to CIK 0002115436 ("ExxonMobil Holdings Corp",
+# registered 2026, no annual periods), while $332B of FY2025 revenue sits under CIK
+# 0000034088 ("EXXON MOBIL CORP"). A naive lookup silently drops Exxon from every screen,
+# or worse, analyses the empty shell.
+#
+# The SEC publishes a complete NAME:CIK index covering entities with no ticker, which is
+# what makes recovery possible.
+
+CIK_LOOKUP_URL = config.SEC_WWW + "/Archives/edgar/cik-lookup-data.txt"
+
+_CIK_LOOKUP: Optional[list[tuple[str, str]]] = None
+
+_CORP_SUFFIXES = [
+    "HOLDINGS", "HOLDING", "HLDGS", "CORPORATION", "CORP", "INCORPORATED", "INC",
+    "COMPANY", "CO", "LTD", "LIMITED", "LLC", "LP", "PLC", "GROUP", "NEW", "THE",
+]
+
+
+def _normalize_company_name(name: str) -> str:
+    """Strip punctuation and corporate suffixes so 'ExxonMobil Holdings Corp' ~ 'EXXON MOBIL CORP'."""
+    n = re.sub(r"[^A-Za-z0-9 ]", " ", (name or "").upper())
+    words = [w for w in n.split() if w and w not in _CORP_SUFFIXES]
+    return "".join(words)
+
+
+def load_cik_lookup(refresh: bool = False, verbose: bool = True) -> list[tuple[str, str]]:
+    """The SEC's complete NAME:CIK index, including entities that have no ticker.
+
+    ~38MB, cached for a week. Only downloaded when a predecessor search is actually needed.
+    """
+    global _CIK_LOOKUP
+    if _CIK_LOOKUP is not None and not refresh:
+        return _CIK_LOOKUP
+    if verbose:
+        print("    [sec] downloading the full SEC CIK index (~38MB, cached 7 days)...")
+    text, _prov = fetch(
+        CIK_LOOKUP_URL, cache_dir=config.SEC_CACHE,
+        ttl_hours=config.CACHE_TTL_HOURS["sec_tickers"],
+        headers=config.SEC_HEADERS, rate_key="sec",
+        rate=config.SEC_MAX_REQUESTS_PER_SECOND, timeout=120,
+        max_retries=config.SEC_MAX_RETRIES, refresh=refresh, verbose=verbose,
+        source_name="SEC CIK lookup index", basis="actual",
+    )
+    rows: list[tuple[str, str]] = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line.endswith(":"):
+            continue
+        parts = line.rstrip(":").rsplit(":", 1)
+        if len(parts) == 2 and parts[1].isdigit():
+            rows.append((parts[0], parts[1].zfill(10)))
+    _CIK_LOOKUP = rows
+    return rows
+
+
+def find_predecessor(company_name: str, sic: Optional[str], exclude_cik: str,
+                     min_annual_periods: int = 2, refresh: bool = False,
+                     verbose: bool = True) -> Optional[dict]:
+    """Locate an older entity that holds this company's financial history.
+
+    Match requires BOTH a normalized-name match AND the same SIC industry code, then the
+    candidate must actually carry annual revenue history. Returns None if nothing
+    qualifies - a wrong match would be far worse than no match.
+    """
+    target = _normalize_company_name(company_name)
+    if not target:
+        return None
+
+    candidates: list[tuple[str, str]] = []
+    for name, cik in load_cik_lookup(refresh=refresh, verbose=verbose):
+        if cik == exclude_cik:
+            continue
+        norm = _normalize_company_name(name)
+        if norm == target or (len(target) >= 8 and (norm.startswith(target)
+                                                    or target.startswith(norm))):
+            candidates.append((name, cik))
+
+    seen: set[str] = set()
+    for name, cik in candidates:
+        if cik in seen:
+            continue
+        seen.add(cik)
+        try:
+            profile = company_profile(cik, refresh=refresh, verbose=verbose)
+            if sic and str(profile.get("sic")) != str(sic):
+                continue
+            facts, _ = get_company_facts(cik, refresh=refresh, verbose=verbose)
+            rev = annual_series(facts, "revenue", years=0)
+            if len(rev) >= min_annual_periods:
+                return {
+                    "cik_padded": cik,
+                    "name": profile.get("name"),
+                    "sic": profile.get("sic"),
+                    "annual_periods": len(rev),
+                    "latest_period": rev[-1].period_end,
+                    "why": ("Ticker resolves to '" + company_name + "' (CIK " + exclude_cik
+                            + "), which has fewer than " + str(min_annual_periods)
+                            + " annual periods. Financial history was located under the "
+                            "predecessor entity '" + str(profile.get("name")) + "' (CIK "
+                            + cik + "), matched on normalized name and SIC "
+                            + str(profile.get("sic")) + "."),
+                }
+        except Exception:
+            continue
+    return None

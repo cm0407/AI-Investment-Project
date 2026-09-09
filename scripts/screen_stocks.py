@@ -33,7 +33,7 @@ import time
 from datetime import datetime
 
 import _bootstrap  # noqa: F401
-from invest import config, metrics, prices, scoring, universe
+from invest import config, metrics, preferences, prices, scoring, universe
 from invest import sec_edgar as sec
 from invest.http_cache import write_dataset, Provenance, utcnow_iso, FetchError
 
@@ -119,7 +119,13 @@ def screen_one(ticker: str, years: int, refresh: bool, verbose: bool) -> dict:
             (m.get("_fallback_tags_used") or {}).items()),
         "composites_suppressed": "; ".join(m.get("_composites_suppressed", [])),
         "sector_special": (m.get("_sector") or {}).get("kind") or "",
+        # needed by the preference rules (IPO recency, domicile)
+        "annual_periods_available": len(fund.get("annual", {}).get("revenue") or []),
+        "state_of_incorporation": profile.get("state_of_incorporation"),
+        "reorganization_detected": bool(fund.get("reorganization")),
+        "history_from_cik": (fund.get("reorganization") or {}).get("history_cik", ""),
     })
+    row["_fund"] = fund
     return row
 
 
@@ -149,6 +155,15 @@ def passes_filters(row: dict, args) -> tuple[bool, str]:
         hint = (row.get("sector_hint") or "").lower()
         if args.sector.lower() not in industry and args.sector.lower() not in hint:
             return False, "excluded: sector filter"
+
+    # The user's own rules, read from notes/my_investing_preferences.md. A rule that
+    # cannot be evaluated because data is missing EXCLUDES the company rather than
+    # letting it through - a filter that fails open is worse than no filter.
+    prefs = getattr(args, "_prefs", None)
+    if prefs is not None:
+        ok, why = preferences.check(row, prefs, fund=row.get("_fund"))
+        if not ok:
+            return False, "excluded by your preferences: " + "; ".join(why)
     return True, "passed"
 
 
@@ -171,11 +186,38 @@ def main() -> int:
     ap.add_argument("--min-operating-margin", type=float, default=None)
     ap.add_argument("--refresh", action="store_true")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--ignore-preferences", action="store_true",
+                    help="do NOT apply your avoid-list and limits (diagnostic use only)")
     args = ap.parse_args()
 
     config.ensure_dirs()
     verbose = not args.quiet
     started = time.time()
+
+    args._prefs = None
+    if not args.ignore_preferences:
+        try:
+            args._prefs = preferences.load()
+        except FileNotFoundError as exc:
+            print("NOTE: " + str(exc).splitlines()[0])
+            print("Screening without your personal rules applied.")
+            print()
+    if args._prefs is not None:
+        pr = args._prefs
+        print("Applying YOUR rules from notes/my_investing_preferences.md:")
+        for line in pr.summary():
+            print("  " + line)
+        if pr.unenforceable_rules or pr.partial_rules:
+            print()
+            print("  Rules this screen CANNOT fully enforce - check these by hand:")
+            for u in pr.unenforceable_rules:
+                print("    [not enforced] " + u.split(" - ")[0])
+            for u in pr.partial_rules:
+                print("    [weak filter ] " + u.split(" - ")[0])
+        for w in pr.warnings:
+            print()
+            print("  ! " + w)
+        print()
 
     if args.tickers:
         entries = [{"ticker": t.upper(), "sector_hint": ""} for t in args.tickers]
@@ -278,6 +320,8 @@ def main() -> int:
     # ---- Persist ----------------------------------------------------------------------
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     csv_path = config.SCREENS_DIR / ("screen_" + stamp + ".csv")
+    for r in rows + excluded + errors:
+        r.pop("_fund", None)
     fields = sorted({k for r in rows for k in r})
     with csv_path.open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)

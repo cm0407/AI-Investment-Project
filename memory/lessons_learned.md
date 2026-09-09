@@ -150,3 +150,30 @@ be used to justify buying beaten-down stocks.
 **Evidence:** research/notes/2026-09-05_return_chasing.md
 **Confidence:** medium-high for the "winners do not persist" half; the mechanism (a higher
 price is a higher bar) is sound independent of this sample. Low for anything about losers.
+
+### 2026-09-09 — A ticker can point at a company with no history
+**Trigger:** XOM was excluded from a screen for having "0 annual filing periods." Exxon
+plainly files annual reports.
+**Rule:** After a holding-company reorganization the SEC reassigns the ticker to a NEW CIK
+with no filing history, while decades of financials remain under the predecessor entity —
+which typically loses its ticker and so disappears from `company_tickers.json` entirely.
+Whenever a large, actively-filing company shows fewer than two annual periods, suspect a
+reorganization before concluding it is a recent IPO. The recovery route is the SEC's full
+`cik-lookup-data.txt` index (which includes ticker-less entities), matching on normalized
+name plus identical SIC code, then requiring the candidate to actually carry annual
+history. Never match on name alone.
+**Evidence:** XOM -> CIK 0002115436 "ExxonMobil Holdings Corp" (registered 2026, no annual
+periods) while CIK 0000034088 "EXXON MOBIL CORP" holds 17 annual periods including FY2025
+revenue of $332.2B.
+**Caution:** recovered history is only comparable if the reorganization was a pure holding-
+company restructure. If assets were spun off or acquired in the transition, the predecessor's
+numbers do not describe the entity you would be buying.
+**Confidence:** high — mechanical, verified end to end.
+
+### 2026-09-09 — Test that the program parses, not just that the library works
+**Trigger:** `scripts/score_stock.py` shipped with a syntax error and the 51-check
+self-test passed anyway, because nothing in it imported that script.
+**Rule:** A self-test that only exercises library internals will certify a completely
+broken command-line tool as healthy. Compile every module in the project as an explicit
+check. Cheap, and it catches the entire class of "the CLI is broken but the tests are green."
+**Confidence:** high.
