@@ -171,7 +171,26 @@ python scripts/make_digest.py --tickers AAPL JNJ --macro
 Creates `reports/daily/digest_YYYY-MM-DD.md` with all the verifiable facts filled in and
 every judgment left as a `TODO` for a human.
 
-### 8. Refresh everything
+### 8. Email the digest to yourself
+
+```bash
+python scripts/send_digest.py --setup      # one-time: how to get a Gmail App Password
+python scripts/send_digest.py --dry-run    # preview WITHOUT sending anything
+python scripts/send_digest.py              # send the most recent digest
+```
+
+`--dry-run` renders the full email and writes an HTML preview to `logs/` without contacting
+a mail server, so you can check how it looks before any credentials are involved.
+
+**Gmail will not accept your normal password.** You need an *App Password* - a 16-digit code
+Google issues for one program, which you can revoke at any time without changing your real
+password. It requires 2-Step Verification to be on first. `--setup` walks through it.
+
+The password goes in `.env`, which is gitignored. **Never put it in a `.py` file** - this
+repository is public, and a secret that reaches git history stays there even after the file
+is deleted.
+
+### 9. Refresh everything
 
 ```bash
 python scripts/refresh_all.py --force

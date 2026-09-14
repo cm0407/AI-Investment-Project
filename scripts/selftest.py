@@ -290,6 +290,22 @@ def main() -> int:
     except Exception as exc:
         check("reorganized ticker recovers predecessor history", FAIL, str(exc)[:110])
 
+    # Email rendering must work offline, and a password must never reach the console.
+    try:
+        from invest import mailer
+        sample_md = "\n".join(["# Test", "", "| a | b |", "|---|---|", "| 1 | 2 |", ""])
+        html = mailer.markdown_to_html(sample_md, "selftest")
+        styled = html.count("style=")
+        check("digest renders to email HTML", PASS if styled >= 4 else FAIL,
+              str(styled) + " inline styles applied (email clients strip <style> blocks)")
+        s = mailer.MailSettings(host="h", port=587, user="u@x.com", password="SECRET123",
+                                sender="u@x.com", recipients=["u@x.com"], use_ssl=False)
+        leaked = "SECRET123" in str(s.redacted())
+        check("password never appears in printable settings", FAIL if leaked else PASS,
+              "redacted() shows: " + str(s.redacted()["password"]))
+    except Exception as exc:
+        check("digest email rendering", FAIL, str(exc)[:110])
+
     check("missing values render as text, not 0",
           PASS if metrics.format_metric(None) == config.MISSING else FAIL,
           metrics.format_metric(None))
