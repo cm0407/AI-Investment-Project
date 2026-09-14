@@ -98,6 +98,7 @@ def screen_one(ticker: str, years: int, refresh: bool, verbose: bool) -> dict:
         "current_ratio": m.get("current_ratio"),
         "net_debt_to_ebitda": m.get("net_debt_to_ebitda"),
         "ocf_to_net_income": m.get("ocf_to_net_income"),
+        "liabilities_to_assets": m.get("liabilities_to_assets"),
         "pe_ratio": m.get("pe_ratio"),
         "ps_ratio": m.get("ps_ratio"),
         "pfcf_ratio": m.get("pfcf_ratio"),

@@ -202,8 +202,16 @@ MISSING = "DATA UNAVAILABLE OR UNVERIFIED"
 
 
 def band_for_score(score: float) -> str:
-    """Return the CLAUDE.md verdict band for a 0-100 score."""
-    for lo, hi, label in SCORE_BANDS:
-        if lo <= score <= hi:
+    """Return the CLAUDE.md verdict band for a 0-100 score.
+
+    Matches on the LOWER bound only. The published bands are written as whole numbers
+    (90-100, 80-89, 70-79 ...), so a fractional score such as 79.4 sits in the gap between
+    79 and 80 and matched nothing - it was reported as "OUT OF RANGE" for a perfectly
+    valid score. Scores are continuous; the bands must be too.
+    """
+    if score > 100 or score < 0:
+        return "OUT OF RANGE"
+    for lo, _hi, label in SCORE_BANDS:
+        if score >= lo:
             return label
-    return "OUT OF RANGE"
+    return "REJECT"

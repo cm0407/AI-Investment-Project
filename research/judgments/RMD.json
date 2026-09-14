@@ -1,0 +1,22 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Clean, monotonic growth in all three lines for five straight years: revenue $3.58B to $5.65B, operating income $1.00B to $1.89B, net income $0.78B to $1.52B. Operating margin 33.4%, ROIC 25.9%, and a razor-and-blade model in which the installed device base drives recurring mask and consumable resupply. High quality by any measure. Deducted for the mix: a meaningful share of profit depends on hardware sales that a returning competitor can contest directly."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Real: an installed base generating annuity-like resupply revenue, clinical relationships, and software (AirView, MatrixCare) that raises switching costs for providers. But the moat has a specific, dated hole in it - Philips is preparing to re-enter the U.S. sleep apnea device market after its recall-driven absence, and that absence is precisely what allowed ResMed's share and margins to expand. Regaining a competitor you have not had to face is not a hypothetical risk."
+  },
+  "catalysts": {
+    "points": 4,
+    "justification": "The lowest catalyst score here because the nearest dated catalyst is NEGATIVE. ResMed has suspended sales of its Astral ventilator line following a field safety action - a stated $75M revenue headwind and roughly $0.15 per-share earnings drag for fiscal 2027. Against that, management argues GLP-1 drugs are a demand-generation opportunity funnelling more diagnosed patients into the ResMed ecosystem. That is plausible but it is a thesis, not a dated event, and persistent market debate over GLP-1s is explicitly keeping the multiple constrained."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "Base +15% against a bear of -28%. The bear case is structural rather than cyclical, which is what caps this score: Eli Lilly's GLP-1 has independent approval to treat obstructive sleep apnea WITHOUT a CPAP machine, and 70-90% of sufferers have the condition because of excess weight. If weight-loss drugs treat the underlying cause, the device addresses a shrinking pool. That may take a decade to matter - or it may compress the multiple long before it shows up in revenue, which is what is happening now."
+  },
+  "management": {
+    "points": 4,
+    "justification": "Consistent operational execution across five years of steady margin expansion, and share count is flat to slightly down (-0.3%), so per-share growth is real rather than engineered. Suspending Astral sales after a safety action is the correct decision even though it is costly. Withheld one point for a communication posture - 'no new competitive threat that we are worried about' - that reads as dismissive given Philips' re-entry and an approved pharmaceutical substitute."
+  }
+}

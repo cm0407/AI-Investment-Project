@@ -112,6 +112,40 @@ def classify_sector(sic: Optional[str | int]) -> dict:
     return {"special": False, "kind": None, "unreliable_metrics": []}
 
 
+def _share_change_ex_splits(series: list[dict] | None) -> Optional[float]:
+    """Change in share count with stock splits removed.
+
+    Comparing the first and last share count treats a split as massive dilution. Netflix
+    went from 451M to 4,495M diluted shares in one year - a 10-for-1 split, not an issuance
+    - and a naive comparison reports +856% "dilution" for a company that actually BUYS BACK
+    stock. KLA (~10:1) and US Lime (5:1) fail the same way. Screening those out as dilutive
+    excludes some of the best-run companies in the market for an accounting event that
+    transferred nothing.
+
+    Method: walk consecutive years and compound only the ratios that look like ordinary
+    share-count movement. Any year-on-year ratio outside 0.67x-1.5x is treated as a split or
+    reverse split and skipped, because no company issues 50% more shares or retires a third
+    of them in a single year through normal activity.
+    """
+    if not series or len(series) < 2:
+        return None
+    ratios = []
+    for prev, cur in zip(series, series[1:]):
+        a, b = _v([prev]), _v([cur])
+        if not a or not b or a <= 0:
+            continue
+        r = b / a
+        if 0.67 <= r <= 1.5:          # ordinary movement
+            ratios.append(r)
+        # else: split / reverse split / restructuring - excluded, not counted as dilution
+    if not ratios:
+        return None
+    total = 1.0
+    for r in ratios:
+        total *= r
+    return (total - 1.0) * 100.0
+
+
 def compute(fund: dict, price: Optional[float] = None) -> dict:
     """Turn a sec_edgar.fundamentals() record into the metric set the system scores on.
 
@@ -299,10 +333,7 @@ def compute(fund: dict, price: Optional[float] = None) -> dict:
         "buybacks_latest": _v(buybacks),
         "dividends_paid_latest": _v(divs),
         "shares_diluted_wa_latest": _v(dilshares),
-        "share_count_change_pct": (
-            ((_v(dilshares) / _v(dilshares, 0) - 1.0) * 100.0)
-            if (_v(dilshares) and _v(dilshares, 0)) else None
-        ),
+        "share_count_change_pct": _share_change_ex_splits(dilshares),
     }
 
     # EBITDA = operating income + depreciation & amortization (a proxy, not a GAAP figure)

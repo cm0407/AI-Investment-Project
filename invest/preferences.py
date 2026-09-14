@@ -291,12 +291,25 @@ def check(row: dict, prefs: Preferences, fund: Optional[dict] = None) -> tuple[b
             pass  # leverage is the business model; judged separately, not here
         else:
             de = row.get("debt_to_equity")
-            if de is None:
-                reasons.append("debt/equity is " + config.MISSING
-                               + " - cannot check leverage")
-            elif de > 2.0:
-                reasons.append("debt/equity of " + format(de, ".2f")
-                               + "x exceeds the 2.0x leverage limit")
+            la = row.get("liabilities_to_assets")
+            if de is not None:
+                if de > 2.0:
+                    reasons.append("debt/equity of " + format(de, ".2f")
+                                   + "x exceeds the 2.0x leverage limit")
+            elif la is not None:
+                # No debt tags at all usually means the company carries no debt - the
+                # SAFEST case, not an unknown one. Manhattan Associates files no debt tag
+                # and has liabilities at 0.00x assets; excluding it for "cannot check
+                # leverage" threw out one of the least leveraged companies in the market.
+                # Total liabilities over total assets answers the user's actual question
+                # ("avoid highly leveraged companies") without inventing a debt figure.
+                if la > 0.75:
+                    reasons.append("liabilities are " + format(la * 100, ".0f")
+                                   + "% of assets (debt/equity unavailable; this is the "
+                                     "fallback leverage test, limit 75%)")
+            else:
+                reasons.append("neither debt/equity nor liabilities/assets is available - "
+                               "cannot assess leverage at all")
 
     # ---- recent IPOs -------------------------------------------------------------------
     if "Recent IPOs (< 2 years of public filings)" in prefs.avoid:

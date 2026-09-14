@@ -8,6 +8,37 @@ the Session Log. Never delete or rewrite older entries.
 
 ## Current status
 
+- **System status:** Operational. 52 self-tests passing. Second full research session
+  completed 2026-09-14 (analysis dated 2026-09-11).
+- **Investment recommendations issued to date:** 0 BUY. 7 WATCH (BKNG, ADBE, INTU, APH, PTC,
+  EXEL, RMD), 2 AVOID (EOG, ULTA).
+- **Open predictions in `predictions.csv`:** 9
+- **Stocks rejected (`rejected_stocks.md`):** 2 (EOG, ULTA)
+- **Theses written (`research/theses/`):** 9
+- **User preferences:** COMPLETE as of 2026-09-05. Recommendations gate open.
+- **Universe:** NOW MARKET-WIDE. `scripts/broad_screen.py` scans every SEC filer via the bulk
+  XBRL frames API (4,354 revenue filers in CY2025) rather than the 184-name curated list. The
+  selection-bias limitation recorded on 2026-09-03 is resolved for stage-1 screening.
+
+### Unresolved items carried forward
+1. **No diversified core.** Sleeve is 30-50% of investable money with no index-fund base.
+   Raised in four consecutive sessions; the user has not responded. Printed as a warning on
+   every screen run and in every digest.
+2. **Stop-loss contradiction.** -25% stop fires before the -30% drawdown the user said they
+   would hold through. One answer must change.
+3. **Analyst-chosen thresholds still unconfirmed:** 2.0x debt/equity and 10% dilution. Both
+   were materially repaired this session (see below) but the levels themselves remain my
+   choice, not the user's instruction.
+4. **Financial-sector analysis remains weak** - no net interest margin, ROTCE or FFO. Banks,
+   insurers and REITs land in the "thinly measured" bucket by design. This session excluded
+   Kinsale, Palomar, Blackstone, Tradeweb, Hamilton Lane and others on those grounds, so
+   genuinely good financial companies are going unexamined rather than being judged badly.
+5. **Correlation risk in my own conclusions.** INTU, ADBE and arguably PTC are the same
+   underlying bet - that the market over-punishes incumbent software over AI fear. If that
+   call is wrong it is wrong across several positions at once. Flagged in the digest.
+
+## Superseded status (2026-09-09 session)
+
 - **System status:** Operational. 52 self-tests passing. First full research session completed
   2026-09-09.
 - **Investment recommendations issued to date:** 0 BUY. 2 WATCH (BKNG, ADBE), 2 AVOID (EOG, ULTA).
@@ -67,6 +98,48 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-09-14 - Second full research session (analysis dated 2026-09-11)
+
+**Universe upgraded from curated to market-wide.** Built `scripts/broad_screen.py` on the SEC
+bulk XBRL frames API - one request returns a concept for every filer, so a genuinely
+unbiased first pass costs ~12 requests instead of ~10,000 downloads. Scanned 4,354 companies
+reporting CY2025 revenue -> 2,222 above the $300M floor -> 239 passing quality and growth ->
+39 through the user's preference rules -> 16 into deep research -> 5 presented.
+
+**Growth window deliberately set to CY2022-CY2025**, applying the 2026-09-09 lesson: six-year
+windows start in 2020 and measure pandemic recovery rather than growth.
+
+**Four defects found and fixed, all by inspecting output rather than trusting it:**
+1. *Revenue tag priority was wrong for lessors and financials.* Preferring
+   `RevenueFromContractWithCustomerExcludingAssessedTax` over `Revenues` understated Air
+   Lease's revenue ninefold ($0.33B vs $3.02B), producing a 329% net margin and a 452% FCF
+   margin that still ranked 20th. Now takes the larger value - a component cannot exceed the
+   total - plus sanity guards rejecting margins above 100%.
+2. *Stock splits were being read as massive dilution.* The filter excluded Netflix for
+   "share count grew 856.4%", KLA 749.0%, ServiceNow 416.9%, US Lime 409.5% - all four are net
+   BUYERS of their own stock. Netflix went 451M -> 4,495M diluted shares on a 10-for-1 split.
+   `_share_change_ex_splits()` now compounds only year-on-year ratios inside 0.67x-1.5x.
+   Netflix reads -4.0% and KLA -12.6% after the fix; genuine dilution survives untouched.
+3. *Debt-free companies were being excluded for "cannot check leverage".* 23 of 39 candidates
+   failed this way, including Manhattan Associates, whose liabilities are 0.00x assets. The
+   leverage test now falls back to liabilities/assets when no debt tag exists, rather than
+   fabricating a zero or excluding the safest companies.
+4. *Score bands had a gap.* A score of 79.4 matched neither the 70-79 nor the 80-89 band and
+   reported "OUT OF RANGE". `band_for_score()` now matches on the lower bound only.
+
+**Outcome: no BUY.** INTU 79.4, APH 77.3, PTC 76.9, EXEL 76.7, RMD 74.6 - all WATCH. Intuit
+landed 0.6 points below the STRONG threshold; I scored its catalysts 6/10, identical to
+Adobe's, because in both cases the re-rating catalyst has no date. Moving one judgment point
+would have produced a BUY and would have been inflation dressed as judgment.
+
+**Prices moved between analysis (2026-09-10) and publication (2026-09-14):** INTU +8.4%,
+PTC +6.2%. The logged predictions keep their analysis-date entry prices - that is the
+permanent record - but the digest shows remaining upside at current prices, which is
+materially lower for the top idea.
+
+Deliverables: `reports/daily/digest_2026-09-14.md`, 5 theses, 5 judgment files,
+`research/notes/2026-09-11_macro_backdrop.md`, 2 lessons.
 
 ### 2026-09-09 - First full research session (Phases 1-5)
 - Built `invest/preferences.py`: the user's avoid-list and limits are now ENFORCED by the

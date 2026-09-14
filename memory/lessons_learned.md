@@ -261,3 +261,32 @@ pressure to produce a BUY — especially when the user has asked for 20% returns
 AVOID, with the reasons recorded. Resist the urge to promote the best available idea to a
 recommendation simply because it is the best available.
 **Confidence:** high. This is a process commitment, not an empirical claim.
+
+### 2026-09-11 — A stock split is not dilution, and a filter that confuses them deletes the best companies
+**Trigger:** A broad screen excluded Netflix for "share count grew 856.4%", KLA for 749.0%,
+ServiceNow for 416.9% and US Lime for 409.5%. All four are net BUYERS of their own stock.
+**Rule:** Never compute share-count change by comparing the first and last value of a
+weighted-average share series. A stock split multiplies the count without transferring
+anything, and reads as catastrophic dilution. Netflix went 451M -> 4,495M diluted shares in
+one year on a 10-for-1 split. Walk consecutive years instead and compound only the ratios
+inside a plausible band (0.67x-1.5x); anything outside it is a split or reverse split, not
+issuance. After the fix Netflix reads -4.0% and KLA -12.6%, while genuine dilution survives
+untouched (Globus Medical +35.7%, Elastic +22.9%, InterDigital +11.0%).
+**Wider point:** this is the same failure as the BKNG per-share warning added on 2026-09-09.
+That fix only compared the cover-page count with the weighted-average count at ONE instant;
+it did not protect the time series. When a distortion is found, ask which OTHER calculations
+consume the same corrupted input.
+**Confidence:** high — mechanical, verified across eight companies.
+
+### 2026-09-11 — "No debt tag" means no debt, not unknown debt
+**Trigger:** 23 of 39 stage-2 candidates were excluded for "debt/equity is DATA UNAVAILABLE -
+cannot check leverage", including Manhattan Associates, whose total liabilities are 0.00x its
+assets. The filter was throwing out the least leveraged companies in the sample.
+**Rule:** Fail-closed is right when a missing value could hide a risk. It is wrong when the
+absence of the value IS the evidence. A company that files no long-term or short-term debt tag
+almost always has no debt, which is the safest case. Do not invent a zero - instead fall back
+to a different measure that IS present. Total liabilities over total assets answers "is this
+company highly leveraged?" without fabricating a debt figure.
+**Generalisable:** before excluding on missing data, ask whether another available field
+answers the same underlying question.
+**Confidence:** high.

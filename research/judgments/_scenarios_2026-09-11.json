@@ -1,0 +1,407 @@
+{
+  "INTU": {
+    "price": 312.77,
+    "score": 79.4,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 225.0,
+      "probability": 0.3,
+      "assumptions": [
+        "AI genuinely commoditises bookkeeping and guided tax preparation; QuickBooks retention starts to slip, not just TurboTax pricing.",
+        "TurboTax DIY unit growth of 2-3% turns negative as low-cost and AI-native filers take share the CEO has already admitted losing.",
+        "The 17% workforce reduction proves to be a response to demand weakness rather than a margin choice, and revenue growth decelerates below 8%.",
+        "Multiple stays compressed at 14-15x earnings on flat-to-falling cash flow."
+      ]
+    },
+    "base": {
+      "target_price": 360.0,
+      "probability": 0.42,
+      "assumptions": [
+        "The consumer DIY franchise stabilises at low single-digit growth while Big Bets (34% growth, now 30% of revenue) carry the company.",
+        "Mid-market and money segments continue growing above 30%, shifting mix toward the durable parts of the business.",
+        "The 17% headcount reduction flows into fiscal 2027 margins, expanding operating margin from 27.4%.",
+        "Multiple re-rates from 18.3x toward 22-23x - still far below the four-year average above 30x."
+      ]
+    },
+    "bull": {
+      "target_price": 470.0,
+      "probability": 0.28,
+      "assumptions": [
+        "Evidence emerges that AI expands Intuit's addressable work rather than replacing it - the Anthropic partnership monetises inside the mid-market platform.",
+        "TurboTax Live continues growing customers 38% and revenue 36%, proving the assisted model beats pure DIY.",
+        "Revenue growth holds mid-teens and free cash flow compounds toward $10B+.",
+        "Multiple returns toward the historical 28-30x as the AI-disruption discount unwinds."
+      ]
+    },
+    "_computed": {
+      "current_price": 312.77,
+      "cases": {
+        "bear": {
+          "target_price": 225.0,
+          "return_pct": -28.062154298685925,
+          "probability": 0.3,
+          "assumptions": [
+            "AI genuinely commoditises bookkeeping and guided tax preparation; QuickBooks retention starts to slip, not just TurboTax pricing.",
+            "TurboTax DIY unit growth of 2-3% turns negative as low-cost and AI-native filers take share the CEO has already admitted losing.",
+            "The 17% workforce reduction proves to be a response to demand weakness rather than a margin choice, and revenue growth decelerates below 8%.",
+            "Multiple stays compressed at 14-15x earnings on flat-to-falling cash flow."
+          ]
+        },
+        "base": {
+          "target_price": 360.0,
+          "return_pct": 15.1005531221025,
+          "probability": 0.42,
+          "assumptions": [
+            "The consumer DIY franchise stabilises at low single-digit growth while Big Bets (34% growth, now 30% of revenue) carry the company.",
+            "Mid-market and money segments continue growing above 30%, shifting mix toward the durable parts of the business.",
+            "The 17% headcount reduction flows into fiscal 2027 margins, expanding operating margin from 27.4%.",
+            "Multiple re-rates from 18.3x toward 22-23x - still far below the four-year average above 30x."
+          ]
+        },
+        "bull": {
+          "target_price": 470.0,
+          "return_pct": 50.27016657607828,
+          "probability": 0.28,
+          "assumptions": [
+            "Evidence emerges that AI expands Intuit's addressable work rather than replacing it - the Anthropic partnership monetises inside the mid-market platform.",
+            "TurboTax Live continues growing customers 38% and revenue 36%, proving the assisted model beats pure DIY.",
+            "Revenue growth holds mid-teens and free cash flow compounds toward $10B+.",
+            "Multiple returns toward the historical 28-30x as the AI-disruption discount unwinds."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 11.999232662979194,
+      "prob_positive": 0.7,
+      "prob_hits_20pct": 0.28,
+      "prob_loss": 0.3,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  },
+  "APH": {
+    "price": 80.25,
+    "score": 77.3,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 50.0,
+      "probability": 0.33,
+      "assumptions": [
+        "AI datacentre capex enters a digestion phase; IT datacom, 43% of sales, goes from +89% growth to flat or negative.",
+        "The trailing 23.2x multiple is revealed to sit on peak-cycle earnings, so earnings and multiple compress together - the classic cyclical trap.",
+        "Hyperscaler order patterns prove lumpy and a single quarter of missed guidance resets expectations.",
+        "CommScope integration absorbs management attention during the downturn."
+      ]
+    },
+    "base": {
+      "target_price": 93.0,
+      "probability": 0.45,
+      "assumptions": [
+        "AI infrastructure spending continues through the next year at a decelerating but still-strong rate.",
+        "Q3 guidance of $9.3-9.4B (50-52% growth) is met, then growth moderates toward 15-20%.",
+        "Operating margin holds near 25% as volume leverage persists.",
+        "Multiple compresses modestly as growth normalises, offsetting part of the earnings growth."
+      ]
+    },
+    "bull": {
+      "target_price": 112.0,
+      "probability": 0.22,
+      "assumptions": [
+        "The AI buildout proves longer and broader than expected; optical and power interconnect content per rack keeps rising.",
+        "Amphenol takes share across both high-speed and power interconnect as complexity increases.",
+        "CommScope acquisition adds accretive interconnect exposure.",
+        "Earnings grow into the multiple rather than the multiple compressing."
+      ]
+    },
+    "_computed": {
+      "current_price": 80.25,
+      "cases": {
+        "bear": {
+          "target_price": 50.0,
+          "return_pct": -37.69470404984424,
+          "probability": 0.33,
+          "assumptions": [
+            "AI datacentre capex enters a digestion phase; IT datacom, 43% of sales, goes from +89% growth to flat or negative.",
+            "The trailing 23.2x multiple is revealed to sit on peak-cycle earnings, so earnings and multiple compress together - the classic cyclical trap.",
+            "Hyperscaler order patterns prove lumpy and a single quarter of missed guidance resets expectations.",
+            "CommScope integration absorbs management attention during the downturn."
+          ]
+        },
+        "base": {
+          "target_price": 93.0,
+          "return_pct": 15.88785046728971,
+          "probability": 0.45,
+          "assumptions": [
+            "AI infrastructure spending continues through the next year at a decelerating but still-strong rate.",
+            "Q3 guidance of $9.3-9.4B (50-52% growth) is met, then growth moderates toward 15-20%.",
+            "Operating margin holds near 25% as volume leverage persists.",
+            "Multiple compresses modestly as growth normalises, offsetting part of the earnings growth."
+          ]
+        },
+        "bull": {
+          "target_price": 112.0,
+          "return_pct": 39.563862928348904,
+          "probability": 0.22,
+          "assumptions": [
+            "The AI buildout proves longer and broader than expected; optical and power interconnect content per rack keeps rising.",
+            "Amphenol takes share across both high-speed and power interconnect as complexity increases.",
+            "CommScope acquisition adds accretive interconnect exposure.",
+            "Earnings grow into the multiple rather than the multiple compressing."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 3.4143302180685273,
+      "prob_positive": 0.67,
+      "prob_hits_20pct": 0.22,
+      "prob_loss": 0.33,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  },
+  "PTC": {
+    "price": 128.72,
+    "score": 76.9,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 96.0,
+      "probability": 0.27,
+      "assumptions": [
+        "Industrial and manufacturing capex weakens; ARR growth slips from 9.1% toward 5-6%.",
+        "Post-divestiture the remaining business is smaller and GAAP comparisons stay muddy, deterring investors.",
+        "Competition from Dassault, Siemens and Autodesk forces pricing concessions at renewal.",
+        "Multiple derates from 19x on decelerating growth."
+      ]
+    },
+    "base": {
+      "target_price": 152.0,
+      "probability": 0.5,
+      "assumptions": [
+        "ARR grows at the guided 9-9.5% constant currency, as it has done consistently.",
+        "Free cash flow continues above guidance (Q3 FCF $249M, cash conversion 1.18x).",
+        "Buybacks continue at the $626M pace, shrinking the share count.",
+        "Multiple holds near 19x; the return comes from cash-flow growth plus buyback, not re-rating."
+      ]
+    },
+    "bull": {
+      "target_price": 176.0,
+      "probability": 0.23,
+      "assumptions": [
+        "The focused post-divestiture CAD/PLM business re-rates as a cleaner, higher-quality asset.",
+        "ARR growth accelerates above 10% as manufacturers digitise product records.",
+        "Margin expansion continues from the 35.9% operating margin already achieved.",
+        "Multiple expands toward 23x on improved visibility."
+      ]
+    },
+    "_computed": {
+      "current_price": 128.72,
+      "cases": {
+        "bear": {
+          "target_price": 96.0,
+          "return_pct": -25.419515226848976,
+          "probability": 0.27,
+          "assumptions": [
+            "Industrial and manufacturing capex weakens; ARR growth slips from 9.1% toward 5-6%.",
+            "Post-divestiture the remaining business is smaller and GAAP comparisons stay muddy, deterring investors.",
+            "Competition from Dassault, Siemens and Autodesk forces pricing concessions at renewal.",
+            "Multiple derates from 19x on decelerating growth."
+          ]
+        },
+        "base": {
+          "target_price": 152.0,
+          "return_pct": 18.08576755748912,
+          "probability": 0.5,
+          "assumptions": [
+            "ARR grows at the guided 9-9.5% constant currency, as it has done consistently.",
+            "Free cash flow continues above guidance (Q3 FCF $249M, cash conversion 1.18x).",
+            "Buybacks continue at the $626M pace, shrinking the share count.",
+            "Multiple holds near 19x; the return comes from cash-flow growth plus buyback, not re-rating."
+          ]
+        },
+        "bull": {
+          "target_price": 176.0,
+          "return_pct": 36.73088875077688,
+          "probability": 0.23,
+          "assumptions": [
+            "The focused post-divestiture CAD/PLM business re-rates as a cleaner, higher-quality asset.",
+            "ARR growth accelerates above 10% as manufacturers digitise product records.",
+            "Margin expansion continues from the 35.9% operating margin already achieved.",
+            "Multiple expands toward 23x on improved visibility."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 10.627719080174018,
+      "prob_positive": 0.73,
+      "prob_hits_20pct": 0.23,
+      "prob_loss": 0.27,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  },
+  "EXEL": {
+    "price": 57.43,
+    "score": 76.7,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 39.0,
+      "probability": 0.32,
+      "assumptions": [
+        "The FDA declines or delays zanzalintinib at the 3 December 2026 action date, removing the second franchise from the story.",
+        "Cabozantinib faces earlier-than-expected generic pressure as patents wind down toward the projected 2029 peak.",
+        "Without a successor drug the company is a single-asset business with a visible expiry, and the multiple contracts sharply.",
+        "Pipeline setbacks in the renal or neuroendocrine programmes compound the problem."
+      ]
+    },
+    "base": {
+      "target_price": 66.0,
+      "probability": 0.45,
+      "assumptions": [
+        "Zanzalintinib is approved on or near 3 December for previously treated metastatic colorectal cancer.",
+        "2026 revenue lands in the guided $2.53-2.63B range, which explicitly EXCLUDES any zanzalintinib contribution.",
+        "The launch is orderly but early revenue is modest in the first year.",
+        "Buybacks continue reducing the share count (already -11.4%)."
+      ]
+    },
+    "bull": {
+      "target_price": 86.0,
+      "probability": 0.23,
+      "assumptions": [
+        "Zanzalintinib is approved and the launch beats expectations, with label expansion visible across renal and neuroendocrine indications.",
+        "The market begins valuing Exelixis as a two-franchise oncology company rather than a single-drug one.",
+        "Operating margin holds near 37.6% as the new product scales on existing infrastructure.",
+        "Multiple expands from 18.2x as the patent-cliff discount unwinds."
+      ]
+    },
+    "_computed": {
+      "current_price": 57.43,
+      "cases": {
+        "bear": {
+          "target_price": 39.0,
+          "return_pct": -32.09124151140519,
+          "probability": 0.32,
+          "assumptions": [
+            "The FDA declines or delays zanzalintinib at the 3 December 2026 action date, removing the second franchise from the story.",
+            "Cabozantinib faces earlier-than-expected generic pressure as patents wind down toward the projected 2029 peak.",
+            "Without a successor drug the company is a single-asset business with a visible expiry, and the multiple contracts sharply.",
+            "Pipeline setbacks in the renal or neuroendocrine programmes compound the problem."
+          ]
+        },
+        "base": {
+          "target_price": 66.0,
+          "return_pct": 14.922514365314289,
+          "probability": 0.45,
+          "assumptions": [
+            "Zanzalintinib is approved on or near 3 December for previously treated metastatic colorectal cancer.",
+            "2026 revenue lands in the guided $2.53-2.63B range, which explicitly EXCLUDES any zanzalintinib contribution.",
+            "The launch is orderly but early revenue is modest in the first year.",
+            "Buybacks continue reducing the share count (already -11.4%)."
+          ]
+        },
+        "bull": {
+          "target_price": 86.0,
+          "return_pct": 49.747518718439835,
+          "probability": 0.23,
+          "assumptions": [
+            "Zanzalintinib is approved and the launch beats expectations, with label expansion visible across renal and neuroendocrine indications.",
+            "The market begins valuing Exelixis as a two-franchise oncology company rather than a single-drug one.",
+            "Operating margin holds near 37.6% as the new product scales on existing infrastructure.",
+            "Multiple expands from 18.2x as the patent-cliff discount unwinds."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 7.8878634859829315,
+      "prob_positive": 0.68,
+      "prob_hits_20pct": 0.23,
+      "prob_loss": 0.32,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  },
+  "RMD": {
+    "price": 219.58,
+    "score": 74.6,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 158.0,
+      "probability": 0.32,
+      "assumptions": [
+        "Philips re-enters the U.S. sleep apnea market and takes back share, compressing both volume and the margin that expanded in its absence.",
+        "GLP-1 adoption accelerates; Eli Lilly's drug treating obstructive sleep apnea WITHOUT CPAP shrinks the addressable device pool.",
+        "The Astral ventilator suspension costs more than the stated $75M revenue and $0.15 EPS, or widens to other product lines.",
+        "Multiple stays constrained by the unresolved GLP-1 debate regardless of reported results."
+      ]
+    },
+    "base": {
+      "target_price": 252.0,
+      "probability": 0.46,
+      "assumptions": [
+        "GLP-1s prove to be net demand generators, as management argues - more diagnosed patients entering the funnel offsets some substitution.",
+        "Philips' return is gradual and ResMed defends most of its share.",
+        "The Astral headwind is absorbed within fiscal 2027 and does not recur.",
+        "Steady mid-single-digit revenue growth with resupply annuity intact; modest multiple expansion."
+      ]
+    },
+    "bull": {
+      "target_price": 288.0,
+      "probability": 0.22,
+      "assumptions": [
+        "GLP-1 screening demonstrably expands the diagnosed population and ResMed captures the majority of new patients.",
+        "Software and residential care (AirView, MatrixCare) grow into a larger share of revenue, raising the quality of the mix.",
+        "Philips' re-entry underwhelms and the competitive fear proves overdone.",
+        "Multiple expands as the GLP-1 overhang lifts."
+      ]
+    },
+    "_computed": {
+      "current_price": 219.58,
+      "cases": {
+        "bear": {
+          "target_price": 158.0,
+          "return_pct": -28.044448492576745,
+          "probability": 0.32,
+          "assumptions": [
+            "Philips re-enters the U.S. sleep apnea market and takes back share, compressing both volume and the margin that expanded in its absence.",
+            "GLP-1 adoption accelerates; Eli Lilly's drug treating obstructive sleep apnea WITHOUT CPAP shrinks the addressable device pool.",
+            "The Astral ventilator suspension costs more than the stated $75M revenue and $0.15 EPS, or widens to other product lines.",
+            "Multiple stays constrained by the unresolved GLP-1 debate regardless of reported results."
+          ]
+        },
+        "base": {
+          "target_price": 252.0,
+          "return_pct": 14.76455050551051,
+          "probability": 0.46,
+          "assumptions": [
+            "GLP-1s prove to be net demand generators, as management argues - more diagnosed patients entering the funnel offsets some substitution.",
+            "Philips' return is gradual and ResMed defends most of its share.",
+            "The Astral headwind is absorbed within fiscal 2027 and does not recur.",
+            "Steady mid-single-digit revenue growth with resupply annuity intact; modest multiple expansion."
+          ]
+        },
+        "bull": {
+          "target_price": 288.0,
+          "return_pct": 31.15948629201202,
+          "probability": 0.22,
+          "assumptions": [
+            "GLP-1 screening demonstrably expands the diagnosed population and ResMed captures the majority of new patients.",
+            "Software and residential care (AirView, MatrixCare) grow into a larger share of revenue, raising the quality of the mix.",
+            "Philips' re-entry underwhelms and the competitive fear proves overdone.",
+            "Multiple expands as the GLP-1 overhang lifts."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 4.67255669915292,
+      "prob_positive": 0.68,
+      "prob_hits_20pct": 0.22,
+      "prob_loss": 0.32,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  }
+}

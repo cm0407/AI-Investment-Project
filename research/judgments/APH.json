@@ -1,0 +1,22 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "An excellent operator: 25.4% operating margin, 19.0% FCF margin, three-year revenue CAGR of 22.3% and net income CAGR of 30.9%, with no base-year distortion. Q2 2026 revenue of $8.76B was up 55% year on year. Deducted for what the margin is built on - connectors and interconnect are a competitive, capital-consuming business, and the current margin reflects extraordinary volume leverage rather than a structural step-change."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Real advantages: enormous breadth of catalogue, design-in relationships that make Amphenol hard to displace mid-programme, and manufacturing scale. But interconnect is not a monopoly - Amphenol competes directly with TE Connectivity, Molex and others, and customers deliberately dual-source. The moat is durable but it is a cost-and-scale moat, not a pricing-power moat."
+  },
+  "catalysts": {
+    "points": 7,
+    "justification": "Specific, dated and currently favourable: Q3 2026 revenue guided to $9.3-9.4B, implying 50-52% year-on-year growth, which was about 7% above what the market expected. IT datacom is 43% of sales and grew 89% year on year (63% organically), with AI products driving essentially all of the 22% sequential growth. The CommScope acquisition adds further interconnect exposure. These are genuine catalysts, not hopes."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "The lowest risk/reward score here, and deliberately so. Every attractive number above is an AI-capex number. With 43% of sales in a segment growing 89%, the trailing multiple of 23.2x is being applied to earnings that embed a boom. My own lessons file warns against buying a cyclical at a full multiple on peak trailing figures - that is precisely this setup. A datacentre capex digestion phase takes that segment from +89% to negative, and the multiple and the earnings compress together. Base +16% against a bear of -38%."
+  },
+  "management": {
+    "points": 4,
+    "justification": "A strong long-run record of disciplined acquisitions integrated without destroying returns, which is rare in industrials. Executing well through an extraordinary demand period. Withheld one point because share count rose 4.6% over the window - modest dilution at a time of record profitability, when buybacks would have been the shareholder-friendlier choice."
+  }
+}
