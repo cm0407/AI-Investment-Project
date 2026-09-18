@@ -290,3 +290,74 @@ company highly leveraged?" without fabricating a debt figure.
 **Generalisable:** before excluding on missing data, ask whether another available field
 answers the same underlying question.
 **Confidence:** high.
+
+### 2026-09-18 - My screen ranked two profit-stagnating companies #1 and #2
+**Trigger:** Reviewing the candidates I had deep-dived but not presented. Harmony Biosciences
+topped the entire market-wide screen at 95.9%, and Doximity was second at 93.2%. Harmony's
+revenue had risen 98% over three years while net income FELL 13%; Doximity's operating and net
+income both declined in the latest year.
+**Rule:** Any composite that weights revenue growth must also test whether PROFIT kept pace.
+Mine weighted revenue growth at 30% and never checked. Revenue rising while profit stalls is
+the signature of discounting, cost inflation, or growth bought through acquisition - never of a
+compounding business. A gap of more than ~10 points a year between revenue CAGR and net income
+CAGR should exclude, not rank first.
+**Implementation:** added the profit-pace test to `scripts/broad_screen.py`; 23 companies
+dropped out, Harmony among them.
+**The uncomfortable part:** `lessons_learned.md` already contained "Read the profit line, not
+the per-share line" from 2026-09-09, written after Ulta. I had written the lesson and then
+built a screen that violated it. **A lesson recorded in prose but not encoded in the code is
+a lesson that will be forgotten.** Where a rule can be made mechanical, make it mechanical.
+**Confidence:** high.
+
+### 2026-09-18 - Annual filings lag reality by up to a year
+**Trigger:** United Therapeutics looked like the best idea of the session on the numbers -
+revenue, operating income and net income all rising every year, 46.9% operating margin, 16.0x
+earnings. Phase 5 disproof found that nebulized Tyvaso revenue fell 18% year over year in Q2
+2026 and 20% in the first half, as a competitor's product took share after a May 2025 approval.
+**Rule:** SEC annual filings are authoritative about the PAST. A company whose most recent
+10-K shows clean compounding can already be in decline by the time you read it. Before
+presenting any idea built on annual data, check the most recent quarter and the competitive
+news for the CURRENT year. This matters most when the multiple is unusually low: a cheap price
+attached to excellent trailing figures usually means the market knows something the annual
+filing does not yet show.
+**Pattern match:** this is structurally identical to EOG (rejected 2026-09-09) - cheap multiple,
+deteriorating core. Two for two now. A low multiple on a high-quality trailing record should
+trigger a search for what is breaking, not excitement.
+**Confidence:** high.
+
+### 2026-09-18 - Acquired growth is not organic growth, and my screen cannot tell them apart
+**Trigger:** Paychex showed revenue rising $4.91B to $6.30B and passed the screen comfortably.
+Roughly 20% of that increase was the Paycor acquisition; organic growth is 4-5%, and FY2027
+guidance is 5-6%.
+**Rule:** Top-line growth from the frames API is TOTAL revenue growth and includes acquisitions.
+For any candidate whose growth looks strong, check whether it bought that growth. An acquisition
+can be good capital allocation, but it is not evidence of organic demand and must not be scored
+as though it were.
+**Known limitation, stated rather than fixed:** the XBRL frames data cannot distinguish organic
+from acquired revenue. This has to be checked by hand per candidate. I am recording it as an
+open gap rather than pretending the screen handles it.
+**Confidence:** high.
+
+### 2026-09-18 - I re-anchored a 12-month thesis on four days of price noise
+**Trigger:** On 2026-09-14 I told the user Intuit had "already run" +8.4% since analysis and
+that "only about 6% of upside remains". Four days later INTU was back at $313.13 - essentially
+the $312.77 entry price. The move fully reversed.
+**Rule:** A few days of price movement carries no information about a 12-month thesis. Reporting
+current prices is correct and necessary; re-framing the ATTRACTIVENESS of an idea around a
+four-day move is not. I effectively told the user the best idea of that session had become
+mediocre, on the basis of noise. State the current price, and let the thesis stand or fall on
+the business.
+**Confidence:** high - and this one is about my own behaviour, not about markets.
+
+### 2026-09-18 - A session can produce one idea, and that is a result
+**Trigger:** Asked for the strongest 3-5 ideas, the honest output was ONE new name clearing the
+70 threshold (NBIX at 71.8). Netflix scored 69.7 and Qualys 68.6 - both inside the speculative
+band, both rejected rather than promoted.
+**Rule:** When two candidates land within 1.5 points of the threshold, the temptation is to move
+a single judgment score and produce a fuller-looking list. Netflix at 69.7 needed 0.3 points.
+Resist it. The threshold is only meaningful if it binds when it is inconvenient, and a session
+that honestly yields one idea has still told the user something true about the opportunity set.
+**Related evidence:** this is consistent with the macro note for this period - high-yield
+spreads at 2.71% are historically very tight, meaning little is being offered cheaply anywhere.
+A screen finding few bargains in that environment is the screen working, not failing.
+**Confidence:** high.

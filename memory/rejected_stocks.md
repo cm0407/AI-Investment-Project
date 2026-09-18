@@ -52,3 +52,88 @@ has been conducted.*
 - **What would change my mind:** one quarter of year-over-year OPERATING MARGIN EXPANSION,
   combined with a materially lower entry price.
 - **Re-review date:** 2026-12-09
+
+### UTHR - United Therapeutics Corporation - 2026-09-18
+- **Score at rejection:** not completed - rejected at Phase 5 before scoring
+- **Price at rejection:** $497.27
+- **Primary reason rejected:** the filings show clean compounding, but the CURRENT year shows
+  the core product shrinking. Nebulized Tyvaso revenue fell 18% year over year in Q2 2026 and
+  20% across the first half, as Liquidia's Yutrepia (approved May 2025) takes share.
+- **Supporting evidence:** FY2025 filings look excellent - revenue $1.94B to $3.18B, operating
+  income $0.98B to $1.49B, net income $0.73B to $1.33B, all rising every year, at 16.0x
+  earnings and a 46.9% operating margin. It would have been my top-ranked idea on the numbers
+  alone. The 16x multiple is not a bargain; it is the market pricing a deterioration my FY2025
+  data cannot see. Merck's Winrevair adds a second competitive front, and patent litigation
+  with Liquidia is unresolved.
+- **The general lesson:** a cheap multiple plus a declining core product is the same structure
+  that got EOG rejected in September. Annual filings lag reality by up to a year.
+- **What would change my mind:** two consecutive quarters of stabilising nebulized Tyvaso
+  revenue, or evidence that Tyvaso DPI growth more than offsets the nebulized decline.
+- **Re-review date:** 2027-03-18
+
+### HRMY - Harmony Biosciences Holdings - 2026-09-18
+- **Score at rejection:** not completed - failed the profit-pace test
+- **Price at rejection:** $42.74
+- **Primary reason rejected:** revenue nearly doubled while profit fell. Revenue $0.44B to
+  $0.87B (+98% over three years) but net income went $0.18B to $0.16B (-13%), and operating
+  income was essentially flat for three years ($0.19B, $0.19B, $0.21B).
+- **Supporting evidence:** this company ranked **#1 in my entire market-wide screen at 95.9%**,
+  on a 15.7x P/E and a 14.0% free-cash-flow yield. The composite weighted revenue growth at 30%
+  and never checked whether profit followed. Doubling sales without earning more money is the
+  signature of discounting or cost inflation, not of a compounding business.
+- **What would change my mind:** two consecutive quarters of operating margin expansion.
+- **Re-review date:** 2027-03-18
+
+### PAYX - Paychex, Inc. - 2026-09-18
+- **Score at rejection:** not completed - rejected at Phase 2
+- **Price at rejection:** $116.51
+- **Primary reason rejected:** the growth my screen measured was bought, not earned. Reported
+  revenue rose from $4.91B to $6.30B, but roughly 20% of that increase is the Paycor
+  acquisition (completed April 2025). **Organic growth is only 4-5%**, and FY2027 guidance is
+  for 5-6% revenue growth, below the ~8% consensus.
+- **Supporting evidence:** Q4 FY2026 revenue of $1.6055B missed consensus by ~1.7%. A 39.8%
+  operating margin and a real payroll moat are genuine positives, but the business is growing
+  at half the rate the headline suggests, and AI-driven commoditisation of payroll is a live
+  structural question.
+- **What would change my mind:** organic revenue growth above 7% for two consecutive quarters.
+- **Re-review date:** 2027-03-18
+
+### UI - Ubiquiti Inc. - 2026-09-18
+- **Score at rejection:** not completed - rejected on valuation
+- **Price at rejection:** $596.44
+- **Primary reason rejected:** the reverse DCF is decisive. At this price the market requires
+  **29.5% annual free-cash-flow growth for a decade**; Ubiquiti has delivered **8.9%**. The
+  price demands more than three times what the company has achieved.
+- **Supporting evidence:** the business itself is superb - ROIC of 116.1%, operating margin
+  36.2%, revenue $1.94B to $3.27B and operating income $0.54B to $1.19B. None of that is the
+  problem. At 37.6x earnings and a 2.5% free-cash-flow yield, the price is.
+- **What would change my mind:** a price near $350-400, where the implied growth rate falls
+  back toward what the company actually delivers.
+- **Re-review date:** 2027-03-18
+
+### NFLX - Netflix, Inc. - 2026-09-18
+- **Score at rejection:** 69.7/100 (SPECULATIVE / INCOMPLETE - below the 70 threshold)
+- **Price at rejection:** $75.31
+- **Primary reason rejected:** an exceptional business at a price that already assumes the
+  exceptional continues. The reverse DCF implies 25.5% annual free-cash-flow growth for a
+  decade - clearable against 37.4% delivered, but a demanding bar for a company already at
+  $45B of revenue, with a 3.0% free-cash-flow yield offering no cushion.
+- **Supporting evidence:** genuinely outstanding operating leverage - revenue +43% over three
+  years while operating income rose +137% and net income +145%, with share count down 4.0%.
+  Risk/reward scored 4/10: base +15% against a bear of -32%.
+- **What would change my mind:** a fall toward $60 without deterioration in the advertising
+  tier's scaling.
+- **Re-review date:** 2026-12-18
+
+### QLYS - Qualys, Inc. - 2026-09-18
+- **Score at rejection:** 68.6/100 (SPECULATIVE / INCOMPLETE - below the 70 threshold)
+- **Price at rejection:** $178.08
+- **Primary reason rejected:** a good, steady business with no catalyst and no valuation
+  cushion. Catalysts scored 4/10 - there is simply no dated event that re-rates it - and at
+  31.1x earnings a 13%-growth company needs the multiple to hold rather than expand.
+- **Supporting evidence:** clean compounding (revenue $0.49B to $0.67B, operating income
+  $0.13B to $0.22B, net income $0.11B to $0.20B), 33.2% operating margin, and the best capital
+  allocation of the session - share count down 10.5% through genuine buybacks. The reverse DCF
+  cushion is thin: 12.3% implied against 15.2% delivered.
+- **What would change my mind:** revenue growth accelerating above 16%, or a price near $140.
+- **Re-review date:** 2027-03-18

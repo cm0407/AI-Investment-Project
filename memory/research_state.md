@@ -8,6 +8,32 @@ the Session Log. Never delete or rewrite older entries.
 
 ## Current status
 
+- **System status:** Operational. 54 self-tests passing. Third research session completed
+  2026-09-18, including the first review of past predictions.
+- **Recommendations to date:** 0 BUY. 8 WATCH (BKNG, ADBE, INTU, APH, PTC, EXEL, RMD, NBIX),
+  2 AVOID (EOG, ULTA). Six further candidates rejected 2026-09-18.
+- **Open predictions:** 10. **All marked to market 2026-09-18; average move -0.01%.**
+  NO outcome is judgeable - only 1.6-2.5% of the stated horizons has elapsed.
+- **Stocks rejected (`rejected_stocks.md`):** 8
+- **Theses written:** 10
+- **Email delivery:** built (`scripts/send_digest.py`). Requires the user to add a Gmail App
+  Password to `.env`; not yet configured at the time of writing.
+
+### Unresolved items carried forward
+1. **No diversified core.** Raised in FIVE consecutive sessions without a response. Printed on
+   every screen run and in every digest.
+2. **Stop-loss contradiction.** -25% stop fires before the -30% drawdown the user said they
+   would hold through.
+3. **Analyst-chosen thresholds unconfirmed:** 2.0x debt/equity, 10% dilution, and now the
+   10-point revenue-vs-profit gap added this session. All mine, not the user's.
+4. **Financial-sector analysis remains weak** - no net interest margin, ROTCE or FFO.
+5. **Organic vs acquired growth is undetectable from XBRL frames.** Paychex passed the screen
+   on revenue growth that was ~20% acquisition. Must be checked by hand per candidate.
+6. **Pharma concentration forming.** EXEL (11 Sep) and NBIX (18 Sep) are both
+   patent-dependent drug companies. Flagged in the NBIX thesis and the digest.
+
+## Superseded status (2026-09-14 session)
+
 - **System status:** Operational. 52 self-tests passing. Second full research session
   completed 2026-09-14 (analysis dated 2026-09-11).
 - **Investment recommendations issued to date:** 0 BUY. 7 WATCH (BKNG, ADBE, INTU, APH, PTC,
@@ -98,6 +124,49 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-09-18 - Third research session + FIRST prediction review
+
+**Prediction review (CLAUDE.md learning loop).** All 9 open predictions marked to market and
+appended to `prediction_reviews.csv`. `predictions.csv` was NOT modified. Average move -0.01%;
+range -5.4% (BKNG) to +4.4% (PTC). **No outcome judged, and none could honestly be** - 7-9 days
+against 12-18 month horizons is 1.6-2.5% elapsed. Recorded the elapsed-percentage explicitly so
+that a future reader cannot mistake a mark-to-market for a verdict.
+
+**New research.** Rather than re-running an identical screen four days after the last one - the
+CY2025 fundamentals had not changed - I examined the candidates deep-dived on 11 September but
+never presented. That surfaced the session's most important finding.
+
+**The screen's top two rankings were both wrong.** Harmony Biosciences ranked #1 of 4,354
+companies at 95.9% with revenue up 98% over three years while net income FELL 13%; Doximity
+ranked #2 with operating and net income both down in the latest year. The stage-1 composite
+weighted revenue growth at 30% and never tested whether profit followed. Added the profit-pace
+test to `broad_screen.py` (excludes when revenue CAGR exceeds net income CAGR by >10 points);
+23 companies dropped out. **The lesson had already been written on 2026-09-09 after Ulta and
+was not encoded in code** - recorded as a lesson in its own right.
+
+**Phase 5 disproof earned its keep twice more:**
+- *United Therapeutics* would have been the top idea on filings alone (all three lines rising,
+  46.9% operating margin, 16.0x earnings). Current-year data shows nebulized Tyvaso revenue
+  down 18% YoY in Q2 2026 as Liquidia's Yutrepia takes share. Same structure as EOG: cheap
+  multiple, deteriorating core. Rejected.
+- *Paychex* passed on revenue growth that was ~20% the Paycor acquisition; organic growth is
+  4-5%. Rejected.
+- *Ubiquiti* rejected purely on the reverse DCF: price implies 29.5% FCF growth against 8.9%
+  delivered, despite a 116% ROIC.
+
+**Outcome: ONE new idea.** NBIX 71.8 (WATCH). Netflix scored 69.7 and Qualys 68.6 - both inside
+the speculative band, both rejected rather than promoted. Netflix missed the threshold by 0.3
+points; moving a single judgment score would have produced a fuller-looking list. Recorded as a
+lesson.
+
+**Also corrected a reporting error of my own:** on 14 September I told the user INTU had "already
+run" +8.4% and that only ~6% of upside remained. By 18 September it was back at $313.13,
+essentially the original entry price. Re-framing a 12-month thesis on a four-day move was wrong
+and is now a recorded lesson.
+
+Deliverables: `reports/daily/digest_2026-09-18.md`, `research/theses/NBIX.md`, 6 rejections,
+5 lessons, screen fix.
 
 ### 2026-09-14 - Second full research session (analysis dated 2026-09-11)
 

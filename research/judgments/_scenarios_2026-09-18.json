@@ -1,0 +1,83 @@
+{
+  "NBIX": {
+    "price": 151.83,
+    "score": 71.8,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 106.0,
+      "probability": 0.3,
+      "assumptions": [
+        "INGREZZA pricing or reimbursement pressure bites; it still carries the majority of revenue, so a shock there hits everything at once.",
+        "CRENESSITY launch decelerates as the initial diagnosed-patient backlog is worked through.",
+        "Crinetics' atumelnant advances faster than expected toward the CAH indication.",
+        "Multiple derates from 32x on any sign the growth rate is normalising."
+      ]
+    },
+    "base": {
+      "target_price": 178.0,
+      "probability": 0.45,
+      "assumptions": [
+        "Combined product sales keep compounding near the 44% pace seen in Q1 2026, decelerating gradually.",
+        "CRENESSITY continues scaling into its monopoly indication without near-term competition.",
+        "Operating margin keeps improving from 21.6% as fixed costs leverage.",
+        "Multiple holds near 32x; return comes from earnings growth, not re-rating."
+      ]
+    },
+    "bull": {
+      "target_price": 228.0,
+      "probability": 0.25,
+      "assumptions": [
+        "A Phase 3 readout (osavampator in major depression, or direclidine in schizophrenia) succeeds and adds a credible third franchise.",
+        "CRENESSITY exceeds expectations and the market begins valuing it as a multi-product specialty pharma company.",
+        "Operating margin expands toward the high 20s on scale.",
+        "Multiple expands as concentration risk in INGREZZA visibly declines."
+      ]
+    },
+    "_computed": {
+      "current_price": 151.83,
+      "cases": {
+        "bear": {
+          "target_price": 106.0,
+          "return_pct": -30.185075413291184,
+          "probability": 0.3,
+          "assumptions": [
+            "INGREZZA pricing or reimbursement pressure bites; it still carries the majority of revenue, so a shock there hits everything at once.",
+            "CRENESSITY launch decelerates as the initial diagnosed-patient backlog is worked through.",
+            "Crinetics' atumelnant advances faster than expected toward the CAH indication.",
+            "Multiple derates from 32x on any sign the growth rate is normalising."
+          ]
+        },
+        "base": {
+          "target_price": 178.0,
+          "return_pct": 17.236382796548753,
+          "probability": 0.45,
+          "assumptions": [
+            "Combined product sales keep compounding near the 44% pace seen in Q1 2026, decelerating gradually.",
+            "CRENESSITY continues scaling into its monopoly indication without near-term competition.",
+            "Operating margin keeps improving from 21.6% as fixed costs leverage.",
+            "Multiple holds near 32x; return comes from earnings growth, not re-rating."
+          ]
+        },
+        "bull": {
+          "target_price": 228.0,
+          "return_pct": 50.167950997826495,
+          "probability": 0.25,
+          "assumptions": [
+            "A Phase 3 readout (osavampator in major depression, or direclidine in schizophrenia) succeeds and adds a credible third franchise.",
+            "CRENESSITY exceeds expectations and the market begins valuing it as a multi-product specialty pharma company.",
+            "Operating margin expands toward the high 20s on scale.",
+            "Multiple expands as concentration risk in INGREZZA visibly declines."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 11.242837383916209,
+      "prob_positive": 0.7,
+      "prob_hits_20pct": 0.25,
+      "prob_loss": 0.3,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  }
+}

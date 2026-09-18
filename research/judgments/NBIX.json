@@ -1,0 +1,22 @@
+{
+  "business_quality": {
+    "points": 11,
+    "justification": "Revenue, operating income and net income all rose every year: revenue $1.49B to $2.86B, operating income $0.25B to $0.62B, net income $0.15B to $0.48B. Operating margin 21.6% and improving as the fixed cost base leverages. Q1 2026 net product sales of $811M grew 44% year over year. Deducted because margin is the lowest of the candidates and because this is a two-product company - quality here is about the drugs, not a durable structural advantage."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Better than a single-drug biotech and that distinction matters. CRENESSITY currently holds an effective monopoly in congenital adrenal hyperplasia, and INGREZZA has an entrenched prescriber base in tardive dyskinesia with a sales infrastructure that is genuinely hard to replicate. But these are patents, not moats in the durable sense - Crinetics' atumelnant is a credible CAH competitor within roughly three years, and INGREZZA faces ongoing pricing pressure. A patent is a legal monopoly with an expiry date printed on it."
+  },
+  "catalysts": {
+    "points": 7,
+    "justification": "The strongest catalyst set of this session's candidates, and unusually it is growth already in evidence rather than hoped for. CRENESSITY launched December 2024 and is scaling into a monopoly indication; combined product sales grew 44% in Q1 2026. Behind that sit Phase 3 programmes - osavampator in major depressive disorder and direclidine in schizophrenia - either of which would add a third franchise. Deducted because none of the pipeline readouts has a hard public date I could verify, unlike Exelixis' 3 December FDA action date."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "Base +17% against a bear of -30%. The reverse DCF is the reason this scores above the rest: at $151.83 the price implies 12.7% annual free-cash-flow growth against 28.0% delivered. The bar is roughly half what the company has achieved, so the multiple of 32.2x is less demanding than it first appears. The offsetting risk is concentration - INGREZZA still carries the majority of revenue, and a pricing or reimbursement shock there hits everything at once."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Executed a genuinely difficult thing: launched a second commercial product into a new indication while the first kept growing, which most single-product biotechs never manage. Pipeline is funded from operating cash flow rather than dilutive raises. Deducted 2 points because share count ROSE 4.8% over the window - shareholders are being diluted while the company is profitable and could instead be repurchasing, and no buyback offsets the stock compensation."
+  }
+}

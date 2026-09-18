@@ -223,6 +223,21 @@ def main() -> int:
         if x["revenue_3y_ago"] is not None and x["revenue_3y_ago"] < 25e6:
             return False, ("growth measured from a negligible base ($"
                            + format(x["revenue_3y_ago"] / 1e6, ".1f") + "M) - not a trend")
+        # PROFIT MUST KEEP PACE WITH REVENUE.
+        # The composite weights revenue growth at 30% and nothing checked whether profit
+        # followed. That put Harmony Biosciences top of the screen at 95.9% - revenue up
+        # 98% over three years while net income FELL 13% - and Doximity second, with
+        # operating and net income both down in the latest year. Revenue growing while
+        # profit stalls is the signature of discounting, cost inflation or an acquisition
+        # spree, and it is precisely what `lessons_learned.md` already warned about under
+        # "Read the profit line, not the per-share line".
+        if x["net_income_cagr_pct"] is not None and x["revenue_cagr_pct"] is not None:
+            gap = x["revenue_cagr_pct"] - x["net_income_cagr_pct"]
+            if gap > 10.0:
+                return False, ("revenue growing " + format(x["revenue_cagr_pct"], ".0f")
+                               + "%/yr but profit only "
+                               + format(x["net_income_cagr_pct"], ".0f")
+                               + "%/yr - profit is not keeping pace with sales")
         if x["revenue_cagr_pct"] < 5.0:
             return False, "revenue CAGR below 5%"
         if x["net_margin_pct"] is None or x["net_margin_pct"] < 5.0:
