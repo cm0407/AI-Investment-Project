@@ -1,0 +1,22 @@
+{
+  "business_quality": {
+    "points": 10,
+    "justification": "Genuinely good financials: revenue $2.2B to $2.9B over three years with operating income and net income rising alongside, 21.9% operating margin, 16.2% ROIC, and 15 of 16 scoring components measurable. Cloud revenue is recurring and the CXone platform is embedded in enterprise contact-centre operations. Deducted 5 points because management has GUIDED margins DOWN from a projected 31% to 25-26%, attributing it to heavy AI investment following the Cognigy acquisition. A quality score should reflect the profitability the company expects to have, not only the profitability it reported."
+  },
+  "competitive_advantage": {
+    "points": 4,
+    "justification": "The weakest moat score I have given a software company, and deliberately so. Contact-centre platforms carry real switching costs - routing logic, agent workflows, compliance recording and years of interaction data. But NICE now faces Microsoft and Salesforce entering the same market directly, alongside Genesys and Five9, while AI agents threaten the seat-based pricing model at its foundation: if software handles the calls, a platform priced per human agent has a structural problem. Reports indicate smaller customers are already choosing cheaper in-house or semi-automated alternatives. A moat that depends on counting human agents is exposed to the technology specifically designed to reduce them."
+  },
+  "catalysts": {
+    "points": 4,
+    "justification": "Thin, and the nearest concrete one points the wrong way. The dated fact is the margin guidance CUT to 25-26%. On the positive side there are enterprise AI wins (the Sopra Steria deployment) and the Cognigy acquisition building an agentic AI capability, but neither has a date or a measurable revenue target attached. Management's own framing - 'we are still in the early stages' - is honest but is not a catalyst. What would re-rate this stock is evidence that AI revenue is growing faster than seat revenue is eroding, and that evidence does not yet exist."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "Base +18% against a bear of -33%. The cheapness is real - 10.4x earnings and an 11.0% free-cash-flow yield give genuine downside support, and the balance sheet is sound. But the bear case is structural rather than cyclical, and the trailing multiple sits on earnings management has already guided lower. A 10.4x P/E computed on 31% margins is not a 10.4x P/E on 25% margins. Adjusting for the guided margin, the effective multiple is meaningfully higher than the headline."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Credit for acting rather than denying: acquiring Cognigy and investing heavily in agentic AI is the correct response to an existential technology shift, and choosing margin compression over pretending nothing is happening is intellectually honest. Deducted for the guidance miss itself - projecting 31% and then guiding 25-26% is a large revision that suggests the competitive shift was underestimated. The investment case now rests on management executing a platform transition they only recently acknowledged the urgency of."
+  }
+}

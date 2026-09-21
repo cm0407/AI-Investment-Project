@@ -8,3 +8,13 @@ review_date,original_prediction_date,ticker,entry_price,price_at_review,pct_move
 2026-09-18,2026-09-11,PTC,128.72,134.44,4.4,152.0,13.1,7,12,1.9,open,,,Routine mark-to-market at 7-9 days elapsed. NO outcome judgement possible - this is 1.6-2.5 percent of the stated horizons.
 2026-09-18,2026-09-11,EXEL,57.43,58.49,1.8,66.0,12.8,7,12,1.9,open,,,Routine mark-to-market at 7-9 days elapsed. NO outcome judgement possible - this is 1.6-2.5 percent of the stated horizons.
 2026-09-18,2026-09-11,RMD,219.58,228.42,4.0,252.0,10.3,7,12,1.9,open,,,Routine mark-to-market at 7-9 days elapsed. NO outcome judgement possible - this is 1.6-2.5 percent of the stated horizons.
+2026-09-20,2026-09-09,ADBE,257.26,248.92,-3.2,303.0,21.7,11,18,2.0,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-09,BKNG,180.3,167.90,-6.9,206.0,22.7,11,12,3.0,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-09,EOG,145.36,144.23,-0.8,167.0,15.8,11,12,3.0,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-09,ULTA,549.23,540.98,-1.5,615.0,13.7,11,12,3.0,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-11,INTU,312.77,303.19,-3.1,360.0,18.7,9,12,2.5,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-11,APH,80.25,77.55,-3.4,93.0,19.9,9,12,2.5,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-11,PTC,128.72,135.89,5.6,152.0,11.9,9,12,2.5,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-11,EXEL,57.43,58.36,1.6,66.0,13.1,9,12,2.5,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-11,RMD,219.58,224.99,2.5,252.0,12.0,9,12,2.5,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.
+2026-09-20,2026-09-18,NBIX,151.83,146.23,-3.7,178.0,21.7,2,12,0.5,open,,,Mark-to-market at 2-11 days elapsed (0.5-3.0 percent of horizons). No outcome judgeable.

@@ -361,3 +361,56 @@ that honestly yields one idea has still told the user something true about the o
 spreads at 2.71% are historically very tight, meaning little is being offered cheaply anywhere.
 A screen finding few bargains in that environment is the screen working, not failing.
 **Confidence:** high.
+
+### 2026-09-20 - An eleven-year-old share count made a 61x stock look like an 11x stock
+**Trigger:** HEICO ranked #1 in a stage-2 screen at 91.2%, showing a P/E of 11.6 and a 10.7%
+free-cash-flow yield on 20.2% revenue growth. Those numbers were impossible for that company.
+Its cover-page (dei) share count read **26.9 million as of 2015-12-15** - eleven years stale -
+while the diluted weighted-average count was 141 million. Market cap was understated 5.2x
+($8.0B instead of $42.0B), turning a ~61x P/E into a fake 11.6x.
+**Rule:** Validate the AGE of the share count before pricing anything off it. A stale
+cover-page figure is uniquely dangerous because of its DIRECTION: too few shares means too
+small a market cap, which makes a stock look CHEAP. The bug therefore promotes its own victims
+to the top of a value screen. Where the cover-page count is more than ~400 days behind the
+latest fiscal period, substitute the diluted weighted-average count; if that is unavailable,
+suppress market cap and every multiple derived from it.
+**Age is what separates this from a legitimate split.** Booking Holdings' cover page (751M) is
+23x its pre-split weighted average (33M) and is perfectly CURRENT, so its market cap is right.
+HEICO's is eleven years old and is not. A ratio test alone cannot tell the two apart; the
+period_end date can.
+**The deeper failure:** I had ALREADY built a detector for this on 2026-09-09 - the
+`_per_share_split_warning`. It fired correctly on HEICO. And the screener used the poisoned
+market cap anyway, because the warning was advisory rather than blocking. **A guard that
+detects a bad number but does not prevent its use is not a guard.** This is the second time
+this exact shape of mistake has appeared (see 2026-09-18, where a lesson written in prose was
+never encoded in code). When a defect is detected, ask what still consumes the bad value.
+**Confidence:** high - mechanical, verified across HEI, NICE, BKNG and INTU.
+
+### 2026-09-20 - A return means nothing without the market's return beside it
+**Trigger:** The prediction review showed picks down 1.3% on average and I had no way to say
+whether that was bad. It turns out the S&P 500 was flat over the same windows, so the picks
+trailed the index by 1.3 points, with 3 of 10 beating it.
+**Rule:** Never report portfolio performance without a benchmark measured over the SAME window.
+"Down 1.3%" reads as failure and "up 8%" reads as skill; in both cases the honest question is
+what the market did meanwhile. A pick that falls 2% while the index falls 5% is working.
+Because predictions are made on different dates, each must be compared from ITS OWN start date
+- a single shared window misattributes market moves to stock selection.
+**Implementation:** added `track_predictions.py benchmark`, which prints each pick against SPY
+over its own window and refuses to call the result a track record while the oldest prediction
+is under six months old.
+**Confidence:** high. This is measurement methodology, not a market claim.
+
+### 2026-09-20 - Three versions of the same bet is one bet
+**Trigger:** NICE cleared the threshold at 71.4 on the argument that the market is
+over-punishing an incumbent software company over AI fear. That is the identical argument I
+made for Adobe on 2026-09-09 and Intuit on 2026-09-11.
+**Rule:** Correlation between ideas is not visible from any single thesis - each one looks
+independently reasonable. Before adding a position, state the one-sentence bet behind it and
+check whether an existing holding carries the same sentence. Three stocks expressing "the
+market is wrong about AI destroying incumbent software" is not diversification across three
+companies; it is a single concentrated wager on one macro-technological judgement, and if that
+judgement is wrong all three fail together.
+**Applied here:** NICE is presented WITH an explicit instruction not to hold all three, and it
+is arguably the weakest of the trio - it is the only one that has already cut margin guidance
+(31% to 25-26%) and the only one facing both Microsoft and Salesforce in its core market.
+**Confidence:** high.

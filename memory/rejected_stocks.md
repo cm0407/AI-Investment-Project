@@ -137,3 +137,41 @@ has been conducted.*
   cushion is thin: 12.3% implied against 15.2% delivered.
 - **What would change my mind:** revenue growth accelerating above 16%, or a price near $140.
 - **Re-review date:** 2027-03-18
+
+### HEI - HEICO Corporation - 2026-09-20
+- **Score at rejection:** 67.5/100 AFTER correcting a data defect (91.2% before)
+- **Price at rejection:** $298.22
+- **Primary reason rejected:** it is not cheap. My screen showed a P/E of 11.6 because HEICO's
+  SEC cover-page share count reads 26.9 million **as of 2015-12-15** - eleven years stale -
+  against a true diluted count of 141 million. Correcting it moves market cap from $8.0B to
+  $42.0B and the P/E from 11.6 to **60.8**.
+- **Supporting evidence:** the underlying business is excellent - 20.2% revenue CAGR, 22.7%
+  operating margin, 13.6% ROIC, and the only company in this screen scoring on all 16 data
+  components. At 60.8x earnings and a 2.1% free-cash-flow yield, the price is the problem.
+- **What would change my mind:** a price near $150-175, where the multiple reflects what an
+  aerospace aftermarket business can compound at.
+- **Re-review date:** 2027-03-20
+
+### CHKP - Check Point Software Technologies - 2026-09-20
+- **Score at rejection:** not completed - rejected at Phase 2 on growth
+- **Price at rejection:** $132.71
+- **Primary reason rejected:** there is no growth to buy. Revenue CAGR is 5.7% and free cash
+  flow has grown 0.5% a year. The reverse DCF implies -0.8% - the market expects nothing, and
+  the company is delivering nothing. At 13.3x earnings that is arguably fair rather than cheap.
+- **Supporting evidence:** genuine positives - 30.5% operating margin, 8.4% free-cash-flow
+  yield, and share count down 22.6% through sustained buybacks, the largest reduction seen in
+  any candidate this session. A shrinking share count on flat earnings still compounds per-share
+  value, but it cannot produce a 20% return on its own.
+- **What would change my mind:** revenue growth accelerating above 10%.
+- **Re-review date:** 2027-03-20
+
+### MPWR / ADSK / HWM - Monolithic Power, Autodesk, Howmet - 2026-09-20
+- **Scores:** 72.4%, 67.9%, 65.9% on data pillars; none taken to a full score
+- **Prices at rejection:** $1,217.80 / $216.95 / $229.67
+- **Primary reason rejected:** valuation. Monolithic Power at 96.3x earnings and a 1.1%
+  free-cash-flow yield, Autodesk at 40.3x, Howmet at 60.7x with a 1.6% yield. All three are
+  good businesses; none offers a price at which a 20% return is a reasonable expectation
+  without heroic assumptions.
+- **What would change my mind:** materially lower prices. These are watchlist-for-a-drawdown
+  names, not present opportunities.
+- **Re-review date:** 2027-03-20

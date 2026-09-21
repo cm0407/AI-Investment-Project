@@ -1,0 +1,83 @@
+{
+  "NICE": {
+    "price": 104.97,
+    "score": 71.4,
+    "action": "WATCH",
+    "horizon_months": 12,
+    "bear": {
+      "target_price": 70.0,
+      "probability": 0.33,
+      "assumptions": [
+        "AI agents genuinely displace human contact-centre seats, and a platform priced per agent loses its pricing base.",
+        "Microsoft and Salesforce bundle CX capability into suites customers already pay for.",
+        "Operating margin falls below the guided 25-26% as AI investment keeps rising without matching revenue.",
+        "Multiple stays near 10x on falling earnings - cheap gets cheaper."
+      ]
+    },
+    "base": {
+      "target_price": 124.0,
+      "probability": 0.45,
+      "assumptions": [
+        "Enterprise customers stay put; switching a contact-centre platform remains disruptive enough to deter churn.",
+        "Margin settles at the guided 25-26% and stops falling.",
+        "Cognigy and agentic AI offset seat erosion enough to hold revenue growth near 10%.",
+        "Multiple re-rates modestly from 10.4x as the panic fades."
+      ]
+    },
+    "bull": {
+      "target_price": 157.0,
+      "probability": 0.22,
+      "assumptions": [
+        "AI revenue grows faster than seat revenue erodes and NICE is re-rated as an AI beneficiary rather than a victim.",
+        "Enterprise wins like the Sopra Steria deployment become a visible pattern.",
+        "Margins recover toward 30% once the investment phase passes.",
+        "Multiple expands toward 15x - still modest for a 12% grower."
+      ]
+    },
+    "_computed": {
+      "current_price": 104.97,
+      "cases": {
+        "bear": {
+          "target_price": 70.0,
+          "return_pct": -33.31428027055349,
+          "probability": 0.33,
+          "assumptions": [
+            "AI agents genuinely displace human contact-centre seats, and a platform priced per agent loses its pricing base.",
+            "Microsoft and Salesforce bundle CX capability into suites customers already pay for.",
+            "Operating margin falls below the guided 25-26% as AI investment keeps rising without matching revenue.",
+            "Multiple stays near 10x on falling earnings - cheap gets cheaper."
+          ]
+        },
+        "base": {
+          "target_price": 124.0,
+          "return_pct": 18.12898923501953,
+          "probability": 0.45,
+          "assumptions": [
+            "Enterprise customers stay put; switching a contact-centre platform remains disruptive enough to deter churn.",
+            "Margin settles at the guided 25-26% and stops falling.",
+            "Cognigy and agentic AI offset seat erosion enough to hold revenue growth near 10%.",
+            "Multiple re-rates modestly from 10.4x as the panic fades."
+          ]
+        },
+        "bull": {
+          "target_price": 157.0,
+          "return_pct": 49.56654282175861,
+          "probability": 0.22,
+          "assumptions": [
+            "AI revenue grows faster than seat revenue erodes and NICE is re-rated as an AI beneficiary rather than a victim.",
+            "Enterprise wins like the Sopra Steria deployment become a visible pattern.",
+            "Margins recover toward 30% once the investment phase passes.",
+            "Multiple expands toward 15x - still modest for a 12% grower."
+          ]
+        }
+      },
+      "probability_weighted_return_pct": 8.068972087263033,
+      "prob_positive": 0.67,
+      "prob_hits_20pct": 0.22,
+      "prob_loss": 0.33,
+      "warnings": [],
+      "_basis": "projected",
+      "_note": "These probabilities are informed estimates, not measurements. Their value is in being written down BEFORE the outcome, so that calibration can be checked later in predictions.csv. Scenario probabilities that are never scored are just decoration."
+    }
+  }
+}

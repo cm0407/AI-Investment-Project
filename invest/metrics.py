@@ -347,10 +347,54 @@ def compute(fund: dict, price: Optional[float] = None) -> dict:
         metrics["ebitda_proxy"] = None
 
     # ---- Valuation multiples (need a market price) -----------------------------------
+    # ---- Share count, validated for AGE before anything is priced off it --------------
+    # The cover-page (dei) share count is normally the most current figure available. But
+    # a company can stop updating that tag: HEICO's still read 26.9M shares "as of
+    # 2015-12-15" while its diluted weighted-average count was 141M. Pricing off the stale
+    # figure understated market cap 5.2x and turned a ~61x P/E into a fake 11.6x - which
+    # ranked HEICO FIRST in a screen of 4,354 companies.
+    #
+    # The direction of the error is what makes this dangerous: a stale, too-low share count
+    # makes a stock look CHEAP, so the bug actively promotes its own victims to the top of
+    # a value screen. Detection alone is not enough - if the count cannot be trusted, every
+    # market-cap-derived multiple must be suppressed, not merely flagged.
+    #
+    # Age is what distinguishes this from a legitimate stock split. Booking Holdings' cover
+    # page (751M) is 23x its pre-split weighted average (33M) and is perfectly CURRENT, so
+    # its market cap is right. HEICO's is eleven years old and is not.
     shares_fact = fund.get("shares_outstanding_latest")
     shares = float(shares_fact["value"]) if shares_fact else None
+    shares_asof = shares_fact["period_end"] if shares_fact else None
+    shares_note = None
+
+    anchor_period = fund.get("latest_fiscal_period_end")
+    if shares and shares_asof and anchor_period:
+        from .sec_edgar import _days_between
+        behind = _days_between(shares_asof, anchor_period)
+        if behind is not None and behind > 400:
+            wa_latest = _v(dilshares)
+            if wa_latest and wa_latest > 0:
+                shares_note = (
+                    "Cover-page share count (" + format(shares, ",.0f") + " as of "
+                    + str(shares_asof) + ") is " + str(behind) + " days behind the latest "
+                    "fiscal period and cannot be trusted. Substituted the diluted "
+                    "weighted-average count (" + format(wa_latest, ",.0f") + "), which is "
+                    "current. Market cap and every multiple derived from it use the "
+                    "substituted figure."
+                )
+                shares, shares_asof = wa_latest, "diluted weighted average, latest year"
+            else:
+                shares_note = (
+                    "Cover-page share count is " + str(behind) + " days stale and no "
+                    "diluted weighted-average count is available. Market cap and all "
+                    "price-derived multiples are SUPPRESSED - a share count this old "
+                    "would misstate them by an unknown factor."
+                )
+                shares = None
+
     metrics["shares_outstanding"] = shares
-    metrics["shares_outstanding_asof"] = shares_fact["period_end"] if shares_fact else None
+    metrics["shares_outstanding_asof"] = shares_asof
+    metrics["_share_count_warning"] = shares_note
 
     if price is not None and shares:
         mcap = price * shares

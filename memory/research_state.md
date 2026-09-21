@@ -8,6 +8,32 @@ the Session Log. Never delete or rewrite older entries.
 
 ## Current status
 
+- **System status:** Operational. 54 self-tests passing. Fourth research session 2026-09-20.
+- **Recommendations:** 0 BUY. 9 WATCH (BKNG, ADBE, INTU, APH, PTC, EXEL, RMD, NBIX, NICE),
+  2 AVOID (EOG, ULTA). 11 further candidates rejected across sessions.
+- **Open predictions:** 11. Marked to market 2026-09-20: **average -1.3% vs S&P 500 +0.0%,
+  so trailing the index by 1.3 points; 3 of 10 beat it.** Oldest is 11 days old against
+  12-18 month horizons - NOT a track record and the tool now says so.
+- **Stocks rejected (`rejected_stocks.md`):** 12
+- **Theses written:** 11
+
+### CONCENTRATION RISK - now material
+ADBE (9 Sep), INTU (11 Sep) and NICE (20 Sep) all rest on the SAME one-sentence bet: "the
+market over-punishes incumbent software over AI fear." Three positions, one wager. Separately,
+EXEL and NBIX are both patent-dependent pharma, and BKNG and APH are both economically
+sensitive. Flagged in the 2026-09-20 digest with an explicit instruction not to hold all three
+software names.
+
+### Unresolved items carried forward
+1. **No diversified core.** Raised in SIX consecutive sessions without a response.
+2. **Stop-loss contradiction.** -25% stop fires before the -30% the user said they would hold.
+3. **Analyst-chosen thresholds unconfirmed:** 2.0x debt/equity, 10% dilution, 10-point
+   revenue-vs-profit gap, 400-day staleness windows. All mine.
+4. **Financial-sector analysis remains weak** - no NIM, ROTCE or FFO.
+5. **Organic vs acquired growth undetectable from XBRL frames** - must be checked by hand.
+
+## Superseded status (2026-09-18 session)
+
 - **System status:** Operational. 54 self-tests passing. Third research session completed
   2026-09-18, including the first review of past predictions.
 - **Recommendations to date:** 0 BUY. 8 WATCH (BKNG, ADBE, INTU, APH, PTC, EXEL, RMD, NBIX),
@@ -124,6 +150,42 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-09-20 - Fourth session: a share-count bug that would have misled the user
+
+**Did NOT re-run the identical screen.** The prompt was the same as 2026-09-18, but CY2025
+frames are annual and cannot change until FY2026 filings land - re-running would have returned
+the identical 216 survivors. Instead mined the ~156 survivors never examined, deliberately
+weighted toward sectors outside the existing pharma/software concentration.
+
+**THE FINDING: HEICO ranked #1 at 91.2% on a P/E of 11.6. It is actually 60.8.**
+HEICO's dei cover-page share count reads 26.9M **as of 2015-12-15** - eleven years stale -
+against a true diluted count of 141M. Market cap was understated 5.2x ($8.0B vs $42.0B).
+The direction matters: too few shares means too small a market cap means the stock looks CHEAP,
+so the bug actively promotes its victims to the top of a value screen.
+
+**The compounding failure:** the `_per_share_split_warning` built on 2026-09-09 FIRED correctly
+on HEICO - and the screener used the poisoned market cap anyway, because the warning was
+advisory rather than blocking. Second occurrence of this shape (18 Sep: a lesson written in
+prose but never encoded). Fix: share-count age validation in `metrics.compute()` substitutes
+the diluted weighted-average count when the cover page is >400 days stale, or suppresses market
+cap entirely. Age - not ratio - is what distinguishes this from a legitimate split: BKNG's
+cover page is 23x its pre-split WA and is CURRENT, so its market cap is right.
+
+**Benchmarking added.** The review showed picks down 1.3% with no way to judge that. Added
+`track_predictions.py benchmark`: each pick vs SPY over its OWN window (different start dates
+would otherwise misattribute market moves). Result: -1.3% vs +0.0%, 3 of 10 beating. The
+command refuses to call it a track record while the oldest prediction is under six months.
+
+**Outcome: ONE new idea.** NICE 71.4 (WATCH) - 10.4x earnings, 11.0% FCF yield, reverse DCF
+implies -8.9% FCF growth against +8.9% delivered. Presented WITH an explicit warning that it
+is the third instance of the ADBE/INTU bet and arguably the weakest: the only one to have
+already cut margin guidance (31% -> 25-26%) and the only one facing both Microsoft and
+Salesforce in its core market. Rejected HEI (60.8x after correction), CHKP (5.7% growth,
+nothing to buy), MPWR/ADSK/HWM (96x/40x/61x).
+
+Deliverables: `reports/daily/digest_2026-09-20.md`, 5 rejections, 3 lessons, metrics fix,
+benchmark command. Digest emailed.
 
 ### 2026-09-18 - Third research session + FIRST prediction review
 

@@ -254,6 +254,84 @@ def cmd_stats(args) -> int:
     return 0
 
 
+def cmd_benchmark(args) -> int:
+    """Compare every pick against the S&P 500 over that pick's OWN holding window.
+
+    A raw return is close to meaningless on its own. "My picks are down 1.3%" reads as
+    failure and "up 8%" reads as skill, when in both cases the honest question is what the
+    market did over the same days. A pick that falls 2% while the index falls 5% is doing
+    its job; one that rises 3% while the index rises 9% is not.
+
+    Each prediction is measured from ITS OWN start date, because they were made on
+    different days and a single shared window would misattribute market moves.
+    """
+    preds = _read(config.PREDICTIONS_CSV)
+    if not preds:
+        print("No predictions recorded yet.")
+        return 0
+
+    try:
+        hist = prices.price_history(args.benchmark, period="1y", verbose=False)
+        closes = hist["Close"]
+    except Exception as exc:
+        print("Could not load benchmark " + args.benchmark + ": " + str(exc)[:120])
+        return 1
+
+    def bench_on(day: str):
+        stamps = [i for i in closes.index if i.strftime("%Y-%m-%d") <= day]
+        return float(closes.loc[stamps[-1]]) if stamps else None
+
+    bench_now = float(closes.iloc[-1])
+    live = prices.batch_prices(sorted({p_["ticker"] for p_ in preds}), verbose=True)
+
+    print()
+    print("PICK vs " + args.benchmark + " OVER EACH PREDICTION'S OWN WINDOW")
+    print("TICKER  FROM        DAYS   MY PICK    " + args.benchmark.ljust(9) + "RELATIVE")
+    print("-" * 62)
+
+    rel_total = pick_total = bench_total = 0.0
+    counted = beat = 0
+    for r in preds:
+        now = live.get(r["ticker"])
+        start = bench_on(r["date"])
+        if now is None or start is None:
+            print("  " + r["ticker"].ljust(6) + r["date"] + "  " + config.MISSING)
+            continue
+        entry = float(r["entry_price"])
+        days = (date.today() - datetime.strptime(r["date"], "%Y-%m-%d").date()).days
+        pick = (now / entry - 1.0) * 100.0
+        mkt = (bench_now / start - 1.0) * 100.0
+        rel = pick - mkt
+        counted += 1
+        beat += 1 if rel > 0 else 0
+        pick_total += pick
+        bench_total += mkt
+        rel_total += rel
+        print("  " + r["ticker"].ljust(6) + r["date"] + "  " + str(days).rjust(4) + "  "
+              + format(pick, "+7.1f") + "%  " + format(mkt, "+7.1f") + "%  "
+              + format(rel, "+8.1f") + " pts")
+
+    if not counted:
+        print("No comparable prices.")
+        return 1
+
+    print("-" * 62)
+    print("  AVERAGE".ljust(24) + format(pick_total / counted, "+7.1f") + "%  "
+          + format(bench_total / counted, "+7.1f") + "%  "
+          + format(rel_total / counted, "+8.1f") + " pts")
+    print("  beat the index: " + str(beat) + " of " + str(counted))
+
+    oldest = min((datetime.strptime(p_["date"], "%Y-%m-%d").date() for p_ in preds))
+    elapsed = (date.today() - oldest).days
+    print()
+    print("  Oldest prediction is " + str(elapsed) + " days old.")
+    if elapsed < 180:
+        print("  THIS IS NOT A TRACK RECORD. Relative performance over weeks is noise;")
+        print("  the horizons here are 12-18 months. Reported because it is the correct")
+        print("  way to measure, not because it yet means anything.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Record and score predictions.")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -285,6 +363,11 @@ def main() -> int:
 
     s = sub.add_parser("stats", help="calibration summary")
     s.set_defaults(func=cmd_stats)
+
+    b = sub.add_parser("benchmark",
+                       help="compare every pick against an index over its own window")
+    b.add_argument("--benchmark", default="SPY", help="index ETF ticker (default SPY)")
+    b.set_defaults(func=cmd_benchmark)
 
     args = ap.parse_args()
     config.ensure_dirs()
