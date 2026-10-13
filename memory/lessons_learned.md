@@ -414,3 +414,100 @@ judgement is wrong all three fail together.
 is arguably the weakest of the trio - it is the only one that has already cut margin guidance
 (31% to 25-26%) and the only one facing both Microsoft and Salesforce in its core market.
 **Confidence:** high.
+
+### 2026-10-12 - I called the ceiling and the ceiling was not there: PTC +51% on a takeover
+**Trigger:** My first resolved prediction. PTC was logged 2026-09-11 at $128.72 with a $152
+target (+18%). On 2026-10-05 Schneider Electric agreed to acquire it for **$205 per share in
+cash** (~$23.7B). The stock is at $194.39, up **51%** in 31 days, having blown through my
+target by 22%.
+
+**What was RIGHT, and worth keeping:** the business judgement. I identified CAD/PLM switching
+costs as punitive ("migrating an engineering record means re-validating decades of product
+data"), scored it the best-measured company in the screen at 16/16 components, and the reverse
+DCF showed the market demanding 8.6% free-cash-flow growth from a company delivering 32%. Every
+one of those readings was correct.
+
+**What was WRONG:** I wrote, explicitly, that the upside was *structurally capped* - "a
+business growing ARR at 9% does not re-rate dramatically... reaching +20% needs the multiple to
+expand, which I cannot point to a specific reason for." I scored catalysts 5/10 on the grounds
+that "a company growing ARR 9% and guiding to 9% is delivering precisely what is already
+expected."
+
+**The rule: a high-quality, hard-to-replace asset trading below what its own cash generation
+justifies IS a catalyst, because it makes the company an acquisition target.** A strategic buyer
+pays for exactly the characteristics I had identified - mission-critical software embedded in
+customers' workflows with punitive switching costs. I spotted that the asset was both excellent
+and cheap, then failed to consider that somebody else might notice the same thing.
+
+**The deeper error - arguing from my own ignorance.** "I cannot point to a catalyst" is a
+statement about the limits of my search. I converted it into "there is no catalyst", which is a
+statement about the world. Those are not the same claim, and the gap between them cost 41
+percentage points of upside in my stated target. **Never convert an absence of evidence in my
+own analysis into an upper bound on an outcome.**
+
+**Framework consequence:** M&A is an entirely unmodelled source of upside here. The catalysts
+pillar only credits dated, company-announced events; it assigns zero weight to "this asset is
+strategically valuable and mispriced", which is the precondition for a bid. For any candidate
+that is (a) sub-$30B, (b) high switching costs, (c) trading below its reverse-DCF implied
+growth, takeover optionality is a real part of the return distribution and the bull case should
+say so.
+
+**And a practical point for the position:** the thesis is now COMPLETE. At $194.39 against a
+$205 cash offer, the remaining 5.2% over roughly nine months to close is a merger-arbitrage
+bet on deal completion - a different proposition from the business thesis I underwrote, with
+different risks (regulatory review, deal break). Holding it is a new decision, not a
+continuation of the old one.
+**Confidence:** high. Single observation, but the reasoning error is plainly identifiable
+independent of the outcome.
+
+### 2026-10-12 - My apparent outperformance is one takeover bid
+**Trigger:** The picks are up 5.2% against the S&P 500's 2.2% - ahead by 3.0 points, 7 of 11
+beating the index. That reads as skill.
+**Strip out PTC and the picks are up 0.62% against the index's 2.20% - BEHIND by 1.6 points.**
+PTC alone contributed +4.6 points of the +5.2% average.
+**Rule:** Whenever a performance figure is reported, check whether a single position is
+producing it, and say so in the same breath. An average across eleven positions where one moved
+51% on a takeover is not a measure of stock selection; it is a measure of one event. Report the
+median or the ex-outlier figure alongside the mean, because the mean is the number that
+flatters.
+**What this means honestly:** on the evidence so far, nine of my eleven theses are doing nothing
+in particular and one got lucky with an acquirer. That is the correct reading at 33 days.
+**Confidence:** high - arithmetic, not judgement.
+
+### 2026-10-12 - The macro assumption under every valuation moved, and I never checked it
+**Trigger:** Reviewing why Booking fell 12%, I found the Federal Reserve had RAISED rates for
+the first time in three years. Checking FRED confirmed a broader shift since my 2026-09-11
+macro note:
+
+| | 2026-09-11 | 2026-10-12 |
+|---|---|---|
+| 10-year Treasury | 4.83% | **5.22%** (+39bp) |
+| Fed funds | 3.63% | 3.75% (a HIKE) |
+| High-yield spread | 2.71% | **3.15%** (+44bp) |
+| Consumer sentiment | 55.2 | **51.7** |
+
+**Rule:** Every DCF in this system uses a 10.0% required return, chosen against a 4.83%
+risk-free rate - a 5.2-point equity risk premium. Holding that premium constant at today's
+5.22% implies **10.4%**, which cuts a DCF-derived fair value by about **5.3%**. None of my
+price targets was adjusted. I wrote in the September macro note that "none of these theses need
+rates to fall" - which was correct and useful - but I never built the converse check: what
+happens if rates RISE. A macro note that records the backdrop without a trigger for the
+backdrop changing is a snapshot, not a control.
+**Action:** before each review, re-pull the risk-free rate and state what the change implies for
+existing targets. Widening credit spreads (+44bp) and falling consumer sentiment (-3.5) both
+lean against the economically-sensitive positions specifically - Booking and Amphenol.
+**Confidence:** high on the mechanism; the magnitude depends on holding the risk premium
+constant, which is itself an assumption.
+
+### 2026-10-12 - I named the right risk and the wrong company
+**Trigger:** My Booking thesis listed as a structural threat "Google increasingly inserting
+itself between the traveller and the OTA." What actually happened: **Meta** launched its Muse AI
+agent and **Expedia** integrated it.
+**Rule:** Credit where due - the SHAPE of the risk was correctly identified, and that is the
+part that matters for a thesis. But I attached it to a specific named competitor, which made it
+easy to monitor the wrong thing. When writing a structural risk, describe the MECHANISM
+("anything that intermediates between the customer and the booking platform") rather than the
+incumbent most likely to do it. Monitoring "is Google doing this?" would have missed Meta
+entirely.
+**Confidence:** medium-high. One observation, but the distinction between mechanism and actor
+is generally sound.

@@ -8,6 +8,45 @@ the Session Log. Never delete or rewrite older entries.
 
 ## Current status
 
+- **System status:** Operational. 54 self-tests passing. Review session 2026-10-12.
+- **FIRST RESOLVED PREDICTION: PTC, target hit via acquisition.** Schneider Electric
+  definitive agreement 2026-10-05 at $205/share cash (~$23.7B), expected close Q3 2027.
+  Logged at $128.72 with a $152 target; +51% to $194.39. **My thesis explicitly claimed the
+  upside was structurally capped - that claim was wrong.** See lessons 2026-10-12.
+- **Open predictions:** 11, of which PTC is complete (now a merger-arb position, not the
+  business thesis) and BKNG is marked **at_risk** (guidance CUT, breaking my base case).
+- **Performance at 33 days:** picks +5.2% vs SPY +2.2%, ahead 3.0 pts, 7 of 11 beating.
+  **EXCLUDING PTC: +0.62% vs +2.20% - BEHIND by 1.6 pts.** All apparent outperformance is
+  one takeover bid. Not a track record at 33 days against 12-18 month horizons.
+- **Stocks rejected:** 12 · **Theses written:** 11
+
+### MACRO REGIME HAS SHIFTED since valuations were set (2026-09-11 -> 2026-10-12)
+| | Sep 11 | Oct 12 |
+|---|---|---|
+| 10-year Treasury | 4.83% | **5.22%** (+39bp) |
+| Fed funds | 3.63% | 3.75% (**a HIKE** - first in 3 years) |
+| High-yield spread | 2.71% | **3.15%** (+44bp) |
+| Consumer sentiment | 55.2 | **51.7** |
+
+All DCFs used a 10.0% required return set against 4.83%. Holding the 5.2-pt risk premium
+constant implies **10.4%** today, cutting DCF-derived fair values ~**5.3%**. **No price target
+has been adjusted.** Widening spreads and falling sentiment lean specifically against the
+economically-sensitive positions (BKNG, APH).
+
+### Unresolved items carried forward
+1. **No diversified core.** SEVEN consecutive sessions. This review strengthens the argument:
+   ex-PTC the picks trailed the index.
+2. **Stop-loss contradiction**, now live - BKNG -12%, ADBE -7%.
+3. **M&A optionality is unmodelled.** The catalysts pillar credits only dated announced events
+   and scored PTC 5/10 weeks before a 59% takeover. Needs a slot in the bull case for
+   "strategically valuable asset trading below its cash-generation value".
+4. **No trigger for macro change.** The September note recorded the backdrop but had no alarm
+   for it moving; the rate rise was found only by investigating BKNG's fall.
+5. Analyst-chosen thresholds still unconfirmed; financial-sector analysis still weak; organic
+   vs acquired growth still undetectable from frames.
+
+## Superseded status (2026-09-20 session)
+
 - **System status:** Operational. 54 self-tests passing. Fourth research session 2026-09-20.
 - **Recommendations:** 0 BUY. 9 WATCH (BKNG, ADBE, INTU, APH, PTC, EXEL, RMD, NBIX, NICE),
   2 AVOID (EOG, ULTA). 11 further candidates rejected across sessions.
@@ -150,6 +189,42 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-10-12 - FIRST RESOLVED PREDICTION, and it exposed a reasoning error
+
+**PTC acquired.** Schneider Electric definitive agreement 2026-10-05, $205/share cash,
+~$23.7B, board approved, close expected Q3 2027. Logged 2026-09-11 at $128.72 with a $152
+target (+18%); now $194.39, **+51% in 31 days**, past my target by 22%.
+
+**What held:** the business and valuation judgements. CAD/PLM switching costs correctly
+identified as punitive; best-measured candidate at 16/16 components; reverse DCF showed the
+market demanding 8.6% FCF growth from a company delivering 32%. That gap is precisely what
+attracts a strategic acquirer.
+
+**What broke:** my explicit claim that upside was STRUCTURALLY CAPPED - "a business growing ARR
+at 9% does not re-rate dramatically... reaching +20% needs multiple expansion, which I cannot
+point to a specific reason for." Catalysts scored 5/10 for having no dated event. **A
+hard-to-replace asset trading below its cash-generation value IS a catalyst - it makes the
+company a target.** Underneath it: I converted "I cannot find a catalyst" (a fact about my
+search) into "there is no catalyst" (a claim about the world). 41 percentage points of stated
+upside sat in that gap.
+
+**Performance honestly stated:** +5.2% vs SPY +2.2%. **Ex-PTC: +0.62% vs +2.20%, BEHIND by 1.6
+pts.** PTC contributed +4.6 of the +5.2 average. Ten theses doing nothing in particular and one
+takeover.
+
+**BKNG marked at_risk.** Guidance CUT and new debt raised - my base case assumed guided growth
+would be delivered. App traffic -5pts QoQ to -2.8% YoY, partially confirming the bear case.
+Also hit by two unanticipated factors: Brent above $100, and a Fed rate HIKE. Separately: my
+thesis named "Google inserting itself between traveller and OTA" - it was **Meta** (Muse agent,
+integrated by Expedia). Right mechanism, wrong actor; monitoring the named company would have
+missed it.
+
+**Macro regime shift found only by investigating BKNG** - see Current status table. 10-year up
+39bp to 5.22%, Fed hiked, spreads +44bp, sentiment down 3.5. Implies ~10.4% discount rate and
+~5.3% lower DCF fair values; no target adjusted.
+
+5 lessons recorded. `predictions.csv` unmodified. Digest emailed.
 
 ### 2026-09-20 - Fourth session: a share-count bug that would have misled the user
 
