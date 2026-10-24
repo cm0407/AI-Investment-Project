@@ -8,6 +8,50 @@ the Session Log. Never delete or rewrite older entries.
 
 ## Current status
 
+- **System status:** Operational. 54 self-tests passing. Review session 2026-10-23.
+- **Open predictions:** 11, at 33-44 days (8-12% of horizons).
+- **Performance:** picks **+9.5%** vs SPY **-0.2%**; ex-PTC **+5.39%**; median **+12.2%**.
+  8 of 11 beating the index. Still NOT a track record at 44 days.
+- **THREE TARGETS EXCEEDED:** PTC (acquisition, +50.6%), ULTA (+13.7%), RMD (+15.2%).
+  Three more within 3% (EXEL, NICE, EOG). **Six of eleven at or near a TWELVE-MONTH target
+  after ~12% of the horizon.**
+- **Stocks rejected:** 12 · **Theses written:** 11
+
+### THE CALIBRATION FINDING - scenario ranges are too narrow
+Tested every scenario span against the stock's own annualised volatility: **10 of 10 are
+narrower than a two-sigma annual move.** NICE carries 47.9% volatility against a -33%/+50%
+span; INTU 42.5% against -28%/+50%. My bear and bull cases are each roughly a ONE-sigma event -
+an ordinary year. This explains both halves of what is happening: targets reached in weeks, and
+BKNG already 41% of the way to its bear case. **The attached probabilities are therefore also
+wrong** - a "30% chance of the bear case" is not conservative if that case is really an ordinary
+outcome. Fix: size ranges off measured volatility, not off what feels like a big number.
+
+### MY AVOID CALLS ARE BEATING MY WATCH CALLS
+AVOID-rated (EOG, ULTA): **+12.95%**. WATCH-rated ex-PTC (8 names): **+3.50%**.
+- *EOG*: I wrote that the return "depends chiefly on the oil price, which I have no framework to
+  forecast" and then rated it AVOID. Brent went above $100. I was right that oil would decide it
+  and then treated my own inability to forecast oil as an expectation of a poor outcome. The
+  honest rating was **no opinion**, not AVOID.
+- *ULTA*: up 13.7% past target but **has not reported since** (next ~3 Dec). The margin concern
+  that drove the rejection is UNTESTED, not refuted. Slow, not wrong.
+
+### Unresolved items carried forward
+1. **No diversified core.** EIGHT consecutive sessions.
+2. **Stop-loss contradiction**, live: BKNG -13.6%, APH -7.7%.
+3. **M&A optionality still unmodelled** in the catalysts pillar (PTC lesson, 2026-10-12).
+4. **No macro-change trigger**; rates checked manually.
+5. **Scenario ranges need volatility-based sizing** - new this session, not yet implemented in code.
+6. Analyst-chosen thresholds unconfirmed; financial-sector analysis weak; organic vs acquired
+   growth undetectable from frames.
+
+### Upcoming dated events
+- **28 Oct 2026** - Amphenol Q3. First genuine test of the "AI capex digestion" bear case;
+  analysts flag pulled-forward orders, the exact mechanism I described.
+- **3 Dec 2026** - Exelixis FDA action date on zanzalintinib (binary).
+- **~3 Dec 2026** - Ulta Q3, the first test of the margin thesis I rejected it on.
+
+## Superseded status (2026-10-12 session)
+
 - **System status:** Operational. 54 self-tests passing. Review session 2026-10-12.
 - **FIRST RESOLVED PREDICTION: PTC, target hit via acquisition.** Schneider Electric
   definitive agreement 2026-10-05 at $205/share cash (~$23.7B), expected close Q3 2027.
@@ -189,6 +233,34 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-10-23 - Calibration review: my scenario ranges are too narrow, and my AVOIDs are winning
+
+**Performance.** +9.5% vs SPY -0.2%, 8 of 11 beating. Ex-PTC +5.39%; median +12.2%. The
+outlier discipline adopted on 10-12 has now moved the answer in BOTH directions (down last
+time, not down this time), which is evidence it measures something rather than only flattering.
+
+**THE FINDING: six of eleven positions are at or within 3% of a TWELVE-MONTH target after ~12%
+of the horizon** (PTC, ULTA, RMD exceeded; EXEL, NICE, EOG within 3%). Meanwhile BKNG is 41% of
+the way to its BEAR case. Both ends moving too fast meant the ranges, not the direction, were
+wrong. Tested it: compared every scenario span against the stock's own annualised volatility -
+**10 of 10 narrower than a two-sigma annual move**. My bear and bull cases are one-sigma events,
+i.e. ordinary years. The attached probabilities are consequently also miscalibrated.
+
+**MY AVOID CALLS OUTPERFORMED MY WATCH CALLS** (+12.95% vs +3.50% ex-PTC). The EOG case is a
+clean reasoning error: I identified correctly that oil would decide the outcome, said I could
+not forecast oil, and then rated AVOID - converting "outside my competence" into "expect a poor
+outcome". The honest rating was no-opinion. ULTA is the counter-case: up 13.7% past target but
+it HAS NOT REPORTED since (next ~3 Dec), so the margin thesis is untested rather than refuted -
+slow, not wrong.
+
+**Checked what had actually reported before reading anything into prices.** ULTA, RMD and APH
+have all moved materially without any new results. APH reports 28 October - its -7.7% fall is
+entirely pre-test. Recorded as a rule: establish whether information has arrived before
+attributing a move to a thesis.
+
+Statuses recorded: RMD and ULTA target_hit, EOG at_risk, each with what held and what broke.
+4 lessons appended. `predictions.csv` unmodified.
 
 ### 2026-10-12 - FIRST RESOLVED PREDICTION, and it exposed a reasoning error
 

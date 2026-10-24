@@ -511,3 +511,101 @@ incumbent most likely to do it. Monitoring "is Google doing this?" would have mi
 entirely.
 **Confidence:** medium-high. One observation, but the distinction between mechanism and actor
 is generally sound.
+
+### 2026-10-23 - My bear and bull cases describe an ordinary year, not an extreme one
+**Trigger:** Six of eleven positions are at or within 3% of a TWELVE-MONTH price target after
+about 12% of the horizon. Three have already exceeded it (PTC, ULTA, RMD). At the same time
+Booking is 41% of the way to its bear case. Both ends of my ranges are being reached far too
+fast for the ranges to be right.
+
+**I tested it properly rather than guessing.** Comparing each scenario span against the stock's
+own annualised volatility:
+
+| | ann. volatility | my bear-to-bull span |
+|---|---|---|
+| NICE | 47.9% | −33% to +50% |
+| INTU | 42.5% | −28% to +50% |
+| APH | 41.0% | −38% to +40% |
+| EXEL | 40.3% | −32% to +50% |
+| ADBE | 37.8% | −30% to +50% |
+| ULTA | 36.9% | −28% to +30% |
+| NBIX | 35.1% | −30% to +50% |
+| BKNG | 33.3% | −33% to +38% |
+| EOG | 29.3% | −32% to +40% |
+| RMD | 28.4% | −28% to +31% |
+
+**All 10 of 10 spans are narrower than a two-sigma annual move.** For most, the bear case and
+the bull case are each roughly a ONE-sigma event - which is to say, an ordinary year. I have
+been labelling the normal range of outcomes "bear" and "bull".
+
+**Rule:** size scenario ranges against the stock's own volatility, not against what feels like a
+big number. If a stock has 40% annualised volatility, a ±30% range does not describe the tails -
+it describes Tuesday. A bear case should be an outcome that genuinely hurts, which for a
+40%-vol stock means something closer to −50%, and the bull case correspondingly wider.
+
+**Why this matters more than it looks:** the probabilities attached to those cases are now also
+wrong. If my "bear case" is really a 1-in-3 ordinary outcome rather than a 1-in-10 bad one, then
+a stated 30% probability of the bear case is not conservative - it may be optimistic. Narrow
+ranges make the whole scenario apparatus look more precise than it is.
+**Confidence:** high. Measured across ten positions with a clear mechanism.
+
+### 2026-10-23 - "I cannot forecast this" is not "this will do badly"
+**Trigger:** My two AVOID-rated picks are up **+12.95%** on average. My eight WATCH-rated picks
+excluding the takeover are up **+3.50%**. The stocks I told the user to skip are beating the
+ones I favoured.
+
+**EOG is the clean case, and the error is mine, not the market's.** I rejected it writing: "the
+return depends chiefly on the oil price, which I have no framework to forecast." Then I rated it
+AVOID. Brent subsequently moved above $100 and EOG is up 12.2%, within 2.4% of my target.
+
+I was **correct** that oil would decide the outcome. I then converted *my own inability to
+forecast oil* into *an expectation of a poor outcome*. Those are different claims. The honest
+rating for something outside my competence is **no opinion** - decline to cover it - not AVOID.
+AVOID is a prediction, and it should only be made when I have positive evidence of a bad
+outcome, not an absence of evidence about any outcome.
+
+**ULTA is the instructive counter-case.** It is up 13.7% past my target, but it **has not
+reported earnings since** - next results are due around 3 December. The concern that drove the
+rejection (operating income falling three straight years while revenue grew, EPS propped up by a
+20.5% share-count reduction) is entirely **untested**. The stock re-rated on no new information
+about the problem. So the analysis is not shown to be wrong - it is shown to be *slow*, which is
+a different thing and must not be confused with it.
+
+**Rule:** separate two questions that I have been answering as one. (1) Is the business
+deteriorating? (2) Will the share price fall over my horizon? An AVOID conflates them. Where the
+answer to (1) is yes but I have no edge on (2), say exactly that.
+**Confidence:** medium-high on the reasoning; low on the performance data itself (n=2, 44 days).
+
+### 2026-10-23 - The outlier discipline earned its keep by reversing the answer twice
+**Trigger:** On 2026-10-12 I committed to always reporting performance with the single largest
+contributor stripped out. This review is the second application and it has now changed the
+conclusion in BOTH directions.
+
+| | all 11 | excluding PTC | median |
+|---|---|---|---|
+| 2026-10-12 | +5.2% vs +2.2% → **ahead 3.0** | +0.62% vs +2.20% → **BEHIND 1.6** | — |
+| 2026-10-23 | +9.5% vs −0.2% → **ahead 9.7** | +5.39% vs −0.2% → **ahead 5.6** | +12.2% |
+
+Last review the headline flattered me and the ex-outlier figure corrected it downward. This
+review the ex-outlier figure still shows genuine outperformance, so the headline was not purely
+an artefact. **A discipline that only ever moves the answer in the flattering direction is not a
+discipline.** This one has moved it both ways, which is evidence it is measuring something.
+**Standing rule:** report mean, ex-largest-contributor, and median together. The median
+(+12.2%) is the most outlier-resistant of the three and is currently the most favourable, which
+is itself worth noticing rather than quietly preferring.
+**Confidence:** high - arithmetic.
+
+### 2026-10-23 - Check whether the company has actually reported before reading anything into the price
+**Trigger:** Three of my largest movers have not reported earnings since the prediction was
+made. ULTA next reports ~3 December. Amphenol reports 28 October - five days from now - so its
+−7.7% fall happened entirely BEFORE the test of my thesis. ResMed likewise exceeded its target
+with no new results.
+**Rule:** before attributing a price move to a thesis being right or wrong, establish whether
+any new information about that thesis has actually arrived. A stock that rises 13.7% with no
+earnings release has told me nothing about whether its margins are recovering. Attribute moves
+to sentiment, rates or sector rotation when that is what they are, and record the thesis as
+UNTESTED rather than vindicated or refuted.
+**Practical consequence:** Amphenol's Q3 on 28 October is the first genuine test of the "AI capex
+digestion" bear case. Analysts already flag that recent strength reflects pulled-forward orders,
+which is the mechanism I described. That report matters; the price action before it does not.
+**Confidence:** high.
