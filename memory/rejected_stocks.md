@@ -175,3 +175,53 @@ has been conducted.*
 - **What would change my mind:** materially lower prices. These are watchlist-for-a-drawdown
   names, not present opportunities.
 - **Re-review date:** 2027-03-20
+
+### FRSH - Freshworks Inc. - 2026-10-24
+- **Score at rejection:** 89.0% on stage-2 data pillars - **top of the screen, and a false positive**
+- **Price at rejection:** $15.49
+- **Primary reason rejected:** the profit is not from operating the business. Net income of
+  **$184M against operating income of $13M** - revenue $839M, operating margin 1.6%, net margin
+  21.9%. Operating income had been NEGATIVE for four straight years (-$233M, -$170M, -$139M)
+  and only just crossed into profit. The gap between net and operating income is a one-off
+  below the operating line (a tax valuation-allowance release is the usual cause), not earnings.
+- **Supporting evidence:** 27.4% revenue CAGR is genuine and the company is clearly improving.
+  But a 21.9% "net margin" on a 1.6% operating margin is an accounting event, not profitability.
+  Only 10 of 16 components measurable.
+- **Defect fixed:** `broad_screen.py` now excludes any company whose net income exceeds
+  operating income by more than 50%. Universe fell 216 -> 208.
+- **What would change my mind:** two consecutive years of operating margin above 10%.
+- **Re-review date:** 2027-04-24
+
+### BMI - Badger Meter, Inc. - 2026-10-24
+- **Score at rejection:** 68.6/100 (SPECULATIVE / INCOMPLETE)
+- **Price at rejection:** $151.24
+- **Primary reason rejected:** the market demands more than the company has delivered. Reverse
+  DCF implies **18.1% annual free-cash-flow growth against 16.1% delivered** - the opposite of
+  the setup worth owning, and at 30.5x earnings with a 3.9% free-cash-flow yield there is no
+  cushion if it disappoints.
+- **Supporting evidence:** genuinely attractive business and the best fit this session for the
+  macro backdrop - water metering for municipal utilities is replacement-cycle and
+  mandate-driven, not discretionary. 16.6% revenue CAGR, 20.0% operating margin, flat share
+  count, 14/16 components measurable. Risk/reward scored 4/10 and that was the binding
+  constraint.
+- **Sized honestly:** 41.7% annualised volatility means a defensible bear case is about **-52%**,
+  not the -28% I would have written before this session's calibration work. That reframing is
+  what pushed risk/reward down.
+- **What would change my mind:** a price near $105-115, where the implied growth rate falls
+  below what the company actually delivers.
+- **Re-review date:** 2027-04-24
+
+### MCD / ROL / PODD / CTAS - McDonald's, Rollins, Insulet, Cintas - 2026-10-24
+- **Prices:** $248.46 / $34.82 / $149.01 / $224.10
+- **Primary reason rejected:** all four require growth well above what they deliver.
+  **McDonald's: price implies 22.4% free-cash-flow growth against 9.2% delivered.**
+  **Rollins: 19.1% implied against 9.5% delivered.** Insulet's implied 20.0% cannot even be
+  compared because its free-cash-flow history is too short to compute a CAGR, and its share
+  count rose 9.0%. Cintas trades at 44.5x earnings with a 2.1% free-cash-flow yield.
+- **Note:** McDonald's and Rollins are exactly the non-discretionary businesses this session's
+  macro note argued for - pest control and fast food both hold up in a weak consumer
+  environment. The problem is not the businesses; it is that everyone else has noticed, and the
+  defensive characteristics are fully priced.
+- **What would change my mind:** materially lower prices. These are watchlist-for-a-drawdown
+  names.
+- **Re-review date:** 2027-04-24

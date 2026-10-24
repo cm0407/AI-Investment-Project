@@ -1,0 +1,22 @@
+{
+  "business_quality": {
+    "points": 11,
+    "justification": "Clean compounding with 14 of 16 components measurable: revenue CAGR 16.6%, operating margin 20.0%, and a flat share count (+0.9%) so per-share growth is real rather than engineered. Badger Meter sells water flow measurement and control to municipal utilities - demand driven by regulated replacement cycles and water-loss mandates rather than discretionary spending, which is exactly the demand profile the current macro backdrop argues for. Deducted because the business is small ($0.9B revenue) and the end market, while non-discretionary, grows slowly in aggregate."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Genuine but bounded. Utility metering carries real switching friction: meters are installed infrastructure with 15-20 year lives, specified into municipal procurement standards, and increasingly tied to the vendor's data platform (BEACON). Utilities are conservative buyers who do not change supplier casually. Deducted because the moat is one of incumbency and procurement inertia rather than technology - Itron, Sensus/Xylem and Mueller compete for the same tenders, and a municipality running a competitive bid can switch at the replacement cycle."
+  },
+  "catalysts": {
+    "points": 4,
+    "justification": "Thin, and I am scoring it honestly rather than manufacturing one. There is no dated event that re-rates this stock. What exists is structural: water infrastructure replacement mandates and smart-metering adoption, both of which are multi-year tailwinds with no scheduled trigger. Municipal budget cycles are slow and well telegraphed. This is a compounder, not a catalyst story, and the score should say so."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "The binding constraint. The reverse DCF implies the price requires 18.1% annual free-cash-flow growth against 16.1% delivered - the market is asking for MORE than the company has achieved, which is the opposite of the setup I want. At 30.5x earnings and a 3.9% free-cash-flow yield there is no valuation cushion. Sized against the stock's own volatility the honest bear case is deeper than it feels, and the upside requires the multiple to hold rather than expand. Positive business, unattractive entry."
+  },
+  "management": {
+    "points": 4,
+    "justification": "Operationally consistent: margins expanded from the mid-teens to 20.0% while revenue compounded 16.6%, and the share count is essentially flat, so growth has not been funded by diluting holders. Conservative balance sheet. Withheld one point because capital allocation is unremarkable - no meaningful buyback at any price, and the cash build has not been deployed into anything that changes the growth rate."
+  }
+}

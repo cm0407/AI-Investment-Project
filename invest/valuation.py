@@ -245,7 +245,63 @@ def multiples_valuation(metrics: dict, target_multiples: dict[str, float]) -> di
     return out
 
 
-def scenarios(price: float, metrics: dict, bear: dict, base: dict, bull: dict) -> dict:
+def check_scenario_width(bear_pct: float, bull_pct: float,
+                         annual_volatility_pct: Optional[float]) -> dict:
+    """Is this bear-to-bull range wide enough to mean anything for THIS stock?
+
+    Added 2026-10-23 after a calibration review found six of eleven positions at or within
+    3% of a TWELVE-MONTH target after about 12% of the horizon, while another was already
+    41% of the way to its bear case. Both ends arriving too fast indicted the ranges, not
+    the direction.
+
+    Testing every scenario span against the stock's own annualised volatility found 10 of
+    10 narrower than a two-sigma annual move. NICE carries 47.9% volatility and had been
+    given a -33%/+50% span; Intuit 42.5% against -28%/+50%. Those are not extremes - for a
+    stock that routinely swings 40%+ a year, they describe an ordinary year.
+
+    The consequence is not merely cosmetic. If the "bear case" is really a common outcome
+    rather than a bad one, then a stated 30% probability attached to it is not conservative;
+    it may be optimistic. Narrow ranges make the whole scenario apparatus look more precise
+    than it is.
+
+    Rule of thumb used here: one standard deviation of annual return is roughly the
+    volatility figure itself. A bear case should sit at or beyond -1 sigma and a bull case
+    at or beyond +1 sigma, so a defensible span is at least ~2x volatility wide.
+    """
+    if annual_volatility_pct is None or annual_volatility_pct <= 0:
+        return {"checked": False,
+                "reason": "annualised volatility unavailable - cannot size the range"}
+
+    span = bull_pct - bear_pct
+    one_sigma = annual_volatility_pct
+    min_span = 2.0 * one_sigma
+
+    return {
+        "checked": True,
+        "annual_volatility_pct": annual_volatility_pct,
+        "span_pct": span,
+        "minimum_defensible_span_pct": min_span,
+        "bear_in_sigmas": bear_pct / one_sigma,
+        "bull_in_sigmas": bull_pct / one_sigma,
+        "too_narrow": span < min_span,
+        "suggested_bear_pct": -one_sigma * 1.25,
+        "suggested_bull_pct": one_sigma * 1.25,
+        "warning": (
+            "RANGE TOO NARROW: this stock's annualised volatility is "
+            + format(one_sigma, ".1f") + "%, so a one-sigma year is about that much in "
+            "either direction. The span given (" + format(bear_pct, "+.0f") + "% to "
+            + format(bull_pct, "+.0f") + "%, " + format(span, ".0f") + " points wide) is "
+            "below the ~" + format(min_span, ".0f") + " points a two-sigma range needs. "
+            "The bear case sits at " + format(bear_pct / one_sigma, ".2f")
+            + " sigma and the bull at " + format(bull_pct / one_sigma, "+.2f")
+            + " sigma - these describe an ORDINARY year, not the tails, and the "
+            "probabilities attached to them are correspondingly overconfident."
+        ) if span < min_span else None,
+    }
+
+
+def scenarios(price: float, metrics: dict, bear: dict, base: dict, bull: dict,
+              annual_volatility_pct: Optional[float] = None) -> dict:
     """Assemble bear / base / bull cases into one probability-weighted view.
 
     Each case dict needs: {"target_price": float, "probability": 0..1,
@@ -286,9 +342,18 @@ def scenarios(price: float, metrics: dict, bear: dict, base: dict, bull: dict) -
             if ret < 0:
                 prob_loss += p
 
+    width = check_scenario_width(
+        enriched["bear"]["return_pct"] if enriched["bear"]["return_pct"] is not None else 0.0,
+        enriched["bull"]["return_pct"] if enriched["bull"]["return_pct"] is not None else 0.0,
+        annual_volatility_pct,
+    )
+    if width.get("warning"):
+        warnings.append(width["warning"])
+
     return {
         "current_price": price,
         "cases": enriched,
+        "range_check": width,
         "probability_weighted_return_pct": expected_return,
         "prob_positive": prob_positive,
         "prob_hits_20pct": prob_20pct,

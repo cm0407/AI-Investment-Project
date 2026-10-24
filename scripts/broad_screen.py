@@ -238,6 +238,20 @@ def main() -> int:
                                + "%/yr but profit only "
                                + format(x["net_income_cagr_pct"], ".0f")
                                + "%/yr - profit is not keeping pace with sales")
+        # NET INCOME MUST NOT WILDLY EXCEED OPERATING INCOME.
+        # Freshworks scored 89% on a 21.9% net margin while its OPERATING margin was 1.6%:
+        # net income of $184M against operating income of $13M, after four straight years of
+        # operating losses. Profit arriving from below the operating line is a one-off - a
+        # tax valuation-allowance release, a legal settlement, an asset sale - not evidence
+        # the business earns money. Scoring net margin without this check rewards exactly
+        # the accounting events that will not repeat.
+        if (x["net_income"] is not None and x["operating_income"] is not None
+                and x["operating_income"] > 0 and x["net_income"] > x["operating_income"] * 1.5):
+            return False, ("net income ($" + format(x["net_income"] / 1e6, ",.0f")
+                           + "M) far exceeds operating income ($"
+                           + format(x["operating_income"] / 1e6, ",.0f")
+                           + "M) - profit is coming from below the operating line, "
+                             "which does not repeat")
         if x["revenue_cagr_pct"] < 5.0:
             return False, "revenue CAGR below 5%"
         if x["net_margin_pct"] is None or x["net_margin_pct"] < 5.0:

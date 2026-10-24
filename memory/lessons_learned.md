@@ -609,3 +609,94 @@ UNTESTED rather than vindicated or refuted.
 digestion" bear case. Analysts already flag that recent strength reflects pulled-forward orders,
 which is the mechanism I described. That report matters; the price action before it does not.
 **Confidence:** high.
+
+### 2026-10-24 - CORRECTION to yesterday's finding, and the sharper bias underneath it
+**This entry corrects the 2026-10-23 lesson above. The earlier entry stays exactly as written -
+the record is append-only - but its headline number was wrong and must not be relied on.**
+
+**What I claimed yesterday:** "10 of 10 scenario ranges are narrower than a two-sigma annual
+move." **That figure was produced by an ad-hoc threshold I invented while writing the analysis
+(span < 3x volatility), not by the defensible standard.** When I encoded the check properly -
+a bear case at or beyond -1 sigma and a bull at or beyond +1 sigma, so a span of at least 2x
+volatility - the honest count is **4 of 10**: NICE, INTU, APH and ULTA.
+
+The overstated version went out to the user by email before I caught it. **Recording that
+plainly, because a correction that is not propagated is not a correction.**
+
+**How the error happened, and this is the generalisable part:** I ran a quick calculation to
+test a hypothesis I already believed, picked a threshold that felt reasonable in the moment,
+and did not go back and justify it once the result confirmed what I expected. A confirming
+result got less scrutiny than a disconfirming one would have. **When a quick test confirms your
+hypothesis, audit the test harder than if it had refuted it** - that is exactly when the
+threshold goes unexamined.
+
+**THE REAL BIAS, which survives correct measurement and is sharper than what I originally
+claimed:**
+
+| | average | inside/beyond 1 sigma |
+|---|---|---|
+| My bear cases | **-0.85 sigma** | 9 of 10 INSIDE 1 sigma |
+| My bull cases | **+1.16 sigma** | 8 of 10 BEYOND 1 sigma |
+
+**I stretch the upside 36% further than the downside, in 10 cases out of 10.** Not one bear
+case reaches even -1.1 sigma, while bull cases run to +1.42. The ranges are not uniformly too
+narrow - they are systematically **LOPSIDED**. I imagine good outcomes more freely than bad
+ones, consistently, across every single position.
+
+That is a worse finding than the one I originally reported, and a more specific one. A
+too-narrow range is a measurement problem. An asymmetric range is a **disposition** - it means
+the downside protection in every scenario set I have written is thinner than the upside
+participation, which is precisely the direction that hurts a beginner.
+
+**Rule:** before publishing any scenario set, express bear and bull as multiples of the stock's
+own annualised volatility and check they are roughly symmetric in sigma terms. If the bull
+reaches +1.3 sigma, the bear should reach about -1.3 sigma unless there is a stated,
+specific reason for asymmetry (a cash floor, a takeover bid already on the table, a binary
+regulatory date). "It feels like it can't fall that far" is not such a reason.
+**Confidence:** high. Measured, reproducible, and now enforced in `valuation.check_scenario_width()`.
+
+### 2026-10-24 - A 21.9% net margin on a 1.6% operating margin is an accounting event
+**Trigger:** Freshworks came out TOP of the stage-2 screen at 89.0%. Revenue $839M growing
+27.4%, net margin 21.9% - and an operating margin of **1.6%**. Net income $184M against
+operating income of $13M, after four consecutive years of operating losses.
+**Rule:** when net income materially exceeds operating income, the profit came from BELOW the
+operating line - a tax valuation-allowance release, a legal settlement, an asset sale - and it
+does not repeat. Scoring net margin without checking it against operating margin rewards exactly
+the one-off events that will not recur. Any company whose net income exceeds operating income by
+more than ~50% should be excluded until the operating line itself supports the profit.
+**Implementation:** added to `broad_screen.py`; universe 216 -> 208.
+**Pattern note - this is the third time the SAME shape of defect has appeared.** Harmony
+Biosciences (18 Sep): revenue up 98%, profit down 13%. HEICO (20 Sep): an eleven-year-old share
+count making a 61x stock look like 11x. Now Freshworks. In every case a single headline metric
+was scored without cross-checking it against the line above or beside it. **The general fix is
+not another individual rule but a habit: for every ranking metric, name the figure that would
+contradict it and check that too.**
+**Confidence:** high.
+
+### 2026-10-24 - The new volatility check changed a verdict on its first real use
+**Trigger:** Badger Meter was the best fit of this session for a deteriorating-consumer backdrop
+- water metering sold to municipal utilities on regulated replacement cycles. On the old habit I
+would have written a -28%/+30% scenario range.
+**What the check said:** BMI carries **41.7% annualised volatility**, so a defensible range is
+about **-52%/+52%**. Re-sizing the bear case from -28% to -52% is not cosmetic - it roughly
+doubles the loss the position has to be able to survive, and that is what drove risk/reward to
+4/10 and the total score to 68.6, below the threshold.
+**Rule confirmed:** the calibration fix is load-bearing, not decorative. It changed a decision on
+the first candidate it was applied to, and in the direction of caution. **A rule that never
+changes an outcome is not being applied.**
+**Confidence:** high.
+
+### 2026-10-24 - Nothing cheap, and the macro says why
+**Trigger:** 22 new candidates screened; NOT ONE cleared 70. The reverse DCFs are strikingly
+consistent: McDonald's price implies 22.4% growth against 9.2% delivered; Rollins 19.1% against
+9.5%; Badger Meter 18.1% against 16.1%. The market is asking more than these businesses produce.
+**Rule:** when a whole screen fails for the same reason, that is information about the market,
+not about the screen. The macro note written the same day found high-yield spreads at 3.40% and
+widening - historically very tight. **Tight spreads mean nothing is being offered cheaply**,
+which is exactly what a screen that finds no bargains should look like.
+**And note the irony worth remembering:** McDonald's and Rollins are precisely the
+non-discretionary businesses the same macro note argued for - pest control and fast food hold up
+when the consumer weakens. The problem is not that they are wrong for the environment. It is
+that everyone else has worked that out and the defensiveness is fully priced. **Identifying the
+right KIND of business is not the same as finding one at the right price.**
+**Confidence:** high.

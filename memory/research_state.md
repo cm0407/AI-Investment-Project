@@ -17,7 +17,16 @@ the Session Log. Never delete or rewrite older entries.
   after ~12% of the horizon.**
 - **Stocks rejected:** 12 · **Theses written:** 11
 
-### THE CALIBRATION FINDING - scenario ranges are too narrow
+### CORRECTED 2026-10-24: ranges are LOPSIDED, not uniformly narrow
+Yesterday's "10 of 10 too narrow" used an ad-hoc threshold and was WRONG; the correct
+count on a +/-1-sigma standard is **4 of 10** (NICE, INTU, APH, ULTA). The overstated
+figure was emailed to the user before being caught. The sharper bias that survives proper
+measurement: **bear cases average -0.85 sigma while bull cases average +1.16 sigma - I
+stretch upside 36% further than downside, in 10 cases out of 10.** 9 of 10 bear cases sit
+INSIDE one sigma. Now enforced by `valuation.check_scenario_width()`, wired into
+`scenarios()`. See lessons 2026-10-24.
+
+### ORIGINAL (overstated) calibration finding - scenario ranges are too narrow
 Tested every scenario span against the stock's own annualised volatility: **10 of 10 are
 narrower than a two-sigma annual move.** NICE carries 47.9% volatility against a -33%/+50%
 span; INTU 42.5% against -28%/+50%. My bear and bull cases are each roughly a ONE-sigma event -
@@ -233,6 +242,48 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-10-24 - Correction to my own finding; 22 candidates screened, none qualified
+
+**CORRECTED YESTERDAY'S HEADLINE NUMBER.** I claimed "10 of 10 scenario ranges too narrow";
+the correct figure on a defensible +/-1-sigma standard is **4 of 10**. The overstated version had
+already been emailed to the user. Cause: I ran a quick test of a hypothesis I already believed,
+picked a threshold in the moment, and did not audit it because the result agreed with me.
+Recorded as a lesson in its own right.
+
+**The sharper bias that survives correct measurement:** bear cases average **-0.85 sigma**, bull
+cases **+1.16 sigma**. 9 of 10 bear cases sit INSIDE one sigma; 8 of 10 bull cases reach beyond
+it. **I stretch upside 36% further than downside, in 10 of 10 cases.** Lopsided, not uniformly
+narrow - a disposition rather than a measurement error, and in the direction that hurts.
+Encoded in `valuation.check_scenario_width()` and wired into `scenarios()`.
+
+**New research: 22 previously-unexamined candidates, NONE cleared 70.** Best was Badger Meter at
+68.6. The reverse DCFs failed with striking consistency - McDonald's price implies 22.4% FCF
+growth against 9.2% delivered, Rollins 19.1% against 9.5%, Badger Meter 18.1% against 16.1%.
+When a whole screen fails the same way that is information about the market: the same-day macro
+note found high-yield spreads at 3.40% and widening, historically very tight, meaning nothing is
+offered cheaply. Noted the irony that McDonald's and Rollins are exactly the non-discretionary
+businesses the macro argues for - and are fully priced for it.
+
+**The volatility check changed a verdict on first use.** Badger Meter carries 41.7% volatility,
+so its honest bear case is -52%, not the -28% I would previously have written. That re-sizing
+drove risk/reward to 4/10 and the total below threshold. A rule that never changes an outcome is
+not being applied; this one did, toward caution.
+
+**Third instance of one defect shape.** Freshworks topped the screen at 89.0% on a 21.9% net
+margin against a **1.6% operating margin** - net income $184M vs operating income $13M after
+four years of operating losses. Profit from below the operating line does not repeat. Fixed in
+`broad_screen.py` (universe 216 -> 208). Harmony (18 Sep), HEICO (20 Sep) and now Freshworks all
+share the shape: a headline metric scored without cross-checking the line beside it. General fix
+adopted: for every ranking metric, name the figure that would contradict it and check that too.
+
+**Macro checked deliberately** (per the 2026-10-12 lesson). 10-year eased 5.22% -> 4.96%, but
+high-yield spreads widened again to 3.40%, consumer sentiment fell 55.2 -> 51.7 -> **48.1**, and
+unemployment ticked up to 4.20%. Three measures deteriorating together; leans against cyclicals
+and validates the BKNG bear case mechanism. Written to
+`research/notes/2026-10-24_macro_backdrop.md`.
+
+**No new predictions logged.** 7 rejections recorded, 3 lessons appended. Digest emailed.
 
 ### 2026-10-23 - Calibration review: my scenario ranges are too narrow, and my AVOIDs are winning
 
