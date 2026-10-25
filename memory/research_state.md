@@ -8,7 +8,10 @@ the Session Log. Never delete or rewrite older entries.
 
 ## Current status
 
-- **System status:** Operational. 54 self-tests passing. Review session 2026-10-23.
+- **System status:** Operational. **62 self-tests passing.** Build session 2026-10-25:
+  the model now writes the judgment half of every score, behind seven validators;
+  a FastAPI service and a Next.js frontend expose the whole record. Last research
+  session 2026-10-24; last review 2026-10-23.
 - **Open predictions:** 11, at 33-44 days (8-12% of horizons).
 - **Performance:** picks **+9.5%** vs SPY **-0.2%**; ex-PTC **+5.39%**; median **+12.2%**.
   8 of 11 beating the index. Still NOT a track record at 44 days.
@@ -242,6 +245,53 @@ universe when a genuinely broad screen is wanted.
 ---
 
 ## Session log (newest first — append, never overwrite)
+
+### 2026-10-25 - The model moved inside the system, and I measured it against myself
+
+**No new stock research this session.** This was a build session: the model that has been
+operating this system from outside is now a component inside it, and there is a frontend.
+
+**What changed.** `invest/judge.py` writes the five judgment pillars - business quality,
+competitive advantage, catalysts, risk/reward, management - from an evidence pack the Python
+builds from SEC facts. It never touches a number. Seven validators check its answer and discard
+the whole verdict on any failure; the load-bearing one rejects any figure in its reasoning that
+is not in the evidence it was given. On failure the score falls back to the PARTIAL path, so a
+model outage degrades output rather than fabricating it. A hand-written `--judgment` file always
+beats the model.
+
+**The measurement that matters.** Model vs. my own 13 hand-written judgments: mean absolute
+deviation **3.38 points of 50**. Business quality, moat and risk/reward agree to within half a
+point. **Catalysts disagree by -2.77, in 13 of 13 cases** - and that is my fault, not the
+model's. The evidence pack is built from SEC filings; catalysts are dated forward-looking events
+that filings do not contain. The model scored 2-3 of 10 and explained the absence instead of
+inventing something.
+
+**The uncomfortable implication for the existing record:** every catalyst score in
+`research/judgments/` that I wrote by hand drew on news I had read and never recorded. Those
+scores are not reproducible from anything in this repository. That is a real gap in the audit
+trail, and the fix is a catalyst evidence source, not a looser prompt.
+
+**Validation rate.** 2 of 15 model calls rejected (13.3%), both recovered on retry, none
+abandoned. The first run of this reported 0% because rejections were only persisted when every
+attempt failed - an instrument that could not report a non-zero number. Fixed.
+
+**A bug the frontend exposed.** The API was adding today's judgment to a data score saved
+2026-09-11 and serving the sum as one current number (PAYX: API 67.8 vs script 67.4). Same
+failure as reading a stale XBRL tag as current, except the stale figure was half the score.
+Now flagged by `freshnessWarning` past a 14-day gap, shown above the score in the UI, and
+guarded by self-test 63.
+
+**Determinism.** Same evidence, three runs, three companies: mean spread **0.7 points of 50**,
+maximum 1. EOG returned an identical verdict every time. Judgment scores do not need to be
+reported as ranges.
+
+**Frontend.** `api/main.py` (FastAPI) and `web/` (Next.js 16 + MUI v9) are built and verified
+against live data. The invariant carried end to end: a metric that could not be measured renders
+as "not available" with the reason attached, never as 0 or a blank cell, and every score shows
+how many of its sixteen components were measurable.
+
+**Self-tests: 62 passing** (was 54), including five over the API and three that exercise the
+validators offline with no model call.
 
 ### 2026-10-24 - Correction to my own finding; 22 candidates screened, none qualified
 

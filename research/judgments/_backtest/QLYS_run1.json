@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Strong economics: gross margin 82.8%, operating margin 33.2%, net margin 29.6%, ROE 35.3%, and capex only 0.7% of revenue, so very little reinvestment is needed. Revenue rose every year from $411.2M (2021) to $669.1M (2025). Operating income grew faster, from $87.7M to $222.0M, and net income went from $71.0M to $198.3M, so margins widened as the business grew. That is a five-year pattern, not one good year. Points off for two things: ROIC is unavailable, and the revenue growth rate has slowed since the move from 2021 to 2022 (revenue went $489.7M, $554.5M, $607.6M, $669.1M), so the company still grows but more slowly than before."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Margins rising over five years of growth (operating income from $87.7M to $222.0M on revenue from $411.2M to $669.1M) fits the pricing power a moat would give, and goodwill is only 0.68% of assets, so the company built its growth rather than buying it. The case is still inferred rather than shown. ROIC is null, and the evidence has no data on competitors, customer retention or concentration, so the width and direction of any moat cannot be checked. A gross margin of 82.8% is normal for packaged software and does not prove a moat by itself. The slowing revenue growth could also mean competitive pressure, which the evidence can neither confirm nor rule out."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no dated event that could re-rate the stock. Insider activity is null, and the filings list shows only routine items: 10-Q reports on 2026-05-05 and 2026-08-04, a 10-K on 2026-02-20, and an 8-K on 2026-06-11 whose contents are not given. A 10-Q was filed on 2025-11-04 last year, so the next quarterly report probably lands around early November 2026. That is a dated mechanism, but a routine one, and nothing suggests it will differ from the trend. The ongoing buyback ($183.4M latest) is a real mechanism with no date attached. Expecting a re-rating from this evidence would be hope, not a catalyst."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "At $216.70 the stock trades at 37.8x earnings, 24.6x free cash flow and 11.2x sales, with a PEG of 2.3, a FCF yield of 4.1% and an earnings yield of 2.6%. The reverse DCF shows the price needs 17.3% annual FCF growth, against 15.2% actually delivered, so the market already expects an improvement the company has not yet shown, while revenue growth is slowing. Annual volatility of 48.8% means deep drawdowns are plausible. No bear, base or bull cases are in the evidence. A +20% path would seem to need faster growth or a higher multiple, and neither is evidenced. Multiple compression if growth keeps slowing looks at least as likely, so the downside roughly matches or exceeds the upside."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital is going back to shareholders: the share count change is -10.5%, the latest buyback was $183.4M against a $7.5B market cap, and no dividend is paid, so dilution is being reversed rather than added. Whether those repurchases were at sensible prices cannot be judged, because they are happening while the stock trades at 37.8x earnings and the evidence gives no history of repurchase prices. Insider open-market buys and sells are null, and there is no record of past guidance against results, so management's credibility is untested. That leaves a middling score: good discipline on share count, unproven on price and candor."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:25:14Z",
+    "evidence_hash": "fc363128274b9750",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

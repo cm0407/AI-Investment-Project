@@ -44,6 +44,9 @@ type Thesis = {
   componentsScored: number;
   componentsTotal: number;
   judgmentSource: "model" | "analyst" | null;
+  dataScoredAt: string | null;
+  judgmentAt: string | null;
+  freshnessWarning: string | null;
   judgmentPillars: {
     name: string;
     points: number | null;
@@ -131,6 +134,14 @@ export default async function StockPage({
         </Alert>
       )}
 
+      {/* A total built from two halves measured weeks apart is not one number. This
+          belongs above the score, not in a footnote under it. */}
+      {thesis?.freshnessWarning && (
+        <Alert severity="error" sx={{ mb: 2 }}>
+          {thesis.freshnessWarning}
+        </Alert>
+      )}
+
       {/* ---- score ---- */}
       {thesis && (
         <Paper variant="outlined" sx={{ p: 2.5, mb: 3 }}>
@@ -143,6 +154,14 @@ export default async function StockPage({
             componentsTotal={thesis.componentsTotal}
             judgmentSource={thesis.judgmentSource}
           />
+          {thesis.dataScoredAt && (
+            <Typography sx={{ mt: 1, fontSize: "0.7rem", color: "text.disabled" }}>
+              Data pillars scored {thesis.dataScoredAt.slice(0, 10)}
+              {thesis.judgmentAt
+                ? " · judgment pillars " + thesis.judgmentAt.slice(0, 10)
+                : ""}
+            </Typography>
+          )}
           {thesis.unscorablePillars.length > 0 && (
             <Box sx={{ mt: 1.5 }}>
               {thesis.unscorablePillars.map((u, i) => (

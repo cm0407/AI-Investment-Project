@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 13,
+    "justification": "Revenue rose every year in the evidence, from about $3.6B (FY2022) to $5.7B (FY2026). Operating income rose faster, from about $1.0B to $1.9B, and net income went from $779.4M to $1.5B. Because operating income grew faster than revenue, margins widened rather than eroded. Latest-year profitability is strong: gross margin 61.1%, operating margin 33.4%, net margin 26.9%, ROIC 25.9% and ROE 23.1%. Capex is only 2.8% of revenue, so growth is cheap to fund. Two caveats hold the score back. First, the evidence gives margin ratios for one year only and has no 10-K business description, so the drivers of these returns cannot be confirmed here. Second, the yearly revenue gains after FY2023 were smaller than the FY2022-to-FY2023 jump, which suggests growth has slowed to a steadier pace."
+  },
+  "competitive_advantage": {
+    "points": 7,
+    "justification": "The evidence fits a company with a moat but does not prove one. ROIC of 25.9% is well above a typical cost of capital. Operating income grew from about $1.0B to $1.9B while revenue grew from $3.6B to $5.7B, so profitability expanded as the company scaled, which is the pattern pricing power produces. However, goodwill is 32.5% of assets, so a meaningful part of the asset base was bought rather than built, and the evidence does not say whether any of it was written down. ROIC is given for one year only, and the pack has no competition or risk-factor content. Whether the moat is widening or narrowing against rivals therefore cannot be judged from this evidence, which is why the score is solid but not top-tier."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no specific, dated catalyst with a stated mechanism. The filings list shows only routine reporting: a 10-K on 2026-08-13 and 8-Ks on 2026-07-07, 2026-08-06, 2026-08-17 and 2026-09-01. Their contents are not included, so none of them can be read as a product launch, contract, or guidance change. Insider activity is null, so there is no insider-buying signal either. An 8-K on 2026-04-30 followed by a 10-Q on 2026-05-01 suggests a regular quarterly earnings schedule, so the next quarterly report is a dated event. Nothing in the evidence suggests that report would change the market's view, though. Continued margin expansion would be the mechanism, and that is a hope, not an identified catalyst."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "Valuation looks reasonable rather than stretched: P/E 23.9, P/FCF 22.1, EV/EBITDA 17.1, a 4.5% FCF yield and a PEG of 0.9. The most useful figure is the reverse DCF. The current price requires about 13.9% annual FCF growth, which is below the 21.1% the company has actually delivered. So the price does not assume an improvement the business has not already shown, and there is a plausible path to upside if growth simply continues. Against that, P/S of 6.5 leaves room for the valuation multiple to shrink if growth falls below the implied rate, and annual volatility is 28.4%. The evidence also includes no bear/base/bull cases, so the realistic downside cannot be measured here. The score is moderately positive, held back by that missing downside analysis."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital return is substantial: the latest year shows $700.0M of buybacks and $349.7M of dividends, paid for by a business with a 4.5% FCF yield. Yet the share count changed by only -0.27% despite that buyback. That may suggest much of the repurchase went to offsetting stock-based dilution rather than shrinking the share base. The evidence cannot show whether buybacks were made at sensible prices. Insider open-market buys and sells are both null, and there is no record comparing past guidance with results to test credibility. Management looks steady and shareholder-friendly but not clearly exceptional, so the score is mid-range."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:26:37Z",
+    "evidence_hash": "3803c9379c8b6aec",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

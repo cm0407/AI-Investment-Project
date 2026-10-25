@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Five annual periods show steady improvement. Revenue rose every year from $505.2M (2021) to $916.7M (2025). Over the same years operating income grew from $78.7M to $183.4M and net income from $60.9M to $141.6M. Profit grew faster than sales, so margins expanded rather than eroded. The latest gross margin of 41.7%, operating margin of 20.0%, net margin of 15.5% and ROE of 19.9% are solid in absolute terms. Capex at 1.5% of revenue means the business needs little capital to grow. It falls short of top marks for three reasons: ROIC is not available, so returns on all invested capital (including a goodwill-heavy balance sheet) cannot be confirmed; the cash figure is stale; and no 10-K business description is in the evidence to explain what drives these results."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "The best moat evidence available is the margin trend. Operating income grew from $78.7M to $183.4M while revenue grew from $505.2M to $916.7M, so profit more than doubled while sales grew by less than double. That is consistent with pricing power or scale benefits rather than margin pressure. However, ROIC is null and the evidence has no Competition or Risk Factors text. Goodwill also equals 24.2% of assets, so a meaningful part of the growth may have been acquired rather than built, and the evidence does not show whether any of it was ever written down. The moat looks plausible and may be widening, but this evidence does not prove it."
+  },
+  "catalysts": {
+    "points": 2,
+    "justification": "The evidence lists only filing dates, not what the filings say. The most recent 10-Q (2026-10-23) and 8-K (2026-10-22) are already in the past. The quarterly pattern (10-Qs on 2026-04-20, 2026-07-23 and 2026-10-23) suggests another earnings report in a few months, but no date for it is given. The evidence also names no product launch, contract decision or stated cause of a margin inflection, and insider activity is null. A routine earnings release with no identified mechanism is not a re-rating catalyst, so this pillar scores low."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "At $151.24 the stock trades at 30.5x earnings, 25.5x free cash flow and 4.7x sales. That gives a 3.9% FCF yield, a 3.3% earnings yield and a PEG of 1.3. The reverse DCF says the price requires 18.1% annual FCF growth, against 16.1% actually delivered, so the market already assumes somewhat better growth than the record shows. That leaves little margin of safety. Annual volatility of 41.7% means a growth disappointment could cause a sharp drop from this full multiple. Reaching +20% probably needs growth above the demonstrated rate or a higher multiple. No bear/base/bull cases are in the evidence, so this is scored cautiously."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Share count rose 0.9% despite $15.0M of buybacks, so repurchases did not fully offset new share issuance: mild dilution rather than a shrinking share count. Dividends of $43.5M were the main way capital was returned, and they look affordable against net income of $141.6M. Insider open-market buys and sells are null, buyback prices are unknown, and the evidence has no record of guidance versus results, so management credibility cannot be tested directly. The steady multi-year profit growth is the only indirect support. Scored as adequate, not exceptional."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:16:25Z",
+    "evidence_hash": "875dd8ebf41f69e8",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

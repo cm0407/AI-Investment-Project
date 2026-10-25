@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 10,
+    "justification": "Latest-year economics are strong. Operating margin is 37.6%, net margin is 33.7% and ROE is 36.2%. Capex is only 0.4% of revenue, so the business needs little reinvestment. Revenue rose every year, from $1.43B to $2.32B. The profit record is not five stable years, though. Operating income fell from $286.7M to $201.5M to $170.9M from 2021 to 2023 while revenue kept rising, which is a warning pattern. It then jumped to $604.6M and $872.2M. Two strong years is a short pattern. Revenue growth is also slowing. The latest step, from $2.17B to $2.32B, is the smallest annual increase in the series, and the 3-year CAGR of 12.9% sits well below the base-distorted 18.6%. Gross margin and ROIC are null. The evidence does not describe what drives revenue, so dependence on a small number of products cannot be ruled out."
+  },
+  "competitive_advantage": {
+    "points": 5,
+    "justification": "Goodwill is only 2.2% of assets, so the business was built rather than bought. The last two years show pricing power: operating income rose to $604.6M and then $872.2M while revenue grew more slowly, from $1.83B to $2.17B to $2.32B. Against that, operating income shrank from 2021 to 2023 even as revenue climbed, which is the opposite of a moat holding firm. ROIC is null, so returns on capital cannot be checked. The evidence has nothing from the 10-K Competition or Risk Factors sections. That leaves the source and lifespan of any advantage unverified. In biological products, an advantage is often tied to specific products and how long they stay protected. This is a middling score: margins are strong now, but the track record is short and unexplained."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no dated catalyst with a clear mechanism. Two 8-Ks were filed on 2026-08-31 and 2026-09-11, but their contents are not in the evidence, so they count as neither positive nor negative. 10-Qs were filed on 2026-05-05 and 2026-08-05, so the next quarterly report probably comes around early November 2026. A report date alone is not a re-rating mechanism when nothing indicates what it might show. The buyback (latest $947.5M) is a real, ongoing mechanism that supports per-share results, but it has no date attached. Insider activity is null. The score reflects one buyback and one expected report, and nothing more specific."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "The price looks undemanding compared with what the company has delivered. A reverse DCF says the $64.53 price requires 9.7% annual FCF growth, against 37.4% actually delivered. P/E is 20.4, P/FCF is 18.3, FCF yield is 5.5% and PEG is 0.43. If recent profits hold, that gap is a real margin of safety. Four things count against it. First, the 37.4% delivered rate likely includes a rebound from the 2023 profit low of $170.9M operating income, so it may overstate repeatable growth. Second, revenue growth is slowing, with a 3-year CAGR of 12.9%. Third, annual volatility is 40.3%, so large swings are normal for this stock. Fourth, no bear/base/bull cases from valuation.py appear in the evidence, so the downside has not been measured. Above average, but not high."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital allocation looks shareholder-friendly. The share count changed by -11.4%, and buybacks were $947.5M in the latest year, more than the latest net income of $782.6M. No dividend is reported. Shrinking the count this much means repurchases more than offset any stock compensation. At a P/E of 20.4 and an FCF yield of 5.5%, the buybacks do not look obviously overpriced, though actual purchase prices are not in the evidence. The truth-telling half of this pillar cannot be tested: there is no record of guidance versus results, and insider buys and sells are null. Debt fields are stale, last tagged in 2016, so whether the buybacks were funded conservatively is unverified."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:19:27Z",
+    "evidence_hash": "b9228f6ce7378714",
+    "attempts": 2,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Revenue rose in every year of the series, from $4,554M (year ending 2022-05-31) to $6,301.1M (year ending 2026-05-31). Operating income also rose every year, from $1,840M to $2,510.5M. An operating margin of 39.8%, a net margin of 27.9%, ROIC of 26.7% and capex of only 3.7% of revenue describe a high-return business that needs little capital. Points come off because margins are drifting down, not up. In the 2025 year operating income barely moved ($2,174.1M to $2,207.7M) while revenue grew from $5,132M to $5,410M, and net income fell from $1,690.4M to $1,657.3M. In the 2026 year revenue jumped to $6,301.1M but net income rose only to $1,760.1M, so profit is lagging sales. The gap between ROE of 47.1% and ROIC of 26.7% suggests leverage is inflating ROE. Gross margin is unavailable."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "ROIC of 26.7% and an operating margin of 39.8%, held while revenue grew in every year of the series, are consistent with real pricing power or scale advantages. The moat does not appear to be widening, though. Operating income grew more slowly than revenue in both the 2025 and 2026 years, so margins are shrinking as the business grows, which is the opposite of the moat signature of margins holding or rising. Goodwill equals 28% of assets, so a meaningful part of the asset base was bought rather than built. The 2026 revenue step-up (from $5,410M to $6,301.1M) is far larger than earlier annual increases and is consistent with an acquisition, but the evidence does not confirm that or say whether goodwill was ever written down. The pack contains no competition data."
+  },
+  "catalysts": {
+    "points": 2,
+    "justification": "The evidence contains no specific, dated event with a stated mechanism. It lists only past filings: a 10-K on 2026-07-17, a 10-Q on 2026-09-24 and an 8-K on 2026-10-16 whose contents are not provided. Insider activity is null. The quarterly filing cadence suggests another report is likely in the coming months, but that is a date without a mechanism: nothing in the pack says what such a report would change, such as a stated margin-recovery target or an integration milestone. Expecting the recent margin compression to reverse is a hope, not a catalyst, so this pillar scores low."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "At $118.04 the stock trades at 23.9x earnings, 18.1x free cash flow and 15.4x EV/EBITDA, with a 5.5% free cash flow yield and a PEG of 0.94. The reverse DCF says the price requires 11.4% annual FCF growth, against 15.2% actually delivered, so the price does not demand heroics and there is a modest cushion. However, the delivered rate may be flattered by the unusually large 2026 revenue step-up. Earnings are also growing more slowly than sales, so a P/E near 23.9 leaves room for the multiple to shrink if growth falls back to the mid-single-digit pace of the 2024 and 2025 years. Volatility of 27.5% is moderate. A path to +20% exists through compounding plus the yield with the multiple held, but it is not compelling, and the evidence contains no bear/base/bull cases to weigh it properly."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Management returns capital to shareholders: buybacks of $611M and dividends of $1,589.6M in the latest year. The share count changed by -0.58%, so buybacks are shrinking the share base rather than merely offsetting stock compensation. But dividends plus buybacks together exceed net income of $1,760.1M, which leaves little cushion if earnings stall. Interest expense data is stale (excluded as 730 days behind), so the cost of any debt funding these payouts cannot be assessed. The evidence says nothing about the prices buybacks were made at or about guidance versus delivery, and insider buying and selling are both null, so management credibility cannot be tested. An average score is the honest one."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:53:39Z",
+    "evidence_hash": "bd7f213c729d9a4d",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Profitability is strong and consistent. The latest gross margin is 36.9%, operating margin 25.4%, net margin 18.5% and ROE 31.8%. Capex is only 4.3% of revenue, so the business needs little capital. Net income rose every year from $1.59B (2021) to $4.27B (2025). That includes 2023, when revenue slipped from $12.62B to $12.55B and profit still edged up from $1.90B to $1.93B, which shows cost discipline in a soft year. Three things keep it out of the top tier. ROIC is null, so returns on all capital cannot be confirmed. ROE can be flattered by debt, and the evidence cannot measure debt because total_debt is suppressed. And the 2025 revenue jump from $15.22B to $23.09B is a single year that may include acquired revenue, given goodwill at 29.2% of assets."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Margins show some pricing power. Operating income grew from $2.11B (2021) to $5.87B (2025). It roughly kept pace with revenue through 2024 and then grew faster, so the latest 25.4% operating margin is the highest in the five-year series. Profit also held up during the 2023 revenue dip. Against that, goodwill is 29.2% of assets, so a meaningful part of the business was bought rather than built. ROIC is null, so I cannot check whether those acquisitions earn their cost. A 36.9% gross margin is solid but not exceptional. The evidence includes no competition or risk-factor text, so the moat's width and whether it is widening are unverified."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no specific dated catalyst with a known mechanism. The filing list shows a regular reporting rhythm: an 8-K on 2026-07-29 followed by a 10-Q on 2026-07-31, and an 8-K on 2026-05-06. That suggests more quarterly results are coming. However, the contents of the 8-Ks dated 2026-08-06, 2026-09-04 and 2026-10-06 are unknown, and insider_activity is null. An earnings report is a dated event, but there is no guidance, product or contract information to explain how it could re-rate the stock. That is a schedule, not a catalyst, so this pillar scores low."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "No bear/base/bull cases were supplied, so the upside and downside cannot be properly probability-weighted. What the evidence shows is moderately favorable: P/E 21.4, P/FCF 20.9 and an FCF yield of 4.8%. The reverse DCF says the price requires 13.0% annual FCF growth, compared with 27.2% actually delivered, which leaves a cushion. But four things weaken that. The delivered growth rate leans on an exceptional 2025 that may include acquisitions. The PEG of 0.74 relies on that same possibly flattered growth. The 2023 revenue dip shows the business is cyclical. And annual volatility of 41% means a deep drawdown is realistic if growth slows and the valuation multiple shrinks. That supports a mid-range score, not a high one."
+  },
+  "management": {
+    "points": 3,
+    "justification": "The record is mixed. In the latest year the company paid $802.2M in dividends and $665.2M in buybacks, yet share count still rose 4.6%, so buybacks did not offset new share issuance. With goodwill at 29.2% of assets, the new shares may have funded acquisitions or stock compensation, but the evidence does not say which. On the positive side, net income grew from $2.42B to $4.27B against that 4.6% share increase, so per-share earnings rose substantially and the issuance looks accretive so far. Buyback prices, insider buys and sells (both null) and past guidance versus results are all unavailable, so management's credibility cannot be tested."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:14:16Z",
+    "evidence_hash": "d3d1dc2f2339ff6e",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

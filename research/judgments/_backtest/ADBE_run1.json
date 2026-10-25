@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 13,
+    "justification": "Gross margin of 89.3%, operating margin of 36.6%, net margin of 30.0% and ROIC of 63.2% show an exceptionally profitable business that needs little capital: capex is just 0.8% of revenue. Revenue rose in every one of the five reported periods, from $15.8B to $23.8B, and net income grew from $4.8B to $7.1B. The record has a flaw. Net income was essentially flat between the first two periods. Operating income also barely moved from the 2023 to the 2024 period, ending at $6.7B, while revenue kept growing. That margin squeeze reversed only in the latest year, when operating income reached $8.7B. ROE of 61.3% is inflated by buybacks shrinking equity, so ROIC is the better guide. The score stays below the top of the scale because of that stall in operating income."
+  },
+  "competitive_advantage": {
+    "points": 7,
+    "justification": "ROIC of 63.2% together with an 89.3% gross margin points to strong pricing power. Operating income rose from $5.8B to $8.7B while revenue grew from $15.8B to $23.8B, which suggests margins broadly held as the business grew rather than eroding. Two cautions limit the score. First, goodwill is 43.6% of assets, so much of the asset base was bought rather than built, and the evidence does not show whether any of it was ever written down. Second, the market prices the stock at a P/E of 14.4, and the reverse DCF implies -4.1% annual FCF growth. Investors appear to doubt the moat will last. The evidence pack has no competition or risk-factor detail to confirm or refute that doubt, so it cannot show whether the moat is widening or narrowing."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence lists no dated event with a stated mechanism. Recent filings include a 10-Q on 2026-09-22 and 8-Ks on 2026-09-10 and 2026-09-08, but their contents are not in the pack, so they cannot be treated as catalysts. Insider activity data is null. The fiscal year appears to end in late November (the last period end is 2025-11-28), so a full-year report should follow that point. Nothing in the evidence says what it would contain or why it would re-rate the shares. The ongoing buyback ($11.3B in the latest year) gives steady support but is not a dated re-rating event. The low score reflects missing evidence, not evidence that no catalysts exist."
+  },
+  "risk_reward": {
+    "points": 7,
+    "justification": "On the evidence, the price already assumes a lot of bad news: P/E of 14.4, P/FCF of 10.4, EV/EBITDA of 10.7 and a 9.6% FCF yield. The reverse DCF shows the $263.8 price requires -4.1% annual FCF growth, against 13.2% actually delivered. If FCF merely holds steady, the starting yield alone is a meaningful return, which tilts the upside-to-downside balance favorably. Against that, a PEG of 2.3 says the stock is not cheap relative to the growth rate assumed in that measure. Annual volatility of 37.8% means wide price swings. No bear/base/bull scenarios were built, so the deep discount may reflect a structural threat the evidence does not capture. A low price with no visible explanation can be a value trap, so this is scored as favorable but unproven."
+  },
+  "management": {
+    "points": 3,
+    "justification": "The share count fell 12.0% and buybacks were $11.3B in the latest year, so management is actively returning capital. However, $11.3B exceeds latest net income of $7.1B, so repurchases ran ahead of earnings, and the evidence pack has no debt or cash figures to show how the gap was funded. The pack gives no purchase prices, so it cannot show whether buybacks were done at sensible prices. With the stock now at a P/E of 14.4, purchases made at higher past multiples may have destroyed some value. No dividend is recorded, insider buy and sell data are null, and there is no record of guidance against delivery, so credibility cannot be tested. A middling score fits capital allocation that is active but cannot be verified."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:32:59Z",
+    "evidence_hash": "31ff748e9f356728",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

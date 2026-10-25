@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 9,
+    "justification": "EOG made a profit in every year shown. Net income was 4.66B in 2021, peaked at 7.76B in 2022 and was 4.98B in 2025. In 2025 the operating margin was 28.2%, the net margin 22.0%, ROE 16.69% and ROIC 14.5%, all above the ~10% quality bar. But EOG sells a commodity, so it has to accept market prices, and the trend is getting worse. Revenue fell three years in a row, from 25.70B (2022) to 22.63B (2025). Operating income fell faster, from 9.97B to 6.39B, so margins are shrinking rather than holding steady. Data caveat: the capex_to_revenue figure of 2.1% comes from a fallback tag (PaymentsToAcquireOtherPropertyPlantAndEquipment). That is implausibly low for an oil and gas producer. The tag probably leaves out spending on oil and gas properties, so it understates how much the business has to reinvest. A good business, but a cyclical one with weakening profitability: 9 of 15."
+  },
+  "competitive_advantage": {
+    "points": 4,
+    "justification": "The evidence shows no pricing power. The product is crude oil and natural gas, a commodity, and the margins move the way a price-taker's do. In 2022 operating income was 9.97B on 25.70B of revenue. In 2025 it was 6.39B on 22.63B, so margins narrowed as revenue shrank. A ROIC of 14.5% means the assets earn more than their cost of capital at current prices. That could come from a low-cost resource base, but the evidence has no cost-per-barrel, reserve-life or peer data to show a lasting cost moat. goodwill_vs_assets is null, so nothing suggests growth was bought through acquisitions. The moat looks narrow, and the margin trend suggests it is narrowing rather than widening: 4 of 10."
+  },
+  "catalysts": {
+    "points": 2,
+    "justification": "The evidence contains no dated event with a stated mechanism. The filings list shows 10-Qs on 2026-05-05 and 2026-08-04 and 8-Ks on 2026-09-24 and 2026-10-08. The contents of those 8-Ks are not provided, so they cannot count as catalysts. The quarterly filing pattern suggests a third-quarter report around early November 2026. A scheduled earnings report only counts as a catalyst when there is a specific reason to expect the stock to be revalued, and nothing here gives one. Insider activity is null. A recovery in oil and gas prices would be the main source of upside, but that is a hope about the commodity cycle, not a catalyst. The ongoing buyback gives steady support but is not a dated event: 2 of 10."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "On reported numbers the stock looks cheap: P/FCF of 8.94, an FCF yield of 11.18% and EV/EBITDA of 8.3. The reverse DCF says the price only requires FCF growth of -6.5% a year, against 14.8% actually delivered. Two problems weaken this. First, FCF is probably overstated. Capex uses a fallback tag that shows only 2.1% of revenue, which is implausibly low for a producer, and with full capex the FCF yield would likely be much lower. Second, the delivered growth rate is flattered by the depressed 2020 starting point that the caveats flag (5-year revenue CAGR of 15.5% vs a 3-year CAGR of -4.2%). On earnings the stock is not cheap: a P/E of 17.17 (earnings yield 5.82%) on net income that has fallen three years in a row. Annual volatility of 29.26% plus commodity exposure make a 20%+ drop plausible in a price downturn, while a 20%+ gain depends mostly on commodity prices. The evidence includes no bear/base/bull cases. Moderate at best: 4 of 10."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Buybacks are actually shrinking the share count: shares changed by -5.69%, with buybacks of 2.56B in the latest year. These buybacks are doing more than offsetting stock compensation. It is unclear whether they were made at sensible prices. They were made while net income fell from 6.40B (2024) to 4.98B (2025), and the stock trades at 17.17x earnings. Dividends paid is null, insider buys and sells are null, and the evidence has no record of guidance versus results, so management credibility cannot be tested. Credit for disciplined share reduction, held back by the missing evidence: 3 of 5."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:38:41Z",
+    "evidence_hash": "a58c9a316ba9be07",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

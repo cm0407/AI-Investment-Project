@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Margins are exceptional for any industry: gross margin 87.9%, operating margin 46.89% and net margin 41.9%, and revenue, operating income and net income each rose in every year of the five-year series. Two cautions keep this below the top tier. First, operating income grew more slowly than revenue in each of the last two annual periods, so the operating margin has drifted down from its peak rather than expanding. Second, ROIC is unavailable and ROE is only 18.8% despite those margins, implying a large capital base, while capex runs at 16.35% of revenue, unusually heavy for a drug company. The evidence also says nothing about product concentration, which matters greatly for a pharmaceutical business."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Holding a gross margin of 87.9% and an operating margin of 46.89% while revenue nearly doubled across the series is real evidence of pricing power. But the moat looks stable to narrowing rather than widening, because operating income growth trailed revenue growth in each of the last two years. The evidence's goodwill-to-assets ratio puts goodwill at roughly two-fifths of total assets. Under this system's guidance that suggests some growth was bought rather than built. The intangibles data is stale and excluded, though, so that reading is uncertain. For a drug maker the moat comes mostly from patents and regulatory exclusivity, and none of that appears in the evidence, so the durability of these margins cannot be verified here."
+  },
+  "catalysts": {
+    "points": 2,
+    "justification": "The evidence contains no dated, forward-looking event with a stated mechanism. The filings list shows several recent current-report filings and a quarterly report, but their contents are not provided, so none can be identified as a catalyst. Insider activity is null, so there is no insider-buying signal either. Continued earnings growth and buybacks could support the stock, but without a date and a mechanism they do not count as catalysts under the rules. This pillar scores low because evidence is missing, not because of a negative finding."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "On earnings the stock looks reasonable: a P/E of 18.879 and a PEG of 0.82, against net income that grew every year. Cash flow tells a less generous story. P/FCF is 24.2 (an FCF yield of 4.13%), and the reverse DCF says a price of 587.5 requires about 16.8% annual FCF growth versus the 8.366% actually delivered. The market is already pricing in an improvement the company has not yet shown. Annual volatility of 42.4% means large swings are possible in either direction, and revenue and profit growth both slowed in the latest year. Bear, base and bull cases have not been built yet, so the balance of upside against downside looks roughly even at best, not compelling."
+  },
+  "management": {
+    "points": 2,
+    "justification": "The latest year shows roughly one billion dollars of buybacks, yet the share count rose 7.399%. Repurchases did not offset new share issuance, so shareholders were diluted despite the spending, and the evidence does not say where the new shares came from. No dividends are recorded. Insider open-market buys and sells are both null, and the evidence has no record of past guidance compared with results, so management's credibility cannot be tested. Steadily rising profits suggest the business is run competently, but capital allocation as measured here looks weak."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:49:12Z",
+    "evidence_hash": "2889e47abf8f1898",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

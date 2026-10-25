@@ -6,6 +6,165 @@ record follows.
 
 ---
 
+## 2026-10-25 — Built: the model is now inside the system, and measured against me
+
+Part A of `docs/BUILD_PLAN.md` is done. `invest/judge.py` is the only module in the project that
+calls a model, and `scripts/score_stock.py --judge` wires it into the real scoring path. The
+boundary is written up in `CLAUDE.md` under *The model in the loop*.
+
+### What the model does
+
+It receives a finished evidence pack — figures the Python has already extracted from SEC XBRL
+facts and labelled — and returns five integers with a written argument for each: business
+quality, competitive advantage, catalysts, risk/reward, management. **It never touches a number.**
+It does not fetch data, pick a tag, compute a ratio, or decide what a company is worth.
+
+Its answer is then thrown away unless it passes seven checks (`validate()`). The one that earns
+its keep is **check5_groundedness**: every figure appearing in the model's written reasoning must
+also appear in the evidence pack it was given. `scripts/selftest.py` tests it offline — a verdict
+citing a 28.4% margin that is nowhere in the evidence is rejected.
+
+### The backtest: 13 companies, model vs. the judgments I wrote by hand
+
+The 14 hand-written judgments in `research/judgments/` were the control group. The model scored
+the same companies from the same evidence; its output went to `_backtest/` and the originals were
+restored afterwards.
+
+```
+mean difference         -2.77 points   (model scores lower)
+mean ABSOLUTE difference 3.38 points   (out of 50)
+model scored lower in    10 of 13
+
+PER PILLAR (positive = model scores HIGHER than me)
+  business_quality      /15   +0.38
+  competitive_advantage /10   +0.31
+  catalysts             /10   -2.77   <-- the whole gap
+  risk_reward           /10   +0.08
+  management            /5    -0.77
+```
+
+**The finding is sharper than "the model agrees with me."** On four of five pillars the model and
+I are within half a point — business quality, moat, and risk/reward are effectively
+indistinguishable. The entire systematic disagreement is **one pillar**, and it is not a model
+defect: it is an **evidence defect**. Catalysts are dated, forward-looking events, and the
+evidence pack is built from SEC filings. The filings do not contain them. The model scored 2–3 of
+10 across almost every company and said so plainly — EXEL's verdict reads *"The evidence contains
+no dated catalyst with a clear mechanism... Two 8-Ks were filed, but their contents are not in
+the evidence, so they count as neither positive nor negative."*
+
+That is the correct behaviour. When I wrote these by hand I had read the news; the model has only
+the pack. **It scored low rather than inventing a catalyst, which is exactly what the design
+asked for.** The gap measures what I failed to put in the evidence pack, not what the model
+failed to reason about. Fixing it means adding an evidence source (8-K contents, earnings dates),
+not tuning the prompt.
+
+My -0.77 on management is the same shape: the pack has buybacks and share counts but no record of
+guidance versus delivery, so the model scored the half it could see and said the other half was
+unverifiable.
+
+### A defect in my own instrumentation
+
+The first backtest reported `rejection rate: 0, no validation failures recorded`. That was wrong.
+Two of thirteen companies show `attempts: 2` in their accepted verdicts — they were rejected once
+and accepted on retry. `judge()` only persisted a rejection record when *every* attempt failed, so
+a verdict that was rejected and then recovered left nothing on disk.
+
+An instrument that reads 0% when the true figure is 13% is worse than no instrument, and this is
+the third time this project has caught itself scoring something without checking the line beside
+it. Fixed in `_record_rejections()`, which now always persists rejected attempts, tagged
+`recovered_on_retry` or `abandoned`, and the accepted verdict carries
+`checks_failed_before_acceptance`.
+
+**Corrected figures:**
+
+```
+model calls made    15
+calls rejected       2   (13.3% of calls)
+recovered on retry   2   (rejected once, valid next attempt)
+abandoned entirely   0   (none fell back to the PARTIAL score)
+```
+
+So the validators do fire, on roughly one call in seven, and the retry absorbs them.
+
+**And then the corrected counter was wrong too.** The fix read every file in `_backtest/` to
+count calls, which includes files left by *earlier* runs — so a 9-call determinism run reported
+21 calls. Now tallied in-process, scoped to the invocation. Two successive attempts to measure
+the same thing, both wrong in the same direction: **the easy way to count was to read what was
+lying around on disk, and what was lying around was not what I had just done.**
+
+### Determinism — the same evidence, three times
+
+```
+ADBE   spread 1 point      EOG   spread 0 points      BKNG   spread 1 point
+mean total spread : 0.7 points      max : 1 point   (out of 50)
+```
+
+The question in `docs/MODEL_IN_THE_LOOP.md` was whether judgment scores swing enough that they
+should be reported as a range rather than a point estimate. **They do not.** A one-point spread
+on a 50-point scale is well inside the rounding the score band already applies, so a single run
+is a fair representation. EOG came back identical all three times.
+
+This also re-measures the catalysts gap on a different sample: **-3.00 per company across these
+three**, against -2.77 across all thirteen. The finding reproduces.
+
+### Cost and latency, measured
+
+13 companies, 15 model calls, **969 seconds** — about 75s per company wall-clock, almost all of it
+model latency. One call per company per evidence state; verdicts are cached on a SHA-256 hash of
+the evidence pack, so re-scoring an unchanged company costs nothing. Reached via `claude -p`
+(Claude Code, headless), invoked as an argument list with the prompt on stdin — never `shell=True`.
+The Claude API is a separate paid product and this system does not call it.
+
+### Part B — the frontend
+
+`api/main.py` (FastAPI, 9 endpoints) and `web/` (Next.js 16, React 19, MUI v9) are built and
+running. The API's core invariant: a null metric is returned as `null` **plus an entry in
+`_unavailable` giving the reason**, so "we could not measure this" survives JSON serialisation
+instead of flattening into zero.
+
+Verified end to end against live data: all 7 routes return 200, AAPL's stale goodwill renders as
+a hoverable *not available* carrying "last reported 2017-09-30, 2919 days behind", INTU's page
+renders 73.4 and labels the judgment pillars *scored by model · 7 validation checks passed*, and
+every financial row names the form and XBRL tag it came from.
+
+### The bug the frontend exposed
+
+Generating model judgments for two companies that had never had one surfaced a defect that had
+been latent in the API since it was written. The API reported PAYX at **67.8**; the script that
+had just computed the same score printed **67.4**.
+
+The API builds a total by adding the data pillars from `data/fundamentals/TICKER_analysis.json`
+to the judgment pillars from `research/judgments/TICKER.json`. Those files are written by
+different processes at different times, and `score_stock.py` only persists its score when passed
+`--save`. So the API was adding **today's judgment to a data score saved on 2026-09-11**, at
+September prices, and serving the sum as one current number.
+
+This is the project's oldest failure mode wearing a new hat. The pipeline already refuses to read
+an abandoned XBRL tag's last value as current; here the stale figure was not a component but
+*half the score*, and the addition erased both timestamps on the way through.
+
+Fixed in three places, because one would not have held:
+
+- `/companies/{ticker}/thesis` returns `dataScoredAt` and `judgmentAt`, and `freshnessWarning`
+  past a 14-day gap.
+- The stock page renders that warning as a top-level error **above** the score, not a footnote
+  beneath it, and prints both dates under the gauge.
+- `selftest.py` check 63 walks every company and fails if any has halves more than 14 days apart
+  without a flag.
+
+Two build findings worth keeping:
+
+- **MUI v9 removed `gap` and `flexWrap` as Stack props.** They belong in `sx` now.
+- **A Server Component cannot pass `component={Link}` into an MUI component.** React refuses to
+  serialise a function across that boundary and `next build` fails on `/_not-found`. Solved with
+  one `"use client"` link primitive (`components/nav/AppLink.tsx`) so every page stays a Server
+  Component and the API base URL never reaches the browser bundle.
+
+`scripts/selftest.py` is now **62 checks, 0 failures**, including five that exercise the API and
+three that exercise the validators offline with no model call.
+
+---
+
 ## 2026-10-24 — Planned: move the model inside the system
 
 **Context.** The artifact requires that a model do real work inside the system *every time it

@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 13,
+    "justification": "Gross margin of 89.3%, operating margin of 36.6%, net margin of 30.0% and ROIC of 63.2% (far above a ~10% bar), with capex at only 0.8% of revenue, describe a highly cash-generative software model. Revenue rose every year, from $15.8B to $23.8B. The record is not flawless: operating income stalled at $6.65B to $6.74B in one year while revenue kept growing (margin compression), and net income dipped from $4.82B to $4.76B, before operating income jumped to $8.7B. ROE of 61.3% is likely flattered by buybacks shrinking equity, so ROIC is the better gauge."
+  },
+  "competitive_advantage": {
+    "points": 7,
+    "justification": "Sustaining a 63.2% ROIC alongside an 89.3% gross margin is consistent with real pricing power. But the margin trend is mixed rather than clearly widening: operating income went from $5.8B on $15.8B of revenue to only $6.74B on $21.5B before recovering to $8.7B on $23.8B, so the latest 36.6% operating margin is a rebound to roughly where it started, not expansion. Goodwill is 43.6% of assets, so a large share of the franchise was bought rather than built. The price also implies FCF growth of -4.1%, which means the market doubts the moat will last for reasons this evidence does not show."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "No dated catalyst with a stated mechanism appears in the evidence: insider_activity is null, and the recent filings list gives only form types and dates (latest 10-Q filed 2026-09-22), with no content. The most concrete event I can infer is the fiscal year closing in late November (prior period_end 2025-11-28) followed by annual results, but the evidence gives no date or guidance for that report. Ongoing buybacks ($11.3B latest, share count change -12.0%) give steady support but are not a re-rating event. The low score reflects missing evidence, not proof that no catalysts exist."
+  },
+  "risk_reward": {
+    "points": 7,
+    "justification": "The valuation sets a low bar: P/E 14.4, P/FCF 10.4, EV/EBITDA 10.7 and a 9.6% FCF yield, with the reverse DCF implying -4.1% annual FCF growth against the 13.2% actually delivered. Even if cash flow only holds flat, the yield is substantial. Against that, annual volatility of 37.8% is high, a PEG of 2.3 suggests the growth rate behind the 14.4 P/E is modest, and nothing in this evidence explains the market's pessimism, which raises the risk of a value trap. No bear/base/bull cases were supplied, so this score is provisional and held below the top band."
+  },
+  "management": {
+    "points": 3,
+    "justification": "The share count changed by -12.0% on $11.3B of buybacks in the latest year, and at a P/FCF of 10.4 those repurchases look accretive if cash flow holds. Caveats: $11.3B appears to exceed the free cash flow implied by a 9.6% FCF yield on a $102.7B market cap, so part may have been funded from cash or debt. This evidence cannot confirm which, and interest expense was excluded as stale. Insider buys and sells are null and no guidance-versus-delivery record is supplied, so the main credibility test cannot be run. The middling score reflects that gap."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:35:25Z",
+    "evidence_hash": "31ff748e9f356728",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

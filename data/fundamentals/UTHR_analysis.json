@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "generated_at_utc": "2026-09-11T08:05:36Z",
+    "generated_at_utc": "2026-10-25T08:53:41Z",
     "generator": "INVEST v1.0.0",
     "provenance": [
       {
         "source": "SEC EDGAR",
         "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001082554.json",
-        "retrieved_at_utc": "2026-09-11T08:05:36Z",
+        "retrieved_at_utc": "2026-10-25T08:53:41Z",
         "basis": "actual",
         "period": null,
         "notes": null,
@@ -15,7 +15,7 @@
       {
         "source": "Yahoo Finance via yfinance",
         "source_url": "https://finance.yahoo.com/quote/UTHR",
-        "retrieved_at_utc": "2026-09-11T08:05:36Z",
+        "retrieved_at_utc": "2026-10-25T08:53:41Z",
         "basis": "market",
         "period": null,
         "notes": null,
@@ -71,7 +71,7 @@
         "_provenance": {
           "source": "SEC EDGAR",
           "source_url": "https://data.sec.gov/submissions/CIK0001082554.json",
-          "retrieved_at_utc": "2026-09-11T07:44:58Z",
+          "retrieved_at_utc": "2026-10-25T08:47:42Z",
           "basis": "actual",
           "period": null,
           "notes": "served from local cache; re-run with --refresh to force a new pull",
@@ -3296,7 +3296,7 @@
       "_provenance": {
         "source": "SEC EDGAR",
         "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001082554.json",
-        "retrieved_at_utc": "2026-09-11T07:44:56Z",
+        "retrieved_at_utc": "2026-10-25T08:47:41Z",
         "basis": "actual",
         "period": null,
         "notes": "served from local cache; re-run with --refresh to force a new pull",
@@ -3367,18 +3367,19 @@
       "ebitda_proxy": 1578100000.0,
       "shares_outstanding": 42890692.0,
       "shares_outstanding_asof": "2026-07-29",
-      "price": 503.8599853515625,
-      "market_cap": 21610903442.83838,
+      "_share_count_warning": null,
+      "price": 587.5,
+      "market_cap": 25198281550.0,
       "enterprise_value": null,
-      "pe_ratio": 16.191581211387113,
-      "ps_ratio": 6.790116392634674,
-      "pfcf_ratio": 20.765737909905237,
-      "pb_ratio": 3.0454191599501677,
+      "pe_ratio": 18.879359818685845,
+      "ps_ratio": 7.917265702076853,
+      "pfcf_ratio": 24.212819784760256,
+      "pb_ratio": 3.5509542501620586,
       "ev_ebitda": null,
       "ev_sales": null,
-      "fcf_yield_pct": 4.815624681090678,
-      "earnings_yield_pct": 6.176049064909895,
-      "peg_ratio": 0.7067069403852961,
+      "fcf_yield_pct": 4.130043542592293,
+      "earnings_yield_pct": 5.296789772554946,
+      "peg_ratio": 0.8240192504802046,
       "_growth_base_warning": null,
       "_per_share_split_warning": null,
       "_shares_to_wa_ratio": 0.8954215448851774,
@@ -3531,6 +3532,7 @@
       "_unavailable_metrics": [
         "_growth_base_warning",
         "_per_share_split_warning",
+        "_share_count_warning",
         "cash_to_debt",
         "debt_to_equity",
         "dividends_paid_latest",
@@ -3564,7 +3566,8 @@
         "EBITDA is approximated as operating income + D&A; companies define it differently.",
         "Multi-year CAGRs use the first and last year in the window only, so a single unusual endpoint year can distort them. The year-by-year series is provided alongside for exactly this reason.",
         "All figures are as-reported (including restatements picked up from later filings); no adjustment is made for one-off items, and 'adjusted' non-GAAP figures that management prefers are deliberately ignored."
-      ]
+      ],
+      "annual_volatility_pct": 42.4203510517533
     },
     "score": {
       "sector_context": {
@@ -3615,20 +3618,20 @@
         "valuation": {
           "pillar": "valuation",
           "max_points": 15,
-          "normalized_score": 0.7625,
-          "points": 11.4375,
+          "normalized_score": 0.7125,
+          "points": 10.6875,
           "components_scored": 4,
           "components_total": 5,
           "components": {
             "pe_ratio": {
-              "value": 16.191581211387113,
+              "value": 18.879359818685845,
               "score": 0.7,
-              "why": "16.19 <= 20.00 -> 0.70"
+              "why": "18.88 <= 20.00 -> 0.70"
             },
             "pfcf_ratio": {
-              "value": 20.765737909905237,
+              "value": 24.212819784760256,
               "score": 0.7,
-              "why": "20.77 <= 25.00 -> 0.70"
+              "why": "24.21 <= 25.00 -> 0.70"
             },
             "ev_ebitda": {
               "value": null,
@@ -3636,14 +3639,14 @@
               "why": "DATA UNAVAILABLE OR UNVERIFIED"
             },
             "fcf_yield": {
-              "value": 4.815624681090678,
+              "value": 4.130043542592293,
               "score": 0.65,
-              "why": "4.82 >= 4.00 -> 0.65"
+              "why": "4.13 >= 4.00 -> 0.65"
             },
             "peg_ratio": {
-              "value": 0.7067069403852961,
-              "score": 1.0,
-              "why": "0.71 <= 0.80 -> 1.00"
+              "value": 0.8240192504802046,
+              "score": 0.8,
+              "why": "0.82 <= 1.20 -> 0.80"
             }
           },
           "sector_suppressed_components": [],
@@ -3709,18 +3712,38 @@
           "sector_suppressed_components": []
         }
       },
-      "data_points_earned": 43.85,
+      "data_points_earned": 43.1,
       "data_points_available": 50.0,
       "data_points_possible": 50,
-      "judgment_pillars_recorded": {},
-      "judgment_points_earned": 0.0,
-      "judgment_pillars_missing": [
-        "business_quality",
-        "competitive_advantage",
-        "catalysts",
-        "risk_reward",
-        "management"
-      ],
+      "judgment_pillars_recorded": {
+        "business_quality": {
+          "points": 12.0,
+          "max_points": 15,
+          "justification": "Margins are exceptional for any industry: gross margin 87.9%, operating margin 46.89% and net margin 41.9%, and revenue, operating income and net income each rose in every year of the five-year series. Two cautions keep this below the top tier. First, operating income grew more slowly than revenue in each of the last two annual periods, so the operating margin has drifted down from its peak rather than expanding. Second, ROIC is unavailable and ROE is only 18.8% despite those margins, implying a large capital base, while capex runs at 16.35% of revenue, unusually heavy for a drug company. The evidence also says nothing about product concentration, which matters greatly for a pharmaceutical business."
+        },
+        "competitive_advantage": {
+          "points": 6.0,
+          "max_points": 10,
+          "justification": "Holding a gross margin of 87.9% and an operating margin of 46.89% while revenue nearly doubled across the series is real evidence of pricing power. But the moat looks stable to narrowing rather than widening, because operating income growth trailed revenue growth in each of the last two years. The evidence's goodwill-to-assets ratio puts goodwill at roughly two-fifths of total assets. Under this system's guidance that suggests some growth was bought rather than built. The intangibles data is stale and excluded, though, so that reading is uncertain. For a drug maker the moat comes mostly from patents and regulatory exclusivity, and none of that appears in the evidence, so the durability of these margins cannot be verified here."
+        },
+        "catalysts": {
+          "points": 2.0,
+          "max_points": 10,
+          "justification": "The evidence contains no dated, forward-looking event with a stated mechanism. The filings list shows several recent current-report filings and a quarterly report, but their contents are not provided, so none can be identified as a catalyst. Insider activity is null, so there is no insider-buying signal either. Continued earnings growth and buybacks could support the stock, but without a date and a mechanism they do not count as catalysts under the rules. This pillar scores low because evidence is missing, not because of a negative finding."
+        },
+        "risk_reward": {
+          "points": 4.0,
+          "max_points": 10,
+          "justification": "On earnings the stock looks reasonable: a P/E of 18.879 and a PEG of 0.82, against net income that grew every year. Cash flow tells a less generous story. P/FCF is 24.2 (an FCF yield of 4.13%), and the reverse DCF says a price of 587.5 requires about 16.8% annual FCF growth versus the 8.366% actually delivered. The market is already pricing in an improvement the company has not yet shown. Annual volatility of 42.4% means large swings are possible in either direction, and revenue and profit growth both slowed in the latest year. Bear, base and bull cases have not been built yet, so the balance of upside against downside looks roughly even at best, not compelling."
+        },
+        "management": {
+          "points": 2.0,
+          "max_points": 5,
+          "justification": "The latest year shows roughly one billion dollars of buybacks, yet the share count rose 7.399%. Repurchases did not offset new share issuance, so shareholders were diluted despite the spending, and the evidence does not say where the new shares came from. No dividends are recorded. Insider open-market buys and sells are both null, and the evidence has no record of past guidance compared with results, so management's credibility cannot be tested. Steadily rising profits suggest the business is run competently, but capital allocation as measured here looks weak."
+        }
+      },
+      "judgment_points_earned": 26.0,
+      "judgment_pillars_missing": [],
       "judgment_evidence": {
         "business_quality": {
           "max_points": 15,
@@ -3777,35 +3800,35 @@
         }
       },
       "unscorable_data_pillars": [],
-      "total_score": 43.9,
-      "score_is_complete": false,
-      "verdict_band": "INCOMPLETE - DO NOT COMPARE TO THE 0-100 BANDS",
-      "interpretation": "PARTIAL SCORE: 43.9 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one.",
+      "total_score": 69.1,
+      "score_is_complete": true,
+      "verdict_band": "SPECULATIVE / INCOMPLETE",
+      "interpretation": "Complete score of 69.1/100 -> SPECULATIVE / INCOMPLETE per the CLAUDE.md bands.",
       "_scoring_note": "Thresholds are conventions chosen at build time, documented in docs/ASSUMPTIONS.md. A pillar with missing inputs is averaged over the components that DO exist, and the count is reported as components_scored/components_total so thin coverage is visible rather than hidden."
     },
     "quote": {
       "ticker": "UTHR",
-      "price": 503.8599853515625,
-      "price_date": "2026-09-10",
+      "price": 587.5,
+      "price_date": "2026-10-23",
       "currency": "USD (assumed - verify for non-US listings)",
       "returns": {
-        "1_week_pct": 2.406405553080404,
-        "1_month_pct": -2.258004781462175,
-        "3_month_pct": -7.395697857005201,
-        "6_month_pct": -7.499409772773447,
-        "1_year_pct": 24.779594002834692
+        "1_week_pct": 10.200331141370711,
+        "1_month_pct": 24.414987109795106,
+        "3_month_pct": 11.28158451399106,
+        "6_month_pct": 3.586294488078301,
+        "1_year_pct": 39.33687021851002
       },
-      "annualized_volatility_pct": 41.08938401426768,
+      "annualized_volatility_pct": 42.4203510517533,
       "52w_high": 596.760009765625,
-      "52w_low": 396.5,
-      "pct_below_52w_high": -15.567401114989021,
-      "pct_above_52w_low": 27.076919382487397,
+      "52w_low": 415.3399963378906,
+      "pct_below_52w_high": -1.5517141923202638,
+      "pct_above_52w_low": 41.450379250750615,
       "max_drawdown_pct_in_window": -32.99999702267531,
-      "ma_50": 523.2680017089843,
-      "ma_200": 523.8585997009277,
-      "avg_daily_volume_3m": 517595.2380952381,
+      "ma_50": 519.3804034423828,
+      "ma_200": 528.7674003601074,
+      "avg_daily_volume_3m": 723420.6349206349,
       "history_rows": 501,
-      "history_start": "2024-09-11",
+      "history_start": "2024-10-24",
       "_basis": {
         "price": "market - last close observed by Yahoo Finance",
         "returns": "derived - (price_now / price_then - 1) using adjusted closes",
@@ -3815,7 +3838,7 @@
       "_provenance": {
         "source": "Yahoo Finance via yfinance",
         "source_url": "https://finance.yahoo.com/quote/UTHR",
-        "retrieved_at_utc": "2026-09-11T08:05:36Z",
+        "retrieved_at_utc": "2026-10-25T08:53:41Z",
         "basis": "market",
         "period": "2y",
         "notes": "Third-party market data. Prices are adjusted for splits and dividends.",

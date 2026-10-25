@@ -97,6 +97,8 @@ def main() -> int:
     rows: list[dict] = []
     rejected: list[dict] = []
     started = time.time()
+    RETRIES = 1                      # judge() default: one try plus one retry
+    tally = {"calls": 0, "rejected": 0, "recovered": 0, "abandoned": 0, "checks": {}}
 
     for i, tk in enumerate(tickers, 1):
         print("[" + str(i) + "/" + str(len(tickers)) + "] " + tk)
@@ -108,20 +110,32 @@ def main() -> int:
 
         runs = []
         for r in range(args.repeat):
-            before = len(list((config.RESEARCH_DIR / "judgments" / "_rejected").glob("*.json"))) \
-                if (config.RESEARCH_DIR / "judgments" / "_rejected").exists() else 0
             verdict = judge.judge(tk, m, fund, refresh=True, verbose=True)
-            after = len(list((config.RESEARCH_DIR / "judgments" / "_rejected").glob("*.json"))) \
-                if (config.RESEARCH_DIR / "judgments" / "_rejected").exists() else 0
             if verdict is None:
+                # every attempt failed; judge() fell back to the PARTIAL score
+                tally["abandoned"] += 1
+                tally["calls"] += RETRIES + 1
+                tally["rejected"] += RETRIES + 1
                 rejected.append({"ticker": tk, "run": r + 1})
                 continue
+
+            # Count the calls THIS invocation made. Reading _backtest/ off disk mixes in
+            # files left by earlier runs, which is how the first version of this report
+            # claimed 21 model calls for a 9-call run.
+            meta = verdict.get("_model_run") or {}
+            n = int(meta.get("attempts") or 1)
+            tally["calls"] += n
+            tally["rejected"] += n - 1
+            if n > 1:
+                tally["recovered"] += 1
+                rejected.append({"ticker": tk, "run": r + 1, "note": "retried then accepted"})
+            for name in meta.get("checks_failed_before_acceptance", []):
+                tally["checks"][name] = tally["checks"].get(name, 0) + 1
+
             runs.append({p: verdict[p]["points"] for p in judge.PILLAR_CAPS})
             # keep the model's output; never clobber the human original
             (OUT_DIR / (tk + "_run" + str(r + 1) + ".json")).write_text(
                 json.dumps(verdict, indent=2), encoding="utf-8")
-            if after > before:
-                rejected.append({"ticker": tk, "run": r + 1, "note": "retried then accepted"})
 
         if not runs:
             continue
@@ -194,38 +208,30 @@ def main() -> int:
     print("2. REJECTION RATE")
     print("=" * 76)
     attempted = len(tickers) * args.repeat
-    abandoned = sum(1 for r in rejected if "note" not in r)
+    calls = tally["calls"]
+    rejected_calls = tally["rejected"]
 
-    # Count MODEL CALLS, not companies. A verdict rejected once and accepted on retry is
-    # one rejected call and one accepted call - reporting only the companies that ended
-    # with nothing hides every time a validator did its job. (The first backtest reported
-    # 0% while 2 of 13 calls had been rejected; see LOG.md 2026-10-25.)
-    accepted_calls = 0
-    retry_rejections = 0
-    recovered = 0
-    for p in OUT_DIR.glob("*_run*.json"):
-        try:
-            meta = json.loads(p.read_text(encoding="utf-8")).get("_model_run") or {}
-        except json.JSONDecodeError:
-            continue
-        n = int(meta.get("attempts") or 1)
-        accepted_calls += 1
-        retry_rejections += n - 1
-        if n > 1:
-            recovered += 1
-
-    abandoned_calls = abandoned * 2          # judge() default: one try plus one retry
-    rejected_calls = retry_rejections + abandoned_calls
-    calls = accepted_calls + rejected_calls
-
+    # Count MODEL CALLS, not companies, and count only the ones this invocation made.
+    # A verdict rejected once and accepted on retry is one rejected call and one accepted
+    # call - reporting only the companies that ended with nothing hides every time a
+    # validator did its job. (The first backtest reported 0% while 2 of 15 calls had been
+    # rejected, then a second version read the whole _backtest/ directory and claimed 21
+    # calls for a 9-call run. See LOG.md 2026-10-25.)
     print("  companies attempted : " + str(attempted))
     print("  model calls made    : " + str(calls))
     print("  calls rejected      : " + str(rejected_calls)
-          + ("" if not calls else "   (" + format(100.0 * rejected_calls / calls, ".1f") + "% of calls)"))
-    print("  recovered on retry  : " + str(recovered)
+          + ("" if not calls else "   ("
+             + format(100.0 * rejected_calls / calls, ".1f") + "% of calls)"))
+    print("  recovered on retry  : " + str(tally["recovered"])
           + "   (rejected once, valid on the next attempt)")
-    print("  abandoned entirely  : " + str(abandoned)
+    print("  abandoned entirely  : " + str(tally["abandoned"])
           + "   (fell back to the PARTIAL score)")
+    if tally["checks"]:
+        print("  which checks fired THIS RUN:")
+        for k, v in sorted(tally["checks"].items(), key=lambda kv: -kv[1]):
+            print("    " + str(v).rjust(3) + "  " + k)
+    elif rejected_calls == 0:
+        print("  no validation failure this run")
     rej_dir = config.RESEARCH_DIR / "judgments" / "_rejected"
     if rej_dir.exists():
         checks: dict[str, int] = {}

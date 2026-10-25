@@ -700,3 +700,66 @@ when the consumer weakens. The problem is not that they are wrong for the enviro
 that everyone else has worked that out and the defensiveness is fully priced. **Identifying the
 right KIND of business is not the same as finding one at the right price.**
 **Confidence:** high.
+
+
+### 2026-10-25 - A measuring instrument that reads zero is not the same as nothing going wrong
+**Trigger:** The first judge backtest reported `rejection rate: 0, no validation failures
+recorded`. That was false. Two of thirteen companies carried `attempts: 2` in their accepted
+verdicts - rejected once, accepted on retry. The code only wrote a rejection record when EVERY
+attempt failed, so a rejected-then-recovered verdict left nothing on disk. True rate: 2 of 15
+calls, 13.3%.
+**Rule:** when a monitor reports zero problems, check that it is capable of reporting a non-zero
+number. A clean reading and a broken sensor look identical from the outside, and the clean
+reading is the more comfortable interpretation, which is exactly why it needs the extra check.
+**Then the fix was wrong too.** The corrected counter read every file in the output directory,
+which included files from earlier runs, so a 9-call run reported 21 calls. Both wrong versions
+shared a cause: **the cheap way to count was to read what was lying around on disk, and what
+was lying around was not what had just happened.** Count events as they occur, in process.
+**This is the fourth instance of one recurring shape in this project:** Harmony, HEICO,
+Freshworks, and now my own instrumentation - a headline figure accepted without checking the
+figure beside it that would contradict it.
+**Confidence:** high.
+
+### 2026-10-25 - When the model and I disagree on exactly one pillar, the evidence is at fault
+**Trigger:** Model judgments vs. my 13 hand-written ones. Mean absolute deviation 3.38 of 50.
+Per pillar: business quality +0.38, moat +0.31, risk/reward +0.08 - effectively identical. But
+catalysts -2.77, in 13 of 13 cases.
+**Rule:** a disagreement spread evenly across pillars is a judgment difference; a disagreement
+concentrated in ONE pillar is a defect in the inputs. **Catalysts are dated forward-looking
+events and the evidence pack is built from SEC filings, which do not contain them.** The model
+scored 2-3 of 10 nearly everywhere and said why - EXEL: *"Two 8-Ks were filed, but their
+contents are not in the evidence, so they count as neither positive nor negative."* It refused
+to invent a catalyst, which is the correct behaviour. When I wrote those pillars by hand I had
+read the news and did not notice I was scoring on evidence the system never had.
+**What this means for MY OWN past scores:** every catalyst score I have written was based on
+information not recorded anywhere in the research record. That is unauditable and unreproducible.
+**Action:** either add an evidence source for catalysts (8-K contents, scheduled earnings dates)
+or record the source alongside the score. Do not fix it by loosening the prompt.
+**Confidence:** high.
+
+### 2026-10-25 - Keep the control group byte-identical
+**Trigger:** The backtest restored the 14 hand-written judgments by re-serialising them through
+`json.dumps`, which silently dropped the trailing newline on every one. Content was intact, but
+all 14 control files showed as modified in git.
+**Rule:** when an experiment temporarily overwrites the thing it is measuring against, restore
+the original BYTES, not a re-serialised reconstruction of them. A control group that drifts, even
+cosmetically, stops being evidence that the comparison was fair.
+**Confidence:** high.
+
+### 2026-10-25 - A total is only honest if both halves describe the same moment
+**Trigger:** Generated model judgments for PAYX and UTHR, then noticed the API reported 67.8
+while the script that had just computed the score printed 67.4. The API was adding today's
+judgment (28 points) to a data score saved on **2026-09-11** - 44 days earlier, at September
+prices - and serving the sum as one current number. `score_stock.py` only persists its score
+with `--save`, which I had not passed, so the stale file was never replaced.
+**Rule:** when a figure is assembled from parts produced by different processes at different
+times, **the assembly step must check that the parts agree on the date.** Summing is not a
+neutral operation; it erases the timestamps of its inputs. This is the same error as reading an
+abandoned XBRL tag's last value as current, one level up: there the stale number was a
+component, here it is half the score.
+**Fixed:** `/companies/{ticker}/thesis` now returns `dataScoredAt` and `judgmentAt` and raises
+`freshnessWarning` past a 14-day gap; the stock page shows it as a top-level error above the
+score; `selftest.py` fails if any company's halves are more than 14 days apart without a flag.
+**Generalises to:** any blended metric in this system - screen composites, portfolio returns,
+anything that adds a cached number to a fresh one.
+**Confidence:** high.

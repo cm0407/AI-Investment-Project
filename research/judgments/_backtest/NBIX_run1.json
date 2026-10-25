@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 11,
+    "justification": "Revenue rose every year from $1133.5M (2021) to $2860.5M (2025), and net income rose every year too, from $89.6M to $478.6M. The current operating margin is 21.6% and net margin is 16.7%. ROE is 14.7% and capex is only 1.19% of revenue, so the business needs little capital to grow. Two weak spots stop me scoring higher. First, operating income barely moved in 2023 ($249.0M to $250.9M) while revenue kept climbing. Second, in 2025 operating income grew more slowly than revenue ($570.5M to $619.1M against $2355.3M to $2860.5M), so the margin narrowed last year. Gross margin and ROIC are not available, and R&D expense was excluded as stale, so I can't confirm what drives the quality."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Goodwill is 0.123 of assets, so most growth appears to have been built rather than bought. Over the full period, operating income rose from $102.5M to $619.1M, much faster than revenue ($1133.5M to $2860.5M), which points to some pricing power or operating leverage (costs growing slower than sales). The trend is uneven, though: operating income stalled in 2023 and lagged revenue in 2025, so the evidence doesn't show the moat widening. ROIC is null, and nothing here covers competition, patents or product concentration, so I can't verify how durable the moat is. A middling score is the honest one."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence has no specific dated event with a known mechanism. There are 8-Ks dated 2026-09-28, 2026-07-30, 2026-05-28, 2026-05-18, 2026-05-05 and 2026-04-06, but their contents aren't given, so I can't treat any of them as a catalyst. Insider activity is null. Past 10-Qs came on 2026-05-05 and 2026-07-31, which suggests another quarterly report is due, but the evidence gives no date, guidance or expected surprise. An earnings report without a stated reason to re-rate the stock is a scheduled event, not a real catalyst, so this scores low."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "The reverse DCF (working backward from the price to the growth it assumes) is favorable. The price requires about 11.2% annual FCF growth, while the company has delivered 28.0%, so the market isn't pricing in growth the company hasn't shown. P/FCF is 19.4 and the FCF yield is 5.16%. Other signals pull the other way. P/E is 30.3, the PEG ratio is a very high 9.24 (that conflicts with the growth record and needs checking), and annual volatility is 35.1%, so large drawdowns are plausible. Bear, base and bull cases haven't been built yet, so I can't weigh probability-weighted upside against bear-case loss. I'm keeping this at the midpoint until they are."
+  },
+  "management": {
+    "points": 2,
+    "justification": "The share count rose 4.8% even though the company spent $167.7M on buybacks. Repurchases didn't offset dilution, which suggests heavy stock compensation is passing value from shareholders to employees. No dividends are recorded. Insider open-market buys and sells are both null, and the evidence includes no past guidance to compare with results, so I can't test credibility directly. Steady growth in revenue and net income is a point in management's favor, but net dilution despite buybacks is a weak capital-allocation signal."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:20:53Z",
+    "evidence_hash": "c682826c19c73c22",
+    "attempts": 2,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

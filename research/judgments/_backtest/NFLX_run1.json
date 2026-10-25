@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Profitability is strong and improving over five reported years. Revenue rose every year, from $29.70B (2021) to $45.18B (2025). Operating income climbed from $6.19B to $13.33B, giving a latest operating margin of 29.5% and a net margin of 24.3%. ROIC of 35.9% and ROE of 41.3% are well above a ~10% quality bar. Points are withheld because the record has a break: in 2022 operating income fell to $5.63B and net income fell to $4.49B (from $5.12B) even though revenue grew, so profit dropped while revenue rose that year. Gross margin is unavailable because the gross profit figure was last reported in 2011. Interest expense is excluded as stale, so I cannot check how much debt is lifting the 41.3% ROE."
+  },
+  "competitive_advantage": {
+    "points": 7,
+    "justification": "The evidence fits a real moat that has widened recently. Operating income more than doubled, from $6.19B (2021) to $13.33B (2025), while revenue grew from $29.70B to $45.18B, so margins expanded as the business got bigger. ROIC is 35.9%. goodwill_vs_assets is null, so nothing suggests growth was bought rather than built, but that is missing data, not proof. The score stays at 7 for two reasons. Operating income fell to $5.63B in 2022, so profitability was not immune to pressure. And the evidence has no competition or risk-factor detail to confirm where the advantage comes from or how long it may last."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence names no specific, dated future event with a stated mechanism. The filings list shows a 10-Q on 2026-10-21 and 8-Ks on 2026-04-23, 2026-07-16 and 2026-10-20, which looks like quarterly reporting. But the next report date is not given and the 8-Ks' contents are not described, so none of them counts as an identified catalyst. Ongoing buybacks ($9.13B latest) and the margin-expansion trend support the stock but are not dated re-rating events. Insider activity is null. The score is low because the evidence offers trends, not catalysts."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "The evidence contains no bear/base/bull cases, so I cannot measure upside against downside directly, and the signals that are available point both ways. In favour: the reverse DCF says the price requires 21.7% annual FCF growth against 37.4% actually delivered, and the PEG ratio is 0.77 at a P/E of 24.6. Against: 21.7% FCF growth sustained for years is still demanding. It is faster than revenue grew in the latest year ($39.00B to $45.18B), so margins would need to keep expanding. The FCF yield is only 3.50%, with P/FCF of 28.6 and EV/EBITDA of 20.2, so there is little valuation cushion if growth slows. Annual volatility of 34.5% means large price drops are plausible. I give a middle score until scenario work is done."
+  },
+  "management": {
+    "points": 3,
+    "justification": "On the evidence, capital return favours shareholders. Buybacks were $9.13B in the latest period and the share count changed by -3.98%, so repurchases are shrinking the share base rather than just offsetting stock compensation. No dividend is reported. The key credibility tests cannot be run, though. There is no record of past guidance versus actual results, insider open-market buys and sells are both null, and a single current P/E of 24.6 says nothing about whether past buybacks were made at sensible prices. The score is slightly above the midpoint, based on capital allocation alone."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:21:48Z",
+    "evidence_hash": "e15bb453e4552cb4",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

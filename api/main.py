@@ -27,6 +27,7 @@ from __future__ import annotations
 import csv
 import json
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
@@ -237,8 +238,10 @@ def get_thesis(ticker: str) -> dict:
     "analyst" when a person did. The UI must show which.
     """
     tk = ticker.upper()
-    d = _read_json(config.FUNDAMENTALS_DIR / (tk + "_analysis.json"))["data"]
+    doc = _read_json(config.FUNDAMENTALS_DIR / (tk + "_analysis.json"))
+    d = doc["data"]
     score = d.get("score") or {}
+    data_scored_at = (doc.get("_meta") or {}).get("generated_at_utc")
 
     judgment_path = config.RESEARCH_DIR / "judgments" / (tk + ".json")
     judgment, source, model_run = None, None, None
@@ -287,6 +290,27 @@ def get_thesis(ticker: str) -> dict:
         band = config.band_for_score(total) if is_complete else (
             "INCOMPLETE - some data pillars could not be scored")
 
+    # The two halves of this total are written by different processes at different times:
+    # the data pillars when score_stock.py --save last ran, the judgment when judge.py last
+    # ran. Adding them is only honest if they describe the same moment. PAYX once served a
+    # total built from a data score 44 days older than its judgment, presented as one
+    # current number - the same mistake as reading a stale XBRL tag as current.
+    freshness = None
+    judged_at = model_run.get("at") if model_run else None
+    if data_scored_at and judged_at:
+        try:
+            gap = abs((datetime.fromisoformat(judged_at.replace("Z", "+00:00"))
+                       - datetime.fromisoformat(data_scored_at.replace("Z", "+00:00"))).days)
+        except ValueError:
+            gap = None
+        if gap is not None and gap > 14:
+            freshness = (
+                "The two halves of this score are " + str(gap) + " days apart. The data "
+                "pillars were scored on " + data_scored_at[:10] + " and the judgment "
+                "pillars on " + judged_at[:10] + ". Re-run "
+                "`python scripts/score_stock.py " + tk + " --judge --save` to bring them "
+                "into line before relying on the total.")
+
     return {
         "ticker": tk,
         "total": total,
@@ -296,6 +320,9 @@ def get_thesis(ticker: str) -> dict:
                                  if judgment_pillars and
                                  all(jp["points"] is not None for jp in judgment_pillars)
                                  else None),
+        "dataScoredAt": data_scored_at,
+        "judgmentAt": judged_at,
+        "freshnessWarning": freshness,
         "dataPointsEarned": score.get("data_points_earned"),
         "dataPointsAvailable": score.get("data_points_available"),
         "dataPointsPossible": score.get("data_points_possible"),

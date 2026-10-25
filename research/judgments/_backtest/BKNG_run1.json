@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "On this evidence the business earns a lot from each sale and needs little spending on physical assets. Operating margin is 32.8%, net margin is 20.1%, and capex is only 1.2% of revenue. Revenue grew every year, from $11.0B to $26.9B, while operating income rose from $2.5B to $8.8B, so profit grew faster than sales across the whole series. It does not reach the top tier for four reasons. ROIC is null. Gross margin is stale because cost_of_revenue was last reported in 2017. ROE of -96.9% is meaningless here because it implies negative shareholder equity. And net income fell from $5.9B to $5.4B in the latest year even as revenue and operating income rose. That drop happened below the operating line, and the evidence cannot explain it, partly because interest expense is also stale."
+  },
+  "competitive_advantage": {
+    "points": 7,
+    "justification": "The rubric's moat signal is present. Operating income grew from $2.5B to $8.8B while revenue grew from $11.0B to $26.9B, so margins widened as the business scaled, ending at a 32.8% operating margin. Goodwill is only 9.1% of assets, so this growth looks mostly built rather than bought. The score stops at 7 for three reasons. ROIC is null. The evidence says nothing about competitors or the 10-K Competition section. And the early part of the series reflects recovery from a depressed base: the 31.7% five-year CAGR is flagged as distorted, which flatters the margin trend."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no specific, dated future catalyst. The filings list shows a quarterly reporting rhythm (10-Qs on 2026-04-28 and 2026-08-04) and several 8-Ks (2026-04-02, 2026-05-07, 2026-05-11, 2026-06-02). Their contents are not in the evidence, so no mechanism can be attached to any of them. The $6.4B of buybacks is a real mechanism that supports value per share, but it is ongoing and undated, not an event that could re-rate the stock. Insider activity is null. A catalyst needs both a date and a mechanism, so this scores low."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "The price asks little of the business. The reverse DCF says the current price needs only 1.4% annual FCF growth, while recent 3-year revenue CAGR is 16.3%. The stock trades at 21.7x earnings, 12.9x FCF and 12.6x EV/EBITDA, with a 7.8% FCF yield. That low bar is a genuine margin-of-safety signal. The score stops at 6 for five reasons. Delivered FCF growth is null, so the gap cannot be confirmed. The evidence has no bear/base/bull cases. Annual volatility is 33.3%. Net income fell from $5.9B to $5.4B in the latest year. And the 0.1 PEG ratio is not a real bargain signal, because it rests on the growth figure distorted by recovery from a depressed base."
+  },
+  "management": {
+    "points": 3,
+    "justification": "The company returns a lot of capital: $6.4B of buybacks and $1.2B of dividends in the latest year, and a reported share count change of -20.7%. A 7.8% FCF yield on a roughly $117B market cap implies free cash flow large enough to cover both. Three caveats hold this at 3. First, the share count comes from a fallback tag (CommonStockSharesIssued), so the -20.7% needs checking. Second, ROE of -96.9% implies cash returned has exceeded book equity, and with interest expense stale since 2023 the evidence cannot show whether buybacks were paid for with debt. Third, buyback prices, insider buys and sells, and guidance versus results are all unavailable, so management's credibility cannot be tested."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:41:18Z",
+    "evidence_hash": "9eb068363df0c476",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 13,
+    "justification": "Margins are exceptional: gross margin 89.3%, operating margin 36.6%, net margin 30.0%, ROIC 63.2%, and capex is only 0.8% of revenue, so the business needs very little capital to grow. Revenue rose in every one of the five fiscal years shown, from $15.8B in fiscal 2021 to $23.8B in fiscal 2025. Two blemishes keep this short of the top. Operating income barely moved in fiscal 2024 ($6.7B) even though revenue reached $21.5B, and net income dipped slightly in fiscal 2022, so profit has not compounded in a straight line. Also, ROE of 61.3% is likely inflated by heavy buybacks shrinking the equity base, so it overstates quality somewhat."
+  },
+  "competitive_advantage": {
+    "points": 7,
+    "justification": "ROIC of 63.2% and an operating margin of 36.6% in the latest year point to real pricing power, and the margin recovered strongly in fiscal 2025 (operating income $8.7B) after a flat fiscal 2024, which argues against a moat that is visibly eroding. Two cautions. First, goodwill is 43.6% of assets, so a large part of the asset base was bought rather than built. The evidence does not say whether any of it was ever written down. Second, the market price implies FCF shrinking about -4.1% a year, which suggests investors doubt the moat will last. The evidence gives no competitive detail that would confirm or refute that doubt, so I cannot rate the moat as clearly widening."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no specific forward-dated event that has a clear mechanism. Insider activity is null, and there is no product launch, contract, or guidance item to point to. The only dated pattern is the reporting cadence: 10-Qs filed in March, June and September 2026 against a fiscal year that ends in late November. That implies a full-year report is likely in the weeks after the fiscal 2026 year end, but a routine earnings release with no stated inflection is not a re-rating mechanism. Ongoing buybacks ($11.3B in the latest year) provide steady support, but they are not a dated catalyst. The score is low because the evidence supports little here."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "On the numbers, the asymmetry looks favorable. The reverse DCF shows the price requires FCF to shrink about -4.1% a year, while the company actually delivered 13.2% FCF growth, and the stock trades at P/FCF 10.4, an FCF yield of 9.6%, P/E 14.4 and EV/EBITDA 10.7, which is low for these margins. I am holding the score down for three reasons. No bear/base/bull cases were provided, which the rubric asks for before this pillar is scored. Annual volatility is high at 37.8%. And a price that implies decline usually reflects a specific fear the evidence does not reveal, so a value trap cannot be ruled out. The PEG of 2.3 also signals that near-term earnings growth is modest relative to the multiple."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital return is substantial and has actually reduced the share count: shares fell -12.0% and buybacks were $11.3B in the latest year against a $102.7B market cap. At today's P/FCF of 10.4, repurchases look sensibly priced, but the evidence does not show the prices paid in earlier years, so I cannot judge whether past buybacks were made near the top. Insider buys and sells are null, dividends are null, and there is no guidance-versus-delivery record, so the most important credibility test is unavailable. Interest expense data is also stale, so I cannot tell whether buybacks were partly funded with debt. That leaves a middling score."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:34:02Z",
+    "evidence_hash": "31ff748e9f356728",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

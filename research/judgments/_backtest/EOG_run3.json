@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 9,
+    "justification": "On profitability EOG looks good for a producer: operating margin 28.2%, net margin 22.0%, ROE 16.7% and ROIC 14.5%. That ROIC is comfortably above a ~10% quality bar. The yearly figures, though, look like a commodity price-taker rather than a steady compounder. Revenue peaked at $25,702M in 2022 and fell three years in a row to $22,632M in 2025. Over the same years operating income fell faster, from $9,966M to $6,385M, and net income fell from $7,759M to $4,980M. Profit shrinking faster than revenue means margins are getting squeezed. The evidence marks the 15.5% five-year revenue CAGR as distorted by a low starting year; the recent 3-year CAGR is -4.2%. Returns are good, but the business is cyclical and currently getting worse."
+  },
+  "competitive_advantage": {
+    "points": 4,
+    "justification": "EOG produces crude oil and natural gas. It sells an undifferentiated commodity and cannot set its own prices, so any moat would have to come from low-cost acreage and efficient operations. This evidence cannot check that against peers. ROIC of 14.5% points to returns above a typical cost of capital, and goodwill_vs_assets is null, so nothing suggests growth was bought through acquisitions. The margin trend argues against a widening moat, though. Operating income fell from $9,966M in 2022 to $6,385M in 2025 while revenue fell only from $25,702M to $22,632M, so margins did not hold up as conditions changed. That is how a price-taker looks, not a business with pricing power."
+  },
+  "catalysts": {
+    "points": 2,
+    "justification": "The evidence contains no catalyst with both a date and a mechanism. The recent filings are routine: 8-Ks on October 8, 2026 and in late September 2026 whose contents are not described, and 10-Qs on May 5, 2026 and August 4, 2026. Following that pattern, the next quarterly report might arrive around early November 2026. That date is inferred, not confirmed, and a routine earnings report is not a re-rating event on its own. Insider activity is null (DATA UNAVAILABLE OR UNVERIFIED). The buyback supports the share price slowly but is not a catalyst. A re-rating would mostly depend on commodity prices recovering, which is a hope, not a catalyst."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "The evidence has no bear/base/bull cases, so this pillar is scored conservatively. At first glance the valuation looks undemanding: P/FCF 8.9, FCF yield 11.2%, EV/EBITDA 8.3. The reverse DCF says the $163.03 price only requires FCF growth of -6.5% a year, against 14.8% delivered. There are two serious cautions. First, capex comes from a fallback tag (PaymentsToAcquireOtherPropertyPlantAndEquipment) that puts it at only 2.1% of revenue. That is implausibly low for an oil and gas producer, whose drilling spend is a main cost, so FCF and every FCF-based ratio here may be materially overstated. Second, the 14.8% delivered growth is likely flattered by the same low starting year flagged for revenue. On earnings, the P/E of 17.2 (earnings yield 5.8%) is not cheap for a cyclical business whose net income has fallen three years in a row. Volatility of 29.3% means real drawdown risk. The odds look roughly balanced, not tilted toward upside."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital return points in a shareholder-friendly direction: share_count_change_pct is -5.7% and the latest buyback was $2,564M, so each remaining share owns more of the company instead of being diluted. This evidence cannot show whether those shares were bought back at sensible prices. dividends_paid_latest is null, and insider open-market buys and sells are null (DATA UNAVAILABLE OR UNVERIFIED). There is also no record here of past guidance compared with what was delivered, which is the best test of management's credibility. A middle score fits: the direction is good, but how well it was executed is unverified."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:39:54Z",
+    "evidence_hash": "a58c9a316ba9be07",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

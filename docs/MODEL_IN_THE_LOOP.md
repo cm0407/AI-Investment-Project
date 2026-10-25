@@ -216,7 +216,10 @@ when *every* attempt failed, so a rejected-then-accepted verdict left no trace. 
 groundedness has so far only fired in the offline self-test, where it correctly rejects a
 fabricated figure.
 
-**3. Determinism.** See `LOG.md` for the measured spread.
+**3. Determinism.** Three companies, same evidence, three runs each: **mean total spread 0.7
+points, maximum 1 point out of 50.** EOG returned an identical verdict all three times. The
+concern above - that a six-point swing would force scores to be reported as ranges - does not
+arise. A single run is a fair representation.
 
 ---
 

@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 11,
+    "justification": "Revenue grew every year, from $1,921.2M in 2021 to $2,945.4M in 2025. Operating income grew faster, from $263.9M to $645.8M, so the operating margin widened to 21.9% today. That is five years of margin expansion, not one good year. ROIC of 16.2% and ROE of 15.8% sit comfortably above ~10%. Capex is only 0.64% of revenue, so the business needs little reinvestment. Two things hold the score back. First, a 66.4% gross margin is only moderate for a software company, which suggests a meaningful lower-margin services mix. Second, growth slowed: revenue rose from $2,735.3M to $2,945.4M in 2025, a noticeably smaller gain than the jump from $2,377.5M to $2,735.3M in 2024. There is also an earnings-quality question. 2025 net income ($612.1M, up from $439.5M) grew much faster than operating income ($645.8M, up from $546.0M). Net income is now nearly equal to operating income, so part of the 2025 profit jump appears to come from below the operating line (tax or non-operating items) rather than from the core business. The evidence gives no 10-K business description to confirm what drives these results."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "Some evidence points to pricing power. Operating income rose from $263.9M to $645.8M while revenue grew from $1,921.2M to $2,945.4M, so margins widened as the company scaled instead of being competed away. ROIC of 16.2% also suggests returns above the cost of capital. Against that, goodwill is 47.8% of total assets. Goodwill is the premium paid when buying other companies, so a large share of this business was bought rather than built. The evidence does not show whether any of that goodwill was ever written down. ROIC on a base this heavy in acquisitions may also reflect past purchase prices more than an organic moat. The evidence includes no 10-K Competition or Risk Factors text, so I cannot identify the moat's source (switching costs, scale, data) or tell whether competitors are closing in. The 2025 slowdown in revenue growth is a mild sign the moat may not be widening. The margin trend supports a moderate score; the missing information prevents a high one."
+  },
+  "catalysts": {
+    "points": 2,
+    "justification": "The evidence contains no dated catalysts. The recent_filings list is empty and insider_activity is null, so I cannot point to a scheduled earnings date, product launch, contract decision, or guidance event with a known date and mechanism. The only ongoing support visible is the buyback ($488.9M in the latest period, with the share count down 3.99%). Buybacks steadily raise each remaining share's claim on earnings, but they are a continuous tailwind, not a dated event that could re-rate the stock. The cheap valuation (P/E 12.0, FCF yield 9.5%) is not a catalyst either. A low multiple can stay low indefinitely without a trigger. Per the rules, vague optimism about a re-rating does not count, so this pillar scores near the floor until specific dated events are documented."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "The valuation looks undemanding on every measure in the evidence: P/E 12.0, P/FCF 10.5, EV/EBITDA 8.2, P/S 2.49, FCF yield 9.5%, PEG 0.47. The reverse DCF says today's $121.18 price implies free cash flow shrinking about 5.3% a year, while the company actually delivered 8.9% FCF growth. If performance merely continues, that gap leaves room for upside. But this is not a free lunch. Annual volatility of 47.9% is very high for a profitable software company, which suggests the market is pricing in a serious risk that this evidence does not reveal, such as disruption, competition, or business-specific trouble. The 2025 profit jump came partly from below the operating line, which flatters the P/E. Interest expense data is stale (last reported 2023), so the debt picture is incomplete. No bear/base/bull cases were provided, so the downside cannot be sized. The setup is attractive on paper but carries an unexplained risk discount, so the score is moderate."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital allocation looks shareholder-friendly on the available figures. The share count fell 3.99%, and buybacks were $488.9M against a $7.32B market cap. At a P/E near 12.0 and an FCF yield near 9.5%, buying back stock is plausibly value-accretive, if purchases happened near current prices. The evidence does not show the prices actually paid, so I cannot rule out buying near a top. Dividends show as $0, but that figure comes from a fallback tag (PaymentsOfDividendsMinorityInterest), so it may not capture common dividends reliably. The best test of credibility, comparing past guidance with what was delivered, is unavailable. Insider open-market buys and sells are null. Heavy goodwill (47.8% of assets) also means acquisition discipline matters a great deal, and it cannot be judged here. Buybacks that shrink the share count earn a slightly above-midpoint score; the unknowns keep it from going higher."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:22:30Z",
+    "evidence_hash": "1631f79752b9e61c",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

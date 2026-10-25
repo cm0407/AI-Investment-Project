@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "The latest figures show a high-margin, asset-light business: operating margin 32.8%, net margin 20.1%, and capex of only 1.2% of revenue. Operating income rose every year in the series, from $2.5B in 2021 to $8.8B in 2025, and grew much faster than revenue, which went from $11.0B to $26.9B. Several things hold the score back. ROIC is null, so return on capital cannot be checked. ROE of -96.9% with positive net income points to negative book equity, which makes ROE meaningless here and suggests a leveraged balance sheet. Gross margin is unavailable because those tags are stale. The early years are recovery-distorted, per the base-year warning. Net income also fell from $5.9B in 2024 to $5.4B in 2025 while revenue and operating income rose, which is a below-the-line deterioration worth investigating."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "There is some evidence of pricing power and scale. Operating income grew from $2.5B to $8.8B while revenue grew from $11.0B to $26.9B, so margins widened as the business grew. Goodwill is only 9.1% of assets, which suggests the growth was mostly built rather than bought. The evidence is still thin for a confident moat call. ROIC is null, there is no competitor or market-share data, and the 2021 starting point reflects recovery from a depressed base rather than proven durable advantage. The margin trend was also not smooth: it dipped in 2023 before recovering in 2024 and 2025. I score a probable but unproven moat, with a mildly widening trend."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no dated forward event with a stated mechanism. The filings list shows past 10-Q reports in April 2026 and August 2026, plus several 8-Ks, and insider_activity is null. The quarterly pattern suggests another report is due, but its date is not in the evidence, so it cannot be counted as a dated catalyst. The ongoing buyback ($6.4B latest) is a steady support for per-share figures, not a re-rating event with a date. Under the rule that a catalyst needs a date and a mechanism, very little here qualifies, so the score stays low."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "Valuation looks undemanding against the record. P/E is 21.7, P/FCF is 12.9, the FCF yield is 7.8%, and EV/EBITDA is 12.6. The reverse DCF says the price requires only 1.4% annual FCF growth, while the recent 3-year revenue CAGR is 16.3%, so the bar looks low. The PEG of 0.1 is distorted by the depressed 2020 base and should be ignored. On the downside, bear/base/bull cases have not been built, so this is not a full scenario-weighted score. Debt cannot be sized because interest expense is stale, and equity appears negative. Annual volatility is 33.3%. The 2020 trough shows demand can collapse in a shock, and net income fell in 2025. The upside looks plausible, but the downside is not quantified."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital return is substantial: buybacks of $6.4B and dividends of $1.2B in the latest year, and a reported share-count change of -20.7%. Shrinking the share base at a current P/FCF of 12.9 does not look like buying at an obviously extreme price. Three caveats keep the score moderate. The share count comes from the fallback tag CommonStockSharesIssued, so the -20.7% may not match shares actually outstanding. The buybacks seem to have pushed equity negative (ROE -96.9%), which adds leverage. Insider buys and sells are null, and there is no guidance-versus-delivery record in the evidence, so truthfulness cannot be tested."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:43:47Z",
+    "evidence_hash": "9eb068363df0c476",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

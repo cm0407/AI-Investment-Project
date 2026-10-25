@@ -1,0 +1,38 @@
+{
+  "business_quality": {
+    "points": 11,
+    "justification": "The evidence shows a high-margin software business that needs little capital: gross margin 83.8%, operating margin 35.9%, net margin 26.8%, ROIC 16.2%, ROE 19.2%, and capex at only 0.4% of revenue. Revenue rose every year, from $1,807.2M (FY2021) to $2,739.2M (FY2025), and operating income also rose every year, from $380.7M to $982.4M. Two things keep this out of the top tier. First, much of the latest margin comes from a single year: operating income jumped from $588.1M to $982.4M in FY2025, after staying between $380.7M and $588.1M across FY2021 through FY2024, and one good year is noise, not a pattern. Second, net income fell from $476.9M (FY2021) to $245.5M (FY2023) while revenue rose, which is a warning sign. FY2021 net income was higher than operating income, so a non-operating item probably inflated that starting year. The 10-K business section is not in the evidence, so I cannot confirm what drives these numbers."
+  },
+  "competitive_advantage": {
+    "points": 6,
+    "justification": "There are signs of a moat. Operating income grew much faster than revenue: it went from $380.7M to $982.4M while revenue went from $1,807.2M to $2,739.2M. Margins therefore widened as the business grew instead of being competed away, and a gross margin of 83.8% fits with pricing power. ROIC of 16.2% is above the ~10% quality bar. On the other side, goodwill is 52.8% of assets, so a large part of this business was bought rather than built, and the evidence does not say whether any of that goodwill was ever written down. Most of the margin widening also happened in one year (FY2025), so it is not yet a proven trend. The 10-K Competition and Risk Factors sections are not in the evidence, so I cannot check where the moat comes from or whether it is widening, beyond what the financials show."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "No catalyst in the evidence has both a date and a mechanism. In the filings list, 8-Ks sit next to 10-Qs (2026-05-06 with 2026-05-07, and 2026-07-29 with 2026-07-31), which looks like a quarterly earnings pattern. The annual periods end in September, so full-year results are probably the next scheduled event. However, that date is not in the evidence, and there is no way to tell whether those results would confirm or reverse the FY2025 margin jump. An 8-K filed on 2026-10-05 falls outside that earnings pattern. Its contents are not in the evidence, so it could be good, bad, or routine, and I cannot count it as a catalyst. Insider activity is null. The score is low because nothing here is both dated and explained."
+  },
+  "risk_reward": {
+    "points": 5,
+    "justification": "On this evidence the stock looks reasonably priced, not cheap: P/E 28.6, P/FCF 24.5, EV/EBITDA 20.3, P/S 7.7, and an FCF yield of 4.1%. The reverse DCF is the strongest point. At $193.8 the price requires 18.4% annual FCF growth, while the company actually delivered 32.0%, and the PEG is 0.7. But the delivered growth rate depends heavily on the FY2025 jump. If part of that year does not repeat, 18.4% sustained growth becomes a hard bar, and the valuation multiples could shrink. Annual volatility of 42.0% is high and means a large drawdown is possible. The evidence contains no bear/base/bull cases, so I cannot measure the realistic downside against the upside. That is why this pillar stays at the midpoint."
+  },
+  "management": {
+    "points": 2,
+    "justification": "There is little evidence on capital allocation, and what exists is mixed. The company spent $300.0M on buybacks in the latest year, yet the share count still rose 3.9%, so the buybacks did not offset new share issuance and existing holders were diluted. The evidence does not say whether that issuance came from stock compensation or acquisitions. Goodwill at 52.8% of assets shows that acquisitions have been a major use of capital, with no evidence on whether they paid off or were later written down. Insider buys and sells are null, dividends are null, and no past guidance is given, so I cannot test management's credibility. In their favor, operating income rose every year, which counts toward execution but cannot outweigh the dilution and missing data."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:23:57Z",
+    "evidence_hash": "7f8a858aee7f7c77",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "model_cli": "claude -p"
+  }
+}

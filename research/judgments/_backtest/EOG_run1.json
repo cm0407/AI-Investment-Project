@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 9,
+    "justification": "EOG is profitable right now. Operating margin is 28.2%, net margin 22.0%, ROE 16.7% and ROIC 14.5%, all comfortably above the ~10% quality bar. The year-by-year numbers show decline, not stability. Revenue peaked at $25.7B in 2022 and fell to $22.6B in 2025, a recent 3-year CAGR of -4.2%. Operating income fell faster, from $9,966M to $9,603M to $8,082M to $6,385M. That is barely above the $6,102M earned in 2021 on only $18.6B of revenue. This is a commodity producer (SIC 1311), so its results follow oil and gas prices. No gross margin is reported, so its cost position cannot be checked. Good returns on a falling earnings path earn a middling score."
+  },
+  "competitive_advantage": {
+    "points": 4,
+    "justification": "A moat shows up as margins that hold up when revenue changes. Here margins did not hold. Revenue slipped from $25.7B to $22.6B between 2022 and 2025, but operating income fell from $9,966M to $6,385M. That pattern fits a price-taker, not a company with pricing power. ROIC of 14.5% suggests the assets earn decent returns, possibly because they are low-cost to produce from. The evidence has nothing on reserves, cost per barrel or competitive position to show a lasting edge. Goodwill data is unavailable, so we cannot tell whether growth was built or bought. On this evidence the moat is narrowing, not widening."
+  },
+  "catalysts": {
+    "points": 2,
+    "justification": "The evidence contains no catalyst with both a date and a mechanism. The filings list shows 10-Q reports on 2026-05-05 and 2026-08-04, which suggests a third-quarter report around early November 2026. An earnings date only counts as a catalyst if there is a stated reason results should turn, and the multi-year series points to continued decline instead. Two recent 8-K filings (2026-09-24 and 2026-10-08) are listed without their contents, so they cannot be counted. Insider activity is unavailable. Any re-rating would depend on oil and gas prices, which is a hope, not a catalyst."
+  },
+  "risk_reward": {
+    "points": 4,
+    "justification": "On the surface the stock looks inexpensive. P/FCF is 8.9, FCF yield 11.2% and EV/EBITDA 8.3. The reverse DCF says the price assumes FCF growth of -6.5%, while the company delivered 14.8%. Two problems weaken that picture. First, capex is only 2.1% of revenue and comes from a fallback tag for 'other' property and equipment, so it may leave out the main drilling spend. P/FCF of 8.9 next to a P/E of 17.2 implies FCF near double earnings, so the FCF-based measures may be too high. Second, the 14.8% delivered growth starts from the same depressed base the caveat flags (15.5% over 5 years vs -4.2% over 3 years). A P/E of 17.2 (earnings yield 5.8%) is not cheap for a business whose net income fell from $7,759M to $4,980M, and annual volatility is 29.3%. No bear/base/bull cases were built, so no +20% path is shown."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital return is visible and favours shareholders. The share count changed by -5.7% and the latest buybacks totalled $2,564M, so each remaining share owns a bigger slice of the company. The evidence cannot show whether those buybacks were made at sensible prices. They came after three straight years of falling operating income, and the purchase prices are not in the evidence. Dividends paid and insider open-market activity are unavailable. There is no record of guidance versus results to test credibility. The allocation signals look reasonable but the evidence is incomplete, so the score is middling."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:37:09Z",
+    "evidence_hash": "a58c9a316ba9be07",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

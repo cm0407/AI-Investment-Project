@@ -1,0 +1,39 @@
+{
+  "business_quality": {
+    "points": 12,
+    "justification": "Revenue rose in every year of the series, from $11.0B (2021) to $26.9B (2025). Operating income grew faster, from $2.5B to $8.8B, giving a 2025 operating margin of 32.8% and a net margin of 20.1%. Capex is only 1.2% of revenue, so the business needs little physical investment to grow. Several things keep the score from going higher. ROIC is unavailable and gross margin data is stale, so returns on capital cannot be checked. ROE of -96.9% signals negative shareholders' equity, so it says nothing useful about quality. In 2025, net income fell from $5.9B to $5.4B while revenue and operating income both rose. Something below the operating line took that profit, the evidence does not say what, and it needs investigating."
+  },
+  "competitive_advantage": {
+    "points": 7,
+    "justification": "The best moat signal available is pricing power showing up in margins. In the latest year, operating income rose from $7.6B to $8.8B while revenue went from $23.7B to $26.9B. Profit grew faster than sales, so the margin widened as the business grew, which is the pattern a durable advantage tends to produce. Goodwill is only 9.1% of assets, so growth was mostly built rather than bought. Capped at 7 for three reasons: ROIC is null; the evidence includes no reading of the 10-K Competition or Risk Factors sections; and margin gains during a recovery period may partly come from operating leverage (fixed costs spread over more sales) rather than from protection against competitors."
+  },
+  "catalysts": {
+    "points": 3,
+    "justification": "The evidence contains no future event with both a date and a stated mechanism. The filings show a regular quarterly reporting cadence (10-Qs on 2026-04-28 and 2026-08-04), which suggests another earnings report is coming, but no date or expected content is given. Six 8-Ks filed between 2026-04-02 and 2026-08-04 have unknown contents and cannot be counted. The $6.4B of buybacks in the latest year steadily supports per-share figures but is not a dated event that could re-rate the stock. Insider activity is null. Under the rules, a reporting rhythm with no dates is not a real catalyst, so this pillar scores low."
+  },
+  "risk_reward": {
+    "points": 6,
+    "justification": "The price is modest relative to cash flow: P/FCF of 12.9, FCF yield of 7.8%, EV/EBITDA of 12.6 and P/E of 21.7. The reverse DCF says the price requires only 1.4% annual FCF growth, against a recent 3-year revenue CAGR of 16.3%. That is a low bar, which gives some margin of safety if growth slows without reversing. The PEG of 0.1 should be ignored because it is distorted by the 31.7% CAGR measured from a depressed base, which the caveats flag. Against this: no bear/base/bull cases have been built, delivered FCF growth is null, and interest expense is stale, so debt costs cannot be checked even though equity is negative (ROE -96.9%). Annual volatility is 33.3%, and demand in travel and transportation can drop sharply in a downturn. The setup looks favorable, but the downside has not been measured."
+  },
+  "management": {
+    "points": 3,
+    "justification": "Capital returns are large: $6.4B of buybacks and $1.2B of dividends in the latest year, with a reported share count change of -20.7%. Buying back stock at today's P/FCF of 12.9 looks sensible, but the evidence does not show what prices were paid in earlier years. Caveats: the share count comes from the fallback tag CommonStockSharesIssued, so the -20.7% figure is less reliable. ROE of -96.9% implies buybacks have pushed equity below zero, possibly funded with borrowed money, and stale interest expense data means that cannot be checked. Insider buys and sells are null, and there is no record comparing past guidance with results, so management's honesty cannot be tested."
+  },
+  "_model_run": {
+    "source": "model",
+    "at": "2026-10-25T08:42:43Z",
+    "evidence_hash": "9eb068363df0c476",
+    "attempts": 1,
+    "checks_passed": [
+      "check1_json",
+      "check2_pillars",
+      "check3_points",
+      "check4_justification",
+      "check5_groundedness",
+      "check6_certainty",
+      "check7_sector"
+    ],
+    "checks_failed_before_acceptance": [],
+    "model_cli": "claude -p"
+  }
+}

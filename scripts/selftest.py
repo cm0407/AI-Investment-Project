@@ -375,6 +375,35 @@ def main() -> int:
               str(len(sc.get("wellMeasured", []))) + " well, "
               + str(len(sc.get("thinlyMeasured", []))) + " thin")
 
+        # A total is the sum of data pillars and judgment pillars, written by different
+        # processes at different times. Adding them is only honest when they describe the
+        # same moment; PAYX once served a total whose halves were 44 days apart.
+        from datetime import datetime as _dt
+        stale_ok = True
+        detail = "no company has both halves dated"
+        dated = 0
+        worst = 0
+        for co in listing:
+            th = tc.get("/companies/" + co["ticker"] + "/thesis").json()
+            a, b = th.get("dataScoredAt"), th.get("judgmentAt")
+            if not (a and b):
+                continue
+            dated += 1
+            gap = abs((_dt.fromisoformat(b.replace("Z", "+00:00"))
+                       - _dt.fromisoformat(a.replace("Z", "+00:00"))).days)
+            worst = max(worst, gap)
+            if gap > 14 and not th.get("freshnessWarning"):
+                stale_ok = False
+                detail = co["ticker"] + ": halves " + str(gap) + " days apart, UNFLAGGED"
+                break
+            if gap > 14:
+                detail = co["ticker"] + ": " + str(gap) + " days apart and flagged"
+        if stale_ok and dated:
+            detail = (str(dated) + " scored by both halves, widest gap "
+                      + str(worst) + "d" + (" - flagged" if worst > 14 else ""))
+        check("API: a score whose halves are weeks apart says so",
+              PASS if stale_ok else FAIL, detail)
+
         spec = tc.get("/openapi.json").json()
         check("API: OpenAPI schema generated", PASS if spec.get("paths") else FAIL,
               str(len(spec.get("paths", {}))) + " paths - the frontend generates TS types from this")
