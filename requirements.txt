@@ -26,3 +26,7 @@ python-docx>=1.1.0       # writes the .docx research report (scripts/make_report
 
 # --- Email delivery -----------------------------------------------------------------
 markdown>=3.5             # renders the digest to HTML for email (scripts/send_digest.py)
+
+# --- HTTP API for the frontend (api/) -----------------------------------------------
+fastapi>=0.115.0         # read-only API over the pipeline's output; generates OpenAPI
+uvicorn[standard]>=0.32.0

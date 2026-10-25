@@ -151,6 +151,82 @@ downside · overweight a sector without reason · bury risk.
 You are not a licensed financial advisor and must say so when the user leans on you for a
 real-money decision. Accuracy over speed. Honesty over optimism.
 
+## The model in the loop — what it decides, what the code checks
+
+A model writes part of every score this system produces. That boundary is drawn on purpose,
+and it is drawn narrowly, so that when a score is wrong you can tell **whose fault it was**.
+
+### The split
+
+The 100-point score divides cleanly in two:
+
+| | Pillars | Who produces it | Where |
+|---|---|---|---|
+| **Measured** | Growth 15 · Valuation 15 · Financial strength 10 · Free cash flow 10 | Deterministic Python over SEC XBRL facts | `invest/scoring.py` |
+| **Judged** | Business quality 15 · Competitive advantage 10 · Catalysts 10 · Risk/reward 10 · Management 5 | A model, called once per company | `invest/judge.py` |
+
+**The model never touches a number.** It does not fetch data, compute a ratio, pick an XBRL
+tag, or decide what a company is worth. It receives a finished **evidence pack** — figures the
+Python already extracted and labelled — and returns five integers with a written reason for
+each. That is its entire job.
+
+This is the whole reason the split is useful: the measured half is reproducible and testable,
+so if the score is wrong there, it is a *code* bug with a specific failing line. The judged half
+is an argument, so if the score is wrong there, it is a *judgment* error you can read and
+disagree with. A single blended score would hide which one happened.
+
+### What the code checks before accepting the model's answer
+
+Model output is **untrusted input**. `validate()` runs seven checks, and any failure discards
+the whole verdict:
+
+1. **check1_json** — parses as JSON (fences and prose stripped first).
+2. **check2_pillars** — exactly the five expected keys, no extras, none missing.
+3. **check3_points** — each score is an integer within that pillar's cap. An out-of-range
+   value is **rejected, never clamped** — clamping would silently convert a model that
+   misunderstood the scale into a plausible-looking answer.
+4. **check4_justification** — at least 120 characters of reasoning per pillar. A score with
+   no argument behind it cannot be audited, so it is not accepted.
+5. **check5_groundedness** — *the important one.* Every number appearing in the written
+   justification must also appear in the evidence pack. The model may reason about the
+   figures it was given; it may not introduce new ones. This is the check that catches a
+   confabulated revenue figure, and it is tested offline in `scripts/selftest.py`.
+6. **check6_certainty** — rejects "guaranteed", "will definitely", "risk-free" and similar.
+   The mission statement forbids implying certainty; this enforces it mechanically rather
+   than hoping the prompt was obeyed.
+7. **check7_sector** — a pillar the sector logic already marked meaningless (bank leverage,
+   REIT margins) may not be scored anyway.
+
+Rejected verdicts are written to `research/judgments/_rejected/` with the failing check named,
+so the failure rate is measurable rather than invisible.
+
+### What happens when the model fails
+
+`judge()` returns `None`. The score falls back to the existing data-only PARTIAL path and the
+report says the judgment pillars were not scored. **A failed model call degrades the output; it
+never fabricates one.** The system has always been willing to say DATA UNAVAILABLE OR
+UNVERIFIED, and a model that cannot produce a valid verdict is just another unavailable input.
+
+### Human override
+
+An explicit `--judgment <file>` always wins over the model. The precedence is one-directional:
+a person can overrule the model, the model can never overwrite a person. Hand-written
+judgments are what the model is measured against in `scripts/backtest_judge.py`.
+
+### Cost and latency
+
+The model is reached through `claude -p` (the Claude Code CLI in headless mode), invoked as a
+subprocess with an argument list and the prompt on **stdin** — never `shell=True`, never a
+prompt interpolated into a command string. This is covered by Claude Code access; the Claude
+API is a separate paid product and this system does not call it.
+
+One call per company per evidence state. Verdicts are cached on a SHA-256 hash of the evidence
+pack, so re-scoring an unchanged company costs nothing and returns instantly; the hash changes
+only when the underlying figures do. A run is roughly one call and a few seconds per company,
+so the model is a per-company cost, not a per-metric one.
+
+---
+
 ## Git
 
 This folder is version-controlled. At the end of each session, stage and commit changes with a

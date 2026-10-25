@@ -46,6 +46,11 @@ def main() -> int:
     ap.add_argument("--insider", action="store_true", help="parse recent Form 4 filings")
     ap.add_argument("--judgment", default=None,
                     help="JSON file with the analyst's scores for the 5 judgment pillars")
+    ap.add_argument("--judge", action="store_true",
+                    help="score the 5 judgment pillars with a MODEL (claude -p). The model "
+                         "returns 5 integers and 5 justifications; 7 deterministic checks "
+                         "decide whether that output may contribute to the score. On any "
+                         "failure the score falls back to PARTIAL. See docs/MODEL_IN_THE_LOOP.md")
     ap.add_argument("--save", action="store_true", help="write the full record to JSON")
     ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
@@ -76,6 +81,18 @@ def main() -> int:
         insider = sec.insider_transactions(fund["cik_padded"], refresh=args.refresh)
 
     judgment = scoring.load_judgment(args.judgment)
+
+    # The model-in-the-loop step. This is the only place a model runs inside the pipeline.
+    # An explicit --judgment file always wins: a human overrides the model, never the reverse.
+    if args.judge and judgment is None:
+        from invest import judge as judge_mod
+        if quote:
+            m["annual_volatility_pct"] = quote.get("annualized_volatility_pct")
+        print()
+        print("Scoring the judgment pillars with a model ...")
+        judgment = judge_mod.judge(tk, m, fund, insider=insider, refresh=args.refresh)
+        if judgment is None:
+            print("    model judgment unavailable - falling back to a PARTIAL score")
     score = scoring.score_company(m, fund, insider=insider, judgment=judgment)
 
     prof = fund["profile"]
@@ -237,7 +254,13 @@ def main() -> int:
           + format(score["data_points_available"], ".1f") + " available"
           + "  (max possible from filings: " + str(score["data_points_possible"]) + ")")
     if score["judgment_pillars_recorded"]:
-        print("  Judgment       : " + format(score["judgment_points_earned"], ".1f"))
+        src = "model" if (judgment or {}).get("_model_run") else "analyst"
+        print("  Judgment       : " + format(score["judgment_points_earned"], ".1f")
+              + "   (written by: " + src + ")")
+        if src == "model":
+            run = judgment["_model_run"]
+            print("                   " + str(len(run["checks_passed"])) + " validation checks "
+                  "passed, attempt " + str(run["attempts"]) + ", " + run["at"])
     print("  TOTAL          : " + format(score["total_score"], ".1f")
           + "   -> " + score["verdict_band"])
     print("\n  " + score["interpretation"])

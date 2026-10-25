@@ -201,6 +201,66 @@ has no source and no timestamp, which makes it unverifiable.
 
 ---
 
+### 10. Let the model write the judgment half of a score
+
+```bash
+python scripts/score_stock.py INTU --judge
+```
+
+Half the 100-point score is arithmetic over SEC filings. The other half — business quality,
+competitive advantage, catalysts, risk/reward, management — is judgement, and `--judge` hands
+that part to a language model.
+
+The model is given figures the Python has already worked out and asked to argue. **It never
+touches a number itself.** Its answer is then checked seven ways and thrown away if any check
+fails; the most important one rejects any figure in its reasoning that is not in the evidence it
+was given. If it fails, you get the same PARTIAL score the system has always produced without
+judgment — a model that cannot answer degrades the output, it never invents one.
+
+A judgment you write yourself always wins:
+
+```bash
+python scripts/score_stock.py INTU --judgment research/judgments/INTU.json
+```
+
+You can overrule the model. The model can never overwrite you. The full split is written up in
+`CLAUDE.md` under **The model in the loop**.
+
+To see how the model compares with judgments written by hand:
+
+```bash
+python scripts/backtest_judge.py                      # all of them
+python scripts/backtest_judge.py --tickers ADBE --repeat 3   # same evidence, three times
+```
+
+---
+
+### 11. Look at it all in a browser
+
+Two servers: a read-only API over everything the pipeline has produced, and a web app.
+
+```bash
+# terminal 1 - the API
+python -m uvicorn api.main:app --port 8000
+# open http://localhost:8000/docs for the endpoint list
+
+# terminal 2 - the web app
+cd web
+npm install          # first time only
+npm run dev
+# open http://localhost:3000
+```
+
+The web app never reads a file directly; it only ever calls the API, and the API only ever reads
+what the scripts wrote. Nothing in the browser can change your research record.
+
+The point of the interface is the thing most financial dashboards get wrong: **a figure that
+could not be measured is shown as "not available" with the reason attached**, never as a zero or
+an empty cell. Scores appear next to a meter showing how many of the sixteen components could
+actually be measured, so a high score on thin evidence looks thin.
+
+---
+
 ## What the folders are for
 
 ```
@@ -217,7 +277,11 @@ INVEST/
 │   ├── metrics.py        Turns raw filings into ratios
 │   ├── valuation.py      DCF, reverse DCF, bear/base/bull
 │   ├── scoring.py        The 0-100 rubric
+│   ├── judge.py          ** The only file that calls a model **
 │   └── universe.py       The list of stocks to search
+│
+├── api/               Read-only HTTP API over everything above (FastAPI)
+├── web/               The browser interface (Next.js + TypeScript)
 │
 ├── scripts/           The commands you actually run
 ├── memory/            ** The long-term brain - append-only **
@@ -230,8 +294,13 @@ INVEST/
 │
 ├── notes/             GLOSSARY.md · my_investing_preferences.md
 ├── docs/              DATA_SOURCES.md · ASSUMPTIONS.md · SCORING.md
-│                      GIT_FOR_BEGINNERS.md
-├── research/theses/   Full write-ups, one per company
+│                      GIT_FOR_BEGINNERS.md · MODEL_IN_THE_LOOP.md
+│                      FRONTEND_SPEC.md · PLATFORM_ROADMAP.md · BUILD_PLAN.md
+├── LOG.md             What was planned, and what changed as it was built
+├── research/theses/     Full write-ups, one per company
+├── research/judgments/  The five judgment pillars, per company
+│   ├── _rejected/         Model answers that failed validation, kept on purpose
+│   └── _backtest/         Model answers compared against hand-written ones
 ├── reports/daily/     The digests
 ├── portfolio/         investment_log.csv
 └── data/              Everything downloaded (rebuildable; cache is gitignored)

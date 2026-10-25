@@ -306,6 +306,83 @@ def main() -> int:
     except Exception as exc:
         check("digest email rendering", FAIL, str(exc)[:110])
 
+    # The model-in-the-loop step. Validators must run OFFLINE - no model call - so this
+    # check stays fast and cannot fail because of a network blip.
+    try:
+        from invest import judge as _judge
+        ev = {"ticker": "T", "sector_special": None, "sector_unreliable_metrics": [],
+              "pillars": {}, "metrics": {"roic_pct": 16.2}}
+        good = "x" * 130 + " ROIC of 16.2% supports this reading of the business."
+        valid = {p_: {"points": min(c_, 5), "justification": good}
+                 for p_, c_ in _judge.PILLAR_CAPS.items()}
+        v, errs = _judge.validate(valid, ev)
+        check("judge accepts a valid judgment", PASS if (v and not errs) else FAIL,
+              "7 checks pass on well-formed output")
+
+        bad = dict(valid)
+        bad["business_quality"] = {"points": 5,
+                                   "justification": "x" * 130 + " ROIC of 28.4% is excellent."}
+        _v, errs = _judge.validate(bad, ev)
+        caught = any("groundedness" in e for e in errs)
+        check("judge REJECTS hallucinated figures", PASS if caught else FAIL,
+              "a cited 28.4% absent from the evidence is rejected"
+              if caught else "groundedness check did not fire")
+
+        over = dict(valid)
+        over["management"] = {"points": 99, "justification": good}
+        _v, errs = _judge.validate(over, ev)
+        check("judge rejects out-of-range points", PASS if any("check3" in e for e in errs) else FAIL,
+              "99 on a 5-point pillar is rejected, not clamped")
+    except Exception as exc:
+        check("judge validators", FAIL, str(exc)[:110])
+
+    # The API is the frontend's only data source. The invariant it must never break is that
+    # a null metric carries a REASON - JSON serialisation is exactly where "not measured"
+    # gets quietly flattened into "zero".
+    try:
+        from fastapi.testclient import TestClient
+        from api.main import app as _api
+        tc = TestClient(_api)
+        h = tc.get("/health")
+        check("API responds", PASS if h.status_code == 200 else FAIL,
+              str(h.json().get("analyses")) + " analyses served")
+
+        listing = tc.get("/companies").json()
+        with_nulls = None
+        for co in listing[:8]:
+            body = tc.get("/companies/" + co["ticker"]).json()
+            if body.get("_unavailable"):
+                with_nulls = (co["ticker"], body)
+                break
+        if with_nulls:
+            tkr, body = with_nulls
+            key = next(iter(body["_unavailable"]))
+            ok_null = body["metrics"].get(key) is None and bool(body["_unavailable"][key])
+            check("API: null metrics carry a reason", PASS if ok_null else FAIL,
+                  tkr + "." + key + " is null with an explanation, not 0")
+        else:
+            check("API: null metrics carry a reason", WARN, "no nulls in the sample")
+
+        preds = tc.get("/predictions").json().get("summary") or {}
+        has_three = all(k in preds for k in ("mean", "meanExcludingLargest", "median"))
+        check("API: performance reports mean, ex-outlier AND median",
+              PASS if has_three else FAIL,
+              "one position once flipped the headline from behind to ahead")
+
+        sc = tc.get("/screens/latest").json()
+        split = "wellMeasured" in sc and "thinlyMeasured" in sc
+        check("API: screens split well- from thinly-measured", PASS if split else FAIL,
+              str(len(sc.get("wellMeasured", []))) + " well, "
+              + str(len(sc.get("thinlyMeasured", []))) + " thin")
+
+        spec = tc.get("/openapi.json").json()
+        check("API: OpenAPI schema generated", PASS if spec.get("paths") else FAIL,
+              str(len(spec.get("paths", {}))) + " paths - the frontend generates TS types from this")
+    except ImportError:
+        check("API tests", WARN, "fastapi/httpx2 not installed - skipped")
+    except Exception as exc:
+        check("API tests", FAIL, str(exc)[:110])
+
     check("missing values render as text, not 0",
           PASS if metrics.format_metric(None) == config.MISSING else FAIL,
           metrics.format_metric(None))

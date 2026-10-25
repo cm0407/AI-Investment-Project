@@ -187,6 +187,39 @@ All three go in `LOG.md` with the numbers, including unflattering ones.
 
 ---
 
+## What the numbers actually said — 2026-10-25
+
+Measured, not predicted. Full write-up in `LOG.md`.
+
+**1. Agreement.** 13 companies, model vs. the hand-written judgments. Mean absolute deviation
+**3.38 points out of 50**; the model scored lower in 10 of 13. Per pillar:
+
+| Pillar | Cap | Model minus human |
+|---|---|---|
+| business_quality | 15 | +0.38 |
+| competitive_advantage | 10 | +0.31 |
+| catalysts | 10 | **-2.77** |
+| risk_reward | 10 | +0.08 |
+| management | 5 | -0.77 |
+
+The prediction above was that a systematic per-pillar gap would be "a finding worth recording."
+It was. Four of five pillars agree to within half a point. **The entire disagreement is one
+pillar, and it is an evidence defect rather than a model defect**: catalysts are dated,
+forward-looking events and the evidence pack is built from SEC filings, which do not contain
+them. The model scored 2-3 of 10 almost everywhere and explained why instead of inventing a
+catalyst. The fix is a new evidence source, not a different prompt.
+
+**2. Rejection rate.** 15 model calls, **2 rejected (13.3%)**, both recovered on retry, none
+abandoned. The first report of this said 0% — `judge()` was only persisting a rejection record
+when *every* attempt failed, so a rejected-then-accepted verdict left no trace. Corrected in
+`_record_rejections()`. The hoped-for "high groundedness-rejection rate" did not materialise;
+groundedness has so far only fired in the offline self-test, where it correctly rejects a
+fabricated figure.
+
+**3. Determinism.** See `LOG.md` for the measured spread.
+
+---
+
 ## Build order
 
 | Step | |
