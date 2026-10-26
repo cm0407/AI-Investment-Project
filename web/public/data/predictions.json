@@ -1,0 +1,253 @@
+{
+ "predictions": [
+  {
+   "date": "2026-09-09",
+   "ticker": "ADBE",
+   "entryPrice": 257.26,
+   "targetPrice": 303.0,
+   "horizonMonths": 18,
+   "expectedReturnPct": 17.8,
+   "probPositive": 0.7,
+   "probHits20Pct": 0.25,
+   "probLoss": 0.3,
+   "convictionScore": 72.7,
+   "thesisStatus": "open",
+   "notes": "High-quality franchise (36.6% op margin, 63.2% ROIC, 41.4% FCF margin) at 14.3x earnings and 9.6% FCF yield after a 37% drawdown on AI-disruption fear. Only candidate of four with undistorted growth. Thesis: enterprise core holds and ARR stabilises 8-10%. Thesis-breaker: ARR decays to mid-single digits as Canva/Figma take the prosumer flank.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 263.82,
+    "pctMoveSinceEntry": 2.5,
+    "pctOfHorizonElapsed": 8.0,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  },
+  {
+   "date": "2026-09-09",
+   "ticker": "BKNG",
+   "entryPrice": 180.3,
+   "targetPrice": 206.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 14.3,
+   "probPositive": 0.75,
+   "probHits20Pct": 0.25,
+   "probLoss": 0.25,
+   "convictionScore": 77.8,
+   "thesisStatus": "open",
+   "notes": "Best-scoring idea. Asset-light network, 32.8% op margin, 9.09B FCF, share count -20.7%. But priced at 25x earnings with guidance decelerating to 4-6%, negative equity from buybacks, and 55 insider sells vs 0 buys. Headline 31.7% revenue CAGR is a covid-trough artefact; real recent rate ~16%.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 155.83,
+    "pctMoveSinceEntry": -13.6,
+    "pctOfHorizonElapsed": 12.0,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  },
+  {
+   "date": "2026-09-09",
+   "ticker": "EOG",
+   "entryPrice": 145.36,
+   "targetPrice": 167.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 14.9,
+   "probPositive": 0.7,
+   "probHits20Pct": 0.25,
+   "probLoss": 0.3,
+   "convictionScore": 67.6,
+   "thesisStatus": "open",
+   "notes": "AVOID at 67.6. Quality operator, 12.5% FCF yield fully returned to holders, D/E 0.27. But revenue has fallen three straight years (-6,-2,-4%) and the 15.5% CAGR is a 2020 oil-crash artefact. Return depends chiefly on the oil price, which I cannot forecast. Logged to test calibration on a rejected idea.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 163.03,
+    "pctMoveSinceEntry": 12.2,
+    "pctOfHorizonElapsed": 12.0,
+    "assumptionsHeld": "Nothing about the business analysis has been contradicted: revenue had fallen three consecutive years and the 15.5pct headline CAGR was a 2020 oil-crash artefact. Both still true.",
+    "assumptionsBroken": "The AVOID rating as a price prediction. Up 12.2pct, within 2.4pct of my 167 target. And the REASON is the thing I named: I rejected it saying the return depends chiefly on the oil price which I cannot forecast - and Brent moved above 100 USD on Middle East tension. I was right that oil would decide it, then treated my own inability to forecast oil as a reason to expect a poor outcome."
+   }
+  },
+  {
+   "date": "2026-09-09",
+   "ticker": "ULTA",
+   "entryPrice": 549.23,
+   "targetPrice": 615.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 12.0,
+   "probPositive": 0.65,
+   "probHits20Pct": 0.2,
+   "probLoss": 0.35,
+   "convictionScore": 66.2,
+   "thesisStatus": "open",
+   "notes": "AVOID at 66.2, weakest of four. Operating income fell three straight years (1.68-1.56-1.53B) while revenue grew 10%; flat EPS is manufactured by a 20.5% share-count reduction, not by earning more. Only +1.6% probability-weighted return at 20.4x earnings with no valuation cushion.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 624.46,
+    "pctMoveSinceEntry": 13.7,
+    "pctOfHorizonElapsed": 12.0,
+    "assumptionsHeld": "Nothing yet. The concern that drove the AVOID - operating income falling three straight years while revenue grew, with flat EPS manufactured by a 20.5pct share-count reduction - has not been tested. Ulta has not reported since; next results are due around 3 December 2026.",
+    "assumptionsBroken": "The AVOID rating itself, as a prediction about the SHARE PRICE. Up 13.7pct and past my 615 target. But note precisely what did and did not happen: the stock re-rated on no new information about the margin problem. My analysis is not yet shown to be wrong - it is shown to be slow."
+   }
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "INTU",
+   "entryPrice": 312.77,
+   "targetPrice": 360.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 15.1,
+   "probPositive": 0.7,
+   "probHits20Pct": 0.28,
+   "probLoss": 0.3,
+   "convictionScore": 79.4,
+   "thesisStatus": "open",
+   "notes": "Strongest idea of the session. Only candidate with revenue, operating income AND net income rising every year for five years (rev 12.73->21.45B, NI 2.07->4.57B), no base-year distortion. 18.3x earnings, 10.4pct FCF yield on 8.66B FCF, 40.4pct FCF margin. Reverse DCF implies the price assumes FCF SHRINKS 5.9pct/yr vs 22.1pct delivered. Down 38pct YTD on AI-disruption fear. Thesis-breaker: QuickBooks retention slipping, not just TurboTax pricing.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 343.39,
+    "pctMoveSinceEntry": 9.8,
+    "pctOfHorizonElapsed": 11.5,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "APH",
+   "entryPrice": 80.25,
+   "targetPrice": 93.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 15.9,
+   "probPositive": 0.67,
+   "probHits20Pct": 0.22,
+   "probLoss": 0.33,
+   "convictionScore": 77.3,
+   "thesisStatus": "open",
+   "notes": "High quality operator riding an AI capex boom - which is the problem. IT datacom is 43pct of sales and grew 89pct YoY; Q3 guided to 50-52pct growth. Trailing 23.2x sits on peak-cycle earnings. Worst bear case of the five at -38pct. Logged as WATCH not BUY precisely because my own lessons warn against buying a cyclical at a full multiple on boom-year trailing figures.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 74.09,
+    "pctMoveSinceEntry": -7.7,
+    "pctOfHorizonElapsed": 11.5,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "PTC",
+   "entryPrice": 128.72,
+   "targetPrice": 152.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 18.1,
+   "probPositive": 0.73,
+   "probHits20Pct": 0.23,
+   "probLoss": 0.27,
+   "convictionScore": 76.9,
+   "thesisStatus": "open",
+   "notes": "Best-measured company in the screen (16/16 scoring components). CAD/PLM switching costs are punitive - migrating an engineering record means re-validating decades of product data. ARR 2.448B growing 9.1pct cc beat guidance; FY26 guide raised to 9-9.5pct. Op margin 35.9pct, FCF 857M, cash conversion 1.18x, profit jump organic not divestiture-driven. Ceiling is low: a 9pct grower does not re-rate hard.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 193.8,
+    "pctMoveSinceEntry": 50.6,
+    "pctOfHorizonElapsed": 11.5,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "EXEL",
+   "entryPrice": 57.43,
+   "targetPrice": 66.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 14.9,
+   "probPositive": 0.68,
+   "probHits20Pct": 0.23,
+   "probLoss": 0.32,
+   "convictionScore": 76.7,
+   "thesisStatus": "open",
+   "notes": "Best-dated catalyst in the screen: zanzalintinib NDA under FDA review with target action date 3 December 2026, and 2026 guidance of 2.53-2.63B explicitly EXCLUDES it. Op income 0.29->0.87B, 37.6pct op margin, shares -11.4pct. But binary: essentially all revenue is cabozantinib, which peaks ~2.8B by 2029 before generic erosion. A large part of this outcome resolves on one regulatory date.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 64.53,
+    "pctMoveSinceEntry": 12.4,
+    "pctOfHorizonElapsed": 11.5,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "RMD",
+   "entryPrice": 219.58,
+   "targetPrice": 252.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 14.8,
+   "probPositive": 0.68,
+   "probHits20Pct": 0.22,
+   "probLoss": 0.32,
+   "convictionScore": 74.6,
+   "thesisStatus": "open",
+   "notes": "Cleanest compounding record of the five (rev 3.58->5.65B, NI 0.78->1.52B, all five years) at 33.4pct op margin and 25.9pct ROIC. But the nearest dated catalyst is NEGATIVE: Astral ventilator suspension costs 75M revenue and 0.15 EPS in FY2027. Structural bear case is real - Lilly GLP-1 approved for sleep apnea WITHOUT CPAP, and Philips re-entering the US market it vacated. Lowest score of the five.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 252.86,
+    "pctMoveSinceEntry": 15.2,
+    "pctOfHorizonElapsed": 11.5,
+    "assumptionsHeld": "The compounding record was real - revenue, operating income and net income all rose five straight years, 33.4pct op margin, 25.9pct ROIC, flat share count. The business quality judgement was correct.",
+    "assumptionsBroken": "My target of 252 was reached in 42 days on a 12-month thesis. I scored catalysts 4/10 - the lowest of that session - on the grounds that the nearest dated catalyst was NEGATIVE (the Astral suspension) and that the GLP-1 overhang would keep the multiple constrained. The multiple expanded anyway. My range was -28pct to +31pct against 28.4pct annualised volatility: barely one sigma."
+   }
+  },
+  {
+   "date": "2026-09-18",
+   "ticker": "NBIX",
+   "entryPrice": 151.83,
+   "targetPrice": 178.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 17.2,
+   "probPositive": 0.7,
+   "probHits20Pct": 0.25,
+   "probLoss": 0.3,
+   "convictionScore": 71.8,
+   "thesisStatus": "open",
+   "notes": "Only new idea clearing 70 this session. Revenue, operating income and net income all rose every year (rev 1.49-2.86B, op 0.25-0.62B, NI 0.15-0.48B); Q1 2026 product sales 811M +44pct YoY. Two commercial products - INGREZZA plus CRENESSITY, which holds an effective monopoly in CAH. Reverse DCF implies 12.7pct FCF growth vs 28.0pct delivered. Thesis-breaker: INGREZZA pricing pressure, since it still carries most of revenue. Share count ROSE 4.8pct - no buyback offsetting comp.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 142.7,
+    "pctMoveSinceEntry": -6.0,
+    "pctOfHorizonElapsed": 9.6,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  },
+  {
+   "date": "2026-09-20",
+   "ticker": "NICE",
+   "entryPrice": 104.97,
+   "targetPrice": 124.0,
+   "horizonMonths": 12,
+   "expectedReturnPct": 18.1,
+   "probPositive": 0.67,
+   "probHits20Pct": 0.22,
+   "probLoss": 0.33,
+   "convictionScore": 71.4,
+   "thesisStatus": "open",
+   "notes": "Only new idea clearing 70 this session. 10.4x earnings, 11.0pct FCF yield, 16.2pct ROIC, 15/16 data coverage. Reverse DCF implies FCF SHRINKS 8.9pct/yr vs +8.9pct delivered - market prices permanent decline. BUT management CUT operating margin guidance from 31pct to 25-26pct on AI investment after the Cognigy deal, and faces Microsoft plus Salesforce entering CX directly. THIRD instance of the same bet as ADBE and INTU - do not hold all three. Thesis-breaker: AI agents displacing per-seat pricing.",
+   "latestReview": {
+    "reviewDate": "2026-10-23",
+    "priceAtReview": 121.18,
+    "pctMoveSinceEntry": 15.4,
+    "pctOfHorizonElapsed": 9.0,
+    "assumptionsHeld": null,
+    "assumptionsBroken": null
+   }
+  }
+ ],
+ "summary": {
+  "mean": 9.5,
+  "meanExcludingLargest": 5.39,
+  "median": 12.2,
+  "count": 11,
+  "note": "Report all three together. One takeover once made the book look 3 points ahead of the index when, excluding it, it was 1.6 points behind."
+ }
+}

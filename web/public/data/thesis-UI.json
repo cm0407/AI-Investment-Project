@@ -1,0 +1,53 @@
+{
+ "ticker": "UI",
+ "total": 35.4,
+ "band": "INCOMPLETE - DO NOT COMPARE TO THE 0-100 BANDS",
+ "isComplete": false,
+ "judgmentPointsEarned": null,
+ "dataScoredAt": "2026-09-11T08:06:06Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 35.44,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 15,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 11.624999999999998,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 4.65,
+   "maxPoints": 15,
+   "componentsScored": 5,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 10.0,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 9.166666666666666,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [],
+ "judgmentSource": null,
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 35.4 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

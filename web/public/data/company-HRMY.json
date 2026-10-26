@@ -1,0 +1,202 @@
+{
+ "ticker": "HRMY",
+ "name": "Harmony Biosciences Holdings, Inc.",
+ "cik": "0001802665",
+ "sic": "2834",
+ "sicDescription": "Pharmaceutical Preparations",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 868453000.0,
+  "revenue_period": "2025-12-31",
+  "net_income_latest": 158687000.0,
+  "operating_income_latest": 208469000.0,
+  "fcf_latest": 347889000.0,
+  "eps_diluted_latest": 2.71,
+  "total_assets": 1271631000.0,
+  "total_equity": 870218000.0,
+  "total_debt": 163663000.0,
+  "total_cash_and_sti": 775340000.0,
+  "net_cash_position": 611677000.0,
+  "goodwill": null,
+  "revenue_cagr_pct": 40.30250994922193,
+  "net_income_cagr_pct": null,
+  "fcf_cagr_pct": null,
+  "eps_cagr_pct": null,
+  "revenue_growth_yoy_pct": [
+   91.20832342151719,
+   43.35221320062861,
+   32.92574025647761,
+   22.801887213885387,
+   21.50716210506287
+  ],
+  "net_income_growth_yoy_pct": [
+   null,
+   424.51946700580976,
+   -28.99409262239072,
+   12.913940692106518,
+   9.068477521255325
+  ],
+  "revenue_growth_latest_pct": 21.50716210506287,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 25.643107389453725,
+  "net_income_cagr_3y_pct": -4.373021800574184,
+  "gross_margin_pct": 77.1614583633196,
+  "operating_margin_pct": 24.00463813240325,
+  "net_margin_pct": 18.272376282884622,
+  "fcf_margin_pct": 40.058471788340874,
+  "roe_pct": 18.235315748467627,
+  "roa_pct": 12.479013172846527,
+  "roic_pct": 59.495715214630295,
+  "effective_tax_rate_pct": 26.214057210876764,
+  "nopat": 153820817.07305732,
+  "invested_capital": 258541000.0,
+  "debt_to_equity": 0.1880712649014385,
+  "net_debt_to_ebitda": -2.930385750421585,
+  "current_ratio": 3.597377564133073,
+  "liabilities_to_assets": 0.3156678313127,
+  "interest_coverage": 14.230937265342344,
+  "cash_to_debt": 4.73741774255635,
+  "ocf_to_net_income": 2.1942503166611003,
+  "capex_to_revenue_pct": 0.03569565652948404,
+  "buybacks_latest": null,
+  "dividends_paid_latest": null,
+  "shares_diluted_wa_latest": 58544570.0,
+  "share_count_change_pct": -1.115852754385005,
+  "ebitda_proxy": 208736000.0,
+  "shares_outstanding": 58236393.0,
+  "shares_outstanding_asof": "2026-07-31",
+  "price": 41.099998474121094,
+  "market_cap": 2393515663.4383163,
+  "enterprise_value": 1781838663.4383163,
+  "pe_ratio": 15.08324981528617,
+  "ps_ratio": 2.756068161936589,
+  "pfcf_ratio": 6.8801130919296565,
+  "pb_ratio": 2.7504782289475926,
+  "ev_ebitda": 8.536326572504581,
+  "ev_sales": 2.051738739388679,
+  "fcf_yield_pct": 14.534644803629693,
+  "earnings_yield_pct": 6.629870964455861,
+  "peg_ratio": null
+ },
+ "_unavailable": {
+  "goodwill": "could not be computed from this company's filings",
+  "net_income_cagr_pct": "could not be computed from this company's filings",
+  "fcf_cagr_pct": "could not be computed from this company's filings",
+  "eps_cagr_pct": "could not be computed from this company's filings",
+  "buybacks_latest": "could not be computed from this company's filings",
+  "dividends_paid_latest": "could not be computed from this company's filings",
+  "peg_ratio": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2020-12-31",
+   "revenue": 159742000.0,
+   "operatingIncome": 16986000.0,
+   "netIncome": -36944000.0,
+   "operatingCashFlow": -2985000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-23-001574"
+  },
+  {
+   "periodEnd": "2021-12-31",
+   "revenue": 305440000.0,
+   "operatingIncome": 87528000.0,
+   "netIncome": 34597000.0,
+   "operatingCashFlow": 98557000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-24-001466"
+  },
+  {
+   "periodEnd": "2022-12-31",
+   "revenue": 437855000.0,
+   "operatingIncome": 120186000.0,
+   "netIncome": 181468000.0,
+   "operatingCashFlow": 144466000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-25-001441"
+  },
+  {
+   "periodEnd": "2023-12-31",
+   "revenue": 582022000.0,
+   "operatingIncome": 192030000.0,
+   "netIncome": 128853000.0,
+   "operatingCashFlow": 219387000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-018859"
+  },
+  {
+   "periodEnd": "2024-12-31",
+   "revenue": 714734000.0,
+   "operatingIncome": 190826000.0,
+   "netIncome": 145493000.0,
+   "operatingCashFlow": 219821000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-018859"
+  },
+  {
+   "periodEnd": "2025-12-31",
+   "revenue": 868453000.0,
+   "operatingIncome": 208469000.0,
+   "netIncome": 158687000.0,
+   "operatingCashFlow": 348199000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-018859"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "cost_of_revenue came from the tag 'CostOfGoodsAndServicesSold' rather than the preferred 'CostOfRevenue', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "sga_expense came from the tag 'GeneralAndAdministrativeExpense' rather than the preferred 'SellingGeneralAndAdministrativeExpense', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "sga_expense"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "interest_expense came from the tag 'InterestExpenseDebt' rather than the preferred 'InterestExpense', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "depreciation_amortization came from the tag 'Depreciation' rather than the preferred 'DepreciationDepletionAndAmortization', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "depreciation_amortization"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "buybacks (last reported 2023-12-31, 731 days behind the newest period)",
+   "affectedMetrics": [
+    "buybacks"
+   ]
+  },
+  {
+   "kind": "growth_base",
+   "severity": "critical",
+   "message": "BASE-YEAR DISTORTION: the 5-year revenue CAGR of 40.3% is far above the recent 3-year CAGR of 25.6%. The window starts at 2020, so the long CAGR is measuring recovery from a depressed base, not underlying growth. Judge this company on the recent figure and the year-by-year series, not the headline CAGR.",
+   "affectedMetrics": []
+  }
+ ],
+ "latestFiscalPeriodEnd": "2025-12-31"
+}

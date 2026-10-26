@@ -1,0 +1,89 @@
+{
+ "ticker": "QLYS",
+ "total": 69.4,
+ "band": "SPECULATIVE / INCOMPLETE",
+ "isComplete": true,
+ "judgmentPointsEarned": 31,
+ "dataScoredAt": "2026-09-11T08:05:59Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 38.38,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 12,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 12.75,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 8.625,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 7.0,
+   "maxPoints": 10,
+   "componentsScored": 1,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 10.0,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 11,
+   "justification": "Revenue, operating income and net income all rose every year: revenue $0.49B to $0.67B, operating income $0.13B to $0.22B, net income $0.11B to $0.20B. Operating margin 33.2% on a subscription model where customers renew annually. Small but consistently profitable, which is unusual in security software - most peers at this size are still loss-making. Deducted because the absolute scale is modest ($0.67B revenue) and growth is a steady 13%, not exceptional.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 6,
+   "justification": "Vulnerability management is sticky in a specific way: the agent is deployed across a customer's entire estate, the scan history becomes the compliance audit trail, and auditors expect continuity year to year. Ripping it out means re-baselining everything. But the moat is narrower than it looks - Tenable, Rapid7, Wiz and the cloud providers' native tooling all compete directly, and larger platform vendors increasingly bundle vulnerability scanning into broader security suites. Bundling is the real threat to a point solution.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 4,
+   "justification": "The weakest catalyst set among this session's finalists, and I am scoring it honestly rather than inventing one. There is no dated event that re-rates this stock. What exists is mechanical: a share count down 10.5% over the window through genuine buybacks, and steady mid-teens revenue growth. That compounds value but it does not catch anyone's attention. A company growing 13% and guiding to 13% delivers exactly what is expected.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 6,
+   "justification": "Base +16% against a bear of -27%. The reverse DCF gives modest comfort: the price implies 12.3% annual free-cash-flow growth against 15.2% delivered - a real cushion, but a thin one. At 31.1x earnings there is not much room for disappointment, and the upside requires the multiple to hold rather than expand. Positive expectancy, unremarkable asymmetry.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 4,
+   "justification": "The clearest capital allocation of this session's candidates: share count down 10.5% through sustained buybacks while margins expanded, so per-share growth is real and amplified rather than manufactured to disguise a decline. Consistent profitability at a scale where competitors burn cash. Withheld one point because sustained buybacks at 30x-plus earnings are only accretive if the business keeps compounding - the same discipline would be worth more at a lower multiple.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 38.4 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

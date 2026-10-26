@@ -1,0 +1,198 @@
+{
+ "ticker": "RMD",
+ "name": "RESMED INC",
+ "cik": "0000943819",
+ "sic": "3841",
+ "sicDescription": "Surgical & Medical Instruments & Apparatus",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 5653443000.0,
+  "revenue_period": "2026-06-30",
+  "net_income_latest": 1523293000.0,
+  "operating_income_latest": 1886715000.0,
+  "fcf_latest": 1649544000.0,
+  "eps_diluted_latest": 10.43,
+  "total_assets": 8965950000.0,
+  "total_equity": 6585393000.0,
+  "total_debt": 659365000.0,
+  "total_cash_and_sti": 1469234000.0,
+  "net_cash_position": 809869000.0,
+  "goodwill": 2909575000.0,
+  "revenue_cagr_pct": 12.077602188982173,
+  "net_income_cagr_pct": 26.272427819932975,
+  "fcf_cagr_pct": 21.074896733770743,
+  "eps_cagr_pct": 26.342032619655285,
+  "revenue_growth_yoy_pct": [
+   11.927521838073707,
+   18.022445821515,
+   10.947306803492207,
+   9.839931171919304,
+   9.853940489984403
+  ],
+  "net_income_growth_yoy_pct": [
+   64.26317952392493,
+   15.15439990659926,
+   13.747888711122203,
+   37.19786747845881,
+   8.750481001597032
+  ],
+  "revenue_growth_latest_pct": 9.853940489984403,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 10.212508025534905,
+  "net_income_cagr_3y_pct": 19.281739531820087,
+  "gross_margin_pct": 61.055519618752676,
+  "operating_margin_pct": 33.372849076217804,
+  "net_margin_pct": 26.944518588053334,
+  "fcf_margin_pct": 29.17768871110932,
+  "roe_pct": 23.13139094356252,
+  "roa_pct": 16.989755686792808,
+  "roic_pct": 25.92562560377526,
+  "effective_tax_rate_pct": 20.63768354541173,
+  "nopat": 1497340728.896185,
+  "invested_capital": 5775524000.0,
+  "debt_to_equity": 0.10012538355721519,
+  "net_debt_to_ebitda": -0.38785770694957084,
+  "current_ratio": 3.0999268874855748,
+  "liabilities_to_assets": 0.2655108493801549,
+  "interest_coverage": null,
+  "cash_to_debt": 2.2282559735503096,
+  "ocf_to_net_income": 1.1854771209478412,
+  "capex_to_revenue_pct": 2.7644216099817402,
+  "buybacks_latest": 700037000.0,
+  "dividends_paid_latest": 349662000.0,
+  "shares_diluted_wa_latest": 146054000.0,
+  "share_count_change_pct": -0.2710804296317759,
+  "ebitda_proxy": 2088057000.0,
+  "shares_outstanding": 144252306.0,
+  "shares_outstanding_asof": "2026-08-10",
+  "price": 219.5800018310547,
+  "market_cap": 31674921615.61386,
+  "enterprise_value": 30865052615.61386,
+  "pe_ratio": 20.793715730075476,
+  "ps_ratio": 5.602766600037156,
+  "pfcf_ratio": 19.202228989110846,
+  "pb_ratio": 4.809875677216813,
+  "ev_ebitda": 14.781709797967135,
+  "ev_sales": 5.459514249213066,
+  "fcf_yield_pct": 5.207728751527116,
+  "earnings_yield_pct": 4.809145286879279,
+  "peg_ratio": 0.7914653290739738
+ },
+ "_unavailable": {
+  "interest_coverage": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2021-06-30",
+   "revenue": 3196825000.0,
+   "operatingIncome": 903678000.0,
+   "netIncome": 474505000.0,
+   "operatingCashFlow": 736718000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000943819-23-000011"
+  },
+  {
+   "periodEnd": "2022-06-30",
+   "revenue": 3578127000.0,
+   "operatingIncome": 1000286000.0,
+   "netIncome": 779437000.0,
+   "operatingCashFlow": 351147000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000943819-24-000013"
+  },
+  {
+   "periodEnd": "2023-06-30",
+   "revenue": 4222993000.0,
+   "operatingIncome": 1131871000.0,
+   "netIncome": 897556000.0,
+   "operatingCashFlow": 693299000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000943819-25-000035"
+  },
+  {
+   "periodEnd": "2024-06-30",
+   "revenue": 4685297000.0,
+   "operatingIncome": 1319893000.0,
+   "netIncome": 1020951000.0,
+   "operatingCashFlow": 1401260000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000943819-26-000047"
+  },
+  {
+   "periodEnd": "2025-06-30",
+   "revenue": 5146327000.0,
+   "operatingIncome": 1685363000.0,
+   "netIncome": 1400723000.0,
+   "operatingCashFlow": 1751588000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000943819-26-000047"
+  },
+  {
+   "periodEnd": "2026-06-30",
+   "revenue": 5653443000.0,
+   "operatingIncome": 1886715000.0,
+   "netIncome": 1523293000.0,
+   "operatingCashFlow": 1805829000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000943819-26-000047"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "cost_of_revenue came from the tag 'CostOfGoodsAndServicesSold' rather than the preferred 'CostOfRevenue', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "dividends_paid came from the tag 'PaymentsOfDividends' rather than the preferred 'PaymentsOfDividendsCommonStock', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "dividends_paid"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "long_term_debt came from the tag 'LongTermDebt' rather than the preferred 'LongTermDebtNoncurrent', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "long_term_debt"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "short_term_debt came from the tag 'ShortTermBorrowings' rather than the preferred 'LongTermDebtCurrent', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "short_term_debt"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "intangibles came from the tag 'FiniteLivedIntangibleAssetsNet' rather than the preferred 'IntangibleAssetsNetExcludingGoodwill', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "intangibles"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "interest_expense (last reported 2023-06-30, 1096 days behind the newest period)",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2026-06-30"
+}

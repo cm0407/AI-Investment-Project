@@ -1,0 +1,142 @@
+[
+ {
+  "ticker": "AAPL",
+  "name": "Apple Inc.",
+  "price": 328.2099914550781,
+  "marketCap": 4789955693093.872,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "ADBE",
+  "name": "ADOBE INC.",
+  "price": 257.260009765625,
+  "marketCap": 102260853881.83594,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "AGX",
+  "name": "ARGAN INC",
+  "price": 396.3299865722656,
+  "marketCap": 5560447091.471008,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "APH",
+  "name": "AMPHENOL CORP /DE/",
+  "price": 80.25,
+  "marketCap": 98946922424.25,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "BKNG",
+  "name": "Booking Holdings Inc.",
+  "price": 180.3000030517578,
+  "marketCap": 135473906443.03131,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "DOCS",
+  "name": "Doximity, Inc.",
+  "price": 24.709999084472656,
+  "marketCap": 4444068625.343323,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "EOG",
+  "name": "EOG RESOURCES INC",
+  "price": 145.36000061035156,
+  "marketCap": 76245561343.5072,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "EXEL",
+  "name": "EXELIXIS, INC.",
+  "price": 57.43000030517578,
+  "marketCap": 14230102647.176971,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "HRMY",
+  "name": "Harmony Biosciences Holdings, Inc.",
+  "price": 41.099998474121094,
+  "marketCap": 2393515663.4383163,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "INTU",
+  "name": "INTUIT INC.",
+  "price": 312.7699890136719,
+  "marketCap": 83583400784.05762,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "NBIX",
+  "name": "NEUROCRINE BIOSCIENCES INC",
+  "price": 156.57000732421875,
+  "marketCap": 15915213013.670837,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "NFLX",
+  "name": "NETFLIX INC",
+  "price": 76.01000213623047,
+  "marketCap": 316501063667.8948,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "PAYX",
+  "name": "PAYCHEX INC",
+  "price": 118.04000091552734,
+  "marketCap": 42019935358.82986,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "PTC",
+  "name": "PTC INC.",
+  "price": 128.72000122070312,
+  "marketCap": 13966926048.373932,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "QLYS",
+  "name": "QUALYS, INC.",
+  "price": 161.57000732421875,
+  "marketCap": 5589514564.951355,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "RMD",
+  "name": "RESMED INC",
+  "price": 219.5800018310547,
+  "marketCap": 31674921615.61386,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "UI",
+  "name": "Ubiquiti Inc.",
+  "price": 536.8400268554688,
+  "marketCap": 32494057681.558044,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "ULTA",
+  "name": "Ulta Beauty, Inc.",
+  "price": 549.22998046875,
+  "marketCap": 23483684962.223145,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "USLM",
+  "name": "UNITED STATES LIME & MINERALS INC",
+  "price": 115.88999938964844,
+  "marketCap": 3324694370.560013,
+  "sectorSpecial": null
+ },
+ {
+  "ticker": "UTHR",
+  "name": "UNITED THERAPEUTICS Corp",
+  "price": 587.5,
+  "marketCap": 25198281550.0,
+  "sectorSpecial": null
+ }
+]

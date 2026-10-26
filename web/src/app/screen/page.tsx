@@ -3,10 +3,8 @@ import { Alert, Box, Paper, Typography } from "@mui/material";
 
 import { CoverageMeter } from "@/components/honesty/CoverageMeter";
 import { UnavailableBadge } from "@/components/honesty/UnavailableBadge";
-import { fetchInvestApi } from "@/lib/api";
+import { loadJson } from "@/lib/data";
 import { formatMetric, isUnavailable, type MetricKind } from "@/lib/format";
-
-export const dynamic = "force-dynamic";
 
 type Row = {
   ticker: string;
@@ -136,7 +134,7 @@ function Table({ rows }: { rows: Row[] }) {
 }
 
 export default async function ScreenPage() {
-  const data = await fetchInvestApi<Payload>("/screens/latest");
+  const data = await loadJson<Payload>("screens-latest");
 
   return (
     <Box sx={{ maxWidth: 1100, mx: "auto", px: { xs: 2, md: 3 }, py: 4 }}>

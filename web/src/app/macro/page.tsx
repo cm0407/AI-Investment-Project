@@ -1,9 +1,7 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 
-import { fetchInvestApi } from "@/lib/api";
+import { loadJson } from "@/lib/data";
 import { outcomeColor } from "@/lib/format";
-
-export const dynamic = "force-dynamic";
 
 type Series = {
   id: string;
@@ -17,7 +15,7 @@ type Series = {
 type Payload = { retrievedAt: string; series: Series[] };
 
 export default async function MacroPage() {
-  const data = await fetchInvestApi<Payload>("/macro");
+  const data = await loadJson<Payload>("macro");
 
   return (
     <Box sx={{ maxWidth: 1100, mx: "auto", px: { xs: 2, md: 3 }, py: 4 }}>

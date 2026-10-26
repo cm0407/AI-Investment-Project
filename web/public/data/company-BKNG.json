@@ -1,0 +1,225 @@
+{
+ "ticker": "BKNG",
+ "name": "Booking Holdings Inc.",
+ "cik": "0001075531",
+ "sic": "4700",
+ "sicDescription": "Transportation Services",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 26917000000.0,
+  "revenue_period": "2025-12-31",
+  "net_income_latest": 5404000000.0,
+  "operating_income_latest": 8825000000.0,
+  "fcf_latest": 9087000000.0,
+  "eps_diluted_latest": 165.57,
+  "total_assets": 29264000000.0,
+  "total_equity": -5578000000.0,
+  "total_debt": 18736000000.0,
+  "total_cash_and_sti": 17203000000.0,
+  "net_cash_position": -1533000000.0,
+  "goodwill": 2669000000.0,
+  "revenue_cagr_pct": 31.69056376027688,
+  "net_income_cagr_pct": 146.81563403912344,
+  "fcf_cagr_pct": null,
+  "eps_cagr_pct": 158.29965811243966,
+  "revenue_growth_yoy_pct": [
+   61.241907004120065,
+   55.959116627121745,
+   25.014628437682852,
+   11.111631172478354,
+   13.38725304351489
+  ],
+  "net_income_growth_yoy_pct": [
+   1874.5762711864409,
+   162.4892703862661,
+   40.25506867233486,
+   37.141524830962936,
+   -8.12648758925536
+  ],
+  "revenue_growth_latest_pct": 13.38725304351489,
+  "growth_years_covered": 5,
+  "gross_margin_pct": null,
+  "operating_margin_pct": 32.78597169075306,
+  "net_margin_pct": 20.07653155998068,
+  "fcf_margin_pct": 33.75933424973066,
+  "roe_pct": -96.88060236643959,
+  "roa_pct": 18.466375068343357,
+  "roic_pct": null,
+  "effective_tax_rate_pct": 20.901639344262296,
+  "nopat": 6980430327.868852,
+  "invested_capital": null,
+  "debt_to_equity": -3.3589100035855144,
+  "net_debt_to_ebitda": 0.16225656223539373,
+  "current_ratio": 1.3333333333333333,
+  "liabilities_to_assets": 1.1906096227446692,
+  "interest_coverage": null,
+  "cash_to_debt": 0.9181789069171649,
+  "ocf_to_net_income": 1.7411176905995558,
+  "capex_to_revenue_pct": 1.1962700152320096,
+  "buybacks_latest": 6440000000.0,
+  "dividends_paid_latest": 1248000000.0,
+  "shares_diluted_wa_latest": 32639000.0,
+  "share_count_change_pct": -20.70213799805637,
+  "ebitda_proxy": 9448000000.0,
+  "shares_outstanding": 751380500.0,
+  "shares_outstanding_asof": "2026-07-27",
+  "price": 180.3000030517578,
+  "market_cap": 135473906443.03131,
+  "enterprise_value": 137006906443.03131,
+  "pe_ratio": 25.069190681537993,
+  "ps_ratio": 5.033023979010711,
+  "pfcf_ratio": 14.908540381097316,
+  "pb_ratio": null,
+  "ev_ebitda": 14.501154365265803,
+  "ev_sales": 5.089976834083713,
+  "fcf_yield_pct": 6.707564754413582,
+  "earnings_yield_pct": 3.9889600454331466,
+  "peg_ratio": 0.17075286869556108
+ },
+ "_unavailable": {
+  "fcf_cagr_pct": "could not be computed from this company's filings",
+  "gross_margin_pct": "could not be computed from this company's filings",
+  "roic_pct": "could not be computed from this company's filings",
+  "invested_capital": "could not be computed from this company's filings",
+  "interest_coverage": "could not be computed from this company's filings",
+  "pb_ratio": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2020-12-31",
+   "revenue": 6796000000.0,
+   "operatingIncome": -631000000.0,
+   "netIncome": 59000000.0,
+   "operatingCashFlow": 85000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001075531-23-000016"
+  },
+  {
+   "periodEnd": "2021-12-31",
+   "revenue": 10958000000.0,
+   "operatingIncome": 2496000000.0,
+   "netIncome": 1165000000.0,
+   "operatingCashFlow": 2820000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001075531-24-000014"
+  },
+  {
+   "periodEnd": "2022-12-31",
+   "revenue": 17090000000.0,
+   "operatingIncome": 5102000000.0,
+   "netIncome": 3058000000.0,
+   "operatingCashFlow": 6554000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001075531-25-000010"
+  },
+  {
+   "periodEnd": "2023-12-31",
+   "revenue": 21365000000.0,
+   "operatingIncome": 5835000000.0,
+   "netIncome": 4289000000.0,
+   "operatingCashFlow": 7344000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001075531-26-000009"
+  },
+  {
+   "periodEnd": "2024-12-31",
+   "revenue": 23739000000.0,
+   "operatingIncome": 7555000000.0,
+   "netIncome": 5882000000.0,
+   "operatingCashFlow": 8323000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001075531-26-000009"
+  },
+  {
+   "periodEnd": "2025-12-31",
+   "revenue": 26917000000.0,
+   "operatingIncome": 8825000000.0,
+   "netIncome": 5404000000.0,
+   "operatingCashFlow": 9409000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001075531-26-000009"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "revenue came from the tag 'Revenues' rather than the preferred 'RevenueFromContractWithCustomerExcludingAssessedTax', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "net_income came from the tag 'NetIncomeLossAvailableToCommonStockholdersBasic' rather than the preferred 'NetIncomeLoss', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "net_income"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "sga_expense came from the tag 'GeneralAndAdministrativeExpense' rather than the preferred 'SellingGeneralAndAdministrativeExpense', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "sga_expense"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "dividends_paid came from the tag 'PaymentsOfDividends' rather than the preferred 'PaymentsOfDividendsCommonStock', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "dividends_paid"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "stock_comp came from the tag 'AllocatedShareBasedCompensationExpense' rather than the preferred 'ShareBasedCompensation', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "stock_comp"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "shares_outstanding came from the tag 'CommonStockSharesIssued' rather than the preferred 'CommonStockSharesOutstanding', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "shares_outstanding"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "cost_of_revenue (last reported 2017-12-31, 2922 days behind the newest period)",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "gross_profit (last reported 2017-12-31, 2922 days behind the newest period)",
+   "affectedMetrics": [
+    "gross_profit"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "interest_expense (last reported 2023-12-31, 731 days behind the newest period)",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2025-12-31"
+}

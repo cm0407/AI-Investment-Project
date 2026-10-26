@@ -1,0 +1,217 @@
+{
+ "ticker": "USLM",
+ "name": "UNITED STATES LIME & MINERALS INC",
+ "cik": "0000082020",
+ "sic": "1400",
+ "sicDescription": "Mining & Quarrying of  Nonmetallic Minerals (No Fuels)",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 372727000.0,
+  "revenue_period": "2025-12-31",
+  "net_income_latest": 134275000.0,
+  "operating_income_latest": 157859000.0,
+  "fcf_latest": 102272000.0,
+  "eps_diluted_latest": 4.67,
+  "total_assets": 681044000.0,
+  "total_equity": 630760000.0,
+  "total_debt": null,
+  "total_cash_and_sti": 371124000.0,
+  "net_cash_position": null,
+  "goodwill": null,
+  "revenue_cagr_pct": 18.323997451436448,
+  "net_income_cagr_pct": 36.60871212560453,
+  "fcf_cagr_pct": 19.801762819715265,
+  "eps_cagr_pct": -1.3562951125048017,
+  "revenue_growth_yoy_pct": [
+   17.7662037037037,
+   24.77873768196348,
+   19.13190768579294,
+   12.93534283581559,
+   17.3126736979929
+  ],
+  "net_income_growth_yoy_pct": [
+   31.25819367182794,
+   22.631934134161156,
+   64.10002421360805,
+   45.99659284497444,
+   23.370299249349948
+  ],
+  "revenue_growth_latest_pct": 17.3126736979929,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 16.430733808667597,
+  "net_income_cagr_3y_pct": 43.5117062753809,
+  "gross_margin_pct": 48.936084587378964,
+  "operating_margin_pct": 42.3524456237407,
+  "net_margin_pct": 36.02502635977539,
+  "fcf_margin_pct": 27.438849345499523,
+  "roe_pct": 21.287811528949206,
+  "roa_pct": 19.716053588314413,
+  "roic_pct": null,
+  "effective_tax_rate_pct": 21.484413830204016,
+  "nopat": 123943919.17177823,
+  "invested_capital": null,
+  "debt_to_equity": null,
+  "net_debt_to_ebitda": null,
+  "current_ratio": 19.266926201760324,
+  "liabilities_to_assets": 0.0738337023745896,
+  "interest_coverage": null,
+  "cash_to_debt": null,
+  "ocf_to_net_income": 1.2285980264382796,
+  "capex_to_revenue_pct": 16.821426942507518,
+  "buybacks_latest": 2681000.0,
+  "dividends_paid_latest": 6872000.0,
+  "shares_diluted_wa_latest": 28733188.0,
+  "share_count_change_pct": 1.6770639205374582,
+  "ebitda_proxy": 183078000.0,
+  "shares_outstanding": 28688363.0,
+  "shares_outstanding_asof": "2026-07-28",
+  "price": 115.88999938964844,
+  "market_cap": 3324694370.560013,
+  "enterprise_value": null,
+  "pe_ratio": 24.76033789283197,
+  "ps_ratio": 8.919918252662171,
+  "pfcf_ratio": 32.508353904881226,
+  "pb_ratio": 5.270934064557062,
+  "ev_ebitda": null,
+  "ev_sales": null,
+  "fcf_yield_pct": 3.076132377929622,
+  "earnings_yield_pct": 4.038717097998474,
+  "peg_ratio": 0.6763509682580263
+ },
+ "_unavailable": {
+  "total_debt": "total_debt suppressed: component(s) short_term_debt were reported historically but are no longer tagged, so any sum would understate the true figure.",
+  "net_cash_position": "could not be computed from this company's filings",
+  "goodwill": "could not be computed from this company's filings",
+  "roic_pct": "could not be computed from this company's filings",
+  "invested_capital": "could not be computed from this company's filings",
+  "debt_to_equity": "could not be computed from this company's filings",
+  "net_debt_to_ebitda": "could not be computed from this company's filings",
+  "interest_coverage": "could not be computed from this company's filings",
+  "cash_to_debt": "could not be computed from this company's filings",
+  "enterprise_value": "could not be computed from this company's filings",
+  "ev_ebitda": "could not be computed from this company's filings",
+  "ev_sales": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2020-12-31",
+   "revenue": 160704000.0,
+   "operatingIncome": 33869000.0,
+   "netIncome": 28223000.0,
+   "operatingCashFlow": 58575000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-23-001894"
+  },
+  {
+   "periodEnd": "2021-12-31",
+   "revenue": 189255000.0,
+   "operatingIncome": 46417000.0,
+   "netIncome": 37045000.0,
+   "operatingCashFlow": 55689000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-24-002201"
+  },
+  {
+   "periodEnd": "2022-12-31",
+   "revenue": 236150000.0,
+   "operatingIncome": 54783000.0,
+   "netIncome": 45429000.0,
+   "operatingCashFlow": 64363000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-25-001798"
+  },
+  {
+   "periodEnd": "2023-12-31",
+   "revenue": 281330000.0,
+   "operatingIncome": 85422000.0,
+   "netIncome": 74549000.0,
+   "operatingCashFlow": 92259000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-020480"
+  },
+  {
+   "periodEnd": "2024-12-31",
+   "revenue": 317721000.0,
+   "operatingIncome": 124923000.0,
+   "netIncome": 108839000.0,
+   "operatingCashFlow": 126020000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-020480"
+  },
+  {
+   "periodEnd": "2025-12-31",
+   "revenue": 372727000.0,
+   "operatingIncome": 157859000.0,
+   "netIncome": 134275000.0,
+   "operatingCashFlow": 164970000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-020480"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "cost_of_revenue came from the tag 'CostOfGoodsAndServicesSold' rather than the preferred 'CostOfRevenue', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "long_term_debt came from the tag 'LongTermDebt' rather than the preferred 'LongTermDebtNoncurrent', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "long_term_debt"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "shares_outstanding came from the tag 'CommonStockSharesIssued' rather than the preferred 'CommonStockSharesOutstanding', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "shares_outstanding"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "interest_expense (last reported 2022-12-31, 1096 days behind the newest period)",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "short_term_debt (last reported 2014-12-31, 4018 days behind the newest period)",
+   "affectedMetrics": [
+    "short_term_debt"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "intangibles (last reported 2011-12-31, 5114 days behind the newest period)",
+   "affectedMetrics": [
+    "intangibles"
+   ]
+  },
+  {
+   "kind": "suppressed_composite",
+   "severity": "warning",
+   "message": "total_debt suppressed: component(s) short_term_debt were reported historically but are no longer tagged, so any sum would understate the true figure.",
+   "affectedMetrics": [
+    "total_debt"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2025-12-31"
+}

@@ -1,0 +1,123 @@
+# Refresh the half of this system that needs no model, then publish the site.
+#
+# WHAT THIS DOES AND DOES NOT DO
+#
+# Runs:   prices, SEC filings, FRED macro, prediction tracking, the screen, and the 50
+#         machine-scorable points. All deterministic Python. Free.
+#
+# Does NOT run: the judgment pillars (invest/judge.py), digests, theses, or any decision
+#         about what to buy. Those need a model. `claude -p` uses a Claude Code login that
+#         exists on a laptop, not on a GitHub runner, and running them here would mean an
+#         Anthropic API key that bills per call. That is a deliberate choice, not an
+#         oversight - see docs/MODEL_IN_THE_LOOP.md.
+#
+# So: the numbers stay current on their own. The judgement stays human-initiated.
+
+name: Refresh data and publish site
+
+on:
+  schedule:
+    # 06:20 UTC every Saturday - after Friday's US close has settled.
+    # Cron on GitHub is UTC and can run late when the queue is busy; that is fine here.
+    - cron: "20 6 * * 6"
+  workflow_dispatch:        # the "Run workflow" button, for when you want it now
+
+permissions:
+  contents: write           # to commit refreshed data back
+  pages: write              # to publish
+  id-token: write
+
+concurrency:
+  group: invest-refresh
+  cancel-in-progress: false  # never interrupt a run mid-write to the research record
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Check the SEC contact address is configured
+        # SEC asks for a real contact address in the User-Agent and throttles requests that
+        # do not carry one. Failing here with a clear message beats a confusing 403 later.
+        run: |
+          if [ -z "${{ secrets.SEC_CONTACT_EMAIL }}" ]; then
+            echo "::error::Repository secret SEC_CONTACT_EMAIL is not set."
+            echo "Add it under Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+
+      - name: Refresh prices, filings and macro
+        env:
+          # SEC requires a real contact address in the User-Agent header. Stored as a repo
+          # secret so it is not sitting in a public file.
+          SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
+        run: |
+          python scripts/refresh_all.py --force
+          python scripts/track_predictions.py
+          python scripts/screen_stocks.py
+
+      - name: Check the honesty guarantees still hold
+        env:
+          SEC_CONTACT_EMAIL: ${{ secrets.SEC_CONTACT_EMAIL }}
+        run: python scripts/selftest.py
+
+      - name: Export the site data
+        run: python scripts/export_site_data.py
+
+      - name: Commit the refreshed record
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ memory/ research/ web/public/data/
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "$(date +%Y-%m-%d): Scheduled refresh - prices, macro, predictions, screen
+
+          Data only. No model ran: judgment pillars, digests and theses are
+          written in a session, not on a timer."
+            git push
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build the static site
+        env:
+          # A GitHub Pages project site lives in a subfolder; without this the page loads
+          # with no CSS.
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        run: |
+          cd web
+          npm ci
+          npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/out
+
+  publish:
+    needs: refresh
+    runs-on: ubuntu-latest
+    # Shared with publish.yml so two deploys can never land on Pages at once.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

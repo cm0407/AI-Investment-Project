@@ -1,0 +1,223 @@
+{
+ "ticker": "INTU",
+ "name": "INTUIT INC.",
+ "cik": "0000896878",
+ "sic": "7372",
+ "sicDescription": "Services-Prepackaged Software",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 21448000000.0,
+  "revenue_period": "2026-07-31",
+  "net_income_latest": 4566000000.0,
+  "operating_income_latest": 5884000000.0,
+  "fcf_latest": 8663000000.0,
+  "eps_diluted_latest": 16.46,
+  "total_assets": 36786000000.0,
+  "total_equity": 18992000000.0,
+  "total_debt": 7669000000.0,
+  "total_cash_and_sti": null,
+  "net_cash_position": null,
+  "goodwill": 13981000000.0,
+  "revenue_cagr_pct": 17.36133692403037,
+  "net_income_cagr_pct": 17.232884058409216,
+  "fcf_cagr_pct": 22.063308046324348,
+  "eps_cagr_pct": 16.837325502259205,
+  "revenue_growth_yoy_pct": [
+   32.10837745250701,
+   12.902718843312911,
+   13.342149220489974,
+   15.63401903592263,
+   13.897297010249066
+  ],
+  "net_income_growth_yoy_pct": [
+   0.19398642095054264,
+   15.392061955469515,
+   24.286912751677846,
+   30.577117786027674,
+   18.014990953734824
+  ],
+  "revenue_growth_latest_pct": 13.897297010249066,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 14.286998540558393,
+  "net_income_cagr_3y_pct": 24.187118990547198,
+  "gross_margin_pct": null,
+  "operating_margin_pct": 27.43379336068631,
+  "net_margin_pct": 21.28869824692279,
+  "fcf_margin_pct": 40.39071242073853,
+  "roe_pct": 24.041701769165964,
+  "roa_pct": 12.412330778013375,
+  "roic_pct": null,
+  "effective_tax_rate_pct": 24.11500747881004,
+  "nopat": 4465072959.946817,
+  "invested_capital": null,
+  "debt_to_equity": 0.403801600673968,
+  "net_debt_to_ebitda": null,
+  "current_ratio": 1.5065433435009348,
+  "liabilities_to_assets": 0.4837166313271353,
+  "interest_coverage": 22.984375,
+  "cash_to_debt": null,
+  "ocf_to_net_income": 1.935611038107753,
+  "capex_to_revenue_pct": 0.8159268929503918,
+  "buybacks_latest": 5412000000.0,
+  "dividends_paid_latest": 1347000000.0,
+  "shares_diluted_wa_latest": 277000000.0,
+  "share_count_change_pct": 1.46520146520146,
+  "ebitda_proxy": 6071000000.0,
+  "shares_outstanding": 267236000.0,
+  "shares_outstanding_asof": "2026-08-31",
+  "price": 312.7699890136719,
+  "market_cap": 83583400784.05762,
+  "enterprise_value": null,
+  "pe_ratio": 18.305606829622782,
+  "ps_ratio": 3.8970254002264832,
+  "pfcf_ratio": 9.648320533770935,
+  "pb_ratio": 4.400979401013986,
+  "ev_ebitda": null,
+  "ev_sales": null,
+  "fcf_yield_pct": 10.364498116535534,
+  "earnings_yield_pct": 5.46280715688575,
+  "peg_ratio": 1.062248592143815
+ },
+ "_unavailable": {
+  "total_cash_and_sti": "total_cash_and_sti suppressed: component(s) short_term_investments were reported historically but are no longer tagged, so any sum would understate the true figure.",
+  "net_cash_position": "could not be computed from this company's filings",
+  "gross_margin_pct": "could not be computed from this company's filings",
+  "roic_pct": "could not be computed from this company's filings",
+  "invested_capital": "could not be computed from this company's filings",
+  "net_debt_to_ebitda": "could not be computed from this company's filings",
+  "cash_to_debt": "could not be computed from this company's filings",
+  "enterprise_value": "could not be computed from this company's filings",
+  "ev_ebitda": "could not be computed from this company's filings",
+  "ev_sales": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2021-07-31",
+   "revenue": 9633000000.0,
+   "operatingIncome": 2500000000.0,
+   "netIncome": 2062000000.0,
+   "operatingCashFlow": 3250000000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000896878-23-000034"
+  },
+  {
+   "periodEnd": "2022-07-31",
+   "revenue": 12726000000.0,
+   "operatingIncome": 2571000000.0,
+   "netIncome": 2066000000.0,
+   "operatingCashFlow": 3889000000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000896878-24-000039"
+  },
+  {
+   "periodEnd": "2023-07-31",
+   "revenue": 14368000000.0,
+   "operatingIncome": 3141000000.0,
+   "netIncome": 2384000000.0,
+   "operatingCashFlow": 5046000000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000896878-25-000035"
+  },
+  {
+   "periodEnd": "2024-07-31",
+   "revenue": 16285000000.0,
+   "operatingIncome": 3630000000.0,
+   "netIncome": 2963000000.0,
+   "operatingCashFlow": 4884000000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000896878-26-000037"
+  },
+  {
+   "periodEnd": "2025-07-31",
+   "revenue": 18831000000.0,
+   "operatingIncome": 4923000000.0,
+   "netIncome": 3869000000.0,
+   "operatingCashFlow": 6207000000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000896878-26-000037"
+  },
+  {
+   "periodEnd": "2026-07-31",
+   "revenue": 21448000000.0,
+   "operatingIncome": 5884000000.0,
+   "netIncome": 4566000000.0,
+   "operatingCashFlow": 8838000000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000896878-26-000037"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "sga_expense came from the tag 'GeneralAndAdministrativeExpense' rather than the preferred 'SellingGeneralAndAdministrativeExpense', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "sga_expense"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "interest_expense came from the tag 'InterestExpenseDebt' rather than the preferred 'InterestExpense', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "depreciation_amortization came from the tag 'Depreciation' rather than the preferred 'DepreciationDepletionAndAmortization', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "depreciation_amortization"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "dividends_paid came from the tag 'PaymentsOfDividends' rather than the preferred 'PaymentsOfDividendsCommonStock', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "dividends_paid"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "intangibles came from the tag 'FiniteLivedIntangibleAssetsNet' rather than the preferred 'IntangibleAssetsNetExcludingGoodwill', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "intangibles"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "cost_of_revenue (last reported 2017-07-31, 3287 days behind the newest period)",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "short_term_investments (last reported 2022-07-31, 1461 days behind the newest period)",
+   "affectedMetrics": [
+    "short_term_investments"
+   ]
+  },
+  {
+   "kind": "suppressed_composite",
+   "severity": "warning",
+   "message": "total_cash_and_sti suppressed: component(s) short_term_investments were reported historically but are no longer tagged, so any sum would understate the true figure.",
+   "affectedMetrics": [
+    "total_cash_and_sti"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2026-07-31"
+}

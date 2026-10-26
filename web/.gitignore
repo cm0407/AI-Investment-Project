@@ -6,3 +6,6 @@ next-env.d.ts
 
 # TypeScript incremental build cache - a local artifact, not source
 *.tsbuildinfo
+
+# public/data/ is generated but IS committed: it lets `npm run dev` work without
+# running Python, and it keeps a history of what the site actually showed.

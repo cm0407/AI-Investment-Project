@@ -237,27 +237,83 @@ python scripts/backtest_judge.py --tickers ADBE --repeat 3   # same evidence, th
 
 ### 11. Look at it all in a browser
 
-Two servers: a read-only API over everything the pipeline has produced, and a web app.
-
 ```bash
-# terminal 1 - the API
-python -m uvicorn api.main:app --port 8000
-# open http://localhost:8000/docs for the endpoint list
-
-# terminal 2 - the web app
 cd web
-npm install          # first time only
+npm install        # first time only
 npm run dev
-# open http://localhost:3000
 ```
 
-The web app never reads a file directly; it only ever calls the API, and the API only ever reads
-what the scripts wrote. Nothing in the browser can change your research record.
+Open **http://localhost:3000**. That's it — no second server.
 
-The point of the interface is the thing most financial dashboards get wrong: **a figure that
-could not be measured is shown as "not available" with the reason attached**, never as a zero or
-an empty cell. Scores appear next to a meter showing how many of the sixteen components could
-actually be measured, so a high score on thin evidence looks thin.
+The website reads JSON files in `web/public/data/`, not a live API. After you change anything
+in the research record, regenerate them:
+
+```bash
+python scripts/export_site_data.py
+```
+
+Then refresh the browser. If a page says *No data file* with a filename in it, that's the
+message telling you to run exactly that command.
+
+**Why files and not a server.** This research changes a handful of times a month. A live API
+would mean a server to host, pay for and keep awake, and a website that breaks whenever it
+isn't. Reading frozen files means the whole site compiles to plain HTML that GitHub hosts for
+free and that cannot fail at request time. The honest cost is printed in the footer of every
+page: **the data is a snapshot, not live prices.**
+
+The API still exists and is still the source of those files — `scripts/export_site_data.py`
+calls the same functions the endpoints call, so the site can't drift from the API's answers.
+Run it when you want to poke at the raw data:
+
+```bash
+python -m uvicorn api.main:app --port 8000     # then http://localhost:8000/docs
+```
+
+---
+
+### 12. Put it on the internet
+
+The site is published at **https://cm0407.github.io/AI-Investment-Project/** by GitHub Actions.
+Two workflows do it, and neither costs anything:
+
+| Workflow | Runs when | What it does |
+|---|---|---|
+| `.github/workflows/publish.yml` | every push to `master` | Rebuilds and republishes the site. |
+| `.github/workflows/refresh.yml` | Saturdays 06:20 UTC, or on demand | Refreshes prices, macro, predictions and the screen, commits the result, then republishes. |
+
+**So after a research session you just push.** The site updates itself two or three minutes
+later. You never have to deploy by hand.
+
+**What the schedule does NOT do:** it never runs the model. The judgment pillars, the digests
+and the theses are written in a session, not on a timer. `claude -p` uses a Claude Code login
+that lives on your laptop, not on a GitHub server — running it in the cloud would need an
+Anthropic API key, which bills per call and is a separate product from Claude Code. That
+boundary is deliberate: **the numbers keep themselves current, the judgement stays
+human-initiated.**
+
+#### One-time setup
+
+1. **Settings → Pages → Source: GitHub Actions.**
+2. **Settings → Secrets and variables → Actions → New repository secret**
+   Name `SEC_CONTACT_EMAIL`, value your email. SEC asks for a real contact address in every
+   request; the workflow refuses to run without it rather than hammering them anonymously.
+3. Push. Watch it under the **Actions** tab.
+
+To run the weekly refresh immediately: **Actions → Refresh data and publish site → Run
+workflow.**
+
+#### What is public, and what is not
+
+The repository is public, so assume anything committed can be read by anyone. These are
+gitignored and stay on your machine:
+
+- `notes/my_investing_preferences.md` — your risk tolerance and goals
+- `portfolio/investment_log.csv` — what you actually own
+- `.env` — the SEC contact address and the email password
+
+The published site shows the research: scores, theses, predictions and their outcomes. It does
+not show your positions. Before adding anything new to the site, check which side of that line
+it falls on.
 
 ---
 
@@ -282,6 +338,8 @@ INVEST/
 │
 ├── api/               Read-only HTTP API over everything above (FastAPI)
 ├── web/               The browser interface (Next.js + TypeScript)
+│   └── public/data/     Exported JSON the site reads - generated, never hand-edited
+├── .github/workflows/ Scheduled refresh and site publishing (free, no model calls)
 │
 ├── scripts/           The commands you actually run
 ├── memory/            ** The long-term brain - append-only **

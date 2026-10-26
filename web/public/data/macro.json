@@ -1,0 +1,45 @@
+{
+ "retrievedAt": "2026-10-24T18:44:56Z",
+ "series": [
+  {
+   "id": "DGS10",
+   "description": "10-year Treasury yield (%) - the risk-free rate everything is priced against",
+   "latest": 4.96,
+   "latestDate": "2026-10-22",
+   "prior": 5.13,
+   "change": -0.16999999999999993
+  },
+  {
+   "id": "FEDFUNDS",
+   "description": "Fed funds rate (%) - the Federal Reserve policy rate",
+   "latest": 3.75,
+   "latestDate": "2026-09-01",
+   "prior": 3.63,
+   "change": 0.1200000000000001
+  },
+  {
+   "id": "BAMLH0A0HYM2",
+   "description": "High-yield bond spread - a live gauge of credit stress",
+   "latest": 3.4,
+   "latestDate": "2026-10-22",
+   "prior": 3.27,
+   "change": 0.1299999999999999
+  },
+  {
+   "id": "UMCSENT",
+   "description": "University of Michigan consumer sentiment",
+   "latest": 48.1,
+   "latestDate": "2026-09-01",
+   "prior": 51.7,
+   "change": -3.6000000000000014
+  },
+  {
+   "id": "UNRATE",
+   "description": "Unemployment rate (%)",
+   "latest": 4.2,
+   "latestDate": "2026-09-01",
+   "prior": 4.1,
+   "change": 0.10000000000000053
+  }
+ ]
+}

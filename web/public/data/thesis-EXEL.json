@@ -1,0 +1,89 @@
+{
+ "ticker": "EXEL",
+ "total": 76.7,
+ "band": "WORTH MONITORING",
+ "isComplete": true,
+ "judgmentPointsEarned": 31,
+ "dataScoredAt": "2026-09-11T08:05:14Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 45.73,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 12,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 13.3125,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 12.75,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 10.0,
+   "maxPoints": 10,
+   "componentsScored": 1,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 9.666666666666666,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 10,
+   "justification": "A sharp and genuine profitability improvement: operating income $0.29B to $0.87B and net income $0.23B to $0.78B over five years, with operating margin now 37.6%. Revenue compounds steadily ($1.43B to $2.32B) with no break in the series - the apparently missing 2024 is a fiscal-calendar artefact, because Exelixis' year ends near 1 January. Deducted 5 points for concentration: essentially all revenue comes from the cabozantinib franchise, which generated $573.0M of U.S. net product revenue in Q2 2026 alone. One drug is not a diversified business.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 4,
+   "justification": "A pharmaceutical patent is a legal monopoly - a powerful moat while it lasts and worth nothing afterwards. Cabozantinib sales are projected to peak around $2.8B by 2029 before generic erosion. This moat is a wasting asset with a visible expiry, and the company's future depends on replacing it rather than defending it. Scored low deliberately: this pillar measures durability, not current strength.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 8,
+   "justification": "The best-dated catalyst in the entire screen. The zanzalintinib New Drug Application for previously treated metastatic colorectal cancer has been accepted and is under active review with a TARGET ACTION DATE OF 3 DECEMBER 2026 - roughly three months away, with a binary and knowable outcome. Management's 2026 revenue guidance of $2.53-2.63B explicitly EXCLUDES any revenue from a zanzalintinib approval, so a positive decision is not embedded in the guided numbers. Broad pivotal programmes follow in renal, neuroendocrine and other tumour types.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 5,
+   "justification": "Genuinely two-sided and genuinely binary. Approval on 3 December opens a second franchise the market is not paying for; rejection or delay leaves a single-drug company facing patent erosion. Base +20% against a bear of -32%. The base business is profitable and the balance sheet is clean, which limits the damage, but a beginner must understand that a large part of this outcome resolves on one regulatory date. That binary quality is why this scores 5 despite an attractive multiple.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 4,
+   "justification": "Converted a flat-profit business into a sharply profitable one while funding a broad late-stage pipeline, and reduced share count 11.4% through buybacks - unusual discipline in biotech, where dilution is the norm. Advanced zanzalintinib to an accepted NDA. Withheld one point because the entire corporate strategy now rests on a single regulatory outcome the company does not control.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 45.7 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

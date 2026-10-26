@@ -1,0 +1,168 @@
+{
+ "ticker": "PAYX",
+ "name": "PAYCHEX INC",
+ "cik": "0000723531",
+ "sic": "8700",
+ "sicDescription": "Services-Engineering, Accounting, Research, Management",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 6301100000.0,
+  "revenue_period": "2026-05-31",
+  "net_income_latest": 1760100000.0,
+  "operating_income_latest": 2510500000.0,
+  "fcf_latest": 2321800000.0,
+  "eps_diluted_latest": 4.89,
+  "total_assets": 16174500000.0,
+  "total_equity": 3735100000.0,
+  "total_debt": 4556100000.0,
+  "total_cash_and_sti": 1124500000.0,
+  "net_cash_position": -3431600000.0,
+  "goodwill": 4527400000.0,
+  "revenue_cagr_pct": 9.528106546435477,
+  "net_income_cagr_pct": 25.338650758044512,
+  "fcf_cagr_pct": 15.249578779376405,
+  "eps_cagr_pct": 10.04574277704604,
+  "revenue_growth_yoy_pct": [
+   13.921200750469055,
+   7.758014931927981,
+   4.578892670103718,
+   5.4169914263445085,
+   16.471349353049902
+  ],
+  "net_income_growth_yoy_pct": [
+   10.281195079086114,
+   7.553784860557777,
+   150.466735812713,
+   -1.9581164221486036,
+   6.202860073613703
+  ],
+  "revenue_growth_latest_pct": 16.471349353049902,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 8.690416869691475,
+  "net_income_cagr_3y_pct": 37.646753152341184,
+  "gross_margin_pct": null,
+  "operating_margin_pct": 39.84224976591389,
+  "net_margin_pct": 27.93321800955389,
+  "fcf_margin_pct": 36.847534557458225,
+  "roe_pct": 47.123236325667314,
+  "roa_pct": 10.881943800426598,
+  "roic_pct": 26.68069823510713,
+  "effective_tax_rate_pct": 23.834869531351423,
+  "nopat": 1912125600.4154227,
+  "invested_capital": 7166700000.0,
+  "debt_to_equity": 1.2198066986158336,
+  "net_debt_to_ebitda": 1.1620331177406793,
+  "current_ratio": 1.2591439347425664,
+  "liabilities_to_assets": 0.7690747782002535,
+  "interest_coverage": null,
+  "cash_to_debt": 0.24681196637475034,
+  "ocf_to_net_income": 1.4525879211408443,
+  "capex_to_revenue_pct": 3.727920521813652,
+  "buybacks_latest": 611000000.0,
+  "dividends_paid_latest": 1589600000.0,
+  "shares_diluted_wa_latest": 360000000.0,
+  "share_count_change_pct": -0.5799502899751396,
+  "ebitda_proxy": 2953100000.0,
+  "shares_outstanding": 355980473.0,
+  "shares_outstanding_asof": "2026-08-31",
+  "price": 118.04000091552734,
+  "market_cap": 42019935358.82986,
+  "enterprise_value": 45451535358.82986,
+  "pe_ratio": 23.873606817129627,
+  "ps_ratio": 6.668666638972538,
+  "pfcf_ratio": 18.09799955156769,
+  "pb_ratio": 11.250016159896617,
+  "ev_ebitda": 15.391126395594412,
+  "ev_sales": 7.2132699622018155,
+  "fcf_yield_pct": 5.525472564802765,
+  "earnings_yield_pct": 4.18872610100325,
+  "peg_ratio": 0.9421814541388016,
+  "annual_volatility_pct": 27.4515202981878
+ },
+ "_unavailable": {
+  "gross_margin_pct": "could not be computed from this company's filings",
+  "interest_coverage": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2021-05-31",
+   "revenue": 3997500000.0,
+   "operatingIncome": 1460700000.0,
+   "netIncome": null,
+   "operatingCashFlow": 1260300000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000950170-23-032988"
+  },
+  {
+   "periodEnd": "2022-05-31",
+   "revenue": 4554000000.0,
+   "operatingIncome": 1840000000.0,
+   "netIncome": null,
+   "operatingCashFlow": 1589700000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000950170-24-082958"
+  },
+  {
+   "periodEnd": "2023-05-31",
+   "revenue": 4907300000.0,
+   "operatingIncome": 2033100000.0,
+   "netIncome": null,
+   "operatingCashFlow": 1706200000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000950170-25-095300"
+  },
+  {
+   "periodEnd": "2024-05-31",
+   "revenue": 5132000000.0,
+   "operatingIncome": 2174100000.0,
+   "netIncome": 1690400000.0,
+   "operatingCashFlow": 1897700000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001193125-26-307785"
+  },
+  {
+   "periodEnd": "2025-05-31",
+   "revenue": 5410000000.0,
+   "operatingIncome": 2207700000.0,
+   "netIncome": 1657300000.0,
+   "operatingCashFlow": 1900900000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001193125-26-307785"
+  },
+  {
+   "periodEnd": "2026-05-31",
+   "revenue": 6301100000.0,
+   "operatingIncome": 2510500000.0,
+   "netIncome": 1760100000.0,
+   "operatingCashFlow": 2556700000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001193125-26-307785"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "short_term_investments came from the tag 'MarketableSecuritiesCurrent' rather than the preferred 'ShortTermInvestments', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "short_term_investments"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "interest_expense (last reported 2024-05-31, 730 days behind the newest period)",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2026-05-31"
+}

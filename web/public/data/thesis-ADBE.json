@@ -1,0 +1,89 @@
+{
+ "ticker": "ADBE",
+ "total": 72.7,
+ "band": "WORTH MONITORING",
+ "isComplete": true,
+ "judgmentPointsEarned": 32,
+ "dataScoredAt": "2026-09-09T08:48:54Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 40.74,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 15,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 11.4375,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 12.299999999999999,
+   "maxPoints": 15,
+   "componentsScored": 5,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 7.000000000000001,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 10.0,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 12,
+   "justification": "Operating margin 36.6%, net margin 30.0%, FCF margin 41.4%, ROIC 63.2% - all exceptional and stable across six years. Subscription model gives recurring revenue. Revenue grew from $12.9B (FY2020) to $23.8B (FY2025) with NO covid distortion: +23,+12,+10,+11,+11% year by year, the only clean growth series among the four candidates. Deducted 3 points because quality here is measured on a business model now facing a genuine technology shift; historical margins do not guarantee future ones.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 5,
+   "justification": "Historically a wide moat: Creative Cloud switching costs, PDF as a de facto standard, entrenchment through education. But the moat is measurably narrowing at the low end. Adobe's ARR growth has decelerated to ~10.9% while Canva and Figma are reported growing ARR at ~30% and ~40%. Generative AI attacks the specific thing Adobe sells - the skilled production of images and layouts. Half marks: the enterprise/professional core still looks defensible, the prosumer and SMB flank does not.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 6,
+   "justification": "Real and dated: Q3 FY2026 earnings due within weeks, and a $25B buyback authorisation that shrinks share count against a depressed price (diluted shares already -12.0% over the window). The genuine re-rating catalyst - visible evidence that AI monetisation offsets prosumer share loss - has no date attached and may not arrive. Adobe has beaten EPS five straight quarters and the stock still fell, which means beats alone are not the catalyst.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 6,
+   "justification": "Base case +22% against a bear case of -30%, at roughly 45/30 odds. Positive expectancy but not the asymmetry I would want when the bear case is structural rather than cyclical. A 9.6% FCF yield and net cash provide a real floor; an AI-driven moat collapse has no floor.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 3,
+   "justification": "Capital allocation is shareholder-friendly in direction - consistent buybacks, share count down 12% - but was price-insensitive, running at the same pace when the multiple was roughly double today's. Operationally credible (five consecutive EPS beats). Deducted for the narrative failure: management has not convinced the market that its AI strategy defends the franchise, and that is management's job.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 40.7 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

@@ -2,9 +2,13 @@ import { AppLink } from "@/components/nav/AppLink";
 import { Box, Paper, Typography } from "@mui/material";
 
 import { Markdown } from "@/components/markdown/Markdown";
-import { fetchInvestApi } from "@/lib/api";
+import { loadJson } from "@/lib/data";
 
-export const dynamic = "force-dynamic";
+/** Every digest becomes its own HTML file at build time. */
+export async function generateStaticParams() {
+  const digests = await loadJson<{ date: string }[]>("digests");
+  return digests.map((d) => ({ date: d.date }));
+}
 
 type Digest = { date: string; markdown: string };
 
@@ -14,7 +18,7 @@ export default async function DigestPage({
   params: Promise<{ date: string }>;
 }) {
   const { date } = await params;
-  const digest = await fetchInvestApi<Digest>("/digests/" + date);
+  const digest = await loadJson<Digest>("digest-" + date);
 
   return (
     <Box sx={{ maxWidth: 780, mx: "auto", px: { xs: 2, md: 3 }, py: 4 }}>

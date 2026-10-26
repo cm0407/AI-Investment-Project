@@ -1,0 +1,189 @@
+{
+ "ticker": "ULTA",
+ "name": "Ulta Beauty, Inc.",
+ "cik": "0001403568",
+ "sic": "5990",
+ "sicDescription": "Retail-Retail Stores, NEC",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 12392820000.0,
+  "revenue_period": "2026-01-31",
+  "net_income_latest": 1153479000.0,
+  "operating_income_latest": 1532992000.0,
+  "fcf_latest": 1067951000.0,
+  "eps_diluted_latest": 25.64,
+  "total_assets": 6999294000.0,
+  "total_equity": 2803451000.0,
+  "total_debt": 62287000.0,
+  "total_cash_and_sti": 494243000.0,
+  "net_cash_position": 431956000.0,
+  "goodwill": 226421000.0,
+  "revenue_cagr_pct": 15.035378713848257,
+  "net_income_cagr_pct": 45.6736068138208,
+  "fcf_cagr_pct": 10.154073105170847,
+  "eps_cagr_pct": 52.486545688254,
+  "revenue_growth_yoy_pct": [
+   40.295106285759985,
+   18.279588580040816,
+   9.783172586197097,
+   0.7883341781693698,
+   9.713169330434512
+  ],
+  "net_income_growth_yoy_pct": [
+   460.6602781016294,
+   26.025702017676355,
+   3.91151698958796,
+   -6.962560175986921,
+   -3.9662214703301446
+  ],
+  "revenue_growth_latest_pct": 9.713169330434512,
+  "growth_years_covered": 5,
+  "gross_margin_pct": 39.097025535753765,
+  "operating_margin_pct": 12.370001339485283,
+  "net_margin_pct": 9.307639423472622,
+  "fcf_margin_pct": 8.617497873768844,
+  "roe_pct": 41.14496739910917,
+  "roa_pct": 16.479933547583514,
+  "roic_pct": 49.34699270556626,
+  "effective_tax_rate_pct": 23.661606540486282,
+  "nopat": 1170261464.6628685,
+  "invested_capital": 2371495000.0,
+  "debt_to_equity": 0.022217973490530063,
+  "net_debt_to_ebitda": -0.23555702914878904,
+  "current_ratio": 1.4135173458038377,
+  "liabilities_to_assets": 0.5994666033459947,
+  "interest_coverage": null,
+  "cash_to_debt": 7.934930242265641,
+  "ocf_to_net_income": 1.3028238918957347,
+  "capex_to_revenue_pct": 3.508717144281931,
+  "buybacks_latest": 901388000.0,
+  "dividends_paid_latest": null,
+  "shares_diluted_wa_latest": 44991000.0,
+  "share_count_change_pct": -20.451571837759463,
+  "ebitda_proxy": 1833764000.0,
+  "shares_outstanding": 42757471.0,
+  "shares_outstanding_asof": "2026-08-24",
+  "price": 549.22998046875,
+  "market_cap": 23483684962.223145,
+  "enterprise_value": 23051728962.223145,
+  "pe_ratio": 20.35900520271556,
+  "ps_ratio": 1.8949427944747963,
+  "pfcf_ratio": 21.98947794629449,
+  "pb_ratio": 8.376706053440257,
+  "ev_ebitda": 12.570717367241992,
+  "ev_sales": 1.8600874508161294,
+  "fcf_yield_pct": 4.5476295637501165,
+  "earnings_yield_pct": 4.911831349532815,
+  "peg_ratio": 0.4457498897712397
+ },
+ "_unavailable": {
+  "interest_coverage": "could not be computed from this company's filings",
+  "dividends_paid_latest": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2021-01-30",
+   "revenue": 6151953000.0,
+   "operatingIncome": 236820000.0,
+   "netIncome": 175835000.0,
+   "operatingCashFlow": 810355000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-23-004581"
+  },
+  {
+   "periodEnd": "2022-01-29",
+   "revenue": 8630889000.0,
+   "operatingIncome": 1297492000.0,
+   "netIncome": 985837000.0,
+   "operatingCashFlow": 1059265000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-24-003941"
+  },
+  {
+   "periodEnd": "2023-01-28",
+   "revenue": 10208580000.0,
+   "operatingIncome": 1638610000.0,
+   "netIncome": 1242408000.0,
+   "operatingCashFlow": 1481915000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-25-003810"
+  },
+  {
+   "periodEnd": "2024-02-03",
+   "revenue": 11207303000.0,
+   "operatingIncome": 1678029000.0,
+   "netIncome": 1291005000.0,
+   "operatingCashFlow": 1476266000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-035243"
+  },
+  {
+   "periodEnd": "2025-02-01",
+   "revenue": 11295654000.0,
+   "operatingIncome": 1564972000.0,
+   "netIncome": 1201118000.0,
+   "operatingCashFlow": 1338605000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-035243"
+  },
+  {
+   "periodEnd": "2026-01-31",
+   "revenue": 12392820000.0,
+   "operatingIncome": 1532992000.0,
+   "netIncome": 1153479000.0,
+   "operatingCashFlow": 1502780000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-035243"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "revenue came from the tag 'Revenues' rather than the preferred 'RevenueFromContractWithCustomerExcludingAssessedTax', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "short_term_debt came from the tag 'ShortTermBorrowings' rather than the preferred 'LongTermDebtCurrent', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "short_term_debt"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "intangibles came from the tag 'FiniteLivedIntangibleAssetsNet' rather than the preferred 'IntangibleAssetsNetExcludingGoodwill', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "intangibles"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "interest_expense (last reported 2018-02-03, 2919 days behind the newest period)",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "dividends_paid (last reported 2013-02-02, 4746 days behind the newest period)",
+   "affectedMetrics": [
+    "dividends_paid"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2026-01-31"
+}

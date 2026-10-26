@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Box, Typography } from "@mui/material";
 
 import { TopNav } from "@/components/nav/TopNav";
+import { generatedAt } from "@/lib/data";
 
 import "./globals.css";
 import { Providers } from "./providers";
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
     "Equity research built on SEC filings, where an unmeasured figure says so instead of showing zero.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const builtAt = await generatedAt();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
@@ -37,6 +40,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 color: "text.disabled",
               }}
             >
+              {/* This site is built from frozen files, not a live feed. Saying so is not a
+                  disclaimer - a reader who assumes these prices are current would be wrong
+                  about the one thing that changes fastest. */}
+              {builtAt ? (
+                <>
+                  <strong>Data as of {builtAt.slice(0, 10)}</strong> — this is a static
+                  snapshot, not live market data. Prices move after it is built; the
+                  fundamentals behind it come from quarterly filings and move far more
+                  slowly.{" "}
+                </>
+              ) : null}
               Research and education only — not financial advice, and not the work of a
               licensed financial adviser. No return shown anywhere in this app is guaranteed.
               Fundamentals come from SEC EDGAR filings, prices from Yahoo Finance, macro series

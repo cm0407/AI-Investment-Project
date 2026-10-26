@@ -1,0 +1,79 @@
+# Rebuild and publish the website whenever the research record changes.
+#
+# This is the answer to "do I have to do something extra for the site to update?" - no.
+# Finish a session, `git push`, and this runs. Two or three minutes later the public site
+# shows the new numbers.
+#
+# It only rebuilds. It never fetches data and never calls a model, so it cannot change what
+# the research says - it just republishes what you committed.
+
+name: Publish site
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "data/**"
+      - "memory/**"
+      - "research/**"
+      - "reports/**"
+      - "web/**"
+      - "api/**"
+      - "invest/**"
+      - ".github/workflows/publish.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false   # let a running deploy finish rather than half-publishing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Export the site data
+        # Reads the committed research record and writes web/public/data/*.json using the
+        # same functions the API serves, so the site cannot drift from the API's answers.
+        run: python scripts/export_site_data.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        run: |
+          cd web
+          npm ci
+          npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,89 @@
+{
+ "ticker": "NFLX",
+ "total": 69.7,
+ "band": "SPECULATIVE / INCOMPLETE",
+ "isComplete": true,
+ "judgmentPointsEarned": 33,
+ "dataScoredAt": "2026-09-11T08:06:03Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 36.65,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 15,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 14.4375,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 7.050000000000001,
+   "maxPoints": 15,
+   "componentsScored": 5,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 7.333333333333334,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 7.833333333333333,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 13,
+   "justification": "The best operating leverage in the session by a wide margin. Revenue grew 43% over three years ($31.62B to $45.18B) while operating income grew 137% ($5.63B to $13.33B) and net income 145% ($4.49B to $10.98B). Profit growing three times faster than revenue is what genuine scale economics look like: the content budget does not need to rise in step with subscribers. Operating margin 29.5%, and the share count is DOWN 4.0%, so per-share growth is real rather than engineered.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 7,
+   "justification": "Real and demonstrated: global scale no rival can match, a recommendation system improved by every hour watched, and - most importantly - the ability to amortise one content spend across 300 million-plus households, which competitors with smaller bases cannot. The password-sharing crackdown and ad tier both worked, which is evidence of pricing power. Deducted because content is not a permanent asset the way a network effect is: subscribers leave when the shows stop landing, Disney, Amazon and YouTube are all well funded, and the moat must be re-bought every single year.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 5,
+   "justification": "The advertising tier is scaling into a genuinely higher-margin revenue stream, and live events and games extend engagement. But I can point to no dated event that re-rates this stock, and after a 137% rise in operating income the easy operating leverage has largely been harvested. Netflix has also stopped reporting quarterly subscriber numbers, which removes the single metric the market used to react to. Scored 5: the business has momentum, but momentum already visible in the price is not a catalyst.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 4,
+   "justification": "The weakest asymmetry of the three finalists, and the reverse DCF is why. At $75.31 the price implies 25.5% annual free-cash-flow growth for a decade. Netflix has delivered 37.4%, so it is clearable - but 25.5% sustained for ten years is a demanding bar for a company already at $45B of revenue, and the 3.0% free-cash-flow yield leaves no valuation cushion. Base +15% against a bear of -32%. You are paying for continued exceptional execution rather than being paid to wait.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 4,
+   "justification": "An excellent record of hard calls that worked: the password-sharing crackdown, launching advertising, and holding content spending flat enough to let margins expand 137% on 43% revenue growth. Share count down 4.0%. Withheld one point for withdrawing quarterly subscriber disclosure - defensible as a management choice once the metric stops driving the business, but it reduces what an outside shareholder can independently verify, and this system exists to rely on verifiable figures.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 36.7 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

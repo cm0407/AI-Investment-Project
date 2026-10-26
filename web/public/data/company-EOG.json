@@ -1,0 +1,186 @@
+{
+ "ticker": "EOG",
+ "name": "EOG RESOURCES INC",
+ "cik": "0000821189",
+ "sic": "1311",
+ "sicDescription": "Crude Petroleum & Natural Gas",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 22632000000.0,
+  "revenue_period": "2025-12-31",
+  "net_income_latest": 4980000000.0,
+  "operating_income_latest": 6385000000.0,
+  "fcf_latest": 9565000000.0,
+  "eps_diluted_latest": 9.12,
+  "total_assets": 51799000000.0,
+  "total_equity": 29833000000.0,
+  "total_debt": 7936000000.0,
+  "total_cash_and_sti": 3396000000.0,
+  "net_cash_position": -4540000000.0,
+  "goodwill": null,
+  "revenue_cagr_pct": 15.45526335723717,
+  "net_income_cagr_pct": null,
+  "fcf_cagr_pct": 14.84823078950026,
+  "eps_cagr_pct": null,
+  "revenue_growth_yoy_pct": [
+   68.9811457577955,
+   37.871473017916536,
+   -5.898373667418877,
+   -2.0176961878772826,
+   -4.498269896193774
+  ],
+  "net_income_growth_yoy_pct": [
+   null,
+   66.35934819897085,
+   -2.1265627013790422,
+   -15.683434290229126,
+   -22.223957519912542
+  ],
+  "revenue_growth_latest_pct": -4.498269896193774,
+  "growth_years_covered": 5,
+  "gross_margin_pct": null,
+  "operating_margin_pct": 28.212265818310357,
+  "net_margin_pct": 22.004241781548252,
+  "fcf_margin_pct": 42.26316719688936,
+  "roe_pct": 16.69292394328428,
+  "roa_pct": 9.614085214000271,
+  "roic_pct": 14.540493330226099,
+  "effective_tax_rate_pct": 21.722728701666142,
+  "nopat": 4998003772.398617,
+  "invested_capital": 34373000000.0,
+  "debt_to_equity": 0.2660141454094459,
+  "net_debt_to_ebitda": 0.41858749769500275,
+  "current_ratio": 1.6320613941590278,
+  "liabilities_to_assets": null,
+  "interest_coverage": 27.170212765957448,
+  "cash_to_debt": 0.4279233870967742,
+  "ocf_to_net_income": 2.016867469879518,
+  "capex_to_revenue_pct": 2.1164722516790384,
+  "buybacks_latest": 2564000000.0,
+  "dividends_paid_latest": null,
+  "shares_diluted_wa_latest": 546000000.0,
+  "share_count_change_pct": -5.699481865284972,
+  "ebitda_proxy": 10846000000.0,
+  "shares_outstanding": 524529176.0,
+  "shares_outstanding_asof": "2026-07-28",
+  "price": 145.36000061035156,
+  "market_cap": 76245561343.5072,
+  "enterprise_value": 80785561343.5072,
+  "pe_ratio": 15.310353683435181,
+  "ps_ratio": 3.3689272421132554,
+  "pfcf_ratio": 7.971308033821976,
+  "pb_ratio": 2.5557456958236586,
+  "ev_ebitda": 7.448419817767583,
+  "ev_sales": 3.5695281611659246,
+  "fcf_yield_pct": 12.544992562789389,
+  "earnings_yield_pct": 6.531527753548475,
+  "peg_ratio": null
+ },
+ "_unavailable": {
+  "goodwill": "could not be computed from this company's filings",
+  "net_income_cagr_pct": "could not be computed from this company's filings",
+  "eps_cagr_pct": "could not be computed from this company's filings",
+  "gross_margin_pct": "could not be computed from this company's filings",
+  "liabilities_to_assets": "could not be computed from this company's filings",
+  "dividends_paid_latest": "could not be computed from this company's filings",
+  "peg_ratio": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2020-12-31",
+   "revenue": 11032000000.0,
+   "operatingIncome": -544000000.0,
+   "netIncome": -605000000.0,
+   "operatingCashFlow": 5008000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000821189-23-000015"
+  },
+  {
+   "periodEnd": "2021-12-31",
+   "revenue": 18642000000.0,
+   "operatingIncome": 6102000000.0,
+   "netIncome": 4664000000.0,
+   "operatingCashFlow": 8791000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000821189-24-000011"
+  },
+  {
+   "periodEnd": "2022-12-31",
+   "revenue": 25702000000.0,
+   "operatingIncome": 9966000000.0,
+   "netIncome": 7759000000.0,
+   "operatingCashFlow": 11093000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000821189-25-000011"
+  },
+  {
+   "periodEnd": "2023-12-31",
+   "revenue": 24186000000.0,
+   "operatingIncome": 9603000000.0,
+   "netIncome": 7594000000.0,
+   "operatingCashFlow": 11340000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000821189-26-000054"
+  },
+  {
+   "periodEnd": "2024-12-31",
+   "revenue": 23698000000.0,
+   "operatingIncome": 8082000000.0,
+   "netIncome": 6403000000.0,
+   "operatingCashFlow": 12143000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000821189-26-000054"
+  },
+  {
+   "periodEnd": "2025-12-31",
+   "revenue": 22632000000.0,
+   "operatingIncome": 6385000000.0,
+   "netIncome": 4980000000.0,
+   "operatingCashFlow": 10044000000.0,
+   "sourceTag": "Revenues",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000821189-26-000054"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "revenue came from the tag 'Revenues' rather than the preferred 'RevenueFromContractWithCustomerExcludingAssessedTax', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "capex came from the tag 'PaymentsToAcquireOtherPropertyPlantAndEquipment' rather than the preferred 'PaymentsToAcquirePropertyPlantAndEquipment', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "capex"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "sga_expense came from the tag 'GeneralAndAdministrativeExpense' rather than the preferred 'SellingGeneralAndAdministrativeExpense', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "sga_expense"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "shares_outstanding came from the tag 'CommonStockSharesIssued' rather than the preferred 'CommonStockSharesOutstanding', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "shares_outstanding"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2025-12-31"
+}

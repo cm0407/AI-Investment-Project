@@ -6,6 +6,54 @@ record follows.
 
 ---
 
+## 2026-10-25 (later) — Deleted the server the website needed
+
+**Decision: the site is static, published to GitHub Pages, and the schedule never calls a model.**
+
+### Why the API stopped being on the critical path
+
+The website called a FastAPI server. That meant something to host, pay for and keep awake, and
+a site that broke whenever it wasn't. The research record changes a few times a month — a live
+API was the wrong shape for data that moves that slowly.
+
+`scripts/export_site_data.py` now writes the same JSON to `web/public/data/`, and the pages read
+it with `fs` at build time. `next build` emits 35 static pages: 20 companies, 8 digests, 7 index
+pages. No server at request time, hosted free, cannot fail at 3am.
+
+**The export does not reimplement the API** — it imports `api.main` and calls the same functions
+the endpoints call. Had it duplicated that logic, the site and the API could disagree about
+whether a metric was available, which is the one thing this project cannot afford. Self-test 64
+now fails if the export does not cover every company the API serves.
+
+The honest cost of going static is that the figures are frozen. That is printed in the footer of
+every page — **"Data as of YYYY-MM-DD — a static snapshot, not live market data"** — because a
+reader who assumed these were live prices would be wrong about the fastest-moving number on the
+page. It was always half-true anyway: the fundamentals come from quarterly filings.
+
+### What runs on a timer, and what does not
+
+| Workflow | Trigger | Does |
+|---|---|---|
+| `publish.yml` | push to `master` | rebuild + republish. Never fetches, never calls a model. |
+| `refresh.yml` | Sat 06:20 UTC | prices, macro, prediction tracking, screen → commit → republish. |
+
+**The schedule deliberately stops short of the model.** `claude -p` authenticates with a Claude
+Code login that exists on a laptop, not on a GitHub runner; running judgments in CI would need
+an Anthropic API key that bills per call and is a separate product. So the deterministic half
+keeps itself current for nothing, and the judgement half stays human-initiated.
+
+That split is not a workaround. It is the same boundary the artifact draws everywhere else in
+this system: **the machine does what can be checked, and a person decides what cannot.** A
+weekly cron writing investment judgements with nobody reading them would be the wrong thing to
+build even if it were free.
+
+### Scope note
+
+`refresh.yml` commits to the research record from CI. It touches `data/`, `memory/` and the
+exported JSON — never `predictions.csv`, which stays append-only and session-written.
+
+---
+
 ## 2026-10-25 — Built: the model is now inside the system, and measured against me
 
 Part A of `docs/BUILD_PLAN.md` is done. `invest/judge.py` is the only module in the project that

@@ -1,0 +1,89 @@
+{
+ "ticker": "BKNG",
+ "total": 77.8,
+ "band": "WORTH MONITORING",
+ "isComplete": true,
+ "judgmentPointsEarned": 34,
+ "dataScoredAt": "2026-09-09T08:48:09Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 43.85,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 14,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 14.250000000000002,
+   "maxPoints": 15,
+   "componentsScored": 3,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 11.1,
+   "maxPoints": 15,
+   "componentsScored": 5,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 8.5,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 10.0,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 12,
+   "justification": "Genuinely excellent economics: operating margin 32.8%, FCF margin 33.8%, and $9.09B of free cash flow on $26.9B revenue. Asset-light marketplace with negative working capital. Q2 2026 delivered 5% room-night growth to 325 million, 9% gross-bookings growth to $51.0B, and $3.64B of quarterly FCF (+16%). Deducted because the six-year growth figures are badly distorted - FY2020 revenue of $6.8B was the covid travel trough, so the headline 31.7% revenue CAGR and 146.8% net-income CAGR measure recovery, not growth. On the recent three years the real rate is ~16%, and the latest years were +11% and +13%.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 8,
+   "justification": "A real two-sided network: more properties attract more travellers which attract more properties, reinforced by enormous brand-search spend and supplier habit. Booking.com's European hotel supply is difficult to replicate. Deducted 2 points for genuine structural threats - Google inserting itself between traveller and OTA, hotel direct-booking pushes, and the fact that a large share of traffic is rented through paid marketing rather than owned.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 6,
+   "justification": "Dated and specific: Q3 2026 guidance of 3-5% room-night growth and 4-6% growth in gross bookings, revenue and adjusted EBITDA, with full-year adjusted EPS growth guided to the low-to-mid teens. The mechanical catalyst is capital return - $4.1B returned in Q2 2026 including $3.7B of buybacks, the largest quarterly return in company history, against a share count already down 20.7%. Marked down because guidance points to DECELERATION, and management explicitly flags continued indirect impacts from the Middle East conflict.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 5,
+   "justification": "Base case +17% against a bear case of -33%. Travel is discretionary and highly cyclical: a consumer recession hits room nights, take rate and marketing efficiency simultaneously. The valuation already embeds a good outcome at 25x earnings and 14.9x free cash flow, so this is not a discounted entry. Weak asymmetry.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 3,
+   "justification": "Aggressive, consistent buybacks have cut the share count 20.7% and genuinely compound per-share value. But two deductions. First, shareholders' equity is NEGATIVE $5.6B from buying back stock beyond retained earnings, which removes the ROIC check entirely and reduces the buffer in a downturn. Second, insider behaviour is one-sided: 55 open-market sales and ZERO purchases across the Form 4 filings examined, netting -$33.3M. That is not proof of anything - most will be scheduled 10b5-1 plans - but zero buys at any price is a fact worth recording.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 43.9 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

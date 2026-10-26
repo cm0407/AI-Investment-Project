@@ -1,10 +1,8 @@
 import { AppLink } from "@/components/nav/AppLink";
 import { Alert, Box, Paper, Stack, Typography } from "@mui/material";
 
-import { fetchInvestApi } from "@/lib/api";
+import { loadJson } from "@/lib/data";
 import { formatDelta, formatMetric, isUnavailable, outcomeColor } from "@/lib/format";
-
-export const dynamic = "force-dynamic";
 
 type Review = {
   reviewDate: string;
@@ -94,7 +92,7 @@ const pct = (v: number | null | undefined) =>
   v === null || v === undefined ? "—" : Math.round(v * 100) + "%";
 
 export default async function PredictionsPage() {
-  const data = await fetchInvestApi<Payload>("/predictions");
+  const data = await loadJson<Payload>("predictions");
   const { summary, predictions } = data;
 
   return (

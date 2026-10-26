@@ -1,0 +1,185 @@
+{
+ "ticker": "UI",
+ "name": "Ubiquiti Inc.",
+ "cik": "0001511737",
+ "sic": "3663",
+ "sicDescription": "Radio & Tv Broadcasting & Communications Equipment",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 3274162000.0,
+  "revenue_period": "2026-06-30",
+  "net_income_latest": 960303000.0,
+  "operating_income_latest": 1185442000.0,
+  "fcf_latest": 908944000.0,
+  "eps_diluted_latest": 15.85,
+  "total_assets": 2198190000.0,
+  "total_equity": 1440246000.0,
+  "total_debt": 0.0,
+  "total_cash_and_sti": 611199000.0,
+  "net_cash_position": 611199000.0,
+  "goodwill": null,
+  "revenue_cagr_pct": 11.520957483240268,
+  "net_income_cagr_pct": 9.26553762071045,
+  "fcf_cagr_pct": 8.891618902813626,
+  "eps_cagr_pct": 10.138227356019858,
+  "revenue_growth_yoy_pct": [
+   -10.874171669053268,
+   14.708351165578604,
+   -0.6195272175590794,
+   33.448708575102806,
+   27.223809958636824
+  ],
+  "net_income_growth_yoy_pct": [
+   -38.58792962516057,
+   7.654420755459435,
+   -14.14995056925088,
+   103.42953480397759,
+   34.88879399709519
+  ],
+  "revenue_growth_latest_pct": 27.223809958636824,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 19.049600860426395,
+  "net_income_cagr_3y_pct": 33.05876119869018,
+  "gross_margin_pct": 46.16063591233421,
+  "operating_margin_pct": 36.20596659542198,
+  "net_margin_pct": 29.329733837238354,
+  "fcf_margin_pct": 27.761118722897642,
+  "roe_pct": 66.67631779570989,
+  "roa_pct": 43.686078091520756,
+  "roic_pct": 116.06390179878036,
+  "effective_tax_rate_pct": 18.82991357268136,
+  "nopat": 962224295.9457346,
+  "invested_capital": 829047000.0,
+  "debt_to_equity": 0.0,
+  "net_debt_to_ebitda": -0.5074776691193688,
+  "current_ratio": 2.9275406262417674,
+  "liabilities_to_assets": 0.3448036793907715,
+  "interest_coverage": null,
+  "cash_to_debt": null,
+  "ocf_to_net_income": 0.967071851280273,
+  "capex_to_revenue_pct": 0.6028412766381138,
+  "buybacks_latest": null,
+  "dividends_paid_latest": 193634000.0,
+  "shares_diluted_wa_latest": 60570000.0,
+  "share_count_change_pct": -3.9364334200342577,
+  "ebitda_proxy": 1204386000.0,
+  "shares_outstanding": 60528381.0,
+  "shares_outstanding_asof": "2026-08-20",
+  "price": 536.8400268554688,
+  "market_cap": 32494057681.558044,
+  "enterprise_value": 31882858681.558044,
+  "pe_ratio": 33.837296854803164,
+  "ps_ratio": 9.924389105229993,
+  "pfcf_ratio": 35.74924052698301,
+  "pb_ratio": 22.56146358438631,
+  "ev_ebitda": 26.47229267158373,
+  "ev_sales": 9.737715690780739,
+  "fcf_yield_pct": 2.797262222242776,
+  "earnings_yield_pct": 2.95531881370734,
+  "peg_ratio": 3.6519518067866454
+ },
+ "_unavailable": {
+  "goodwill": "could not be computed from this company's filings",
+  "interest_coverage": "could not be computed from this company's filings",
+  "cash_to_debt": "could not be computed from this company's filings",
+  "buybacks_latest": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2021-06-30",
+   "revenue": 1898094000.0,
+   "operatingIncome": 742592000.0,
+   "netIncome": 616584000.0,
+   "operatingCashFlow": 612022000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001511737-23-000061"
+  },
+  {
+   "periodEnd": "2022-06-30",
+   "revenue": 1691692000.0,
+   "operatingIncome": 462264000.0,
+   "netIncome": 378657000.0,
+   "operatingCashFlow": 370259000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001511737-24-000053"
+  },
+  {
+   "periodEnd": "2023-06-30",
+   "revenue": 1940512000.0,
+   "operatingIncome": 544566000.0,
+   "netIncome": 407641000.0,
+   "operatingCashFlow": -145428000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001511737-25-000053"
+  },
+  {
+   "periodEnd": "2024-06-30",
+   "revenue": 1928490000.0,
+   "operatingIncome": 498997000.0,
+   "netIncome": 349960000.0,
+   "operatingCashFlow": 541516000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001511737-26-000056"
+  },
+  {
+   "periodEnd": "2025-06-30",
+   "revenue": 2573545000.0,
+   "operatingIncome": 836280000.0,
+   "netIncome": 711922000.0,
+   "operatingCashFlow": 640027000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001511737-26-000056"
+  },
+  {
+   "periodEnd": "2026-06-30",
+   "revenue": 3274162000.0,
+   "operatingIncome": 1185442000.0,
+   "netIncome": 960303000.0,
+   "operatingCashFlow": 928682000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001511737-26-000056"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "cost_of_revenue came from the tag 'CostOfGoodsAndServicesSold' rather than the preferred 'CostOfRevenue', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "dividends_paid came from the tag 'PaymentsOfDividends' rather than the preferred 'PaymentsOfDividendsCommonStock', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "dividends_paid"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "short_term_debt came from the tag 'ShortTermBorrowings' rather than the preferred 'LongTermDebtCurrent', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "short_term_debt"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "buybacks (last reported 2024-06-30, 730 days behind the newest period)",
+   "affectedMetrics": [
+    "buybacks"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2026-06-30"
+}

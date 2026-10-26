@@ -1,0 +1,89 @@
+{
+ "ticker": "INTU",
+ "total": 79.4,
+ "band": "WORTH MONITORING",
+ "isComplete": true,
+ "judgmentPointsEarned": 34,
+ "dataScoredAt": "2026-09-11T08:05:21Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 45.44,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 14,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 13.3125,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 13.125,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 9.0,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 10.0,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 12,
+   "justification": "Revenue, operating income AND net income rose in every one of the last five years - $12.73B->$21.45B revenue and $2.07B->$4.57B net income, with no base-year distortion flag. That is the cleanest series of any candidate in this screen. Operating margin 27.4%, FCF margin 40.4%, $8.66B of free cash flow. Deducted 3 points for a real crack in the current business, not a hypothetical one: the CEO stated on the earnings call that Intuit 'lost quality DIY customers to low-cost providers this year' over TurboTax pricing, and TurboTax unit growth is guided to just 2-3%.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 6,
+   "justification": "QuickBooks has genuine switching costs - accountant workflows, payroll and payments are embedded in it, and migrating a small business's books is painful. TurboTax has brand and filing integration. But the moat is being tested at both ends: price competition is already taking DIY customers, and the AI-disruption narrative targets exactly the guidance-heavy, know-how parts of the product. Half marks - the mid-market and accountant channel looks defensible, the consumer DIY flank does not.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 6,
+   "justification": "Dated and mechanical: fiscal 2027 guidance has been set; the announced 17% workforce reduction ($300-340M restructuring charge) flows into FY2027 margins whether or not anything else improves; Big Bets grew 34% and now represent 30% of revenue, a measurable mix shift toward faster-growing segments; and a multi-year partnership with Anthropic puts AI agents into the mid-market product. Scored 6 rather than higher for the same reason as Adobe: the catalyst that would actually re-rate the stock - evidence that AI is not eating the franchise - has no date attached to it.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 7,
+   "justification": "Base case +28% against a bear case of -28%, at roughly 47/28 odds. The asymmetry is better than anything else in this screen because the valuation floor is real: a 10.4% free-cash-flow yield on $8.66B of actual cash, from a business still growing revenue 14%. The reverse DCF says the price already assumes free cash flow SHRINKS 5.9% a year for a decade, against 22.1% delivered. You are being paid to take the AI risk rather than paying up for growth.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 3,
+   "justification": "Grew revenue 14% to over $20B and expanded operating income to $5.88B, so execution is not broken. But three deductions: they lowered their own TurboTax revenue forecast, the CEO conceded a pricing misjudgment that cost customers, and a 17% workforce cut is a large correction to make in one step. Capital allocation is unremarkable - share count is roughly flat (+1.5%), so no meaningful buyback support at a price management presumably considers cheap.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 45.4 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

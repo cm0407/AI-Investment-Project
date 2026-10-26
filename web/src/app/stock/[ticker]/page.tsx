@@ -4,10 +4,14 @@ import { ReverseDcfBar } from "@/components/chart/ReverseDcfBar";
 import { CoverageMeter } from "@/components/honesty/CoverageMeter";
 import { UnavailableBadge } from "@/components/honesty/UnavailableBadge";
 import { ScoreGauge } from "@/components/score/ScoreGauge";
-import { fetchInvestApi } from "@/lib/api";
+import { loadJson, loadJsonOrNull } from "@/lib/data";
 import { formatMetric, isUnavailable, type MetricKind } from "@/lib/format";
 
-export const dynamic = "force-dynamic";
+/** Every analysed company becomes its own HTML file at build time. */
+export async function generateStaticParams() {
+  const companies = await loadJson<{ ticker: string }[]>("companies");
+  return companies.map((c) => ({ ticker: c.ticker }));
+}
 
 type Caveat = {
   kind: string;
@@ -100,9 +104,12 @@ export default async function StockPage({
 }) {
   const { ticker } = await params;
 
+  const tk = ticker.toUpperCase();
   const [company, thesis] = await Promise.all([
-    fetchInvestApi<Company>(`/companies/${ticker.toUpperCase()}`),
-    fetchInvestApi<Thesis>(`/companies/${ticker.toUpperCase()}/thesis`).catch(() => null),
+    loadJson<Company>("company-" + tk),
+    // A company can be analysed without ever being scored. That is a real state, so the
+    // page renders without a thesis block rather than failing.
+    loadJsonOrNull<Thesis>("thesis-" + tk),
   ]);
 
   const m = company.metrics;

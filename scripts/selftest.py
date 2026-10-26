@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import sys
 import time
 from datetime import date
@@ -403,6 +404,24 @@ def main() -> int:
                       + str(worst) + "d" + (" - flagged" if worst > 14 else ""))
         check("API: a score whose halves are weeks apart says so",
               PASS if stale_ok else FAIL, detail)
+
+        # The website reads exported files, not the API. If the export is stale, the public
+        # site quietly shows older figures than the system believes - the same class of
+        # mistake as a stale data score, one layer out.
+        man_path = config.ROOT / "web" / "public" / "data" / "manifest.json"
+        if man_path.exists():
+            man = json.loads(man_path.read_text(encoding="utf-8"))
+            api_tickers = sorted(c["ticker"] for c in listing)
+            missing = sorted(set(api_tickers) - set(man.get("companies") or []))
+            check("site export covers every company the API serves",
+                  PASS if not missing else FAIL,
+                  (str(len(api_tickers)) + " companies, exported "
+                   + str(len(man.get("companies") or []))
+                   + ", generated " + str(man.get("generatedAt", "?"))[:10])
+                  if not missing else "MISSING from the site: " + ", ".join(missing))
+        else:
+            check("site export covers every company the API serves", WARN,
+                  "no export yet - run: python scripts/export_site_data.py")
 
         spec = tc.get("/openapi.json").json()
         check("API: OpenAPI schema generated", PASS if spec.get("paths") else FAIL,

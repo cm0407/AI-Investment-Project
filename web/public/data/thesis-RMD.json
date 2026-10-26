@@ -1,0 +1,89 @@
+{
+ "ticker": "RMD",
+ "total": 74.6,
+ "band": "WORTH MONITORING",
+ "isComplete": true,
+ "judgmentPointsEarned": 31,
+ "dataScoredAt": "2026-09-11T08:05:40Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 43.63,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 15,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 13.3125,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 10.649999999999999,
+   "maxPoints": 15,
+   "componentsScored": 5,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 10.0,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 9.666666666666666,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 12,
+   "justification": "Clean, monotonic growth in all three lines for five straight years: revenue $3.58B to $5.65B, operating income $1.00B to $1.89B, net income $0.78B to $1.52B. Operating margin 33.4%, ROIC 25.9%, and a razor-and-blade model in which the installed device base drives recurring mask and consumable resupply. High quality by any measure. Deducted for the mix: a meaningful share of profit depends on hardware sales that a returning competitor can contest directly.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 6,
+   "justification": "Real: an installed base generating annuity-like resupply revenue, clinical relationships, and software (AirView, MatrixCare) that raises switching costs for providers. But the moat has a specific, dated hole in it - Philips is preparing to re-enter the U.S. sleep apnea device market after its recall-driven absence, and that absence is precisely what allowed ResMed's share and margins to expand. Regaining a competitor you have not had to face is not a hypothetical risk.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 4,
+   "justification": "The lowest catalyst score here because the nearest dated catalyst is NEGATIVE. ResMed has suspended sales of its Astral ventilator line following a field safety action - a stated $75M revenue headwind and roughly $0.15 per-share earnings drag for fiscal 2027. Against that, management argues GLP-1 drugs are a demand-generation opportunity funnelling more diagnosed patients into the ResMed ecosystem. That is plausible but it is a thesis, not a dated event, and persistent market debate over GLP-1s is explicitly keeping the multiple constrained.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 5,
+   "justification": "Base +15% against a bear of -28%. The bear case is structural rather than cyclical, which is what caps this score: Eli Lilly's GLP-1 has independent approval to treat obstructive sleep apnea WITHOUT a CPAP machine, and 70-90% of sufferers have the condition because of excess weight. If weight-loss drugs treat the underlying cause, the device addresses a shrinking pool. That may take a decade to matter - or it may compress the multiple long before it shows up in revenue, which is what is happening now.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 4,
+   "justification": "Consistent operational execution across five years of steady margin expansion, and share count is flat to slightly down (-0.3%), so per-share growth is real rather than engineered. Suspending Astral sales after a safety action is the correct decision even though it is costly. Withheld one point for a communication posture - 'no new competitive threat that we are worried about' - that reads as dismissive given Philips' re-entry and an approved pharmaceutical substitute.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 43.6 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

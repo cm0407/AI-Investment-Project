@@ -1,14 +1,12 @@
 import { AppLink } from "@/components/nav/AppLink";
 import { Box, Paper, Stack, Typography } from "@mui/material";
 
-import { fetchInvestApi } from "@/lib/api";
-
-export const dynamic = "force-dynamic";
+import { loadJson } from "@/lib/data";
 
 type Digest = { date: string; title: string; sizeBytes: number };
 
 export default async function DigestsPage() {
-  const digests = await fetchInvestApi<Digest[]>("/digests");
+  const digests = await loadJson<Digest[]>("digests");
 
   return (
     <Box sx={{ maxWidth: 820, mx: "auto", px: { xs: 2, md: 3 }, py: 4 }}>

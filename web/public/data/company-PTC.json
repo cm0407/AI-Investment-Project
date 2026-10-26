@@ -1,0 +1,174 @@
+{
+ "ticker": "PTC",
+ "name": "PTC INC.",
+ "cik": "0000857005",
+ "sic": "7372",
+ "sicDescription": "Services-Prepackaged Software",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 2739226000.0,
+  "revenue_period": "2025-09-30",
+  "net_income_latest": 733997000.0,
+  "operating_income_latest": 982385000.0,
+  "fcf_latest": 856688000.0,
+  "eps_diluted_latest": 6.08,
+  "total_assets": 6617172000.0,
+  "total_equity": 3826229000.0,
+  "total_debt": 1197434000.0,
+  "total_cash_and_sti": 184415000.0,
+  "net_cash_position": -1013019000.0,
+  "goodwill": 3493316000.0,
+  "revenue_cagr_pct": 13.435593739979002,
+  "net_income_cagr_pct": 41.217026405850255,
+  "fcf_cagr_pct": 32.019902436961914,
+  "eps_cagr_pct": 40.26105826759165,
+  "revenue_growth_yoy_pct": [
+   23.912535183743987,
+   6.982672803001844,
+   8.467491867729905,
+   9.604859772261353,
+   19.175956896581738
+  ],
+  "net_income_growth_yoy_pct": [
+   264.9129653008914,
+   -34.35397328289892,
+   -21.573011457098957,
+   53.26749205832044,
+   95.03923387000344
+  ],
+  "revenue_growth_latest_pct": 19.175956896581738,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 12.315411374311115,
+  "net_income_cagr_3y_pct": 32.84519710569009,
+  "gross_margin_pct": 83.75515565345832,
+  "operating_margin_pct": 35.863597965264645,
+  "net_margin_pct": 26.795780997989944,
+  "fcf_margin_pct": 31.274819967392247,
+  "roe_pct": 19.183300319975622,
+  "roa_pct": 11.092306501931642,
+  "roic_pct": 16.19297906691989,
+  "effective_tax_rate_pct": 20.233063856192885,
+  "nopat": 783618415.6363395,
+  "invested_capital": 4839248000.0,
+  "debt_to_equity": 0.31295408612500714,
+  "net_debt_to_ebitda": 0.933753591381238,
+  "current_ratio": 1.1179590497525465,
+  "liabilities_to_assets": 0.4217727754394173,
+  "interest_coverage": 12.75509939105935,
+  "cash_to_debt": 0.15400848815049514,
+  "ocf_to_net_income": 1.1821519706483814,
+  "capex_to_revenue_pct": 0.4018653444440145,
+  "buybacks_latest": 299998000.0,
+  "dividends_paid_latest": null,
+  "shares_diluted_wa_latest": 120777000.0,
+  "share_count_change_pct": 3.879002640474094,
+  "ebitda_proxy": 1084889000.0,
+  "shares_outstanding": 108506261.0,
+  "shares_outstanding_asof": "2026-07-29",
+  "price": 128.72000122070312,
+  "market_cap": 13966926048.373932,
+  "enterprise_value": 14979945048.373932,
+  "pe_ratio": 19.028587376207167,
+  "ps_ratio": 5.098858600339633,
+  "pfcf_ratio": 16.303398726693885,
+  "pb_ratio": 3.65031106302679,
+  "ev_ebitda": 13.807813562838163,
+  "ev_sales": 5.468678031083939,
+  "fcf_yield_pct": 6.133690384218351,
+  "earnings_yield_pct": 5.255250850887508,
+  "peg_ratio": 0.46166812687647674
+ },
+ "_unavailable": {
+  "dividends_paid_latest": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2020-09-30",
+   "revenue": 1458415000.0,
+   "operatingIncome": 210863000.0,
+   "netIncome": 130695000.0,
+   "operatingCashFlow": 233808000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000950170-22-025211"
+  },
+  {
+   "periodEnd": "2021-09-30",
+   "revenue": 1807159000.0,
+   "operatingIncome": 380748000.0,
+   "netIncome": 476923000.0,
+   "operatingCashFlow": 368809000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000950123-23-011049"
+  },
+  {
+   "periodEnd": "2022-09-30",
+   "revenue": 1933347000.0,
+   "operatingIncome": 447362000.0,
+   "netIncome": 313081000.0,
+   "operatingCashFlow": 435326000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000950170-24-127231"
+  },
+  {
+   "periodEnd": "2023-09-30",
+   "revenue": 2097053000.0,
+   "operatingIncome": 458474000.0,
+   "netIncome": 245540000.0,
+   "operatingCashFlow": 610861000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001193125-25-291326"
+  },
+  {
+   "periodEnd": "2024-09-30",
+   "revenue": 2298472000.0,
+   "operatingIncome": 588062000.0,
+   "netIncome": 376333000.0,
+   "operatingCashFlow": 749984000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001193125-25-291326"
+  },
+  {
+   "periodEnd": "2025-09-30",
+   "revenue": 2739226000.0,
+   "operatingIncome": 982385000.0,
+   "netIncome": 733997000.0,
+   "operatingCashFlow": 867696000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001193125-25-291326"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "cost_of_revenue came from the tag 'CostOfGoodsAndServicesSold' rather than the preferred 'CostOfRevenue', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "sga_expense came from the tag 'GeneralAndAdministrativeExpense' rather than the preferred 'SellingGeneralAndAdministrativeExpense', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "sga_expense"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "long_term_debt came from the tag 'LongTermDebt' rather than the preferred 'LongTermDebtNoncurrent', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "long_term_debt"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2025-09-30"
+}

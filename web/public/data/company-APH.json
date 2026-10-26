@@ -1,0 +1,192 @@
+{
+ "ticker": "APH",
+ "name": "AMPHENOL CORP /DE/",
+ "cik": "0000820313",
+ "sic": "3678",
+ "sicDescription": "Electronic Connectors",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 23094700000.0,
+  "revenue_period": "2025-12-31",
+  "net_income_latest": 4270300000.0,
+  "operating_income_latest": 5868600000.0,
+  "fcf_latest": 4378100000.0,
+  "eps_diluted_latest": 3.34,
+  "total_assets": 36236900000.0,
+  "total_equity": 13413100000.0,
+  "total_debt": null,
+  "total_cash_and_sti": 11434200000.0,
+  "net_cash_position": null,
+  "goodwill": 10575400000.0,
+  "revenue_cagr_pct": 21.8467319160899,
+  "net_income_cagr_pct": 28.827825355148452,
+  "fcf_cagr_pct": 27.19170098998449,
+  "eps_cagr_pct": 11.249502901731944,
+  "revenue_growth_yoy_pct": [
+   26.484782937352456,
+   16.059689416437585,
+   -0.5410758139903327,
+   21.251005599496597,
+   51.712245528060066
+  ],
+  "net_income_growth_yoy_pct": [
+   32.19212232009308,
+   19.58134272064369,
+   1.3509961625400857,
+   25.72614107883817,
+   76.16749174917491
+  ],
+  "revenue_growth_latest_pct": 51.712245528060066,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 22.30660589034148,
+  "net_income_cagr_3y_pct": 30.936218110987035,
+  "gross_margin_pct": 36.88162219037268,
+  "operating_margin_pct": 25.41102504037723,
+  "net_margin_pct": 18.490389569901318,
+  "fcf_margin_pct": 18.9571633318467,
+  "roe_pct": 31.836786425211173,
+  "roa_pct": 11.784396568139107,
+  "roic_pct": null,
+  "effective_tax_rate_pct": 23.12925170068027,
+  "nopat": 4511236734.693877,
+  "invested_capital": null,
+  "debt_to_equity": null,
+  "net_debt_to_ebitda": null,
+  "current_ratio": 2.979243840771447,
+  "liabilities_to_assets": 0.6271838926618999,
+  "interest_coverage": null,
+  "cash_to_debt": null,
+  "ocf_to_net_income": 1.258623515912231,
+  "capex_to_revenue_pct": 4.315275799209342,
+  "buybacks_latest": 665200000.0,
+  "dividends_paid_latest": 802200000.0,
+  "shares_diluted_wa_latest": 1277500000.0,
+  "share_count_change_pct": 4.614410274537506,
+  "ebitda_proxy": 6791000000.0,
+  "shares_outstanding": 1232983457.0,
+  "shares_outstanding_asof": "2026-07-28",
+  "price": 80.25,
+  "market_cap": 98946922424.25,
+  "enterprise_value": null,
+  "pe_ratio": 23.17095342815493,
+  "ps_ratio": 4.284399555926251,
+  "pfcf_ratio": 22.600425395548296,
+  "pb_ratio": 7.376886955606832,
+  "ev_ebitda": null,
+  "ev_sales": null,
+  "fcf_yield_pct": 4.424695475851416,
+  "earnings_yield_pct": 4.315748176270141,
+  "peg_ratio": 0.8037704246746714
+ },
+ "_unavailable": {
+  "total_debt": "total_debt suppressed: component(s) short_term_debt were reported historically but are no longer tagged, so any sum would understate the true figure.",
+  "net_cash_position": "could not be computed from this company's filings",
+  "roic_pct": "could not be computed from this company's filings",
+  "invested_capital": "could not be computed from this company's filings",
+  "debt_to_equity": "could not be computed from this company's filings",
+  "net_debt_to_ebitda": "could not be computed from this company's filings",
+  "interest_coverage": "could not be computed from this company's filings",
+  "cash_to_debt": "could not be computed from this company's filings",
+  "enterprise_value": "could not be computed from this company's filings",
+  "ev_ebitda": "could not be computed from this company's filings",
+  "ev_sales": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2020-12-31",
+   "revenue": 8598900000.0,
+   "operatingIncome": 1638400000.0,
+   "netIncome": 1203400000.0,
+   "operatingCashFlow": 1592000000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-23-001036"
+  },
+  {
+   "periodEnd": "2021-12-31",
+   "revenue": 10876300000.0,
+   "operatingIncome": 2105100000.0,
+   "netIncome": 1590800000.0,
+   "operatingCashFlow": 1540100000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-24-000866"
+  },
+  {
+   "periodEnd": "2022-12-31",
+   "revenue": 12623000000.0,
+   "operatingIncome": 2585800000.0,
+   "netIncome": 1902300000.0,
+   "operatingCashFlow": 2174600000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001558370-25-000714"
+  },
+  {
+   "periodEnd": "2023-12-31",
+   "revenue": 12554700000.0,
+   "operatingIncome": 2559600000.0,
+   "netIncome": 1928000000.0,
+   "operatingCashFlow": 2528700000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-013549"
+  },
+  {
+   "periodEnd": "2024-12-31",
+   "revenue": 15222700000.0,
+   "operatingIncome": 3156900000.0,
+   "netIncome": 2424000000.0,
+   "operatingCashFlow": 2814700000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-013549"
+  },
+  {
+   "periodEnd": "2025-12-31",
+   "revenue": 23094700000.0,
+   "operatingIncome": 5868600000.0,
+   "netIncome": 4270300000.0,
+   "operatingCashFlow": 5374700000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0001104659-26-013549"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "long_term_debt came from the tag 'LongTermDebtAndCapitalLeaseObligations' rather than the preferred 'LongTermDebtNoncurrent', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "long_term_debt"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "interest_expense (last reported 2023-12-31, 731 days behind the newest period)",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "short_term_debt (last reported 2017-12-31, 2922 days behind the newest period)",
+   "affectedMetrics": [
+    "short_term_debt"
+   ]
+  },
+  {
+   "kind": "suppressed_composite",
+   "severity": "warning",
+   "message": "total_debt suppressed: component(s) short_term_debt were reported historically but are no longer tagged, so any sum would understate the true figure.",
+   "affectedMetrics": [
+    "total_debt"
+   ]
+  }
+ ],
+ "latestFiscalPeriodEnd": "2025-12-31"
+}

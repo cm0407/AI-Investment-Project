@@ -1,0 +1,226 @@
+{
+ "ticker": "EXEL",
+ "name": "EXELIXIS, INC.",
+ "cik": "0000939767",
+ "sic": "2836",
+ "sicDescription": "Biological Products, (No Diagnostic Substances)",
+ "sectorSpecial": null,
+ "sectorUnreliableMetrics": [],
+ "metrics": {
+  "revenue_latest": 2320126000.0,
+  "revenue_period": "2026-01-02",
+  "net_income_latest": 782570000.0,
+  "operating_income_latest": 872191000.0,
+  "fcf_latest": 875838000.0,
+  "eps_diluted_latest": 2.78,
+  "total_assets": 2844423000.0,
+  "total_equity": 2161319000.0,
+  "total_debt": null,
+  "total_cash_and_sti": 1059091000.0,
+  "net_cash_position": null,
+  "goodwill": 63684000.0,
+  "revenue_cagr_pct": 18.629186154922106,
+  "net_income_cagr_pct": 47.5812012212566,
+  "fcf_cagr_pct": 37.432824919027574,
+  "eps_cagr_pct": 51.35450438841522,
+  "revenue_growth_yoy_pct": [
+   45.30782612922237,
+   12.271476058732933,
+   13.602580161409051,
+   18.494783106619582,
+   6.9822903203346165
+  ],
+  "net_income_growth_yoy_pct": [
+   106.71044274071622,
+   -21.111558319592493,
+   13.97998705302772,
+   150.8925949991577,
+   50.1284370581679
+  ],
+  "revenue_growth_latest_pct": 6.9822903203346165,
+  "growth_years_covered": 5,
+  "revenue_cagr_3y_pct": 12.92751520741946,
+  "net_income_cagr_3y_pct": 62.52735589868328,
+  "gross_margin_pct": null,
+  "operating_margin_pct": 37.59239799907419,
+  "net_margin_pct": 33.72963364920698,
+  "fcf_margin_pct": 37.74958773790733,
+  "roe_pct": 36.20798225528022,
+  "roa_pct": 27.512433980459306,
+  "roic_pct": null,
+  "effective_tax_rate_pct": null,
+  "nopat": null,
+  "invested_capital": null,
+  "debt_to_equity": null,
+  "net_debt_to_ebitda": null,
+  "current_ratio": 3.5580188539704767,
+  "liabilities_to_assets": 0.2401555605477807,
+  "interest_coverage": null,
+  "cash_to_debt": null,
+  "ocf_to_net_income": 1.1299525921003872,
+  "capex_to_revenue_pct": 0.3632992346105341,
+  "buybacks_latest": 947511000.0,
+  "dividends_paid_latest": null,
+  "shares_diluted_wa_latest": 281863000.0,
+  "share_count_change_pct": -11.364115207184867,
+  "ebitda_proxy": 901246000.0,
+  "shares_outstanding": 247781692.0,
+  "shares_outstanding_asof": "2026-07-27",
+  "price": 57.43000030517578,
+  "market_cap": 14230102647.176971,
+  "enterprise_value": null,
+  "pe_ratio": 18.18380802634521,
+  "ps_ratio": 6.1333318307613345,
+  "pfcf_ratio": 16.247414073352573,
+  "pb_ratio": 6.583989983513295,
+  "ev_ebitda": null,
+  "ev_sales": null,
+  "fcf_yield_pct": 6.154825595539555,
+  "earnings_yield_pct": 5.4993981378992345,
+  "peg_ratio": 0.3821637024628481
+ },
+ "_unavailable": {
+  "total_debt": "total_debt suppressed: component(s) long_term_debt, short_term_debt were reported historically but are no longer tagged, so any sum would understate the true figure.",
+  "net_cash_position": "could not be computed from this company's filings",
+  "gross_margin_pct": "could not be computed from this company's filings",
+  "roic_pct": "could not be computed from this company's filings",
+  "effective_tax_rate_pct": "could not be computed from this company's filings",
+  "nopat": "could not be computed from this company's filings",
+  "invested_capital": "could not be computed from this company's filings",
+  "debt_to_equity": "could not be computed from this company's filings",
+  "net_debt_to_ebitda": "could not be computed from this company's filings",
+  "interest_coverage": "could not be computed from this company's filings",
+  "cash_to_debt": "could not be computed from this company's filings",
+  "dividends_paid_latest": "could not be computed from this company's filings",
+  "enterprise_value": "could not be computed from this company's filings",
+  "ev_ebitda": "could not be computed from this company's filings",
+  "ev_sales": "could not be computed from this company's filings"
+ },
+ "financials": [
+  {
+   "periodEnd": "2021-01-01",
+   "revenue": 987538000.0,
+   "operatingIncome": 110060000.0,
+   "netIncome": 111781000.0,
+   "operatingCashFlow": 208982000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000939767-23-000019"
+  },
+  {
+   "periodEnd": "2021-12-31",
+   "revenue": 1434970000.0,
+   "operatingIncome": 286666000.0,
+   "netIncome": 231063000.0,
+   "operatingCashFlow": 400804000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000939767-24-000028"
+  },
+  {
+   "periodEnd": "2022-12-30",
+   "revenue": 1611062000.0,
+   "operatingIncome": 201484000.0,
+   "netIncome": 182282000.0,
+   "operatingCashFlow": 362614000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000939767-25-000019"
+  },
+  {
+   "periodEnd": "2023-12-29",
+   "revenue": 1830208000.0,
+   "operatingIncome": 170885000.0,
+   "netIncome": 207765000.0,
+   "operatingCashFlow": 333324000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000939767-26-000021"
+  },
+  {
+   "periodEnd": "2025-01-03",
+   "revenue": 2168701000.0,
+   "operatingIncome": 604617000.0,
+   "netIncome": 521267000.0,
+   "operatingCashFlow": 699971000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000939767-26-000021"
+  },
+  {
+   "periodEnd": "2026-01-02",
+   "revenue": 2320126000.0,
+   "operatingIncome": 872191000.0,
+   "netIncome": 782570000.0,
+   "operatingCashFlow": 884267000.0,
+   "sourceTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "sourceForm": "10-K",
+   "sourceAccession": "0000939767-26-000021"
+  }
+ ],
+ "caveats": [
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "cost_of_revenue came from the tag 'CostOfGoodsAndServicesSold' rather than the preferred 'CostOfRevenue', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "cost_of_revenue"
+   ]
+  },
+  {
+   "kind": "fallback_tag",
+   "severity": "info",
+   "message": "short_term_investments came from the tag 'MarketableSecuritiesCurrent' rather than the preferred 'ShortTermInvestments', which may not mean exactly the same thing",
+   "affectedMetrics": [
+    "short_term_investments"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "pretax_income (last reported 2021-01-01, 1827 days behind the newest period)",
+   "affectedMetrics": [
+    "pretax_income"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "interest_expense (last reported 2020-01-03, 2191 days behind the newest period)",
+   "affectedMetrics": [
+    "interest_expense"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "long_term_debt (last reported 2016-12-31, 3289 days behind the newest period)",
+   "affectedMetrics": [
+    "long_term_debt"
+   ]
+  },
+  {
+   "kind": "stale_input",
+   "severity": "warning",
+   "message": "short_term_debt (last reported 2016-12-31, 3289 days behind the newest period)",
+   "affectedMetrics": [
+    "short_term_debt"
+   ]
+  },
+  {
+   "kind": "suppressed_composite",
+   "severity": "warning",
+   "message": "total_debt suppressed: component(s) long_term_debt, short_term_debt were reported historically but are no longer tagged, so any sum would understate the true figure.",
+   "affectedMetrics": [
+    "total_debt"
+   ]
+  },
+  {
+   "kind": "growth_base",
+   "severity": "critical",
+   "message": "BASE-YEAR DISTORTION: the 5-year revenue CAGR of 18.6% is far above the recent 3-year CAGR of 12.9%. The window starts at 2021, so the long CAGR is measuring recovery from a depressed base, not underlying growth. Judge this company on the recent figure and the year-by-year series, not the headline CAGR.",
+   "affectedMetrics": []
+  }
+ ],
+ "latestFiscalPeriodEnd": "2026-01-02"
+}

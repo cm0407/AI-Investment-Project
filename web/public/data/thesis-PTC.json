@@ -1,0 +1,89 @@
+{
+ "ticker": "PTC",
+ "total": 76.9,
+ "band": "WORTH MONITORING",
+ "isComplete": true,
+ "judgmentPointsEarned": 33,
+ "dataScoredAt": "2026-09-11T08:05:33Z",
+ "judgmentAt": null,
+ "freshnessWarning": null,
+ "dataPointsEarned": 43.88,
+ "dataPointsAvailable": 50.0,
+ "dataPointsPossible": 50,
+ "componentsScored": 16,
+ "componentsTotal": 16,
+ "pillars": [
+  {
+   "name": "growth",
+   "points": 14.4375,
+   "maxPoints": 15,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "valuation",
+   "points": 12.149999999999999,
+   "maxPoints": 15,
+   "componentsScored": 5,
+   "componentsTotal": 5,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "financial_strength",
+   "points": 7.625,
+   "maxPoints": 10,
+   "componentsScored": 4,
+   "componentsTotal": 4,
+   "sectorSuppressed": []
+  },
+  {
+   "name": "free_cash_flow",
+   "points": 9.666666666666666,
+   "maxPoints": 10,
+   "componentsScored": 3,
+   "componentsTotal": 3,
+   "sectorSuppressed": []
+  }
+ ],
+ "judgmentPillars": [
+  {
+   "name": "business_quality",
+   "points": 11,
+   "justification": "Operating margin 35.9%, free cash flow $857M on $2.74B revenue, and cash conversion of 1.18x operating cash flow to net income - profits arrive as real cash. Operating income rose $0.588B to $0.982B in the latest year and operating cash flow rose alongside it ($750M to $868M), so the jump is organic rather than an accounting artefact. Best-measured company in the screen at 16 of 16 scoring components. Deducted because the underlying growth rate is only about 9% - this is a steady compounder, not a grower.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "competitive_advantage",
+   "points": 7,
+   "justification": "Among the strongest moats in this set. CAD and PLM software holds a manufacturer's entire engineering record - part geometry, revisions, bills of material, supplier data. Migrating means re-validating decades of product data, so switching costs are genuinely punitive and renewal rates are high. The deduction is for competition from Dassault, Siemens and Autodesk, all well-resourced, which caps pricing power even though it rarely causes churn.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "catalysts",
+   "points": 5,
+   "justification": "Real and dated but modest. Q3 FY2026 constant-currency ARR of $2.448B grew 9.1% excluding divestitures, beating the guided 8-9% range, and management RAISED the low end of full-year guidance to roughly 9-9.5%. Operating and free cash flow both came in above the high end of guidance, and $626M of buybacks were executed. Scored only 5 because none of this re-rates a stock: a company growing ARR 9% and guiding to 9% is delivering precisely what is already expected.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "risk_reward",
+   "points": 6,
+   "justification": "Base case +18% against a bear of -25%. The reverse DCF implies the price assumes 8.6% free-cash-flow growth against 32.0% delivered, so the bar is low and clearable. But the upside is correspondingly capped - a 9%-growth business does not re-rate dramatically. This is a moderate and fairly reliable return rather than a 20%-plus candidate.",
+   "source": "analyst",
+   "modelRun": null
+  },
+  {
+   "name": "management",
+   "points": 4,
+   "justification": "Divested Kepware and ThingWorx in March 2026 to concentrate on the core CAD/PLM franchise, a genuine focus decision rather than empire-building, and returned $626M through buybacks. Beat and raised guidance. Withheld one point because those divestitures make fiscal 2026 GAAP figures noisy and harder for a shareholder to interpret without adjustment.",
+   "source": "analyst",
+   "modelRun": null
+  }
+ ],
+ "judgmentSource": "analyst",
+ "unscorablePillars": [],
+ "interpretation": "PARTIAL SCORE: 43.9 of 50.0 points available from filings. The 5 judgment pillar(s) business_quality, competitive_advantage, catalysts, risk_reward, management (worth 50 points) have NOT been scored - a script cannot judge a moat or a catalyst. Score them by hand from the evidence pack and pass them back with --judgment. Until then this number is not a CLAUDE.md score and must not be presented as one."
+}

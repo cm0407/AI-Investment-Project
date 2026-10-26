@@ -1,0 +1,41 @@
+{
+ "generatedAt": "2026-10-25T19:57:30",
+ "companies": [
+  "AAPL",
+  "ADBE",
+  "AGX",
+  "APH",
+  "BKNG",
+  "DOCS",
+  "EOG",
+  "EXEL",
+  "HRMY",
+  "INTU",
+  "NBIX",
+  "NFLX",
+  "PAYX",
+  "PTC",
+  "QLYS",
+  "RMD",
+  "UI",
+  "ULTA",
+  "USLM",
+  "UTHR"
+ ],
+ "digests": [
+  "2026-10-24",
+  "2026-10-23",
+  "2026-10-12",
+  "2026-09-20",
+  "2026-09-18",
+  "2026-09-14",
+  "2026-09-09",
+  "2026-09-03"
+ ],
+ "counts": {
+  "companies": 20,
+  "digests": 8,
+  "files": 54
+ },
+ "note": "Written by scripts/export_site_data.py from the same functions the API serves. Figures are as of the last time the research scripts ran, not live market data."
+}

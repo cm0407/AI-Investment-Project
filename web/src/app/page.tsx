@@ -1,10 +1,8 @@
 import { AppLink } from "@/components/nav/AppLink";
 import { Alert, Box, Paper, Stack, Typography } from "@mui/material";
 
-import { fetchInvestApi } from "@/lib/api";
+import { loadJson } from "@/lib/data";
 import { formatDelta, formatMetric, isUnavailable } from "@/lib/format";
-
-export const dynamic = "force-dynamic";
 
 type Company = {
   ticker: string;
@@ -51,9 +49,9 @@ function Headline({ label, value, sub }: { label: string; value: string; sub: st
 
 export default async function HomePage() {
   const [companies, preds, digests] = await Promise.all([
-    fetchInvestApi<Company[]>("/companies"),
-    fetchInvestApi<PredictionsPayload>("/predictions"),
-    fetchInvestApi<Digest[]>("/digests"),
+    loadJson<Company[]>("companies"),
+    loadJson<PredictionsPayload>("predictions"),
+    loadJson<Digest[]>("digests"),
   ]);
 
   const reviewed = preds.predictions.filter((p) => p.latestReview?.pctMoveSinceEntry != null);
