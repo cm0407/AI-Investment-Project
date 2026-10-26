@@ -4,6 +4,10 @@ A record of what was planned and what changed, kept per the course artifact requ
 Newest entries at the top. Entries are appended, never rewritten - the same rule the research
 record follows.
 
+**This file is the technical record** - what each change does, why, and what it measured.
+For the collaboration record - what I asked for session by session, what I decided, and what
+I abandoned - see [`notes/LOG.md`](notes/LOG.md).
+
 ---
 
 ## 2026-10-25 (later) — Deleted the server the website needed

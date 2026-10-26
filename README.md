@@ -354,7 +354,8 @@ INVEST/
 ├── docs/              DATA_SOURCES.md · ASSUMPTIONS.md · SCORING.md
 │                      GIT_FOR_BEGINNERS.md · MODEL_IN_THE_LOOP.md
 │                      FRONTEND_SPEC.md · PLATFORM_ROADMAP.md · BUILD_PLAN.md
-├── LOG.md             What was planned, and what changed as it was built
+├── LOG.md             What was planned, and what changed as it was built (technical)
+├── notes/LOG.md       What I asked for, decided, and abandoned (session by session)
 ├── research/theses/     Full write-ups, one per company
 ├── research/judgments/  The five judgment pillars, per company
 │   ├── _rejected/         Model answers that failed validation, kept on purpose
