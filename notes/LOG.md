@@ -232,5 +232,7 @@ Recorded here so they are not quietly forgotten:
   cannot score, because the pack is built from filings and catalysts are news. The fix is a new
   evidence source (8-K contents, scheduled earnings dates) — **not a looser prompt.**
 - **My hand-written catalyst scores are unreproducible.** They used news that was never recorded.
-- **`SEC_CONTACT_EMAIL` repository secret** is not set yet. It does not block the site; the
-  weekly refresh fails with a clear message until it exists.
+- ~~**`SEC_CONTACT_EMAIL` repository secret** is not set yet.~~ **Done 2026-10-26.** Struck
+  through rather than deleted — a to-do list that quietly loses its finished items stops being
+  a record of what the week actually involved. The weekly refresh can now identify itself to
+  SEC as required instead of failing its guard step.
